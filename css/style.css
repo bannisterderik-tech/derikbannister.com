@@ -958,6 +958,10 @@ body::before {
   .blog-grid { grid-template-columns: 1fr; }
   .neighborhood-overview { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
+  .breadcrumb { padding: 4.5rem 0 0.75rem; }
+  .breadcrumb-list { flex-wrap: wrap; font-size: 0.7rem; gap: 0.3rem; }
+  .page-hero { padding: clamp(2rem, 4vh, 3rem) 0 clamp(2rem, 4vh, 3rem); }
+  .page-hero h1 { font-size: clamp(1.8rem, 5vw, 2.5rem); }
 }
 
 @media (max-width: 480px) {
@@ -965,4 +969,6 @@ body::before {
   .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
   .about-credentials { grid-template-columns: 1fr; }
   .trust-bar .container { grid-template-columns: repeat(2, 1fr); }
+  .breadcrumb { padding: 4rem 0 0.5rem; }
+  .breadcrumb-list { font-size: 0.65rem; }
 }
