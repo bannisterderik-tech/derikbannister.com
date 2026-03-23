@@ -222,6 +222,21 @@ body::before {
 }
 .btn-secondary:hover { border-color: var(--brand); color: var(--brand); background: var(--brand-glow); }
 
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.75rem;
+  padding: 1rem 2.5rem; background: var(--brand); color: var(--bg-primary);
+  font-family: var(--font-body); font-size: 0.82rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase; border: none; cursor: pointer;
+  transition: all 0.35s ease; text-decoration: none; width: 100%;
+}
+.btn:hover { background: var(--brand-light); color: var(--bg-primary); transform: translateY(-2px); box-shadow: 0 8px 40px rgba(128, 191, 77, 0.3); }
+
+.btn-outline, .btn.btn-outline {
+  background: transparent; color: var(--text-primary);
+  border: 1px solid var(--border-hover);
+}
+.btn-outline:hover, .btn.btn-outline:hover { border-color: var(--brand); color: var(--brand); background: var(--brand-glow); }
+
 /* ══════════ TRUST BAR ══════════ */
 .trust-bar { background: var(--bg-secondary); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 2rem 0; }
 .trust-bar .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem; align-items: center; text-align: center; }
@@ -504,7 +519,7 @@ body::before {
 
 /* ══════════ BREADCRUMBS ══════════ */
 .breadcrumb {
-  padding: 1rem 0;
+  padding: 5rem 0 1rem;
   border-bottom: 1px solid var(--border);
 }
 .breadcrumb-list {
