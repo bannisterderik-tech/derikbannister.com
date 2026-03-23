@@ -485,6 +485,10 @@ body::before {
 .footer-bottom-links a { font-size: 0.75rem; color: var(--text-muted); }
 
 /* ══════════ ANIMATIONS ══════════ */
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.btn-spinner { display: inline-block; animation: spin 0.8s linear infinite; font-size: 1.1em; }
+.email-form button { transition: all 0.3s ease; }
+.email-form input { transition: border-color 0.3s ease; }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -871,9 +875,9 @@ body::before {
       <p>Get my monthly investor briefing: real deal data, market trends, inventory shifts, rental yield analysis, and where the smart money is moving across Eugene and Springfield. No fluff. Just numbers and opportunities.</p>
     </div>
     <div>
-      <form class="email-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='You\'re In'; this.querySelector('button').style.background='var(--brand-dark)';">
+      <form class="email-form" data-source="investor-market-intel" onsubmit="handleEmailSubmit(event)">
         <input type="email" placeholder="Your email address" required>
-        <button type="submit">Get Intel</button>
+        <button type="submit"><span class="btn-text">Get Intel</span><span class="btn-spinner" style="display:none;">&#9676;</span></button>
       </form>
       <p class="email-cta-note">Delivered the 5th of every month. Unsubscribe anytime. Your data stays private.</p>
     </div>
@@ -889,9 +893,9 @@ body::before {
       <p>Are you a real estate agent who wants to work smarter with investors? Get my free toolkit: APOD templates, ARV calculation spreadsheets, rehab cost estimators, and the exact deal analysis framework I use on every flip and rental acquisition. Level up your investor game.</p>
     </div>
     <div>
-      <form class="email-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Check Your Email'; this.querySelector('button').style.background='var(--brand-dark)';">
+      <form class="email-form" data-source="agent-toolkit" onsubmit="handleEmailSubmit(event)">
         <input type="email" placeholder="Your agent email" required>
-        <button type="submit">Get the Toolkit</button>
+        <button type="submit"><span class="btn-text">Get the Toolkit</span><span class="btn-spinner" style="display:none;">&#9676;</span></button>
       </form>
       <p class="email-cta-note">Instant download after sign-up. Includes APOD template, ARV calculator, and rehab estimator.</p>
     </div>
@@ -1040,6 +1044,87 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); if (navLinks && window.innerWidth <= 1024) navLinks.style.display = 'none'; }
   });
 });
+
+// Email form submission
+const SHEET_URL = 'https://script.google.com/a/macros/theoperativegroup.com/s/AKfycbztIrSRy9L80koIccqvBq1Ou8E7CHfDR1FX6Avn_xz2gdKmKkpDire5CYLt_O1F74OERw/exec';
+
+async function handleEmailSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const input = form.querySelector('input[type="email"]');
+  const btn = form.querySelector('button');
+  const btnText = btn.querySelector('.btn-text');
+  const btnSpinner = btn.querySelector('.btn-spinner');
+  const note = form.nextElementSibling;
+  const originalText = btnText.textContent;
+  const email = input.value.trim();
+
+  if (!email) return;
+
+  // Loading state
+  input.disabled = true;
+  btn.disabled = true;
+  btnText.style.display = 'none';
+  btnSpinner.style.display = 'inline';
+  btn.style.opacity = '0.7';
+
+  try {
+    const res = await fetch(SHEET_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: email,
+        source: form.dataset.source,
+        referrer: document.referrer || 'direct',
+        userAgent: navigator.userAgent
+      })
+    });
+
+    // Success state
+    btnSpinner.style.display = 'none';
+    btnText.style.display = 'inline';
+    btnText.textContent = 'You\'re In ✓';
+    btn.style.opacity = '1';
+    btn.style.background = 'var(--brand-dark)';
+    input.value = '';
+    input.style.borderColor = 'var(--brand)';
+    if (note) {
+      note.textContent = 'Welcome aboard — keep an eye on your inbox.';
+      note.style.color = 'var(--brand)';
+    }
+
+    // Reset after 4 seconds
+    setTimeout(() => {
+      btnText.textContent = originalText;
+      btn.style.background = '';
+      btn.disabled = false;
+      input.disabled = false;
+      input.style.borderColor = '';
+      if (note) {
+        note.textContent = form.dataset.source === 'investor-market-intel'
+          ? 'Delivered the 5th of every month. Unsubscribe anytime. Your data stays private.'
+          : 'Instant download after sign-up. Includes APOD template, ARV calculator, and rehab estimator.';
+        note.style.color = '';
+      }
+    }, 4000);
+
+  } catch (err) {
+    // Error state
+    btnSpinner.style.display = 'none';
+    btnText.style.display = 'inline';
+    btnText.textContent = 'Try Again';
+    btn.style.opacity = '1';
+    btn.style.background = '#c0392b';
+    btn.disabled = false;
+    input.disabled = false;
+
+    setTimeout(() => {
+      btnText.textContent = originalText;
+      btn.style.background = '';
+    }, 3000);
+  }
+}
 </script>
 </body>
 </html>
