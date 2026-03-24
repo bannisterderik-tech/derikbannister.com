@@ -369,6 +369,10 @@ body::before {
 }
 .service-card:hover .service-tag { border-color: var(--border-hover); color: var(--text-secondary); }
 
+/* ══════════ FLYWHEEL & MARKETS GRIDS ══════════ */
+.flywheel-grid { grid-template-columns: repeat(4, 1fr); }
+.markets-grid { grid-template-columns: repeat(3, 1fr); }
+
 /* ══════════ NEIGHBORHOODS ══════════ */
 .neighborhoods-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--grid-gap); margin-top: 3rem; }
 .neighborhood-card {
@@ -581,6 +585,8 @@ body::before {
 
 /* ══════════ RESPONSIVE ══════════ */
 @media (max-width: 1024px) {
+  .flywheel-grid { grid-template-columns: repeat(2, 1fr); }
+  .markets-grid { grid-template-columns: repeat(2, 1fr); }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .approach-grid { grid-template-columns: 1fr; gap: 1px; background: var(--border); }
   .approach-step { border-right: none; border-bottom: 1px solid var(--border); }
@@ -616,6 +622,8 @@ body::before {
   .about .container { grid-template-columns: 1fr; }
   .about-portrait { max-height: 400px; }
   .services-grid { grid-template-columns: 1fr; }
+  .flywheel-grid { grid-template-columns: 1fr; }
+  .markets-grid { grid-template-columns: 1fr; }
   .neighborhoods-grid { grid-template-columns: 1fr; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .insights-grid { grid-template-columns: 1fr; }
@@ -750,7 +758,7 @@ body::before {
     <div class="section-label">The Business Model</div>
     <div class="section-title">The Investor<br><em>Flywheel</em></div>
     <p style="color: var(--text-secondary); max-width: 700px; margin-bottom: 3rem; font-size: 1.05rem;">Most agents sell houses. I run a deal machine. Here's how I work with investors to create profitable outcomes on repeat &mdash; and why my clients keep coming back.</p>
-    <div class="services-grid reveal-stagger" style="grid-template-columns: repeat(4, 1fr);">
+    <div class="services-grid reveal-stagger flywheel-grid">
       <div class="service-card">
         <div class="service-number">01</div>
         <h3>I Source<br>the Deal</h3>
@@ -813,7 +821,7 @@ body::before {
     <div class="section-label">Where the Deals Are</div>
     <div class="section-title">Investment<br><em>Markets</em></div>
     <p style="color: var(--text-secondary); max-width: 700px; margin-bottom: 3rem; font-size: 1.05rem;">I know every street, every pocket, and every opportunity zone across Lane County. Here's where the smart money is moving right now.</p>
-    <div class="services-grid reveal-stagger" style="grid-template-columns: repeat(3, 1fr);">
+    <div class="services-grid reveal-stagger markets-grid">
       <div class="service-card">
         <div class="service-number" style="opacity:0.15;">$$</div>
         <h3>Bethel-Danebo<br>&amp; West Eugene</h3>
