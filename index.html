@@ -128,7 +128,7 @@
   --container-narrow: 900px;
 }
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: var(--brand-dark) var(--bg-primary); }
+html { scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: var(--brand-dark) var(--bg-primary); overflow-x: hidden; max-width: 100vw; }
 body {
   font-family: var(--font-body);
   background: var(--bg-primary);
@@ -137,6 +137,7 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  max-width: 100vw;
 }
 a { color: var(--brand); text-decoration: none; transition: all 0.3s ease; }
 a:hover { color: var(--brand-light); }
@@ -236,7 +237,7 @@ body::before {
 
 .hero-bg {
   position: absolute; inset: 0; z-index: 0;
-  background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1920&q=80');
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Eugene%2C_Oregon_from_Skinner_Butte.jpg/1920px-Eugene%2C_Oregon_from_Skinner_Butte.jpg');
   background-size: cover; background-position: center 40%;
 }
 .hero-bg::before {
@@ -321,7 +322,7 @@ body::before {
 .trust-item-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); }
 
 /* ══════════ ABOUT ══════════ */
-.about { background: linear-gradient(rgba(8, 10, 6, 0.92), rgba(8, 10, 6, 0.97)), url('https://images.unsplash.com/photo-1582407947092-50af6a41e6dd?w=1920&q=80') center/cover no-repeat; }
+.about { background: linear-gradient(rgba(8, 10, 6, 0.92), rgba(8, 10, 6, 0.97)), url('https://images.unsplash.com/photo-1542361345-89e58247f2d5?w=1920&q=80') center/cover no-repeat; }
 .about .container { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 6vw, 6rem); align-items: center; }
 .about-portrait {
   position: relative; aspect-ratio: 3/4; background: var(--bg-card); border: 1px solid var(--border); overflow: hidden;
@@ -606,8 +607,10 @@ body::before {
   .nav-cta { font-size: 0.7rem; padding: 0.5rem 1rem; }
 }
 @media (max-width: 768px) {
+  .container { padding: 0 1rem; }
   .email-cta .container { grid-template-columns: 1fr; }
-  .email-form { max-width: 100%; }
+  .email-form { max-width: 100%; grid-template-columns: 1fr; }
+  .email-form input[type="email"] { border-right: 1px solid var(--border-hover); }
   .about .container { grid-template-columns: 1fr; }
   .about-portrait { max-height: 400px; }
   .services-grid { grid-template-columns: 1fr; }
@@ -617,14 +620,35 @@ body::before {
   .insights-grid .insight-card:first-child { grid-column: span 1; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { grid-template-columns: 1fr; text-align: center; }
-  .footer-bottom-links { justify-content: center; }
+  .footer-bottom-links { justify-content: center; flex-wrap: wrap; }
   .cta-contact { flex-direction: column; gap: 1.5rem; }
+  .hero h1 { font-size: clamp(2.2rem, 7vw, 3.5rem); }
+  .hero-content { padding: clamp(7rem, 12vh, 10rem) 1rem clamp(2rem, 4vh, 4rem); }
+  .trust-bar .container { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .approach-grid { grid-template-columns: 1fr; gap: 1px; background: var(--border); }
+  .approach-step { border-right: none; border-bottom: 1px solid var(--border); }
+  .approach-step:last-child { border-bottom: none; }
+  .faq-question { padding: 1.25rem 1rem; font-size: 1.1rem; gap: 1rem; }
+  .faq-answer-inner { padding: 0 1rem 1.25rem; }
+  .section { padding: clamp(3rem, 6vw, 6rem) 0; }
+  .cta-section { padding: clamp(3rem, 8vw, 6rem) 0; }
 }
 @media (max-width: 480px) {
+  .container { padding: 0 0.75rem; }
   .hero-actions { flex-direction: column; width: 100%; }
-  .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+  .hero-actions .btn-primary, .hero-actions .btn-secondary { width: 100%; justify-content: center; }
   .about-credentials { grid-template-columns: 1fr; }
-  .trust-bar .container { grid-template-columns: repeat(2, 1fr); }
+  .trust-bar .container { grid-template-columns: 1fr; gap: 1rem; }
+  .trust-bar { padding: 1.5rem 0; }
+  .trust-item-value { font-size: 1.6rem; }
+  .service-card { padding: 1.5rem; }
+  .hero h1 { font-size: clamp(1.8rem, 6vw, 2.8rem); }
+  .hero-content { padding: clamp(6rem, 10vh, 8rem) 0.75rem clamp(1.5rem, 3vh, 3rem); }
+  .section-title { font-size: clamp(1.8rem, 5vw, 2.5rem); }
+  .cta-section h2 { font-size: clamp(2rem, 5vw, 3rem); }
+  .footer { padding: 3rem 0 1.5rem; }
+  .footer-grid { gap: 2rem; }
+  .email-form button { padding: 1rem 1.25rem; font-size: 0.72rem; }
 }
 </style>
 </head>
@@ -782,7 +806,7 @@ body::before {
 </section>
 
 <!-- INVESTMENT MARKETS -->
-<section class="section approach" id="markets" style="background: linear-gradient(rgba(8, 10, 6, 0.93), rgba(13, 16, 10, 0.97)), url('https://images.unsplash.com/photo-1605146769289-440113cc3d00?w=1920&q=80') center/cover no-repeat;">
+<section class="section approach" id="markets" style="background: linear-gradient(rgba(8, 10, 6, 0.93), rgba(13, 16, 10, 0.97)), url('https://images.unsplash.com/photo-1511497584788-876760111969?w=1920&q=80') center/cover no-repeat;">
   <div class="container">
     <div class="section-label">Where the Deals Are</div>
     <div class="section-title">Investment<br><em>Markets</em></div>

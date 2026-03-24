@@ -32,7 +32,7 @@
 
 /* ══════════ RESET & BASE ══════════ */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: var(--brand-dark) var(--bg-primary); }
+html { scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: var(--brand-dark) var(--bg-primary); overflow-x: hidden; max-width: 100vw; }
 body {
   font-family: var(--font-body);
   background: var(--bg-primary);
@@ -41,6 +41,7 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  max-width: 100vw;
 }
 a { color: var(--brand); text-decoration: none; transition: all 0.3s ease; }
 a:hover { color: var(--brand-light); }
@@ -491,21 +492,22 @@ a.btn-outline:hover, a.btn.btn-outline:hover, .btn-outline:hover { border-color:
 .email-cta-note { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.75rem; }
 
 /* ══════════ FOOTER ══════════ */
-.footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 4rem 0 2rem; }
+.footer { background: #f5f5f0; border-top: 1px solid #e0e0d8; padding: 4rem 0 2rem; color: #1a1a1a; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: clamp(2rem, 4vw, 4rem); margin-bottom: 3rem; }
-.footer-brand-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; margin-bottom: 1rem; }
-.footer-brand-name span { color: var(--brand); }
-.footer-brand-desc { color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 1.5rem; max-width: 320px; }
+.footer-brand-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; margin-bottom: 1rem; color: #1a1a1a; }
+.footer-brand-name span { color: var(--brand-dark); }
+.footer-brand-desc { color: #4a4a4a; font-size: 0.88rem; margin-bottom: 1.5rem; max-width: 320px; }
 .footer-logos { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
-.footer-logo-badge { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); padding: 0.5rem 0.75rem; border: 1px solid var(--border); }
-.footer h4 { font-family: var(--font-body); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+.footer-logo-badge { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #666; padding: 0.5rem 0.75rem; border: 1px solid #d0d0c8; }
+.footer h4 { font-family: var(--font-body); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #666; margin-bottom: 1.25rem; }
 .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
-.footer-links a { color: var(--text-secondary); font-size: 0.9rem; transition: color 0.3s; }
-.footer-links a:hover { color: var(--brand); }
-.footer-bottom { padding-top: 2rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; }
-.footer-bottom p { font-size: 0.78rem; color: var(--text-muted); }
+.footer-links a { color: #4a4a4a; font-size: 0.9rem; transition: color 0.3s; }
+.footer-links a:hover { color: var(--brand-dark); }
+.footer-bottom { padding-top: 2rem; border-top: 1px solid #d0d0c8; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; }
+.footer-bottom p { font-size: 0.78rem; color: #666; }
 .footer-bottom-links { display: flex; gap: 1.5rem; }
-.footer-bottom-links a { font-size: 0.75rem; color: var(--text-muted); }
+.footer-bottom-links a { font-size: 0.75rem; color: #666; }
+.footer-bottom-links a:hover { color: #1a1a1a; }
 
 /* ═══════════════════════════════════════════════════════════════════
    INNER PAGE STYLES — New additions for multi-page site
@@ -1032,8 +1034,10 @@ a.btn-outline:hover, a.btn.btn-outline:hover, .btn-outline:hover { border-color:
 
 @media (max-width: 768px) {
   .nav-logo { height: 28px; }
+  .container { padding: 0 1rem; }
   .email-cta .container { grid-template-columns: 1fr; }
-  .email-form { max-width: 100%; }
+  .email-form { max-width: 100%; grid-template-columns: 1fr; }
+  .email-form input[type="email"] { border-right: 1px solid var(--border-hover); }
   .about .container { grid-template-columns: 1fr; }
   .about-portrait { max-height: 400px; }
   .services-grid { grid-template-columns: 1fr; }
@@ -1043,9 +1047,18 @@ a.btn-outline:hover, a.btn.btn-outline:hover, .btn-outline:hover { border-color:
   .insights-grid .insight-card:first-child { grid-column: span 1; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { grid-template-columns: 1fr; text-align: center; }
-  .footer-bottom-links { justify-content: center; }
+  .footer-bottom-links { justify-content: center; flex-wrap: wrap; }
   .cta-contact { flex-direction: column; gap: 1.5rem; }
   .hero h1 { font-size: clamp(2.2rem, 7vw, 3.5rem); }
+  .hero-content { padding: clamp(7rem, 12vh, 10rem) 1rem clamp(2rem, 4vh, 4rem); }
+  .trust-bar .container { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .approach-grid { grid-template-columns: 1fr; gap: 1px; background: var(--border); }
+  .approach-step { border-right: none; border-bottom: 1px solid var(--border); }
+  .approach-step:last-child { border-bottom: none; }
+  .faq-question { padding: 1.25rem 1rem; font-size: 1.1rem; gap: 1rem; }
+  .faq-answer-inner { padding: 0 1rem 1.25rem; }
+  .section { padding: clamp(3rem, 6vw, 6rem) 0; }
+  .cta-section { padding: clamp(3rem, 8vw, 6rem) 0; }
 
   /* Inner page responsive */
   .stats-grid { grid-template-columns: 1fr; }
@@ -1061,10 +1074,21 @@ a.btn-outline:hover, a.btn.btn-outline:hover, .btn-outline:hover { border-color:
 
 @media (max-width: 480px) {
   .nav-logo { height: 24px; }
+  .container { padding: 0 0.75rem; }
   .hero-actions { flex-direction: column; width: 100%; }
-  .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+  .hero-actions .btn-primary, .hero-actions .btn-secondary { width: 100%; justify-content: center; }
   .about-credentials { grid-template-columns: 1fr; }
-  .trust-bar .container { grid-template-columns: repeat(2, 1fr); }
+  .trust-bar .container { grid-template-columns: 1fr; gap: 1rem; }
+  .trust-bar { padding: 1.5rem 0; }
+  .trust-item-value { font-size: 1.6rem; }
+  .service-card { padding: 1.5rem; }
+  .hero h1 { font-size: clamp(1.8rem, 6vw, 2.8rem); }
+  .hero-content { padding: clamp(6rem, 10vh, 8rem) 0.75rem clamp(1.5rem, 3vh, 3rem); }
+  .section-title { font-size: clamp(1.8rem, 5vw, 2.5rem); }
+  .cta-section h2 { font-size: clamp(2rem, 5vw, 3rem); }
+  .footer { padding: 3rem 0 1.5rem; }
+  .footer-grid { gap: 2rem; }
   .breadcrumb { padding: 4rem 0 0.5rem; }
   .breadcrumb-list { font-size: 0.65rem; }
+  .email-form button { padding: 1rem 1.25rem; font-size: 0.72rem; }
 }
