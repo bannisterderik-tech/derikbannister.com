@@ -508,6 +508,7 @@ a.btn-outline:hover, a.btn.btn-outline:hover, .btn-outline:hover { border-color:
 .footer-bottom-links { display: flex; gap: 1.5rem; }
 .footer-bottom-links a { font-size: 0.75rem; color: #666; }
 .footer-bottom-links a:hover { color: #1a1a1a; }
+.footer-associated { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: #999; margin-bottom: 0.25rem; }
 
 /* ═══════════════════════════════════════════════════════════════════
    INNER PAGE STYLES — New additions for multi-page site

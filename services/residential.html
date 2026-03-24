@@ -124,7 +124,7 @@ body::before { content: ''; position: fixed; inset: 0; opacity: 0.025; backgroun
 .feature-card p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; }
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 5vw, 5rem); margin-top: 2rem; }
 .two-col h3 { margin-top: 0; }
-.stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin: 3rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin: 3rem 0; border-top: 1px solid #e0e0d8; border-bottom: 1px solid var(--border); }
 .stat-item { padding: 2rem; text-align: center; border-right: 1px solid var(--border); }
 .stat-item:last-child { border-right: none; }
 .stat-number { font-family: var(--font-display); font-size: clamp(2rem, 3vw, 2.5rem); font-weight: 300; color: var(--brand); line-height: 1; margin-bottom: 0.5rem; }
@@ -142,7 +142,7 @@ body::before { content: ''; position: fixed; inset: 0; opacity: 0.025; backgroun
 .cta-contact-item { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
 .cta-contact-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); }
 .cta-contact-value { font-family: var(--font-display); font-size: 1.2rem; color: var(--text-primary); }
-.email-cta { padding: clamp(3rem, 5vw, 5rem) 0; position: relative; overflow: hidden; background: var(--bg-secondary); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.email-cta { padding: clamp(3rem, 5vw, 5rem) 0; position: relative; overflow: hidden; background: var(--bg-secondary); border-top: 1px solid #e0e0d8; border-bottom: 1px solid var(--border); }
 .email-cta .container { display: grid; grid-template-columns: 1.2fr 1fr; gap: clamp(2rem, 4vw, 4rem); align-items: center; }
 .email-cta-content h3 { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 300; line-height: 1.15; margin-bottom: 0.75rem; margin-top: 0; }
 .email-cta-content h3 em { font-style: italic; color: var(--brand); }
@@ -160,19 +160,19 @@ body::before { content: ''; position: fixed; inset: 0; opacity: 0.025; backgroun
 .related-service-card:hover { border-color: var(--border-hover); color: var(--text-primary); transform: translateY(-3px); }
 .related-service-card h4 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 400; margin-bottom: 0.5rem; }
 .related-service-card p { color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; }
-.footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 4rem 0 2rem; }
+.footer { background: #f5f5f0; border-top: 1px solid #e0e0d8; padding: 4rem 0 2rem; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: clamp(2rem, 4vw, 4rem); margin-bottom: 3rem; }
 .footer-brand-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; margin-bottom: 1rem; }
 .footer-brand-name span { color: var(--brand); }
-.footer-brand-desc { color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 1.5rem; max-width: 320px; }
-.footer h4 { font-family: var(--font-body); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+.footer-brand-desc { color: #4a4a4a; font-size: 0.88rem; margin-bottom: 1.5rem; max-width: 320px; }
+.footer h4 { font-family: var(--font-body); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #666; margin-bottom: 1.25rem; }
 .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
-.footer-links a { color: var(--text-secondary); font-size: 0.9rem; transition: color 0.3s; }
+.footer-links a { color: #4a4a4a; font-size: 0.9rem; transition: color 0.3s; }
 .footer-links a:hover { color: var(--brand); }
-.footer-bottom { padding-top: 2rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; }
-.footer-bottom p { font-size: 0.78rem; color: var(--text-muted); }
+.footer-bottom { padding-top: 2rem; border-top: 1px solid #e0e0d8; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; }
+.footer-bottom p { font-size: 0.78rem; color: #666; }
 .footer-bottom-links { display: flex; gap: 1.5rem; }
-.footer-bottom-links a { font-size: 0.75rem; color: var(--text-muted); }
+.footer-bottom-links a { font-size: 0.75rem; color: #666; }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -414,6 +414,7 @@ body::before { content: ''; position: fixed; inset: 0; opacity: 0.025; backgroun
       <div>
         <div class="footer-brand-name">Derik <span>Bannister</span></div>
         <p class="footer-brand-desc">Strategic real estate services across Lane County, Oregon. Luxury homes, investment properties, multi-family rentals, and fix &amp; flip opportunities.</p>
+        <p class="footer-associated">Associated with</p>
         <img src="/images/logo.png" alt="Eugene RealEstate.com | The Operative Group | Powered by Real" class="footer-logo-img" />
       </div>
       <div>
