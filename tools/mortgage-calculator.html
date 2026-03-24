@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mortgage Payment Calculator | Eugene Oregon | Derik Bannister</title>
+<meta name="description" content="Free mortgage payment calculator for Eugene, Oregon home buyers. Calculate monthly P&I, property tax, insurance, total payments, and total interest over the life of your loan.">
+<meta name="keywords" content="mortgage calculator Eugene Oregon, home loan calculator, monthly payment calculator, amortization calculator, Lane County mortgage, Oregon home loan">
+<meta name="author" content="Derik Bannister">
+<meta property="og:title" content="Mortgage Payment Calculator | Eugene Oregon">
+<meta property="og:description" content="Calculate monthly mortgage payments, total interest, and view an amortization summary for homes in Eugene, Oregon.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://derikbannister.com/tools/mortgage-calculator.html">
+<link rel="canonical" href="https://derikbannister.com/tools/mortgage-calculator.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://derikbannister.com"},
+    {"@type": "ListItem", "position": 2, "name": "Investor Tools", "item": "https://derikbannister.com/tools/"},
+    {"@type": "ListItem", "position": 3, "name": "Mortgage Calculator", "item": "https://derikbannister.com/tools/mortgage-calculator.html"}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+
+<style>
+:root {
+  --brand: #80bf4d; --brand-light: #9ed474; --brand-dark: #5a8a33;
+  --brand-glow: rgba(128,191,77,0.15); --brand-glow-strong: rgba(128,191,77,0.3);
+  --bg-primary: #080a06; --bg-secondary: #0d100a; --bg-card: #111410;
+  --bg-card-hover: #161a13; --bg-elevated: #1a1f16;
+  --text-primary: #f0f2ed; --text-secondary: #a8b09e; --text-muted: #6b7360;
+  --text-accent: var(--brand);
+  --border: rgba(128,191,77,0.08); --border-hover: rgba(128,191,77,0.2);
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --grid-gap: clamp(1rem, 2vw, 2rem);
+  --section-padding: clamp(4rem, 8vw, 8rem);
+  --container-max: 1400px;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--bg-primary); color: var(--text-primary); font-size: clamp(15px, 1.1vw, 17px); line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+.container { max-width: var(--container-max); margin: 0 auto; padding: 0 clamp(1.5rem, 4vw, 3rem); }
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.25rem 0; transition: all 0.4s; background: transparent; }
+.nav.scrolled { background: rgba(8,10,6,0.95); backdrop-filter: blur(20px); padding: 0.75rem 0; border-bottom: 1px solid var(--border); }
+.nav .container { display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 2rem; }
+.nav-brand { text-decoration: none; display: flex; align-items: center; }
+.nav-logo { height: 45px; width: auto; transition: height 0.3s; }
+.nav.scrolled .nav-logo { height: 36px; }
+.nav-links { list-style: none; display: flex; gap: clamp(1.5rem, 2.5vw, 2.5rem); justify-self: center; }
+.nav-links a { text-decoration: none; color: var(--text-secondary); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.3s; }
+.nav-links a:hover { color: var(--brand); }
+.nav-cta { text-decoration: none; color: var(--brand); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+.nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text-primary); margin: 5px 0; transition: 0.3s; }
+.tool-hero { padding: calc(var(--section-padding) + 4rem) 0 var(--section-padding); text-align: center; position: relative; }
+.tool-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 50% 0%, rgba(128,191,77,0.06) 0%, transparent 60%); pointer-events: none; }
+.breadcrumbs { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 1.5rem; letter-spacing: 0.04em; text-transform: uppercase; }
+.breadcrumbs a { color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+.breadcrumbs a:hover { color: var(--brand); }
+.breadcrumbs span { margin: 0 0.5rem; }
+.tool-hero h1 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.1; margin-bottom: 1rem; }
+.tool-hero h1 em { font-style: italic; color: var(--brand); }
+.tool-hero p { color: var(--text-secondary); font-size: 1rem; max-width: 600px; margin: 0 auto; }
+.calc-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 3vw, 3rem); padding-bottom: var(--section-padding); align-items: start; }
+.calc-inputs { background: var(--bg-card); border: 1px solid var(--border); padding: clamp(1.5rem, 3vw, 2.5rem); }
+.calc-results { background: var(--bg-card); border: 1px solid var(--brand-dark); padding: clamp(1.5rem, 3vw, 2.5rem); position: sticky; top: 100px; }
+.calc-section-title { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border); }
+.calc-section-title em { color: var(--brand); font-style: italic; }
+.form-group { margin-bottom: 1.25rem; }
+.form-group label { display: block; font-size: 0.8rem; font-weight: 500; color: var(--text-secondary); margin-bottom: 0.35rem; letter-spacing: 0.02em; }
+.form-group .tooltip { font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.35rem; line-height: 1.4; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-group input {
+  width: 100%; padding: 0.75rem 1rem; background: var(--bg-primary); border: 1px solid var(--border-hover);
+  color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; outline: none; transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-group input:focus { border-color: var(--brand); box-shadow: 0 0 0 2px var(--brand-glow); }
+.form-group input::placeholder { color: var(--text-muted); }
+
+/* Term Toggle */
+.term-toggle { display: flex; gap: 0; margin-bottom: 1.25rem; }
+.term-toggle button {
+  flex: 1; padding: 0.75rem 1rem; background: var(--bg-primary); border: 1px solid var(--border-hover);
+  color: var(--text-secondary); font-family: var(--font-body); font-size: 0.85rem; font-weight: 500;
+  cursor: pointer; transition: all 0.3s; letter-spacing: 0.02em;
+}
+.term-toggle button:first-child { border-right: none; }
+.term-toggle button.active { background: var(--brand); color: var(--bg-primary); border-color: var(--brand); font-weight: 600; }
+.term-toggle button:hover:not(.active) { background: var(--bg-elevated); color: var(--text-primary); }
+
+.result-item { display: flex; justify-content: space-between; align-items: baseline; padding: 0.75rem 0; border-bottom: 1px solid var(--border); }
+.result-item:last-child { border-bottom: none; }
+.result-label { font-size: 0.85rem; color: var(--text-secondary); }
+.result-value { font-family: var(--font-display); font-size: 1.3rem; font-weight: 500; color: var(--text-primary); }
+.result-value.highlight { color: var(--brand); font-size: 1.5rem; }
+.result-value.subtle { font-size: 1.1rem; color: var(--text-secondary); }
+.result-divider { height: 1px; background: var(--border-hover); margin: 0.5rem 0; }
+.results-header { font-family: var(--font-display); font-size: 1.1rem; color: var(--text-muted); margin-top: 1rem; margin-bottom: 0.5rem; font-weight: 400; }
+
+/* Amortization Table */
+.amort-table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.8rem; }
+.amort-table th { text-align: left; color: var(--text-muted); font-weight: 500; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.6rem 0.5rem; border-bottom: 1px solid var(--border-hover); }
+.amort-table td { padding: 0.5rem 0.5rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+.amort-table tr:last-child td { border-bottom: none; }
+.amort-table td:first-child { color: var(--text-primary); font-weight: 500; }
+
+/* Payment Donut */
+.payment-visual { display: flex; align-items: center; gap: 1.5rem; margin: 1.5rem 0; }
+.donut-chart { width: 120px; height: 120px; border-radius: 50%; position: relative; flex-shrink: 0; }
+.donut-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+.donut-center .amount { font-family: var(--font-display); font-size: 1.2rem; font-weight: 500; color: var(--brand); display: block; }
+.donut-center .label { font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.donut-legend { display: flex; flex-direction: column; gap: 0.5rem; }
+.legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; color: var(--text-secondary); }
+.legend-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+
+.cta-section { padding: var(--section-padding) 0; text-align: center; border-top: 1px solid var(--border); background: linear-gradient(135deg, rgba(128,191,77,0.05) 0%, var(--bg-primary) 50%, rgba(128,191,77,0.03) 100%); }
+.cta-section h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 300; margin-bottom: 1rem; }
+.cta-section h2 em { font-style: italic; color: var(--brand); }
+.cta-section p { color: var(--text-secondary); max-width: 550px; margin: 0 auto 2rem; }
+.cta-btn { display: inline-block; padding: 1rem 2.5rem; background: var(--brand); color: var(--bg-primary); text-decoration: none; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s; border: 1px solid var(--brand); }
+.cta-btn:hover { background: var(--brand-light); box-shadow: 0 0 30px var(--brand-glow-strong); }
+.footer { border-top: 1px solid var(--border); padding: var(--section-padding) 0 2rem; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: clamp(2rem, 4vw, 4rem); margin-bottom: 3rem; }
+.footer-brand-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; margin-bottom: 0.5rem; }
+.footer-brand-name span { color: var(--brand); }
+.footer-logo-img { height: 32px; margin-bottom: 1rem; }
+.footer-brand-desc { color: var(--text-muted); font-size: 0.82rem; line-height: 1.6; }
+.footer h4 { font-family: var(--font-display); font-size: 1rem; font-weight: 400; margin-bottom: 1rem; color: var(--text-secondary); }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 0.5rem; }
+.footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.82rem; transition: color 0.3s; }
+.footer-links a:hover { color: var(--brand); }
+.footer-bottom { border-top: 1px solid var(--border); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-bottom p { color: var(--text-muted); font-size: 0.72rem; }
+.footer-bottom-links a { color: var(--text-muted); text-decoration: none; font-size: 0.72rem; margin-left: 1.5rem; transition: color 0.3s; }
+.footer-bottom-links a:hover { color: var(--brand); }
+@media (max-width: 900px) { .calc-layout { grid-template-columns: 1fr; } .calc-results { position: static; } }
+@media (max-width: 768px) { .form-row { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; } .nav-links { display: none; } .nav-toggle { display: block; } .payment-visual { flex-direction: column; align-items: flex-start; } }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="container">
+    <a href="/" class="nav-brand">
+      <div class="nav-brand-text">Derik <span>Bannister</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/services/">Services</a></li>
+      <li><a href="/neighborhoods/">Neighborhoods</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/faq.html">FAQ</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <a href="tel:5307367085" class="nav-cta">530-736-7085</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="tool-hero">
+  <div class="container">
+    <div class="breadcrumbs">
+      <a href="/">Home</a><span>&rsaquo;</span><a href="/tools/">Tools</a><span>&rsaquo;</span>Mortgage Calculator
+    </div>
+    <h1>Mortgage <em>Payment Calculator</em></h1>
+    <p>Calculate monthly payments, total interest, and view a year-by-year amortization summary for any home purchase.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="calc-layout">
+
+      <div class="calc-inputs">
+        <div class="calc-section-title">Loan <em>Details</em></div>
+
+        <div class="form-group">
+          <label>Home Price</label>
+          <div class="tooltip">Purchase price or current market value</div>
+          <input type="text" id="homePrice" placeholder="$450,000" value="450000" inputmode="decimal">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Down Payment %</label>
+            <div class="tooltip">Conventional loans typically require 5-20%</div>
+            <input type="text" id="downPayment" placeholder="20" value="20" inputmode="decimal">
+          </div>
+          <div class="form-group">
+            <label>Interest Rate %</label>
+            <div class="tooltip">Annual interest rate from your lender</div>
+            <input type="text" id="interestRate" placeholder="6.75" value="6.75" inputmode="decimal">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Loan Term</label>
+          <div class="tooltip">Choose between a 15-year or 30-year fixed mortgage</div>
+        </div>
+        <div class="term-toggle">
+          <button class="term-btn" data-term="15" onclick="setTerm(15)">15 Years</button>
+          <button class="term-btn active" data-term="30" onclick="setTerm(30)">30 Years</button>
+        </div>
+
+        <div class="calc-section-title" style="margin-top:1.5rem;">Tax &amp; <em>Insurance Estimates</em></div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Property Tax Rate %</label>
+            <div class="tooltip">Annual tax as % of home value; Oregon averages ~1.0%</div>
+            <input type="text" id="taxRate" placeholder="1.0" value="1.0" inputmode="decimal">
+          </div>
+          <div class="form-group">
+            <label>Annual Insurance</label>
+            <div class="tooltip">Homeowner's insurance premium per year</div>
+            <input type="text" id="annualInsurance" placeholder="$1,800" value="1800" inputmode="decimal">
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-results">
+        <div class="calc-section-title">Payment <em>Summary</em></div>
+
+        <div class="payment-visual">
+          <div class="donut-chart" id="donutChart"></div>
+          <div class="donut-legend">
+            <div class="legend-item"><span class="legend-dot" style="background:#80bf4d"></span>Principal &amp; Interest</div>
+            <div class="legend-item"><span class="legend-dot" style="background:#5a8a33"></span>Property Tax</div>
+            <div class="legend-item"><span class="legend-dot" style="background:#3d5e22"></span>Insurance</div>
+          </div>
+        </div>
+
+        <div class="result-item">
+          <span class="result-label">Monthly P&amp;I</span>
+          <span class="result-value" id="resPI">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Monthly Property Tax</span>
+          <span class="result-value subtle" id="resTax">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Monthly Insurance</span>
+          <span class="result-value subtle" id="resInsurance">--</span>
+        </div>
+        <div class="result-item" style="border-top: 1px solid var(--border-hover); margin-top:0.25rem; padding-top:0.75rem;">
+          <span class="result-label" style="font-weight:600; color:var(--text-primary);">Total Monthly Payment</span>
+          <span class="result-value highlight" id="resTotal">--</span>
+        </div>
+
+        <div class="result-divider"></div>
+        <div class="results-header">Loan Overview</div>
+
+        <div class="result-item">
+          <span class="result-label">Loan Amount</span>
+          <span class="result-value" id="resLoan">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Down Payment</span>
+          <span class="result-value" id="resDown">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Total Interest Paid</span>
+          <span class="result-value" id="resTotalInterest">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Total Cost of Loan</span>
+          <span class="result-value" id="resTotalCost">--</span>
+        </div>
+
+        <div class="result-divider"></div>
+        <div class="results-header">Amortization Summary (by year)</div>
+        <table class="amort-table" id="amortTable">
+          <thead>
+            <tr><th>Year</th><th>Principal</th><th>Interest</th><th>Balance</th></tr>
+          </thead>
+          <tbody id="amortBody"></tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready to Get <em>Pre-Approved</em>?</h2>
+    <p>I work with trusted local lenders who offer competitive rates for Eugene and Lane County home buyers. Let me connect you with the right financing partner.</p>
+    <a href="/contact.html" class="cta-btn">Get Started</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Derik <span>Bannister</span></div>
+        <img src="/images/logo.png" alt="Eugene RealEstate.com | The Operative Group | Powered by Real" class="footer-logo-img" />
+        <p class="footer-brand-desc">Strategic real estate services across Lane County, Oregon. Luxury homes, investment properties, multi-family rentals, and fix &amp; flip opportunities.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="/services/luxury.html">Luxury Homes</a></li>
+          <li><a href="/services/residential.html">Residential</a></li>
+          <li><a href="/services/investment.html">Investment Properties</a></li>
+          <li><a href="/services/fix-and-flip.html">Fix &amp; Flip</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Neighborhoods</h4>
+        <ul class="footer-links">
+          <li><a href="/neighborhoods/south-eugene.html">South Eugene</a></li>
+          <li><a href="/neighborhoods/whiteaker.html">Whiteaker</a></li>
+          <li><a href="/neighborhoods/gateway-springfield.html">Springfield</a></li>
+          <li><a href="/neighborhoods/river-road.html">River Road</a></li>
+          <li><a href="/neighborhoods/bethel-danebo.html">Bethel-Danebo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:5307367085">530-736-7085</a></li>
+          <li><a href="mailto:derik@theoperativegroup.com">derik@theoperativegroup.com</a></li>
+          <li><a href="https://derikbannister.com">derikbannister.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Derik Bannister &middot; Affiliated with The Operative Group &middot; Brokered by Real Broker, LLC &middot; Oregon License #201261238</p>
+      <div class="footer-bottom-links"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+const navToggle = document.getElementById('navToggle');
+const navLinksEl = document.querySelector('.nav-links');
+navToggle.addEventListener('click', () => { navLinksEl.style.display = navLinksEl.style.display === 'flex' ? 'none' : 'flex'; });
+
+let loanTerm = 30;
+
+function setTerm(t) {
+  loanTerm = t;
+  document.querySelectorAll('.term-btn').forEach(b => {
+    b.classList.toggle('active', parseInt(b.dataset.term) === t);
+  });
+  calc();
+}
+
+function num(id) { return parseFloat(document.getElementById(id).value.replace(/[^0-9.\-]/g, '')) || 0; }
+function fmt(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+
+function calc() {
+  const price = num('homePrice');
+  const dpPct = num('downPayment') / 100;
+  const rate = num('interestRate') / 100;
+  const taxRate = num('taxRate') / 100;
+  const annIns = num('annualInsurance');
+
+  const downAmt = price * dpPct;
+  const loanAmt = price - downAmt;
+  const monthlyRate = rate / 12;
+  const n = loanTerm * 12;
+
+  // Monthly P&I
+  let monthlyPI = 0;
+  if (monthlyRate > 0 && n > 0) {
+    monthlyPI = loanAmt * (monthlyRate * Math.pow(1 + monthlyRate, n)) / (Math.pow(1 + monthlyRate, n) - 1);
+  } else if (n > 0) {
+    monthlyPI = loanAmt / n;
+  }
+
+  const moTax = (price * taxRate) / 12;
+  const moIns = annIns / 12;
+  const totalMonthly = monthlyPI + moTax + moIns;
+  const totalPaid = monthlyPI * n;
+  const totalInterest = totalPaid - loanAmt;
+
+  document.getElementById('resPI').textContent = fmt(monthlyPI);
+  document.getElementById('resTax').textContent = fmt(moTax);
+  document.getElementById('resInsurance').textContent = fmt(moIns);
+  document.getElementById('resTotal').textContent = fmt(totalMonthly);
+  document.getElementById('resLoan').textContent = fmt(loanAmt);
+  document.getElementById('resDown').textContent = fmt(downAmt);
+  document.getElementById('resTotalInterest').textContent = fmt(totalInterest);
+  document.getElementById('resTotalCost').textContent = fmt(totalPaid);
+
+  // Donut chart via conic-gradient
+  const piPct = totalMonthly > 0 ? (monthlyPI / totalMonthly) * 100 : 0;
+  const taxPct = totalMonthly > 0 ? (moTax / totalMonthly) * 100 : 0;
+  const insPct = totalMonthly > 0 ? (moIns / totalMonthly) * 100 : 0;
+  const p1 = piPct;
+  const p2 = piPct + taxPct;
+  const donut = document.getElementById('donutChart');
+  donut.style.background = `conic-gradient(#80bf4d 0% ${p1}%, #5a8a33 ${p1}% ${p2}%, #3d5e22 ${p2}% 100%)`;
+  donut.innerHTML = `<div class="donut-center"><span class="amount">${fmt(totalMonthly)}</span><span class="label">/ month</span></div>`;
+
+  // Amortization table (yearly summary)
+  const tbody = document.getElementById('amortBody');
+  tbody.innerHTML = '';
+  let balance = loanAmt;
+  const years = loanTerm;
+  // Show first 5 years, then every 5th year, plus the last year
+  const showYears = new Set();
+  for (let y = 1; y <= Math.min(5, years); y++) showYears.add(y);
+  for (let y = 10; y <= years; y += 5) showYears.add(y);
+  showYears.add(years);
+
+  let lastShown = 0;
+  for (let y = 1; y <= years; y++) {
+    let yearPrincipal = 0;
+    let yearInterest = 0;
+    for (let m = 0; m < 12; m++) {
+      if (balance <= 0) break;
+      const intPayment = balance * monthlyRate;
+      const princPayment = Math.min(monthlyPI - intPayment, balance);
+      yearPrincipal += princPayment;
+      yearInterest += intPayment;
+      balance -= princPayment;
+    }
+    if (balance < 0) balance = 0;
+
+    if (showYears.has(y)) {
+      if (lastShown > 0 && y - lastShown > 1) {
+        const ellipsis = document.createElement('tr');
+        ellipsis.innerHTML = '<td colspan="4" style="text-align:center; color:var(--text-muted); font-size:0.75rem;">...</td>';
+        tbody.appendChild(ellipsis);
+      }
+      const row = document.createElement('tr');
+      row.innerHTML = `<td>${y}</td><td>${fmt(yearPrincipal)}</td><td>${fmt(yearInterest)}</td><td>${fmt(balance)}</td>`;
+      tbody.appendChild(row);
+      lastShown = y;
+    }
+  }
+}
+
+document.querySelectorAll('.calc-inputs input').forEach(el => el.addEventListener('input', calc));
+calc();
+</script>
+<script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rental Property Investment Calculator | Eugene Oregon | Derik Bannister</title>
+<meta name="description" content="Free rental property investment calculator for Eugene, Oregon. Analyze cash flow, cap rate, cash-on-cash return, and GRM instantly. Professional investment analysis tool.">
+<meta name="keywords" content="rental property calculator Eugene Oregon, investment property calculator, cash flow calculator, cap rate calculator, cash on cash return, GRM calculator, Lane County investment">
+<meta name="author" content="Derik Bannister">
+<meta property="og:title" content="Rental Property Investment Calculator | Eugene Oregon">
+<meta property="og:description" content="Analyze cash flow, cap rate, cash-on-cash return, and GRM for any rental property in Eugene, Oregon.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://derikbannister.com/tools/investment-calculator.html">
+<link rel="canonical" href="https://derikbannister.com/tools/investment-calculator.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://derikbannister.com"},
+    {"@type": "ListItem", "position": 2, "name": "Investor Tools", "item": "https://derikbannister.com/tools/"},
+    {"@type": "ListItem", "position": 3, "name": "Rental Property Investment Calculator", "item": "https://derikbannister.com/tools/investment-calculator.html"}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+
+<style>
+:root {
+  --brand: #80bf4d; --brand-light: #9ed474; --brand-dark: #5a8a33;
+  --brand-glow: rgba(128,191,77,0.15); --brand-glow-strong: rgba(128,191,77,0.3);
+  --bg-primary: #080a06; --bg-secondary: #0d100a; --bg-card: #111410;
+  --bg-card-hover: #161a13; --bg-elevated: #1a1f16;
+  --text-primary: #f0f2ed; --text-secondary: #a8b09e; --text-muted: #6b7360;
+  --text-accent: var(--brand);
+  --border: rgba(128,191,77,0.08); --border-hover: rgba(128,191,77,0.2);
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --grid-gap: clamp(1rem, 2vw, 2rem);
+  --section-padding: clamp(4rem, 8vw, 8rem);
+  --container-max: 1400px;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--bg-primary); color: var(--text-primary); font-size: clamp(15px, 1.1vw, 17px); line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+.container { max-width: var(--container-max); margin: 0 auto; padding: 0 clamp(1.5rem, 4vw, 3rem); }
+
+/* Nav */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.25rem 0; transition: all 0.4s; background: transparent; }
+.nav.scrolled { background: rgba(8,10,6,0.95); backdrop-filter: blur(20px); padding: 0.75rem 0; border-bottom: 1px solid var(--border); }
+.nav .container { display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 2rem; }
+.nav-brand { text-decoration: none; display: flex; align-items: center; }
+.nav-logo { height: 45px; width: auto; transition: height 0.3s; }
+.nav.scrolled .nav-logo { height: 36px; }
+.nav-links { list-style: none; display: flex; gap: clamp(1.5rem, 2.5vw, 2.5rem); justify-self: center; }
+.nav-links a { text-decoration: none; color: var(--text-secondary); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.3s; }
+.nav-links a:hover { color: var(--brand); }
+.nav-cta { text-decoration: none; color: var(--brand); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+.nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text-primary); margin: 5px 0; transition: 0.3s; }
+
+/* Hero */
+.tool-hero { padding: calc(var(--section-padding) + 4rem) 0 var(--section-padding); text-align: center; position: relative; }
+.tool-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 50% 0%, rgba(128,191,77,0.06) 0%, transparent 60%); pointer-events: none; }
+.breadcrumbs { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 1.5rem; letter-spacing: 0.04em; text-transform: uppercase; }
+.breadcrumbs a { color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+.breadcrumbs a:hover { color: var(--brand); }
+.breadcrumbs span { margin: 0 0.5rem; }
+.tool-hero h1 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.1; margin-bottom: 1rem; }
+.tool-hero h1 em { font-style: italic; color: var(--brand); }
+.tool-hero p { color: var(--text-secondary); font-size: 1rem; max-width: 600px; margin: 0 auto; }
+
+/* Calculator Layout */
+.calc-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 3vw, 3rem); padding-bottom: var(--section-padding); align-items: start; }
+.calc-inputs { background: var(--bg-card); border: 1px solid var(--border); padding: clamp(1.5rem, 3vw, 2.5rem); }
+.calc-results { background: var(--bg-card); border: 1px solid var(--brand-dark); padding: clamp(1.5rem, 3vw, 2.5rem); position: sticky; top: 100px; }
+.calc-section-title { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border); }
+.calc-section-title em { color: var(--brand); font-style: italic; }
+
+/* Form Groups */
+.form-group { margin-bottom: 1.25rem; }
+.form-group label { display: block; font-size: 0.8rem; font-weight: 500; color: var(--text-secondary); margin-bottom: 0.35rem; letter-spacing: 0.02em; }
+.form-group .tooltip { font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.35rem; line-height: 1.4; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-group input {
+  width: 100%; padding: 0.75rem 1rem; background: var(--bg-primary); border: 1px solid var(--border-hover);
+  color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; outline: none; transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-group input:focus { border-color: var(--brand); box-shadow: 0 0 0 2px var(--brand-glow); }
+.form-group input::placeholder { color: var(--text-muted); }
+
+/* Results */
+.result-item { display: flex; justify-content: space-between; align-items: baseline; padding: 0.75rem 0; border-bottom: 1px solid var(--border); }
+.result-item:last-child { border-bottom: none; }
+.result-label { font-size: 0.85rem; color: var(--text-secondary); }
+.result-value { font-family: var(--font-display); font-size: 1.3rem; font-weight: 500; color: var(--text-primary); }
+.result-value.highlight { color: var(--brand); font-size: 1.5rem; }
+.result-value.negative { color: #e05555; }
+.result-divider { height: 1px; background: var(--border-hover); margin: 0.5rem 0; }
+.results-header { font-family: var(--font-display); font-size: 1.1rem; color: var(--text-muted); margin-top: 1rem; margin-bottom: 0.5rem; font-weight: 400; }
+
+/* CTA */
+.cta-section { padding: var(--section-padding) 0; text-align: center; border-top: 1px solid var(--border); background: linear-gradient(135deg, rgba(128,191,77,0.05) 0%, var(--bg-primary) 50%, rgba(128,191,77,0.03) 100%); }
+.cta-section h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 300; margin-bottom: 1rem; }
+.cta-section h2 em { font-style: italic; color: var(--brand); }
+.cta-section p { color: var(--text-secondary); max-width: 550px; margin: 0 auto 2rem; }
+.cta-btn { display: inline-block; padding: 1rem 2.5rem; background: var(--brand); color: var(--bg-primary); text-decoration: none; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s; border: 1px solid var(--brand); }
+.cta-btn:hover { background: var(--brand-light); box-shadow: 0 0 30px var(--brand-glow-strong); }
+
+/* Footer */
+.footer { border-top: 1px solid var(--border); padding: var(--section-padding) 0 2rem; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: clamp(2rem, 4vw, 4rem); margin-bottom: 3rem; }
+.footer-brand-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; margin-bottom: 0.5rem; }
+.footer-brand-name span { color: var(--brand); }
+.footer-logo-img { height: 32px; margin-bottom: 1rem; }
+.footer-brand-desc { color: var(--text-muted); font-size: 0.82rem; line-height: 1.6; }
+.footer h4 { font-family: var(--font-display); font-size: 1rem; font-weight: 400; margin-bottom: 1rem; color: var(--text-secondary); }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 0.5rem; }
+.footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.82rem; transition: color 0.3s; }
+.footer-links a:hover { color: var(--brand); }
+.footer-bottom { border-top: 1px solid var(--border); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-bottom p { color: var(--text-muted); font-size: 0.72rem; }
+.footer-bottom-links a { color: var(--text-muted); text-decoration: none; font-size: 0.72rem; margin-left: 1.5rem; transition: color 0.3s; }
+.footer-bottom-links a:hover { color: var(--brand); }
+
+@media (max-width: 900px) {
+  .calc-layout { grid-template-columns: 1fr; }
+  .calc-results { position: static; }
+}
+@media (max-width: 768px) {
+  .form-row { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="container">
+    <a href="/" class="nav-brand">
+      <div class="nav-brand-text">Derik <span>Bannister</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/services/">Services</a></li>
+      <li><a href="/neighborhoods/">Neighborhoods</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/faq.html">FAQ</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <a href="tel:5307367085" class="nav-cta">530-736-7085</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="tool-hero">
+  <div class="container">
+    <div class="breadcrumbs">
+      <a href="/">Home</a><span>&rsaquo;</span><a href="/tools/">Tools</a><span>&rsaquo;</span>Investment Calculator
+    </div>
+    <h1>Rental Property <em>Investment Calculator</em></h1>
+    <p>Analyze cash flow, cap rate, cash-on-cash return, and gross rent multiplier for any investment property.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="calc-layout">
+
+      <div class="calc-inputs">
+        <div class="calc-section-title">Property &amp; <em>Financing</em></div>
+
+        <div class="form-group">
+          <label>Purchase Price</label>
+          <div class="tooltip">Total acquisition price of the property</div>
+          <input type="text" id="purchasePrice" placeholder="$300,000" value="300000" inputmode="decimal">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Down Payment %</label>
+            <div class="tooltip">Percentage of purchase price paid upfront</div>
+            <input type="text" id="downPayment" placeholder="25" value="25" inputmode="decimal">
+          </div>
+          <div class="form-group">
+            <label>Interest Rate %</label>
+            <div class="tooltip">Annual mortgage interest rate</div>
+            <input type="text" id="interestRate" placeholder="7.0" value="7.0" inputmode="decimal">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Loan Term (years)</label>
+          <div class="tooltip">Amortization period, typically 30 years</div>
+          <input type="text" id="loanTerm" placeholder="30" value="30" inputmode="decimal">
+        </div>
+
+        <div class="calc-section-title" style="margin-top:2rem;">Income &amp; <em>Expenses</em></div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Monthly Rent</label>
+            <div class="tooltip">Total gross monthly rental income</div>
+            <input type="text" id="monthlyRent" placeholder="$2,200" value="2200" inputmode="decimal">
+          </div>
+          <div class="form-group">
+            <label>Vacancy Rate %</label>
+            <div class="tooltip">Expected vacancy; 5-8% is typical</div>
+            <input type="text" id="vacancyRate" placeholder="5" value="5" inputmode="decimal">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Property Tax / Year</label>
+            <div class="tooltip">Annual property tax assessment</div>
+            <input type="text" id="propertyTax" placeholder="$3,600" value="3600" inputmode="decimal">
+          </div>
+          <div class="form-group">
+            <label>Insurance / Year</label>
+            <div class="tooltip">Annual hazard &amp; liability insurance</div>
+            <input type="text" id="insurance" placeholder="$1,800" value="1800" inputmode="decimal">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Maintenance / Year</label>
+            <div class="tooltip">Repairs, CapEx reserves; 1-2% of value typical</div>
+            <input type="text" id="maintenance" placeholder="$3,000" value="3000" inputmode="decimal">
+          </div>
+          <div class="form-group">
+            <label>Property Management %</label>
+            <div class="tooltip">% of collected rent; 8-10% is standard</div>
+            <input type="text" id="mgmtFee" placeholder="10" value="10" inputmode="decimal">
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-results">
+        <div class="calc-section-title">Investment <em>Analysis</em></div>
+
+        <div class="result-item">
+          <span class="result-label">Monthly Mortgage (P&amp;I)</span>
+          <span class="result-value" id="resMortgage">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Monthly Cash Flow</span>
+          <span class="result-value highlight" id="resCashFlow">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Annual Cash Flow</span>
+          <span class="result-value" id="resAnnualCF">--</span>
+        </div>
+
+        <div class="result-divider"></div>
+        <div class="results-header">Return Metrics</div>
+
+        <div class="result-item">
+          <span class="result-label">Cap Rate</span>
+          <span class="result-value" id="resCapRate">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Cash-on-Cash Return</span>
+          <span class="result-value highlight" id="resCoCReturn">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Gross Rent Multiplier</span>
+          <span class="result-value" id="resGRM">--</span>
+        </div>
+
+        <div class="result-divider"></div>
+        <div class="results-header">Monthly Expense Breakdown</div>
+
+        <div class="result-item">
+          <span class="result-label">Mortgage (P&amp;I)</span>
+          <span class="result-value" id="expMortgage">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Property Tax</span>
+          <span class="result-value" id="expTax">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Insurance</span>
+          <span class="result-value" id="expInsurance">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Maintenance</span>
+          <span class="result-value" id="expMaintenance">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Management Fee</span>
+          <span class="result-value" id="expMgmt">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Vacancy Allowance</span>
+          <span class="result-value" id="expVacancy">--</span>
+        </div>
+        <div class="result-item" style="border-top: 1px solid var(--border-hover); margin-top: 0.25rem; padding-top: 0.75rem;">
+          <span class="result-label" style="font-weight:600; color: var(--text-primary);">Total Monthly Expenses</span>
+          <span class="result-value" id="expTotal">--</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Found a Promising <em>Investment</em>?</h2>
+    <p>Let me run a detailed market analysis and help you negotiate the best deal on investment properties in Eugene and Lane County.</p>
+    <a href="/contact.html" class="cta-btn">Let's Talk Numbers</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Derik <span>Bannister</span></div>
+        <img src="/images/logo.png" alt="Eugene RealEstate.com | The Operative Group | Powered by Real" class="footer-logo-img" />
+        <p class="footer-brand-desc">Strategic real estate services across Lane County, Oregon. Luxury homes, investment properties, multi-family rentals, and fix &amp; flip opportunities.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="/services/luxury.html">Luxury Homes</a></li>
+          <li><a href="/services/residential.html">Residential</a></li>
+          <li><a href="/services/investment.html">Investment Properties</a></li>
+          <li><a href="/services/fix-and-flip.html">Fix &amp; Flip</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Neighborhoods</h4>
+        <ul class="footer-links">
+          <li><a href="/neighborhoods/south-eugene.html">South Eugene</a></li>
+          <li><a href="/neighborhoods/whiteaker.html">Whiteaker</a></li>
+          <li><a href="/neighborhoods/gateway-springfield.html">Springfield</a></li>
+          <li><a href="/neighborhoods/river-road.html">River Road</a></li>
+          <li><a href="/neighborhoods/bethel-danebo.html">Bethel-Danebo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:5307367085">530-736-7085</a></li>
+          <li><a href="mailto:derik@theoperativegroup.com">derik@theoperativegroup.com</a></li>
+          <li><a href="https://derikbannister.com">derikbannister.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Derik Bannister &middot; Affiliated with The Operative Group &middot; Brokered by Real Broker, LLC &middot; Oregon License #201261238</p>
+      <div class="footer-bottom-links"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+const navToggle = document.getElementById('navToggle');
+const navLinksEl = document.querySelector('.nav-links');
+navToggle.addEventListener('click', () => { navLinksEl.style.display = navLinksEl.style.display === 'flex' ? 'none' : 'flex'; });
+
+function num(id) { return parseFloat(document.getElementById(id).value.replace(/[^0-9.\-]/g, '')) || 0; }
+function fmt(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+function pct(n) { return isFinite(n) ? n.toFixed(2) + '%' : '--'; }
+
+function calc() {
+  const price = num('purchasePrice');
+  const dpPct = num('downPayment') / 100;
+  const rate = num('interestRate') / 100;
+  const term = num('loanTerm');
+  const rent = num('monthlyRent');
+  const vacPct = num('vacancyRate') / 100;
+  const tax = num('propertyTax');
+  const ins = num('insurance');
+  const maint = num('maintenance');
+  const mgmtPct = num('mgmtFee') / 100;
+
+  const downAmt = price * dpPct;
+  const loanAmt = price - downAmt;
+  const monthlyRate = rate / 12;
+  const n = term * 12;
+
+  // Monthly mortgage (P&I)
+  let mortgage = 0;
+  if (monthlyRate > 0 && n > 0) {
+    mortgage = loanAmt * (monthlyRate * Math.pow(1 + monthlyRate, n)) / (Math.pow(1 + monthlyRate, n) - 1);
+  } else if (n > 0) {
+    mortgage = loanAmt / n;
+  }
+
+  // Monthly expenses
+  const moTax = tax / 12;
+  const moIns = ins / 12;
+  const moMaint = maint / 12;
+  const moVacancy = rent * vacPct;
+  const effectiveRent = rent - moVacancy;
+  const moMgmt = effectiveRent * mgmtPct;
+  const totalExpenses = mortgage + moTax + moIns + moMaint + moMgmt + moVacancy;
+
+  // Cash flow
+  const moCashFlow = rent - totalExpenses;
+  const annualCF = moCashFlow * 12;
+
+  // NOI (before debt service)
+  const annualGrossRent = rent * 12;
+  const annualEffective = annualGrossRent * (1 - vacPct);
+  const annualOpEx = tax + ins + maint + (annualEffective * mgmtPct);
+  const noi = annualEffective - annualOpEx;
+
+  // Metrics
+  const capRate = price > 0 ? (noi / price) * 100 : 0;
+  const cocReturn = downAmt > 0 ? (annualCF / downAmt) * 100 : 0;
+  const grm = annualGrossRent > 0 ? price / annualGrossRent : 0;
+
+  // Update DOM
+  document.getElementById('resMortgage').textContent = fmt(mortgage);
+  const cfEl = document.getElementById('resCashFlow');
+  cfEl.textContent = fmt(moCashFlow);
+  cfEl.className = 'result-value ' + (moCashFlow >= 0 ? 'highlight' : 'negative');
+  const acfEl = document.getElementById('resAnnualCF');
+  acfEl.textContent = fmt(annualCF);
+  acfEl.className = 'result-value ' + (annualCF < 0 ? 'negative' : '');
+  document.getElementById('resCapRate').textContent = pct(capRate);
+  document.getElementById('resCoCReturn').textContent = pct(cocReturn);
+  document.getElementById('resGRM').textContent = grm > 0 ? grm.toFixed(2) : '--';
+
+  document.getElementById('expMortgage').textContent = fmt(mortgage);
+  document.getElementById('expTax').textContent = fmt(moTax);
+  document.getElementById('expInsurance').textContent = fmt(moIns);
+  document.getElementById('expMaintenance').textContent = fmt(moMaint);
+  document.getElementById('expMgmt').textContent = fmt(moMgmt);
+  document.getElementById('expVacancy').textContent = fmt(moVacancy);
+  document.getElementById('expTotal').textContent = fmt(totalExpenses);
+}
+
+document.querySelectorAll('.calc-inputs input').forEach(el => el.addEventListener('input', calc));
+calc();
+</script>
+<script src="/js/main.js"></script>
+</body>
+</html>

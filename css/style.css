@@ -738,6 +738,25 @@ a.btn-outline:hover, a.btn.btn-outline:hover, .btn-outline:hover { border-color:
 .service-feature p { color: var(--text-secondary); font-size: 0.9rem; }
 
 /* ══════════ NEIGHBORHOOD GUIDE PAGE ══════════ */
+.neighborhood-hero {
+  padding: clamp(8rem, 15vw, 12rem) 0 clamp(4rem, 8vw, 6rem);
+  position: relative;
+  overflow: hidden;
+}
+.neighborhood-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+.neighborhood-tagline {
+  color: var(--text-secondary);
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  max-width: 600px;
+  line-height: 1.7;
+}
 .neighborhood-hero-img {
   width: 100%;
   height: 300px;
@@ -770,6 +789,36 @@ a.btn-outline:hover, a.btn.btn-outline:hover, .btn-outline:hover { border-color:
   width: 6px;
   height: 6px;
   background: var(--brand);
+}
+
+/* ══════════ BLOG HERO ══════════ */
+.blog-hero {
+  padding: clamp(8rem, 15vw, 12rem) 0 clamp(4rem, 8vw, 6rem);
+  position: relative;
+  overflow: hidden;
+}
+.blog-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+.blog-hero-date {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--brand);
+  display: block;
+  margin-bottom: 1.5rem;
+}
+.blog-hero-subtitle {
+  color: var(--text-secondary);
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  max-width: 650px;
+  line-height: 1.7;
 }
 
 /* ══════════ BLOG INDEX ══════════ */

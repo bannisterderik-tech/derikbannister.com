@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fix &amp; Flip Profit Calculator | Eugene Oregon | Derik Bannister</title>
+<meta name="description" content="Free fix and flip profit calculator for Eugene, Oregon. Estimate rehab costs, holding costs, projected profit, ROI, and profit margin for house flipping projects.">
+<meta name="keywords" content="fix and flip calculator Eugene Oregon, house flip profit calculator, rehab cost estimator, ROI calculator, flip profit margin, Lane County fix and flip">
+<meta name="author" content="Derik Bannister">
+<meta property="og:title" content="Fix &amp; Flip Profit Calculator | Eugene Oregon">
+<meta property="og:description" content="Estimate total investment, projected profit, ROI, and profit margin for house flipping projects in Eugene, Oregon.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://derikbannister.com/tools/flip-calculator.html">
+<link rel="canonical" href="https://derikbannister.com/tools/flip-calculator.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://derikbannister.com"},
+    {"@type": "ListItem", "position": 2, "name": "Investor Tools", "item": "https://derikbannister.com/tools/"},
+    {"@type": "ListItem", "position": 3, "name": "Fix & Flip Calculator", "item": "https://derikbannister.com/tools/flip-calculator.html"}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+
+<style>
+:root {
+  --brand: #80bf4d; --brand-light: #9ed474; --brand-dark: #5a8a33;
+  --brand-glow: rgba(128,191,77,0.15); --brand-glow-strong: rgba(128,191,77,0.3);
+  --bg-primary: #080a06; --bg-secondary: #0d100a; --bg-card: #111410;
+  --bg-card-hover: #161a13; --bg-elevated: #1a1f16;
+  --text-primary: #f0f2ed; --text-secondary: #a8b09e; --text-muted: #6b7360;
+  --text-accent: var(--brand);
+  --border: rgba(128,191,77,0.08); --border-hover: rgba(128,191,77,0.2);
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --grid-gap: clamp(1rem, 2vw, 2rem);
+  --section-padding: clamp(4rem, 8vw, 8rem);
+  --container-max: 1400px;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--bg-primary); color: var(--text-primary); font-size: clamp(15px, 1.1vw, 17px); line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+.container { max-width: var(--container-max); margin: 0 auto; padding: 0 clamp(1.5rem, 4vw, 3rem); }
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.25rem 0; transition: all 0.4s; background: transparent; }
+.nav.scrolled { background: rgba(8,10,6,0.95); backdrop-filter: blur(20px); padding: 0.75rem 0; border-bottom: 1px solid var(--border); }
+.nav .container { display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 2rem; }
+.nav-brand { text-decoration: none; display: flex; align-items: center; }
+.nav-logo { height: 45px; width: auto; transition: height 0.3s; }
+.nav.scrolled .nav-logo { height: 36px; }
+.nav-links { list-style: none; display: flex; gap: clamp(1.5rem, 2.5vw, 2.5rem); justify-self: center; }
+.nav-links a { text-decoration: none; color: var(--text-secondary); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.3s; }
+.nav-links a:hover { color: var(--brand); }
+.nav-cta { text-decoration: none; color: var(--brand); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+.nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text-primary); margin: 5px 0; transition: 0.3s; }
+.tool-hero { padding: calc(var(--section-padding) + 4rem) 0 var(--section-padding); text-align: center; position: relative; }
+.tool-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 50% 0%, rgba(128,191,77,0.06) 0%, transparent 60%); pointer-events: none; }
+.breadcrumbs { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 1.5rem; letter-spacing: 0.04em; text-transform: uppercase; }
+.breadcrumbs a { color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+.breadcrumbs a:hover { color: var(--brand); }
+.breadcrumbs span { margin: 0 0.5rem; }
+.tool-hero h1 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.1; margin-bottom: 1rem; }
+.tool-hero h1 em { font-style: italic; color: var(--brand); }
+.tool-hero p { color: var(--text-secondary); font-size: 1rem; max-width: 600px; margin: 0 auto; }
+.calc-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 3vw, 3rem); padding-bottom: var(--section-padding); align-items: start; }
+.calc-inputs { background: var(--bg-card); border: 1px solid var(--border); padding: clamp(1.5rem, 3vw, 2.5rem); }
+.calc-results { background: var(--bg-card); border: 1px solid var(--brand-dark); padding: clamp(1.5rem, 3vw, 2.5rem); position: sticky; top: 100px; }
+.calc-section-title { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border); }
+.calc-section-title em { color: var(--brand); font-style: italic; }
+.form-group { margin-bottom: 1.25rem; }
+.form-group label { display: block; font-size: 0.8rem; font-weight: 500; color: var(--text-secondary); margin-bottom: 0.35rem; letter-spacing: 0.02em; }
+.form-group .tooltip { font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.35rem; line-height: 1.4; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-group input {
+  width: 100%; padding: 0.75rem 1rem; background: var(--bg-primary); border: 1px solid var(--border-hover);
+  color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; outline: none; transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-group input:focus { border-color: var(--brand); box-shadow: 0 0 0 2px var(--brand-glow); }
+.form-group input::placeholder { color: var(--text-muted); }
+.result-item { display: flex; justify-content: space-between; align-items: baseline; padding: 0.75rem 0; border-bottom: 1px solid var(--border); }
+.result-item:last-child { border-bottom: none; }
+.result-label { font-size: 0.85rem; color: var(--text-secondary); }
+.result-value { font-family: var(--font-display); font-size: 1.3rem; font-weight: 500; color: var(--text-primary); }
+.result-value.highlight { color: var(--brand); font-size: 1.5rem; }
+.result-value.negative { color: #e05555; }
+.result-value.subtle { font-size: 1.1rem; color: var(--text-secondary); }
+.result-divider { height: 1px; background: var(--border-hover); margin: 0.5rem 0; }
+.results-header { font-family: var(--font-display); font-size: 1.1rem; color: var(--text-muted); margin-top: 1rem; margin-bottom: 0.5rem; font-weight: 400; }
+.profit-bar { margin-top: 1.5rem; }
+.profit-bar-label { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.4rem; display: flex; justify-content: space-between; }
+.profit-bar-track { height: 8px; background: var(--bg-primary); border: 1px solid var(--border); overflow: hidden; }
+.profit-bar-fill { height: 100%; background: var(--brand); transition: width 0.4s ease; }
+.profit-bar-fill.negative { background: #e05555; }
+.cta-section { padding: var(--section-padding) 0; text-align: center; border-top: 1px solid var(--border); background: linear-gradient(135deg, rgba(128,191,77,0.05) 0%, var(--bg-primary) 50%, rgba(128,191,77,0.03) 100%); }
+.cta-section h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 300; margin-bottom: 1rem; }
+.cta-section h2 em { font-style: italic; color: var(--brand); }
+.cta-section p { color: var(--text-secondary); max-width: 550px; margin: 0 auto 2rem; }
+.cta-btn { display: inline-block; padding: 1rem 2.5rem; background: var(--brand); color: var(--bg-primary); text-decoration: none; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s; border: 1px solid var(--brand); }
+.cta-btn:hover { background: var(--brand-light); box-shadow: 0 0 30px var(--brand-glow-strong); }
+.footer { border-top: 1px solid var(--border); padding: var(--section-padding) 0 2rem; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: clamp(2rem, 4vw, 4rem); margin-bottom: 3rem; }
+.footer-brand-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; margin-bottom: 0.5rem; }
+.footer-brand-name span { color: var(--brand); }
+.footer-logo-img { height: 32px; margin-bottom: 1rem; }
+.footer-brand-desc { color: var(--text-muted); font-size: 0.82rem; line-height: 1.6; }
+.footer h4 { font-family: var(--font-display); font-size: 1rem; font-weight: 400; margin-bottom: 1rem; color: var(--text-secondary); }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 0.5rem; }
+.footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.82rem; transition: color 0.3s; }
+.footer-links a:hover { color: var(--brand); }
+.footer-bottom { border-top: 1px solid var(--border); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-bottom p { color: var(--text-muted); font-size: 0.72rem; }
+.footer-bottom-links a { color: var(--text-muted); text-decoration: none; font-size: 0.72rem; margin-left: 1.5rem; transition: color 0.3s; }
+.footer-bottom-links a:hover { color: var(--brand); }
+@media (max-width: 900px) { .calc-layout { grid-template-columns: 1fr; } .calc-results { position: static; } }
+@media (max-width: 768px) { .form-row { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; } .nav-links { display: none; } .nav-toggle { display: block; } }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="container">
+    <a href="/" class="nav-brand">
+      <div class="nav-brand-text">Derik <span>Bannister</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/services/">Services</a></li>
+      <li><a href="/neighborhoods/">Neighborhoods</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/faq.html">FAQ</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <a href="tel:5307367085" class="nav-cta">530-736-7085</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="tool-hero">
+  <div class="container">
+    <div class="breadcrumbs">
+      <a href="/">Home</a><span>&rsaquo;</span><a href="/tools/">Tools</a><span>&rsaquo;</span>Fix &amp; Flip Calculator
+    </div>
+    <h1>Fix &amp; Flip <em>Profit Calculator</em></h1>
+    <p>Estimate total costs, projected profit, ROI, and profit margin before committing to a renovation project.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="calc-layout">
+
+      <div class="calc-inputs">
+        <div class="calc-section-title">Acquisition &amp; <em>Rehab</em></div>
+
+        <div class="form-group">
+          <label>Purchase Price</label>
+          <div class="tooltip">Contract price or winning bid amount</div>
+          <input type="text" id="purchasePrice" placeholder="$250,000" value="250000" inputmode="decimal">
+        </div>
+
+        <div class="form-group">
+          <label>Rehab Budget</label>
+          <div class="tooltip">Total estimated renovation and repair costs</div>
+          <input type="text" id="rehabBudget" placeholder="$60,000" value="60000" inputmode="decimal">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Holding Costs / Month</label>
+            <div class="tooltip">Monthly carrying costs: mortgage, taxes, insurance, utilities during rehab</div>
+            <input type="text" id="holdingCosts" placeholder="$2,500" value="2500" inputmode="decimal">
+          </div>
+          <div class="form-group">
+            <label>Holding Period (months)</label>
+            <div class="tooltip">Expected time from purchase to sale</div>
+            <input type="text" id="holdingPeriod" placeholder="5" value="5" inputmode="decimal">
+          </div>
+        </div>
+
+        <div class="calc-section-title" style="margin-top:2rem;">Transaction <em>Costs</em></div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Closing Costs - Buy %</label>
+            <div class="tooltip">Buyer closing costs as % of purchase price; 1-3% typical</div>
+            <input type="text" id="closingBuy" placeholder="2" value="2" inputmode="decimal">
+          </div>
+          <div class="form-group">
+            <label>Closing Costs - Sell %</label>
+            <div class="tooltip">Seller closing costs as % of sale price; 1-2% typical</div>
+            <input type="text" id="closingSell" placeholder="2" value="2" inputmode="decimal">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Agent Commission %</label>
+          <div class="tooltip">Total real estate commission on the sale; 5-6% is standard</div>
+          <input type="text" id="commission" placeholder="5" value="5" inputmode="decimal">
+        </div>
+
+        <div class="calc-section-title" style="margin-top:2rem;">After Repair <em>Value</em></div>
+
+        <div class="form-group">
+          <label>After Repair Value (ARV)</label>
+          <div class="tooltip">Estimated market value after all renovations are complete</div>
+          <input type="text" id="arv" placeholder="$400,000" value="400000" inputmode="decimal">
+        </div>
+      </div>
+
+      <div class="calc-results">
+        <div class="calc-section-title">Flip <em>Analysis</em></div>
+
+        <div class="results-header">Cost Breakdown</div>
+        <div class="result-item">
+          <span class="result-label">Purchase Price</span>
+          <span class="result-value subtle" id="resPurchase">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Rehab Budget</span>
+          <span class="result-value subtle" id="resRehab">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Closing Costs (Buy)</span>
+          <span class="result-value subtle" id="resClosingBuy">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Total Holding Costs</span>
+          <span class="result-value subtle" id="resHolding">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Closing Costs (Sell)</span>
+          <span class="result-value subtle" id="resClosingSell">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Agent Commission</span>
+          <span class="result-value subtle" id="resCommission">--</span>
+        </div>
+        <div class="result-item" style="border-top: 1px solid var(--border-hover); margin-top: 0.25rem; padding-top: 0.75rem;">
+          <span class="result-label" style="font-weight:600; color:var(--text-primary);">Total Investment</span>
+          <span class="result-value" id="resTotalInvestment">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label" style="font-weight:600; color:var(--text-primary);">Total All-In Costs</span>
+          <span class="result-value" id="resTotalCosts">--</span>
+        </div>
+
+        <div class="result-divider"></div>
+        <div class="results-header">Profitability</div>
+
+        <div class="result-item">
+          <span class="result-label">After Repair Value (ARV)</span>
+          <span class="result-value" id="resARV">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Projected Profit</span>
+          <span class="result-value highlight" id="resProfit">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Return on Investment (ROI)</span>
+          <span class="result-value highlight" id="resROI">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Profit Margin</span>
+          <span class="result-value" id="resMargin">--</span>
+        </div>
+
+        <div class="profit-bar">
+          <div class="profit-bar-label">
+            <span>Cost vs. ARV</span>
+            <span id="barPct">--</span>
+          </div>
+          <div class="profit-bar-track">
+            <div class="profit-bar-fill" id="barFill" style="width:0%"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Eyeing a <em>Fixer-Upper</em>?</h2>
+    <p>I specialize in finding undervalued properties with strong flip potential in Eugene and Lane County. Let me help you source, analyze, and close your next deal.</p>
+    <a href="/contact.html" class="cta-btn">Find Flip Opportunities</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Derik <span>Bannister</span></div>
+        <img src="/images/logo.png" alt="Eugene RealEstate.com | The Operative Group | Powered by Real" class="footer-logo-img" />
+        <p class="footer-brand-desc">Strategic real estate services across Lane County, Oregon. Luxury homes, investment properties, multi-family rentals, and fix &amp; flip opportunities.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="/services/luxury.html">Luxury Homes</a></li>
+          <li><a href="/services/residential.html">Residential</a></li>
+          <li><a href="/services/investment.html">Investment Properties</a></li>
+          <li><a href="/services/fix-and-flip.html">Fix &amp; Flip</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Neighborhoods</h4>
+        <ul class="footer-links">
+          <li><a href="/neighborhoods/south-eugene.html">South Eugene</a></li>
+          <li><a href="/neighborhoods/whiteaker.html">Whiteaker</a></li>
+          <li><a href="/neighborhoods/gateway-springfield.html">Springfield</a></li>
+          <li><a href="/neighborhoods/river-road.html">River Road</a></li>
+          <li><a href="/neighborhoods/bethel-danebo.html">Bethel-Danebo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:5307367085">530-736-7085</a></li>
+          <li><a href="mailto:derik@theoperativegroup.com">derik@theoperativegroup.com</a></li>
+          <li><a href="https://derikbannister.com">derikbannister.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Derik Bannister &middot; Affiliated with The Operative Group &middot; Brokered by Real Broker, LLC &middot; Oregon License #201261238</p>
+      <div class="footer-bottom-links"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+const navToggle = document.getElementById('navToggle');
+const navLinksEl = document.querySelector('.nav-links');
+navToggle.addEventListener('click', () => { navLinksEl.style.display = navLinksEl.style.display === 'flex' ? 'none' : 'flex'; });
+
+function num(id) { return parseFloat(document.getElementById(id).value.replace(/[^0-9.\-]/g, '')) || 0; }
+function fmt(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+function pct(n) { return isFinite(n) ? n.toFixed(2) + '%' : '--'; }
+
+function calc() {
+  const price = num('purchasePrice');
+  const rehab = num('rehabBudget');
+  const holdingMo = num('holdingCosts');
+  const holdingPeriod = num('holdingPeriod');
+  const closeBuyPct = num('closingBuy') / 100;
+  const closeSellPct = num('closingSell') / 100;
+  const commissionPct = num('commission') / 100;
+  const arv = num('arv');
+
+  const closingBuy = price * closeBuyPct;
+  const totalHolding = holdingMo * holdingPeriod;
+  const closingSell = arv * closeSellPct;
+  const commission = arv * commissionPct;
+
+  // Total investment = money out of pocket before sale
+  const totalInvestment = price + rehab + closingBuy + totalHolding;
+  // Total all-in costs = investment + selling costs
+  const totalCosts = totalInvestment + closingSell + commission;
+
+  const profit = arv - totalCosts;
+  const roi = totalInvestment > 0 ? (profit / totalInvestment) * 100 : 0;
+  const margin = arv > 0 ? (profit / arv) * 100 : 0;
+
+  document.getElementById('resPurchase').textContent = fmt(price);
+  document.getElementById('resRehab').textContent = fmt(rehab);
+  document.getElementById('resClosingBuy').textContent = fmt(closingBuy);
+  document.getElementById('resHolding').textContent = fmt(totalHolding);
+  document.getElementById('resClosingSell').textContent = fmt(closingSell);
+  document.getElementById('resCommission').textContent = fmt(commission);
+  document.getElementById('resTotalInvestment').textContent = fmt(totalInvestment);
+  document.getElementById('resTotalCosts').textContent = fmt(totalCosts);
+  document.getElementById('resARV').textContent = fmt(arv);
+
+  const profitEl = document.getElementById('resProfit');
+  profitEl.textContent = fmt(profit);
+  profitEl.className = 'result-value ' + (profit >= 0 ? 'highlight' : 'negative');
+
+  const roiEl = document.getElementById('resROI');
+  roiEl.textContent = pct(roi);
+  roiEl.className = 'result-value ' + (roi >= 0 ? 'highlight' : 'negative');
+
+  document.getElementById('resMargin').textContent = pct(margin);
+
+  // Bar
+  const costPctOfARV = arv > 0 ? Math.min((totalCosts / arv) * 100, 100) : 0;
+  const fill = document.getElementById('barFill');
+  fill.style.width = costPctOfARV + '%';
+  fill.className = 'profit-bar-fill' + (profit < 0 ? ' negative' : '');
+  document.getElementById('barPct').textContent = costPctOfARV.toFixed(1) + '% of ARV';
+}
+
+document.querySelectorAll('.calc-inputs input').forEach(el => el.addEventListener('input', calc));
+calc();
+</script>
+<script src="/js/main.js"></script>
+</body>
+</html>
