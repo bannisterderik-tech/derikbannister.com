@@ -115,7 +115,7 @@ body::before {
 .nav-brand-text { font-family: var(--font-display); font-size: 1.3rem; font-weight: 500; color: var(--text-primary); letter-spacing: 0.02em; white-space: nowrap; }
 .nav-brand-text span { color: var(--brand); }
 .nav-logo { height: 36px; width: auto; display: block; }
-.footer-logo-img { height: 40px; width: auto; display: block; margin: 0.75rem 0 1rem; }
+.footer-logo-img { height: 80px; width: auto; display: block; margin: 0.75rem 0 1rem; background: #f5f5f0; }
 
 .nav-links { display: flex; justify-content: center; gap: clamp(1.5rem, 3vw, 3rem); list-style: none; }
 .nav-links a {
