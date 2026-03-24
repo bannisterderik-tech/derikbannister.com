@@ -175,8 +175,6 @@ body::before { content: ''; position: fixed; inset: 0; opacity: 0.025; backgroun
 .footer-brand-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; margin-bottom: 1rem; }
 .footer-brand-name span { color: var(--brand); }
 .footer-brand-desc { color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 1.5rem; max-width: 320px; }
-.footer-logos { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
-.footer-logo-badge { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); padding: 0.5rem 0.75rem; border: 1px solid var(--border); }
 .footer h4 { font-family: var(--font-body); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
 .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
 .footer-links a { color: var(--text-secondary); font-size: 0.9rem; transition: color 0.3s; }
@@ -215,6 +213,7 @@ body::before { content: ''; position: fixed; inset: 0; opacity: 0.025; backgroun
   .footer-bottom-links { justify-content: center; }
   .cta-contact { flex-direction: column; gap: 1.5rem; }
 }
+.btn-primary, a.btn-primary { color: #080a06 !important; font-weight: 600; }
 </style>
 </head>
 <body>
@@ -223,7 +222,7 @@ body::before { content: ''; position: fixed; inset: 0; opacity: 0.025; backgroun
 <nav class="nav" id="nav">
   <div class="container">
     <a href="/" class="nav-brand">
-      <div class="nav-brand-text">Derik <span>Bannister</span></div>
+      <img src="/images/logo.png" alt="Eugene RealEstate.com | The Operative Group | Powered by Real" class="nav-logo" />
     </a>
     <ul class="nav-links">
       <li><a href="/about.html">About</a></li>
@@ -479,10 +478,7 @@ body::before { content: ''; position: fixed; inset: 0; opacity: 0.025; backgroun
       <div>
         <div class="footer-brand-name">Derik <span>Bannister</span></div>
         <p class="footer-brand-desc">Strategic real estate services across Lane County, Oregon. Luxury homes, investment properties, multi-family rentals, and fix &amp; flip opportunities.</p>
-        <div class="footer-logos">
-          <span class="footer-logo-badge">The Operative Group</span>
-          <span class="footer-logo-badge">Real Broker, LLC</span>
-        </div>
+        <img src="/images/logo.png" alt="Eugene RealEstate.com | The Operative Group | Powered by Real" class="footer-logo-img" />
       </div>
       <div>
         <h4>Services</h4>
