@@ -270,6 +270,105 @@ footer .mono{font-size:.64rem}
 
 .hero .wrap,.state .k{will-change:transform}
 
+/* horizontal builds gallery */
+#builds{padding:0}
+.hstage{position:sticky;top:0;height:100svh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.hs-track{display:flex;gap:2px;padding:0 var(--gutter);width:max-content;will-change:transform}
+.bldc{flex:0 0 min(clamp(300px,34vw,460px),74vh);padding:0 0 26px}
+.bldc .shot{aspect-ratio:16/10;overflow:hidden;margin:0;background:var(--ink2);border-bottom:1px solid var(--hair)}
+.bldc .shot img{width:100%;height:100%;object-fit:cover;object-position:top;filter:grayscale(1) contrast(1.06) brightness(.9);transform:scale(1.01);transition:filter .5s,transform .6s cubic-bezier(.2,.7,.2,1)}
+.bldc:hover .shot img{filter:none;transform:scale(1.045)}
+.bldc .meta{padding:22px 24px 0;display:grid;gap:10px}
+.bldc.more{display:flex;align-items:center}
+.bldc.more .meta{padding:24px}
+.hs-ui{display:flex;align-items:center;gap:18px;padding:clamp(22px,3.5vh,44px) var(--gutter) 0}
+.hs-ui .mono{font-size:.62rem;color:var(--faint)}
+.hs-bar{flex:1;height:1px;background:var(--hair2);position:relative}
+.hs-bar i{position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,var(--silver-lo),var(--silver-hi))}
+/* capability UI vignettes — ink on paper */
+.viz{position:relative;height:150px;background:#fff;border:1px solid var(--hair-ink);margin-bottom:22px;overflow:hidden;font-family:var(--mono);text-transform:uppercase}
+.viz .t7{position:absolute;top:9px;left:11px;font-size:7px;letter-spacing:.2em;color:rgba(10,10,10,.4);z-index:2}
+/* CRM pipeline */
+.viz-crm .cols{display:flex;gap:8px;height:100%;padding:28px 10px 10px}
+.viz-crm .col{flex:1;border:1px dashed rgba(10,10,10,.18);padding:17px 6px 6px;position:relative}
+.viz-crm .col i{position:absolute;top:5px;left:6px;font-style:normal;font-size:6.5px;letter-spacing:.16em;color:rgba(10,10,10,.45)}
+.viz-crm .col b{display:block;height:11px;background:rgba(10,10,10,.06);border:1px solid rgba(10,10,10,.14);margin-bottom:5px}
+.viz-crm .lead{position:absolute;height:11px;width:24%;background:var(--ink);top:46px;left:6%;animation:crmlead 7s cubic-bezier(.7,0,.2,1) infinite}
+@keyframes crmlead{0%,16%{left:6%;top:46px}30%,58%{left:38%;top:63px}72%,100%{left:70%;top:46px}}
+/* AI chat + voice */
+.viz-ai{padding:30px 12px 10px}
+.viz-ai .bub{max-width:62%;border:1px solid rgba(10,10,10,.2);padding:7px 9px;display:grid;gap:4px}
+.viz-ai .bub span{display:block;height:4px;background:rgba(10,10,10,.18);width:110px;max-width:100%}
+.viz-ai .bub span:last-child{width:66px}
+.viz-ai .dots{display:inline-flex;gap:4px;margin:8px 0 0 3px;height:10px;align-items:center}
+.viz-ai .dots i{width:4px;height:4px;border-radius:50%;background:rgba(10,10,10,.5);animation:aidot 1.2s infinite}
+.viz-ai .dots i:nth-child(2){animation-delay:.2s}
+.viz-ai .dots i:nth-child(3){animation-delay:.4s}
+@keyframes aidot{0%,100%{opacity:.15}50%{opacity:1}}
+.viz-ai .out{margin-left:auto;margin-top:8px;background:var(--ink);border-color:var(--ink);display:flex;align-items:flex-end;gap:3px;height:36px;padding:7px 11px;max-width:56%}
+.viz-ai .out i{width:3px;height:100%;background:#fff;transform-origin:bottom;animation:wave 1s ease-in-out infinite alternate}
+.viz-ai .out i:nth-child(odd){transform:scaleY(.35)}
+.viz-ai .out i:nth-child(3n){animation-delay:.15s}
+.viz-ai .out i:nth-child(4n){animation-delay:.3s}
+.viz-ai .out i:nth-child(5n){animation-delay:.45s}
+@keyframes wave{from{transform:scaleY(.25)}to{transform:scaleY(1)}}
+/* growth chart */
+.viz-gro svg{position:absolute;left:10px;right:10px;bottom:10px;top:30px;width:calc(100% - 20px);height:calc(100% - 40px)}
+.viz-gro .l{stroke:var(--ink);stroke-width:1.5;stroke-dasharray:330;stroke-dashoffset:330}
+.cap.on .viz-gro .l{animation:chartdraw 2.2s cubic-bezier(.6,0,.2,1) .4s forwards}
+@keyframes chartdraw{to{stroke-dashoffset:0}}
+.viz-gro .a{opacity:0;transition:opacity 1s 1.8s}
+.cap.on .viz-gro .a{opacity:1}
+.viz-gro .kpi{position:absolute;right:11px;top:8px;text-align:right;z-index:2}
+.viz-gro .kpi b{display:block;font-size:14px;letter-spacing:.04em;color:var(--ink);font-weight:600}
+.viz-gro .kpi i{font-style:normal;font-size:6.5px;letter-spacing:.18em;color:rgba(10,10,10,.45)}
+/* dialer */
+.viz-tel{padding:29px 12px 10px;display:grid;gap:6px;align-content:start}
+.viz-tel .ln{display:flex;align-items:center;gap:8px;border:1px solid rgba(10,10,10,.14);padding:8px 9px;font-size:7.5px;letter-spacing:.16em;color:rgba(10,10,10,.6)}
+.viz-tel .ln s{text-decoration:none;width:6px;height:6px;border-radius:50%;border:1px solid var(--ink);flex:none}
+.viz-tel .ln em{font-style:normal;margin-left:auto;color:rgba(10,10,10,.4)}
+.viz-tel .l1 s{animation:inkblink 2.2s infinite}
+.viz-tel .l2{border-color:var(--ink)}
+.viz-tel .l2 s{background:var(--ink);animation:inkblink 1.4s infinite}
+.viz-tel .l2 em{color:var(--ink)}
+@keyframes inkblink{0%,100%{opacity:1}50%{opacity:.25}}
+.viz-tel .talk{height:2px;background:rgba(10,10,10,.12);position:relative;margin-top:3px}
+.viz-tel .talk i{position:absolute;top:0;bottom:0;left:0;width:0;background:var(--ink);animation:fillbar 8s linear infinite}
+@keyframes fillbar{to{width:100%}}
+/* app window */
+.viz-app .bar,.viz-web .bar{height:17px;border-bottom:1px solid rgba(10,10,10,.15);display:flex;align-items:center;gap:4px;padding:0 9px}
+.viz-app .bar i,.viz-web .bar i{width:5px;height:5px;border-radius:50%;border:1px solid rgba(10,10,10,.4)}
+.viz-app .body{display:flex;height:calc(100% - 17px)}
+.viz-app .side{width:36px;border-right:1px solid rgba(10,10,10,.15);padding:9px 7px;display:grid;gap:7px;align-content:start}
+.viz-app .side b{height:5px;background:rgba(10,10,10,.14)}
+.viz-app .side b:first-child{background:var(--ink)}
+.viz-app .main{flex:1;padding:11px;display:grid;gap:9px;align-content:start}
+.viz-app .main b{height:13px;border:1px solid rgba(10,10,10,.15);background:rgba(10,10,10,.04);opacity:0;transform:translateX(14px);transition:opacity .5s,transform .5s}
+.cap.on .viz-app .main b{opacity:1;transform:none}
+.cap.on .viz-app .main b:nth-child(2){transition-delay:.15s}
+.cap.on .viz-app .main b:nth-child(3){transition-delay:.3s}
+.viz-app .pg{height:3px;background:rgba(10,10,10,.12);position:relative;margin-top:7px;display:block}
+.viz-app .pg i{position:absolute;top:0;bottom:0;left:0;width:0;background:var(--ink);animation:fillbar 5s ease-in-out infinite}
+/* site assembly */
+.viz-web .bar .url{margin-left:8px;font-size:6.5px;letter-spacing:.18em;color:rgba(10,10,10,.45)}
+.viz-web .pgc{padding:11px;display:grid;gap:7px;height:calc(100% - 17px);align-content:start}
+.viz-web .pgc>*{opacity:0;transform:translateY(8px);transition:opacity .6s,transform .6s}
+.cap.on .viz-web .pgc>*{opacity:1;transform:none}
+.cap.on .viz-web .pgc>*:nth-child(2){transition-delay:.2s}
+.cap.on .viz-web .pgc>*:nth-child(3){transition-delay:.4s}
+.viz-web .h{height:10px;background:rgba(10,10,10,.1)}
+.viz-web .hero{height:46px;background:var(--ink);position:relative;overflow:hidden}
+.viz-web .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.35) 50%,transparent 60%);transform:translateX(-120%);animation:herosheen 3.6s infinite}
+@keyframes herosheen{0%,40%{transform:translateX(-120%)}75%,100%{transform:translateX(120%)}}
+.viz-web .two{display:flex;gap:7px}
+.viz-web .two b{flex:1;height:24px;border:1px solid rgba(10,10,10,.15);background:rgba(10,10,10,.04)}
+
+/* flat fallback: native swipe strip */
+.hgal.flat .hstage{position:static;height:auto;padding:clamp(76px,10vw,120px) 0;overflow:visible}
+.hgal.flat .hs-track{width:auto;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.hgal.flat .hs-track::-webkit-scrollbar{display:none}
+.hgal.flat .bldc{scroll-snap-align:start;flex-basis:clamp(280px,78vw,440px)}
+
 @media (prefers-reduced-motion:reduce){
   .rv{transition:none;opacity:1;transform:none}
   .mq-track,.grain,.chrome,.ticker .dot,.hero-scroll .stem::after,.boot .line i{animation:none!important}
@@ -278,6 +377,11 @@ footer .mono{font-size:.64rem}
   .section::before{transition:none;transform:scaleX(1)}
   .wsplit .w>*{transition:none;transform:none}
   .bld.rv.on,.cap.rv.on{transform:none}
+  .bldc .shot img{filter:grayscale(1);transition:none;transform:none}
+  .viz *,.viz .hero::after{animation:none!important;transition:none!important}
+  .viz-app .main b,.viz-web .pgc>*{opacity:1;transform:none}
+  .viz-gro .l{stroke-dashoffset:0}
+  .viz-gro .a{opacity:1}
 }
 </style>
 </head>
@@ -363,49 +467,75 @@ footer .mono{font-size:.64rem}
   </div>
 </div>
 
-<!-- ================= RECENT BUILDS ================= -->
+<!-- ================= RECENT BUILDS — horizontal gallery ================= -->
 <section class="section" id="builds">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 class="rv">Recent <span class="chrome" data-scramble>builds.</span></h2>
-      <span class="sec-num">[ 01 / SHIPPED ]</span>
-    </div>
-    <div class="bld-grid">
-      <a class="bld rv" style="--d:.0s" href="https://larissamayfieldre.com" target="_blank" rel="noopener">
-        <span class="idx">B-01</span>
-        <h3>Larissa Mayfield</h3>
-        <p>Real-estate agent site.</p>
-        <span class="dom">LARISSAMAYFIELDRE.COM ↗</span>
-      </a>
-      <div class="bld rv" style="--d:.08s">
-        <span class="idx">B-02</span>
-        <h3>Mistletoe Construction</h3>
-        <p>Construction company site.</p>
-        <span class="dom">SHIPPED</span>
+  <div class="hgal" id="hgal">
+    <div class="hstage">
+      <div class="wrap">
+        <div class="sec-head" style="margin-bottom:clamp(22px,3.5vh,48px)">
+          <h2 class="rv">Recent <span class="chrome" data-scramble>builds.</span></h2>
+          <span class="sec-num">[ 01 / SHIPPED ]</span>
+        </div>
       </div>
-      <div class="bld rv" style="--d:.16s">
-        <span class="idx">B-03</span>
-        <h3>Tossie Buys Houses</h3>
-        <p>Home-buying company site.</p>
-        <span class="dom">SHIPPED</span>
+      <div class="hs-track" id="hsTrack">
+        <a class="bld bldc rv" style="--d:.0s" href="https://larissamayfieldre.com" target="_blank" rel="noopener">
+          <figure class="shot"><img src="/images/builds/larissa.jpg" alt="larissamayfieldre.com — Larissa Mayfield real-estate site homepage" width="860" height="537" loading="lazy"></figure>
+          <div class="meta">
+            <span class="idx">B-01</span>
+            <h3>Larissa Mayfield</h3>
+            <p>Real-estate agent site.</p>
+            <span class="dom">LARISSAMAYFIELDRE.COM ↗</span>
+          </div>
+        </a>
+        <a class="bld bldc rv" style="--d:.06s" href="https://mistletoeconstruction.com" target="_blank" rel="noopener">
+          <figure class="shot"><img src="/images/builds/mistletoe.jpg" alt="mistletoeconstruction.com — Mistletoe Construction roofing site homepage" width="860" height="537" loading="lazy"></figure>
+          <div class="meta">
+            <span class="idx">B-02</span>
+            <h3>Mistletoe Construction</h3>
+            <p>Roofing &amp; construction company site.</p>
+            <span class="dom">MISTLETOECONSTRUCTION.COM ↗</span>
+          </div>
+        </a>
+        <a class="bld bldc rv" style="--d:.12s" href="https://tossiebuyshouses.com" target="_blank" rel="noopener">
+          <figure class="shot"><img src="/images/builds/tossie.jpg" alt="tossiebuyshouses.com — Tossie Buys Houses cash home-buyer site homepage" width="860" height="537" loading="lazy"></figure>
+          <div class="meta">
+            <span class="idx">B-03</span>
+            <h3>Tossie Buys Houses</h3>
+            <p>Cash home-buyer site.</p>
+            <span class="dom">TOSSIEBUYSHOUSES.COM ↗</span>
+          </div>
+        </a>
+        <a class="bld bldc rv" style="--d:.18s" href="https://freebyrd.pro" target="_blank" rel="noopener">
+          <figure class="shot"><img src="/images/builds/freebyrd.jpg" alt="freebyrd.pro — FreeByrd agency site homepage" width="860" height="537" loading="lazy"></figure>
+          <div class="meta">
+            <span class="idx">B-04</span>
+            <h3>FreeByrd</h3>
+            <p>Revenue-growth agency site.</p>
+            <span class="dom">FREEBYRD.PRO ↗</span>
+          </div>
+        </a>
+        <a class="bld bldc rv" style="--d:.24s" href="https://lynkspot.com" target="_blank" rel="noopener">
+          <figure class="shot"><img src="/images/builds/lynkspot.jpg" alt="lynkspot.com — Lynkspot marketing platform homepage" width="860" height="537" loading="lazy"></figure>
+          <div class="meta">
+            <span class="idx">B-05</span>
+            <h3>Lynkspot</h3>
+            <p>Marketing platform for loan officers.</p>
+            <span class="dom">LYNKSPOT.COM ↗</span>
+          </div>
+        </a>
+        <div class="bld bldc more rv" style="--d:.30s">
+          <div class="meta">
+            <span class="idx">B-06+</span>
+            <h3>More in the shop</h3>
+            <p>New builds land here as they ship.</p>
+            <span class="dom">ALWAYS BUILDING</span>
+          </div>
+        </div>
       </div>
-      <a class="bld rv" style="--d:.24s" href="https://freebyrd.pro" target="_blank" rel="noopener">
-        <span class="idx">B-04</span>
-        <h3>FreeByrd</h3>
-        <p>Brand &amp; product site.</p>
-        <span class="dom">FREEBYRD.PRO ↗</span>
-      </a>
-      <a class="bld rv" style="--d:.32s" href="https://lynkspot.com" target="_blank" rel="noopener">
-        <span class="idx">B-05</span>
-        <h3>Lynkspot</h3>
-        <p>Web platform build.</p>
-        <span class="dom">LYNKSPOT.COM ↗</span>
-      </a>
-      <div class="bld more rv" style="--d:.40s">
-        <span class="idx">B-06+</span>
-        <h3>More in the shop</h3>
-        <p>New builds land here as they ship.</p>
-        <span class="dom">ALWAYS BUILDING</span>
+      <div class="hs-ui" aria-hidden="true">
+        <span class="mono" id="hsCount">01 / 06</span>
+        <span class="hs-bar"><i id="hsFill"></i></span>
+        <span class="mono">SCROLL</span>
       </div>
     </div>
   </div>
@@ -436,31 +566,79 @@ footer .mono{font-size:.64rem}
     <div class="cap-grid">
       <div class="cap rv" style="--d:.0s">
         <span class="idx">C-01</span>
+        <div class="viz viz-crm" aria-hidden="true">
+          <span class="t7">PIPELINE</span>
+          <div class="cols">
+            <div class="col"><i>NEW</i><b></b><b></b><b></b></div>
+            <div class="col"><i>QUALIFIED</i><b></b><b></b></div>
+            <div class="col"><i>WON</i><b></b></div>
+          </div>
+          <span class="lead"></span>
+        </div>
         <h3>Platforms &amp; CRM</h3>
         <p>Full operating systems — lead capture to close, pipelines, routing, multi-tenant white-label.</p>
       </div>
       <div class="cap rv" style="--d:.06s">
         <span class="idx">C-02</span>
+        <div class="viz viz-ai" aria-hidden="true">
+          <span class="t7">AI RECEPTIONIST</span>
+          <div class="bub"><span></span><span></span></div>
+          <div class="dots"><i></i><i></i><i></i></div>
+          <div class="bub out"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
         <h3>AI systems</h3>
         <p>Voice receptionists, SDR agents that work the follow-up, and assistants grounded in the business's own data.</p>
       </div>
       <div class="cap rv" style="--d:.12s">
         <span class="idx">C-03</span>
+        <div class="viz viz-gro" aria-hidden="true">
+          <span class="t7">BOOKED REVENUE</span>
+          <div class="kpi"><b>+312%</b><i>QTR / QTR</i></div>
+          <svg viewBox="0 0 200 70" preserveAspectRatio="none">
+            <line x1="0" y1="18" x2="200" y2="18" stroke="rgba(10,10,10,.07)"/>
+            <line x1="0" y1="36" x2="200" y2="36" stroke="rgba(10,10,10,.07)"/>
+            <line x1="0" y1="54" x2="200" y2="54" stroke="rgba(10,10,10,.07)"/>
+            <path class="a" d="M0 62 L30 55 L60 58 L95 40 L130 44 L165 22 L200 12 L200 70 L0 70 Z" fill="rgba(10,10,10,.05)" stroke="none"/>
+            <path class="l" d="M0 62 L30 55 L60 58 L95 40 L130 44 L165 22 L200 12" fill="none"/>
+          </svg>
+        </div>
         <h3>Growth engines</h3>
         <p>SEO, paid ads, email and SMS — run to booked-revenue numbers, not vanity dashboards.</p>
       </div>
       <div class="cap rv" style="--d:.18s">
         <span class="idx">C-04</span>
+        <div class="viz viz-tel" aria-hidden="true">
+          <span class="t7">DIALER</span>
+          <div class="ln l1"><s></s>LINE 01<em>DIALING</em></div>
+          <div class="ln l2"><s></s>LINE 02<em>CONNECTED 00:47</em></div>
+          <div class="ln l3"><s></s>LINE 03<em>QUEUED</em></div>
+          <div class="talk"><i></i></div>
+        </div>
         <h3>Telephony</h3>
         <p>Multi-line dialers, call routing, compliance — the phone treated as the core system it actually is.</p>
       </div>
       <div class="cap rv" style="--d:.24s">
         <span class="idx">C-05</span>
+        <div class="viz viz-app" aria-hidden="true">
+          <div class="bar"><i></i><i></i><i></i></div>
+          <div class="body">
+            <div class="side"><b></b><b></b><b></b><b></b></div>
+            <div class="main"><b></b><b></b><b></b><span class="pg"><i></i></span></div>
+          </div>
+        </div>
         <h3>Custom apps</h3>
         <p>Purpose-built software for how an operation actually runs — calculators, portals, internal tools.</p>
       </div>
       <div class="cap rv" style="--d:.3s">
         <span class="idx">C-06</span>
+        <div class="viz viz-web" aria-hidden="true">
+          <div class="bar"><i></i><i></i><i></i><span class="url">YOURCOMPANY.COM</span></div>
+          <div class="pgc">
+            <b class="h"></b>
+            <b class="hero"></b>
+            <div class="two"><b></b><b></b></div>
+          </div>
+        </div>
         <h3>Brand &amp; web</h3>
         <p>Sites built to rank and convert, with a brand you can spot from a truck two lanes over.</p>
       </div>
@@ -747,6 +925,27 @@ if (finePointer && !reduced) {
   });
 }
 
+/* horizontal builds gallery */
+const hgal = document.getElementById(`hgal`);
+const hsTrack = document.getElementById(`hsTrack`);
+const hsFill = document.getElementById(`hsFill`);
+const hsCount = document.getElementById(`hsCount`);
+const hsCards = hsTrack ? hsTrack.children.length : 0;
+const hsFlat = reduced || !finePointer || innerWidth < 900;
+if (hgal && hsFlat) {
+  hgal.classList.add(`flat`);
+  hsTrack.addEventListener(`scroll`, () => {
+    const m = hsTrack.scrollWidth - hsTrack.clientWidth;
+    const p = m > 0 ? hsTrack.scrollLeft / m : 0;
+    hsFill.style.width = p * 100 + `%`;
+    hsCount.textContent = `0` + (1 + Math.round(p * (hsCards - 1))) + ` / 0` + hsCards;
+  }, { passive: true });
+}
+if (hgal && !hsFlat) {
+  const size = () => { hgal.style.height = innerHeight + Math.max(0, hsTrack.scrollWidth - innerWidth) + `px`; };
+  size(); addEventListener(`resize`, size, { passive: true });
+}
+
 /* continuous fx loop: kinetic skew by scroll velocity, hero parallax, ghost numerals */
 if (!reduced) {
   const heroWrap = document.querySelector(`.hero .wrap`);
@@ -770,6 +969,17 @@ if (!reduced) {
       const r = g.parentElement.getBoundingClientRect();
       if (r.top < innerHeight && r.bottom > 0) g.style.transform = `translateY(${((innerHeight - r.top) * -.08).toFixed(1)}px)`;
     });
+    if (hgal && !hsFlat) {
+      const r = hgal.getBoundingClientRect();
+      if (r.top < innerHeight && r.bottom > 0) {
+        const extra = hsTrack.scrollWidth - innerWidth;
+        const span = r.height - innerHeight;
+        const p = span > 0 ? Math.min(1, Math.max(0, -r.top / span)) : 0;
+        hsTrack.style.transform = `translateX(${(-p * Math.max(0, extra)).toFixed(1)}px)`;
+        hsFill.style.width = p * 100 + `%`;
+        hsCount.textContent = `0` + (1 + Math.round(p * (hsCards - 1))) + ` / 0` + hsCards;
+      }
+    }
     requestAnimationFrame(fx);
   };
   fx();
