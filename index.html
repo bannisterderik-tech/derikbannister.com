@@ -34,7 +34,7 @@
   --gutter:clamp(20px,5vw,72px);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:78px}
 body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body.booting{overflow:hidden}
 ::selection{background:var(--silver-hi);color:var(--ink)}
@@ -231,11 +231,53 @@ footer{border-top:1px solid var(--hair);padding:34px 0;background:var(--ink2)}
 footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
 footer .mono{font-size:.64rem}
 
+/* ---------- motion layer v2 ---------- */
+/* masked word reveals */
+.wsplit .w{display:inline-block;overflow:hidden;vertical-align:top;padding:.08em .02em .16em 0;margin:-.08em -.02em -.16em 0}
+.wsplit .w>*{display:inline-block;transform:translateY(115%);transition:transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--wd,0)*70ms)}
+.wsplit.on .w>*{transform:none}
+
+/* section hairline draws itself in */
+.section::before{content:"";position:absolute;top:-1px;left:0;height:1px;width:100%;background:linear-gradient(90deg,var(--silver-lo),var(--silver-hi));opacity:.35;transform:scaleX(0);transform-origin:left;transition:transform 1.3s cubic-bezier(.2,.7,.2,1)}
+.section.insec::before{transform:scaleX(1)}
+.room::before{background:var(--ink);opacity:.14}
+
+/* ghost section numerals */
+.gnum{position:absolute;right:var(--gutter);top:clamp(20px,4vw,54px);font-family:var(--disp);font-weight:800;font-size:clamp(6rem,15vw,12rem);line-height:1;color:transparent;-webkit-text-stroke:1px rgba(199,199,207,.10);pointer-events:none;user-select:none;z-index:0;will-change:transform}
+.room .gnum{-webkit-text-stroke-color:rgba(10,10,10,.07)}
+
+/* section rail */
+.rail{position:fixed;right:22px;top:50%;transform:translateY(-50%);z-index:60;display:grid;gap:16px;mix-blend-mode:difference}
+.rail a{display:flex;align-items:center;gap:10px;justify-content:flex-end;font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);transition:color .3s}
+.rail a .lbl{opacity:0;transform:translateX(6px);transition:opacity .3s,transform .3s}
+.rail a:hover .lbl,.rail a.act .lbl{opacity:1;transform:none}
+.rail a .tick{width:16px;height:1px;background:var(--faint);transition:width .3s,background .3s}
+.rail a:hover{color:var(--silver)}
+.rail a.act{color:var(--silver-hi)}
+.rail a.act .tick{width:32px;background:var(--silver-hi)}
+@media(max-width:1100px){.rail{display:none}}
+
+/* scrollspy in topbar */
+.nav a:not(.btn).act{color:var(--silver-hi)}
+.nav a:not(.btn).act::after{width:100%}
+
+/* card glare + tilt (fine pointers only) */
+@media(hover:hover) and (pointer:fine){
+  .bld::before{content:"";position:absolute;inset:0;background:radial-gradient(240px circle at var(--gx,50%) var(--gy,50%),rgba(242,242,246,.09),transparent 65%);opacity:var(--go,0);transition:opacity .4s;pointer-events:none}
+  .cap::before{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--gx,50%) var(--gy,50%),rgba(10,10,10,.05),transparent 65%);opacity:var(--go,0);transition:opacity .4s;pointer-events:none}
+  .bld.rv.on,.cap.rv.on{transform:perspective(800px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:background .3s}
+}
+
+.hero .wrap,.state .k{will-change:transform}
+
 @media (prefers-reduced-motion:reduce){
   .rv{transition:none;opacity:1;transform:none}
   .mq-track,.grain,.chrome,.ticker .dot,.hero-scroll .stem::after,.boot .line i{animation:none!important}
   .chrome{color:var(--silver-hi);background:none;-webkit-background-clip:initial}
   html{scroll-behavior:auto}
+  .section::before{transition:none;transform:scaleX(1)}
+  .wsplit .w>*{transition:none;transform:none}
+  .bld.rv.on,.cap.rv.on{transform:none}
 }
 </style>
 </head>
@@ -264,6 +306,14 @@ footer .mono{font-size:.64rem}
     </nav>
   </div>
 </header>
+
+<nav class="rail" aria-label="Section index">
+  <a href="#builds"><span class="lbl">Builds</span><span class="tick"></span></a>
+  <a href="#sectors"><span class="lbl">Industries</span><span class="tick"></span></a>
+  <a href="#capabilities"><span class="lbl">Capabilities</span><span class="tick"></span></a>
+  <a href="#principles"><span class="lbl">Principles</span><span class="tick"></span></a>
+  <a href="#contact"><span class="lbl">Contact</span><span class="tick"></span></a>
+</nav>
 
 <!-- ================= HERO ================= -->
 <main id="top">
@@ -458,7 +508,7 @@ footer .mono{font-size:.64rem}
 <!-- ================= CONTACT ================= -->
 <section class="section contact" id="contact">
   <div class="wrap">
-    <p class="mono eyebrow rv" style="margin-bottom:24px">[ 06 / CONTACT ]</p>
+    <p class="mono eyebrow rv" style="margin-bottom:24px">[ 05 / CONTACT ]</p>
     <h2 class="rv">Let's build <span class="chrome" data-scramble>something real.</span></h2>
     <p class="sub rv" style="--d:.1s">Partnerships, projects, or a straight question — I read everything and answer fast.</p>
     <div class="contact-links rv" style="--d:.2s">
@@ -542,13 +592,16 @@ if (cv && !reduced) {
     x: (k * 733 % 1000) / 1000, y: (k * 397 % 1000) / 1000,
     z: .25 + (k * 211 % 100) / 120, o: .12 + (k * 137 % 100) / 400,
   }));
+  let mxr = .5, smx = .5;
+  addEventListener(`pointermove`, e => { mxr = e.clientX / innerWidth; }, { passive: true });
   const draw = () => {
     requestAnimationFrame(draw);
     if (!run || !W) return;
     t += .0016;
+    smx += (mxr - smx) * .04;
     ctx.clearRect(0, 0, W, H);
     // concentric horizon arcs, engraved-silver feel
-    const cx = W / 2, cy = H * 1.25;
+    const cx = W / 2 + (smx - .5) * W * .07, cy = H * 1.25;
     for (let r = 1; r <= 9; r++) {
       const rad = r * H * .16 + (t * 40 * dpr) % (H * .16);
       ctx.strokeStyle = `rgba(199,199,207,${.05 - r * .004})`;
@@ -623,14 +676,104 @@ const onScroll = () => {
   progress.style.width = (max > 0 ? (y / max) * 100 : 0) + `%`;
   topbar.classList.toggle(`hide`, y > 600 && y > lastY);
   lastY = y;
-  if (!reduced) kinetics.forEach(k => {
-    const dir = +k.dataset.kinetic;
-    k.style.transform = `translateX(${(((y * .2) % 800) - 400) * dir}px)`;
-  });
   ticking = false;
 };
 addEventListener(`scroll`, () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
 onScroll();
+
+/* word-mask reveals for section headings */
+if (!reduced) {
+  document.querySelectorAll(`.sec-head h2, .contact h2`).forEach(h => {
+    let wi = 0;
+    [...h.childNodes].forEach(n => {
+      if (n.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach(part => {
+          if (!part) return;
+          if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
+          const w = document.createElement(`span`); w.className = `w`;
+          const i = document.createElement(`span`); i.style.setProperty(`--wd`, wi++);
+          i.textContent = part; w.appendChild(i); frag.appendChild(w);
+        });
+        h.replaceChild(frag, n);
+      } else if (n.nodeType === 1) {
+        const w = document.createElement(`span`); w.className = `w`;
+        const i = document.createElement(`span`); i.style.setProperty(`--wd`, wi++);
+        h.insertBefore(w, n); w.appendChild(i); i.appendChild(n);
+      }
+    });
+    h.classList.add(`wsplit`);
+  });
+}
+
+/* ghost section numerals */
+document.querySelectorAll(`main section[id]`).forEach((s, i) => {
+  const g = document.createElement(`span`);
+  g.className = `gnum`; g.setAttribute(`aria-hidden`, `true`);
+  g.textContent = `0` + (i + 1);
+  s.prepend(g);
+});
+
+/* section hairline draw */
+const secIO = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add(`insec`); secIO.unobserve(e.target); }
+}), { threshold: .12 });
+document.querySelectorAll(`.section`).forEach(s => secIO.observe(s));
+
+/* scrollspy: rail + topbar */
+const spyLinks = [...document.querySelectorAll(`.rail a, .nav a[href^="#"]`)];
+const spyIO = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) spyLinks.forEach(a => a.classList.toggle(`act`, a.getAttribute(`href`) === `#` + e.target.id));
+}), { rootMargin: `-45% 0px -50% 0px` });
+document.querySelectorAll(`main section[id]`).forEach(s => spyIO.observe(s));
+
+/* card glare + tilt */
+if (finePointer && !reduced) {
+  document.querySelectorAll(`.bld,.cap`).forEach(card => {
+    card.addEventListener(`pointermove`, e => {
+      const r = card.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width, py2 = (e.clientY - r.top) / r.height;
+      card.style.setProperty(`--gx`, px * 100 + `%`);
+      card.style.setProperty(`--gy`, py2 * 100 + `%`);
+      card.style.setProperty(`--go`, 1);
+      card.style.setProperty(`--rx`, (py2 - .5) * -3.5 + `deg`);
+      card.style.setProperty(`--ry`, (px - .5) * 4.5 + `deg`);
+    }, { passive: true });
+    card.addEventListener(`pointerleave`, () => {
+      card.style.setProperty(`--go`, 0);
+      card.style.setProperty(`--rx`, `0deg`);
+      card.style.setProperty(`--ry`, `0deg`);
+    });
+  });
+}
+
+/* continuous fx loop: kinetic skew by scroll velocity, hero parallax, ghost numerals */
+if (!reduced) {
+  const heroWrap = document.querySelector(`.hero .wrap`);
+  const heroSide = document.querySelectorAll(`.hero-tel,.hero-scroll`);
+  const gnums = [...document.querySelectorAll(`.gnum`)];
+  let vel = 0, sk = 0, py = scrollY;
+  const fx = () => {
+    const y = scrollY;
+    vel = y - py; py = y;
+    sk += (Math.max(-12, Math.min(12, vel * .4)) - sk) * .1;
+    kinetics.forEach(k => {
+      const dir = +k.dataset.kinetic;
+      k.style.transform = `translateX(${(((y * .2) % 800) - 400) * dir}px) skewX(${(sk * dir * .6).toFixed(2)}deg)`;
+    });
+    if (y < innerHeight) {
+      heroWrap.style.transform = `translateY(${(y * .22).toFixed(1)}px)`;
+      heroWrap.style.opacity = Math.max(0, 1 - y / (innerHeight * .8)).toFixed(3);
+      heroSide.forEach(el => el.style.opacity = Math.max(0, 1 - y / (innerHeight * .45)).toFixed(3));
+    }
+    gnums.forEach(g => {
+      const r = g.parentElement.getBoundingClientRect();
+      if (r.top < innerHeight && r.bottom > 0) g.style.transform = `translateY(${((innerHeight - r.top) * -.08).toFixed(1)}px)`;
+    });
+    requestAnimationFrame(fx);
+  };
+  fx();
+}
 
 /* ticker clock + rotating focus */
 const clockEl = document.getElementById(`tkClock`);
