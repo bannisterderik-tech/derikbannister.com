@@ -115,7 +115,7 @@ const footerHTML = `<footer><div class="wrap"><div class="fcols">
 <div><h3>Services</h3>${services.slice(0, 8).map(s => `<a href="/services/${s.slug}/">${esc(s.short)}</a>`).join('')}<a href="/services/">All services →</a></div>
 <div><h3>Industries</h3>${trades.slice(0, 8).map(t => `<a href="/trades/${t.slug}/">${esc(t.name)}</a>`).join('')}<a href="/trades/">All industries →</a></div>
 <div><h3>Locations</h3>${locations.slice(0, 8).map(l => `<a href="/locations/${l.slug}/">${esc(l.city)}, ${l.state}</a>`).join('')}<a href="/locations/">All locations →</a></div>
-<div><h3>Company</h3><a href="/">Home</a><a href="/about/">About</a><a href="/#work">Work</a><a href="/products/">SEO Products</a><a href="mailto:${EMAIL}">Email</a><a href="tel:${PHONE_TEL}">Call/Text ${PHONE}</a></div>
+<div><h3>Company</h3><a href="/">Home</a><a href="/about/">About</a><a href="/#builds">Builds</a><a href="/products/">SEO Products</a><a href="mailto:${EMAIL}">Email</a><a href="tel:${PHONE_TEL}">Call/Text ${PHONE}</a></div>
 </div><div class="legal"><span class="mono">© 2026 ${BRAND}</span><span class="mono">DB<b>—</b> BUILD. OPERATE. OWN.</span></div></div></footer>`;
 
 let urls = [];
@@ -154,7 +154,8 @@ ${footerHTML}
   const dir = join(ROOT, path.slice(1));
   mkdirSync(dir, { recursive: true });
   writeFileSync(join(dir, 'index.html'), html);
-  urls.push({ path, html });
+  /* pages canonicalized elsewhere stay out of the sitemap — it should list canonical URLs only */
+  urls.push({ path, html, skipmap: !!canonicalOverride });
 }
 
 const faqLD = qs => ({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: qs.map(q => ({ '@type': 'Question', name: q.q, acceptedAnswer: { '@type': 'Answer', text: q.a } })) });
@@ -222,7 +223,7 @@ for (const s of services) {
   const canonicalOverride = s.slug === 'link-building' ? `${SITE}/products/link-building/` : s.slug === 'press-releases' ? `${SITE}/products/press-releases/` : undefined;
   const cityLinks = s.core ? `<section><div class="wrap"><h2>${esc(s.short)}, market by market</h2><div class="citylinks">${locations.map(l => `<a href="/locations/${l.slug}/${s.slug}/">${esc(s.short)} in ${esc(l.city)}, ${l.state}</a>`).join('')}</div></div></section>` : '';
   page({
-    path: `/services/${s.slug}/`, title: `${s.name} for Service Businesses | ${BRAND}`,
+    path: `/services/${s.slug}/`, title: (() => { const t = `${s.name} for Service Businesses | ${BRAND}`; return t.length > 65 ? `${s.name} | ${BRAND}` : t; })(),
     desc: `${s.metaShort}. For service businesses across Oregon, Boise, Spokane, Vancouver WA, Reno, and Redding. Flat pricing — you own everything.`,
     crumbs: [{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/' }, { name: s.short, url: `/services/${s.slug}/` }],
     h1: `${esc(s.name)}<span class="chrome"> that earns its keep.</span>`,
@@ -273,7 +274,7 @@ for (const t of trades) {
 
 /* ---------- location hubs + city-service pages ---------- */
 page({
-  path: '/locations/', title: `Locations — Every Oregon Market + Neighboring Metros | ${BRAND}`,
+  path: '/locations/', title: `Locations — Oregon + Neighboring Metros | ${BRAND}`,
   desc: `${BRAND} builds websites, software, and growth systems across every Oregon market plus Boise, Spokane, Vancouver WA, Reno, and Redding.`,
   crumbs: [{ name: 'Home', url: '/' }, { name: 'Locations', url: '/locations/' }],
   h1: `All of Oregon. <span class="chrome">Then some.</span>`,
@@ -415,7 +416,7 @@ for (const u of entries) {
   newManifest[u.path] = prev && prev.hash === h ? prev : { hash: h, lastmod: today };
 }
 writeFileSync(manifestPath, JSON.stringify(newManifest, null, 1));
-writeFileSync(join(ROOT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries.map(u => `<url><loc>${SITE}${u.path}</loc><lastmod>${newManifest[u.path].lastmod}</lastmod></url>`).join('\n')}\n</urlset>\n`);
+writeFileSync(join(ROOT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries.filter(u => !u.skipmap).map(u => `<url><loc>${SITE}${u.path}</loc><lastmod>${newManifest[u.path].lastmod}</lastmod></url>`).join('\n')}\n</urlset>\n`);
 writeFileSync(join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
 
 console.log(`generated ${urls.length} pages + 404 + CNAME + llms.txt + sitemap(${entries.length}) + robots`);
