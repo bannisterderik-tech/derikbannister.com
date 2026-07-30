@@ -161,6 +161,16 @@ h1,h2,h3{font-family:var(--disp);line-height:1.02;font-weight:800;letter-spacing
 
 
 
+/* stat grid */
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair)}
+@media(max-width:1000px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.stat-grid{grid-template-columns:1fr}}
+.stat{background:var(--ink);padding:34px 30px;display:grid;gap:12px;align-content:start;transition:background .3s}
+.stat:hover{background:var(--ink2)}
+.stat b{font-family:var(--disp);font-weight:800;font-size:clamp(2.6rem,5vw,4rem);line-height:1}
+.stat p{color:var(--muted);font-size:.92rem;max-width:32ch}
+.stat .src{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;color:var(--faint)}
+
 /* sectors index */
 .sec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}
 .sec-grid a{border:1px solid var(--hair);padding:14px 16px;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);transition:border-color .25s,color .25s}
@@ -405,7 +415,7 @@ footer .mono{font-size:.64rem}
       <a href="#builds">Builds</a>
       <a href="#sectors">Industries</a>
       <a href="#capabilities">Capabilities</a>
-      <a href="#principles">Principles</a>
+      <a href="/ideas/">Ideas</a>
       <a class="btn mag" href="#contact">Get in touch <span class="arr">→</span></a>
     </nav>
   </div>
@@ -413,6 +423,7 @@ footer .mono{font-size:.64rem}
 
 <nav class="rail" aria-label="Section index">
   <a href="#builds"><span class="lbl">Builds</span><span class="tick"></span></a>
+  <a href="#math"><span class="lbl">The Math</span><span class="tick"></span></a>
   <a href="#sectors"><span class="lbl">Industries</span><span class="tick"></span></a>
   <a href="#capabilities"><span class="lbl">Capabilities</span><span class="tick"></span></a>
   <a href="#principles"><span class="lbl">Principles</span><span class="tick"></span></a>
@@ -424,10 +435,10 @@ footer .mono{font-size:.64rem}
 <section class="hero">
   <canvas id="fx" aria-hidden="true"></canvas>
   <div class="wrap">
-    <p class="mono eyebrow kicker rv">Operator &amp; founder&nbsp;&nbsp;<b>— Oregon, USA</b></p>
+    <p class="mono eyebrow kicker rv">Derik Bannister&nbsp;&nbsp;<b>Operator &amp; Founder — Oregon, USA</b></p>
     <h1>
-      <span class="line rv" style="--d:.05s"><span data-scramble>Derik</span></span>
-      <span class="line chrome rv" style="--d:.15s"><span data-scramble>Bannister</span></span>
+      <span class="line rv" style="--d:.05s"><span data-scramble>Own your</span></span>
+      <span class="line chrome rv" style="--d:.15s"><span data-scramble>market.</span></span>
     </h1>
     <p class="sub rv" style="--d:.25s">
       I build <b>operating systems for real businesses</b> — software, AI, and growth
@@ -532,12 +543,31 @@ footer .mono{font-size:.64rem}
   </div>
 </section>
 
+<!-- ================= THE MATH ================= -->
+<section class="section" id="math">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="rv">The <span class="chrome" data-scramble>math.</span></h2>
+      <span class="sec-num">[ 02 / WHY NOW ]</span>
+    </div>
+    <p class="body rv" style="color:var(--muted);max-width:62ch;margin:-30px 0 40px">Roofing, HVAC, plumbing, electrical — the trades leak more revenue to missed calls and slow follow-up than to any competitor. Processes, automations, and agentic AI plug the leak. The numbers aren't subtle:</p>
+    <div class="stat-grid">
+      <div class="stat rv" style="--d:.0s"><b class="chrome"><i data-count="62">0</i>%</b><p>of calls to home-service businesses go unanswered</p><span class="src">SERVICETITAN · 50K+ CONTRACTOR LINES</span></div>
+      <div class="stat rv" style="--d:.06s"><b class="chrome"><i data-count="86">0</i>%</b><p>of callers who hit voicemail hang up without leaving a message</p><span class="src">INDUSTRY CALL STUDIES</span></div>
+      <div class="stat rv" style="--d:.12s"><b class="chrome"><i data-count="78">0</i>%</b><p>of customers hire the business that responds first</p><span class="src">LEAD CONNECT</span></div>
+      <div class="stat rv" style="--d:.18s"><b class="chrome"><i data-count="7">0</i>×</b><p>more likely to win the lead when you answer inside the hour</p><span class="src">HARVARD BUSINESS REVIEW · 2.2M LEADS</span></div>
+      <div class="stat rv" style="--d:.24s"><b class="chrome"><i data-count="25">0</i>%</b><p>of residential contractors meaningfully use AI today — that gap is your head start</p><span class="src">2026 CONTRACTOR SURVEY · 1,000+ FIRMS</span></div>
+      <div class="stat rv" style="--d:.30s"><b class="chrome"><i data-count="73">0</i>%</b><p>of contractors already using AI say it gives them a competitive edge</p><span class="src">2026 CONTRACTOR SURVEY · 1,000+ FIRMS</span></div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= SECTORS ================= -->
 <section class="section" id="sectors">
   <div class="wrap">
     <div class="sec-head">
       <h2 class="rv">Eighteen industries. <span class="chrome" data-scramble>By name.</span></h2>
-      <span class="sec-num">[ 02 / SECTORS ]</span>
+      <span class="sec-num">[ 03 / SECTORS ]</span>
     </div>
     <p class="body rv" style="color:var(--muted);max-width:60ch;margin:-30px 0 30px">No generic &ldquo;home services&rdquo; hand-waving. Every industry gets its own systems, its own page, its own plan &mdash; across all of Oregon and the neighboring metros I serve.</p>
     <div class="sec-grid rv"><a href="/trades/roofing/">Roofing</a><a href="/trades/plumbing/">Plumbing</a><a href="/trades/hvac/">HVAC</a><a href="/trades/electrical/">Electrical</a><a href="/trades/solar/">Solar</a><a href="/trades/concrete/">Concrete</a><a href="/trades/landscaping/">Landscaping</a><a href="/trades/pest-control/">Pest Control</a><a href="/trades/garage-doors/">Garage Doors</a><a href="/trades/painting/">Painting</a><a href="/trades/remodeling/">Remodeling</a><a href="/trades/fencing/">Fencing</a><a href="/trades/excavation/">Excavation</a><a href="/trades/tree-service/">Tree Service</a><a href="/trades/flooring/">Flooring</a><a href="/trades/gutters/">Gutters</a><a href="/trades/construction/">Construction</a><a href="/trades/real-estate/">Real Estate</a></div>
@@ -552,7 +582,7 @@ footer .mono{font-size:.64rem}
   <div class="wrap">
     <div class="sec-head">
       <h2 class="rv">What I build.</h2>
-      <span class="sec-num">[ 03 / CAPABILITIES ]</span>
+      <span class="sec-num">[ 04 / CAPABILITIES ]</span>
     </div>
     <div class="cap-grid">
       <div class="cap rv" style="--d:.0s">
@@ -648,7 +678,7 @@ footer .mono{font-size:.64rem}
   <div class="wrap">
     <div class="sec-head">
       <h2 class="rv">How I <span class="chrome" data-scramble>operate.</span></h2>
-      <span class="sec-num">[ 04 / PRINCIPLES ]</span>
+      <span class="sec-num">[ 05 / PRINCIPLES ]</span>
     </div>
     <div class="rules">
       <p class="lede rv">Operator first, vendor never. <span class="chrome">The core stack runs in my own business before it runs in yours.</span></p>
@@ -677,7 +707,7 @@ footer .mono{font-size:.64rem}
 <!-- ================= CONTACT ================= -->
 <section class="section contact" id="contact">
   <div class="wrap">
-    <p class="mono eyebrow rv" style="margin-bottom:24px">[ 05 / CONTACT ]</p>
+    <p class="mono eyebrow rv" style="margin-bottom:24px">[ 06 / CONTACT ]</p>
     <h2 class="rv">Let's build <span class="chrome" data-scramble>something real.</span></h2>
     <p class="sub rv" style="--d:.1s">Partnerships, projects, or a straight question — I read everything and answer fast.</p>
     <div class="contact-links rv" style="--d:.2s">
@@ -699,7 +729,8 @@ footer .mono{font-size:.64rem}
       <div><h4>Services</h4><a href="/services/web-design/">Websites</a><a href="/services/custom-software/">Custom Software</a><a href="/services/seo/">SEO</a><a href="/services/google-ads/">Google Ads / LSA</a><a href="/services/ai-receptionist/">AI Receptionist</a><a href="/services/crm/">CRM & Automation</a><a href="/services/">All services →</a></div>
       <div><h4>Industries</h4><a href="/trades/roofing/">Roofing</a><a href="/trades/plumbing/">Plumbing</a><a href="/trades/hvac/">HVAC</a><a href="/trades/electrical/">Electrical</a><a href="/trades/solar/">Solar</a><a href="/trades/concrete/">Concrete</a><a href="/trades/">All industries →</a></div>
       <div><h4>Locations</h4><a href="/locations/portland-or/">Portland, OR</a><a href="/locations/salem-or/">Salem, OR</a><a href="/locations/eugene-or/">Eugene, OR</a><a href="/locations/springfield-or/">Springfield, OR</a><a href="/locations/gresham-or/">Gresham, OR</a><a href="/locations/hillsboro-or/">Hillsboro, OR</a><a href="/locations/">All locations →</a></div>
-      <div><h4>Company</h4><a href="#builds">Builds</a><a href="/products/">SEO Products</a><a href="mailto:bannisterderik@gmail.com">Email</a><a href="tel:+15307367085">Call/Text 530-736-7085</a></div>
+      <div><h4>Company</h4><a href="#builds">Builds</a><a href="/ideas/">Ideas Board</a><a href="/products/">SEO Products</a><a href="mailto:bannisterderik@gmail.com">Email</a><a href="tel:+15307367085">Call/Text 530-736-7085</a></div>
+      <div><h4>Legal</h4><a href="/legal/terms/">Terms of Use</a><a href="/legal/privacy/">Privacy Policy</a><a href="/legal/do-not-sell/">Do Not Sell or Share My Personal Information</a><a href="/legal/accessibility/">Accessibility</a><a href="/legal/disclaimer/">Disclaimer</a></div>
     </div>
     <div style="display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center;border-top:1px solid var(--hair);padding-top:26px">
       <span class="mono">© 2026 Derik Bannister</span>
@@ -812,6 +843,19 @@ const scramble = el => {
   step();
 };
 
+/* stat count-up */
+const countUp = el => {
+  const target = +el.dataset.count;
+  if (reduced) { el.textContent = target; return; }
+  const t0 = performance.now(), dur = 1400;
+  const step = now => {
+    const p = Math.min(1, (now - t0) / dur);
+    el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+    if (p < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+};
+
 /* reveals */
 const io = new IntersectionObserver(es => {
   es.forEach(e => {
@@ -819,6 +863,7 @@ const io = new IntersectionObserver(es => {
     e.target.classList.add(`on`);
     e.target.querySelectorAll(`[data-scramble]`).forEach(scramble);
     if (e.target.matches(`[data-scramble]`)) scramble(e.target);
+    e.target.querySelectorAll(`[data-count]`).forEach(countUp);
     io.unobserve(e.target);
   });
 }, { threshold: .15, rootMargin: `0px 0px -40px 0px` });

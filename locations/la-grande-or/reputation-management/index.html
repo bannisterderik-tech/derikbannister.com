@@ -65,12 +65,32 @@ footer{border-top:1px solid var(--hair);padding:40px 0;background:var(--ink2);ma
 .fcols a{display:block;color:var(--muted);font-size:.82rem;padding:3px 0}
 .fcols a:hover{color:var(--silver-hi)}
 .legal{margin-top:30px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+/* ideas board */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.chips .lab{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;color:var(--faint);text-transform:uppercase;width:100%;margin-bottom:2px}
+.chip{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--hair);background:transparent;padding:.55em 1em;cursor:pointer;transition:border-color .25s,color .25s,background .25s}
+.chip:hover{border-color:var(--silver);color:var(--silver-hi)}
+.chip.on{background:var(--silver-hi);color:var(--ink);border-color:var(--silver-hi)}
+.idea-count{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;color:var(--faint);text-transform:uppercase;margin:18px 0 22px}
+.idea-count b{color:var(--silver-hi);font-weight:500}
+.ideas{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair)}
+@media(max-width:1000px){.ideas{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.ideas{grid-template-columns:1fr}}
+.idea{background:var(--ink);padding:26px 24px;display:grid;gap:10px;align-content:start;transition:background .3s;position:relative;overflow:hidden}
+.idea::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background:linear-gradient(90deg,var(--silver-lo),var(--silver-hi));transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.idea:hover{background:var(--surface)}
+.idea:hover::after{transform:scaleX(1)}
+.idea .tp{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;color:var(--silver);text-transform:uppercase}
+.idea h3{font-size:1.02rem;text-transform:uppercase;letter-spacing:.01em}
+.idea p{color:var(--muted);font-size:.88rem}
+.idea .for{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;color:var(--faint);text-transform:uppercase;margin-top:4px}
+.idea.hide{display:none}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://derikbannister.com/"},{"@type":"ListItem","position":2,"name":"Locations","item":"https://derikbannister.com/locations/"},{"@type":"ListItem","position":3,"name":"La Grande, OR","item":"https://derikbannister.com/locations/la-grande-or/"},{"@type":"ListItem","position":4,"name":"Reputation","item":"https://derikbannister.com/locations/la-grande-or/reputation-management/"}]}</script>
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"Service","name":"Reputation & Review Management in La Grande, OR","description":"review requests after every job, responses handled, your rating defended","provider":{"@id":"https://derikbannister.com/#business"},"areaServed":{"@type":"City","name":"La Grande","containedInPlace":{"@type":"State","name":"Oregon"}},"url":"https://derikbannister.com/locations/la-grande-or/reputation-management/"},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do you work with businesses in La Grande, OR?","acceptedAnswer":{"@type":"Answer","text":"Yes — La Grande and the surrounding Grande Ronde Valley (Island City, Cove, Union and beyond) are core service areas. Everything is delivered remotely with the same speed and accountability, and I'm reachable by phone or text at 530-736-7085."}},{"@type":"Question","name":"How is this different from a big agency?","acceptedAnswer":{"@type":"Answer","text":"You work directly with the operator who builds and runs these systems — no account managers, no hand-offs, no invoices for meetings. If it doesn't book revenue for you, it gets rebuilt."}},{"@type":"Question","name":"Do I own what you build?","acceptedAnswer":{"@type":"Answer","text":"Completely. Your domain, your site, your data, your customer list. If we part ways, everything stays with you — that's a rule, not a favor."}},{"@type":"Question","name":"How fast can we start?","acceptedAnswer":{"@type":"Answer","text":"Most projects kick off within days of a strategy call, and the first pieces ship fast — a live system beats a perfect plan."}},{"@type":"Question","name":"What's the cost of Reputation in La Grande?","acceptedAnswer":{"@type":"Answer","text":"Flat, quoted-up-front pricing scoped to your goals — no percent-of-revenue, no lock-in contracts. Email bannisterderik@gmail.com for a free strategy brief with a straight number."}}]}]</script>
 </head>
 <body>
-<header class="top"><div class="wrap"><a class="logo" href="/">DB<span style="color:var(--silver-lo)">—</span></a><nav><a href="/services/">Services</a><a href="/trades/">Industries</a><a href="/locations/">Locations</a><a href="/products/">Products</a><a href="/#contact">Contact</a></nav></div></header>
+<header class="top"><div class="wrap"><a class="logo" href="/">DB<span style="color:var(--silver-lo)">—</span></a><nav><a href="/services/">Services</a><a href="/trades/">Industries</a><a href="/locations/">Locations</a><a href="/ideas/">Ideas</a><a href="/products/">Products</a><a href="/#contact">Contact</a></nav></div></header>
 <div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/locations/">Locations</a> / <a href="/locations/la-grande-or/">La Grande, OR</a> / Reputation</nav></div>
 <main>
 <div class="hero"><div class="wrap"><h1>Reputation in <span class="chrome">La Grande, OR.</span></h1><p class="lede">Review requests after every job, responses handled, your rating defended — for service businesses in La Grande, Island City, Cove, and across Union County.</p>
@@ -84,7 +104,8 @@ footer{border-top:1px solid var(--hair);padding:40px 0;background:var(--ink2);ma
 <div><h3>Services</h3><a href="/services/web-design/">Websites</a><a href="/services/custom-software/">Custom Software</a><a href="/services/seo/">SEO</a><a href="/services/google-ads/">Google Ads / LSA</a><a href="/services/ai-receptionist/">AI Receptionist</a><a href="/services/crm/">CRM &amp; Automation</a><a href="/services/email-sms-marketing/">Email &amp; SMS</a><a href="/services/reputation-management/">Reputation</a><a href="/services/">All services →</a></div>
 <div><h3>Industries</h3><a href="/trades/roofing/">Roofing</a><a href="/trades/plumbing/">Plumbing</a><a href="/trades/hvac/">HVAC</a><a href="/trades/electrical/">Electrical</a><a href="/trades/solar/">Solar</a><a href="/trades/concrete/">Concrete</a><a href="/trades/landscaping/">Landscaping</a><a href="/trades/pest-control/">Pest Control</a><a href="/trades/">All industries →</a></div>
 <div><h3>Locations</h3><a href="/locations/portland-or/">Portland, OR</a><a href="/locations/salem-or/">Salem, OR</a><a href="/locations/eugene-or/">Eugene, OR</a><a href="/locations/springfield-or/">Springfield, OR</a><a href="/locations/gresham-or/">Gresham, OR</a><a href="/locations/hillsboro-or/">Hillsboro, OR</a><a href="/locations/beaverton-or/">Beaverton, OR</a><a href="/locations/bend-or/">Bend, OR</a><a href="/locations/">All locations →</a></div>
-<div><h3>Company</h3><a href="/">Home</a><a href="/about/">About</a><a href="/#builds">Builds</a><a href="/products/">SEO Products</a><a href="mailto:bannisterderik@gmail.com">Email</a><a href="tel:+15307367085">Call/Text 530-736-7085</a></div>
+<div><h3>Company</h3><a href="/">Home</a><a href="/about/">About</a><a href="/#builds">Builds</a><a href="/ideas/">Ideas Board</a><a href="/products/">SEO Products</a><a href="mailto:bannisterderik@gmail.com">Email</a><a href="tel:+15307367085">Call/Text 530-736-7085</a></div>
+<div><h3>Legal</h3><a href="/legal/terms/">Terms of Use</a><a href="/legal/privacy/">Privacy Policy</a><a href="/legal/do-not-sell/">Do Not Sell or Share My Personal Information</a><a href="/legal/accessibility/">Accessibility</a><a href="/legal/disclaimer/">Disclaimer</a></div>
 </div><div class="legal"><span class="mono">© 2026 Derik Bannister</span><span class="mono">DB<b>—</b> BUILD. OPERATE. OWN.</span></div></div></footer>
 </body>
 </html>

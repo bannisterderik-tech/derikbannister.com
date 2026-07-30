@@ -104,6 +104,26 @@ footer{border-top:1px solid var(--hair);padding:40px 0;background:var(--ink2);ma
 .fcols a{display:block;color:var(--muted);font-size:.82rem;padding:3px 0}
 .fcols a:hover{color:var(--silver-hi)}
 .legal{margin-top:30px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+/* ideas board */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.chips .lab{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;color:var(--faint);text-transform:uppercase;width:100%;margin-bottom:2px}
+.chip{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--hair);background:transparent;padding:.55em 1em;cursor:pointer;transition:border-color .25s,color .25s,background .25s}
+.chip:hover{border-color:var(--silver);color:var(--silver-hi)}
+.chip.on{background:var(--silver-hi);color:var(--ink);border-color:var(--silver-hi)}
+.idea-count{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;color:var(--faint);text-transform:uppercase;margin:18px 0 22px}
+.idea-count b{color:var(--silver-hi);font-weight:500}
+.ideas{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair)}
+@media(max-width:1000px){.ideas{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.ideas{grid-template-columns:1fr}}
+.idea{background:var(--ink);padding:26px 24px;display:grid;gap:10px;align-content:start;transition:background .3s;position:relative;overflow:hidden}
+.idea::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background:linear-gradient(90deg,var(--silver-lo),var(--silver-hi));transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.idea:hover{background:var(--surface)}
+.idea:hover::after{transform:scaleX(1)}
+.idea .tp{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;color:var(--silver);text-transform:uppercase}
+.idea h3{font-size:1.02rem;text-transform:uppercase;letter-spacing:.01em}
+.idea p{color:var(--muted);font-size:.88rem}
+.idea .for{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;color:var(--faint);text-transform:uppercase;margin-top:4px}
+.idea.hide{display:none}
 `;
 
 const FONTS = `<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">`;
@@ -115,11 +135,12 @@ const footerHTML = `<footer><div class="wrap"><div class="fcols">
 <div><h3>Services</h3>${services.slice(0, 8).map(s => `<a href="/services/${s.slug}/">${esc(s.short)}</a>`).join('')}<a href="/services/">All services →</a></div>
 <div><h3>Industries</h3>${trades.slice(0, 8).map(t => `<a href="/trades/${t.slug}/">${esc(t.name)}</a>`).join('')}<a href="/trades/">All industries →</a></div>
 <div><h3>Locations</h3>${locations.slice(0, 8).map(l => `<a href="/locations/${l.slug}/">${esc(l.city)}, ${l.state}</a>`).join('')}<a href="/locations/">All locations →</a></div>
-<div><h3>Company</h3><a href="/">Home</a><a href="/about/">About</a><a href="/#builds">Builds</a><a href="/products/">SEO Products</a><a href="mailto:${EMAIL}">Email</a><a href="tel:${PHONE_TEL}">Call/Text ${PHONE}</a></div>
+<div><h3>Company</h3><a href="/">Home</a><a href="/about/">About</a><a href="/#builds">Builds</a><a href="/ideas/">Ideas Board</a><a href="/products/">SEO Products</a><a href="mailto:${EMAIL}">Email</a><a href="tel:${PHONE_TEL}">Call/Text ${PHONE}</a></div>
+<div><h3>Legal</h3><a href="/legal/terms/">Terms of Use</a><a href="/legal/privacy/">Privacy Policy</a><a href="/legal/do-not-sell/">Do Not Sell or Share My Personal Information</a><a href="/legal/accessibility/">Accessibility</a><a href="/legal/disclaimer/">Disclaimer</a></div>
 </div><div class="legal"><span class="mono">© 2026 ${BRAND}</span><span class="mono">DB<b>—</b> BUILD. OPERATE. OWN.</span></div></div></footer>`;
 
 let urls = [];
-function page({ path, title, desc, crumbs, h1, lede, body, schema, canonicalOverride }) {
+function page({ path, title, desc, crumbs, h1, lede, body, schema, canonicalOverride, noCta }) {
   const canonical = canonicalOverride || `${SITE}${path}`;
   if (desc.length > 158) desc = desc.slice(0, 155).replace(/[,;\s]+\S*$/, '') + '…';
   const crumbUI = crumbs.map((c, i) => i === crumbs.length - 1 ? esc(c.name) : `<a href="${c.url}">${esc(c.name)}</a> / `).join('');
@@ -141,11 +162,11 @@ ${FONTS}
 ${schema ? `<script type="application/ld+json">${JSON.stringify(schema)}</script>` : ''}
 </head>
 <body>
-<header class="top"><div class="wrap"><a class="logo" href="/">DB<span style="color:var(--silver-lo)">—</span></a><nav><a href="/services/">Services</a><a href="/trades/">Industries</a><a href="/locations/">Locations</a><a href="/products/">Products</a><a href="/#contact">Contact</a></nav></div></header>
+<header class="top"><div class="wrap"><a class="logo" href="/">DB<span style="color:var(--silver-lo)">—</span></a><nav><a href="/services/">Services</a><a href="/trades/">Industries</a><a href="/locations/">Locations</a><a href="/ideas/">Ideas</a><a href="/products/">Products</a><a href="/#contact">Contact</a></nav></div></header>
 <div class="wrap"><nav class="crumbs" aria-label="Breadcrumb">${crumbUI}</nav></div>
 <main>
 <div class="hero"><div class="wrap"><h1>${h1}</h1><p class="lede">${lede}</p>
-<div class="cta-row"><a class="btn" href="mailto:${EMAIL}?subject=${encodeURIComponent('Project inquiry — ' + title)}">Get a free strategy brief →</a><a class="btn ghost" href="tel:${PHONE_TEL}">Call/Text ${PHONE}</a></div></div></div>
+${noCta ? '' : `<div class="cta-row"><a class="btn" href="mailto:${EMAIL}?subject=${encodeURIComponent('Project inquiry — ' + title)}">Get a free strategy brief →</a><a class="btn ghost" href="tel:${PHONE_TEL}">Call/Text ${PHONE}</a></div>`}</div></div>
 ${body}
 </main>
 ${footerHTML}
@@ -206,7 +227,7 @@ const faqPoolCitySvc = (svc, loc) => {
 };
 
 /* ---------- clean old generated dirs ---------- */
-for (const d of ['services', 'trades', 'locations', 'products', 'about']) rmSync(join(ROOT, d), { recursive: true, force: true });
+for (const d of ['services', 'trades', 'locations', 'products', 'about', 'legal', 'ideas']) rmSync(join(ROOT, d), { recursive: true, force: true });
 mkdirSync(join(ROOT, 'og'), { recursive: true }); /* og-default.png is generated separately — never clean this dir */
 
 /* ---------- service hubs ---------- */
@@ -371,8 +392,148 @@ page({
   h1: `The operator behind <span class="chrome">the systems.</span>`,
   lede: `I'm Derik Bannister — an Oregon operator, not an agency. I sell real estate at The Operative Group, co-founded REoperative.ai, and build growth systems for service businesses across the Northwest.`,
   body: `<section><div class="wrap"><h2>Why that matters to you</h2><p class="body-copy">Everything on this site comes from operating, not theorizing. The CRM, the AI answering, the follow-up automation, the search strategy — the core stack runs inside my own real-estate business on live deals and real phones before any of it is offered to yours. When something doesn't book revenue, I feel it before you would.</p><p class="body-copy">That also means you deal with me. No account managers, no hand-offs, no ticket queues — email <b>${EMAIL}</b> or text <b>${PHONE}</b> and the person who answers is the person doing the work.</p></div></section>
-<section><div class="wrap"><h2>The work</h2><div class="grid"><a href="https://www.reoperative.ai" target="_blank" rel="noopener"><b>REoperative.ai</b>Co-founder — operating system for real-estate teams</a><a href="/#work"><b>The Operative Group</b>Real-estate agent — Oregon</a><a href="/#builds"><b>Recent builds</b>Sites shipped for local businesses</a></div></div></section>` + contactBand(`Want to talk to the person who'd actually build it?`),
+<section><div class="wrap"><h2>The work</h2><div class="grid"><a href="https://www.reoperative.ai" target="_blank" rel="noopener"><b>REoperative.ai</b>Co-founder — operating system for real-estate teams</a><a href="/"><b>The Operative Group</b>Real-estate agent — Oregon</a><a href="/#builds"><b>Recent builds</b>Sites shipped for local businesses</a></div></div></section>` + contactBand(`Want to talk to the person who'd actually build it?`),
   schema: { '@context': 'https://schema.org', '@type': 'Person', name: BRAND, email: EMAIL, telephone: PHONE_TEL, url: `${SITE}/about/`, jobTitle: 'Operator & Founder', worksFor: { '@id': BUSINESS_ID }, address: { '@type': 'PostalAddress', addressRegion: 'OR', addressCountry: 'US' } },
+});
+
+/* ---------- ideas board (filterable, from data/ideas.json) ---------- */
+const ideas = JSON.parse(readFileSync(join(ROOT, 'data/ideas.json'), 'utf8'));
+const IDEA_TYPES = [
+  { key: 'ai', label: 'AI' }, { key: 'agentic', label: 'Agentic AI' }, { key: 'automation', label: 'Automation' },
+  { key: 'marketing', label: 'Marketing' }, { key: 'software', label: 'Software' }, { key: 'growth', label: 'Growth' }, { key: 'ops', label: 'Ops' },
+];
+const tradeName = Object.fromEntries(trades.map(t => [t.slug, t.name]));
+const ideaFor = list => list.includes('all') ? 'EVERY TRADE' : list.slice(0, 3).map(s => tradeName[s] || s).join(' · ').toUpperCase() + (list.length > 3 ? ` +${list.length - 3}` : '');
+page({
+  path: '/ideas/', title: `${ideas.length} Build Ideas for the Trades | ${BRAND}`,
+  desc: `${ideas.length} concrete systems worth building for roofing, HVAC, plumbing, electrical, and 14 more trades — AI, agentic AI, automation, marketing, and software. Filterable by industry.`,
+  crumbs: [{ name: 'Home', url: '/' }, { name: 'Ideas', url: '/ideas/' }],
+  h1: `Things I've already <span class="chrome">thought of for you.</span>`,
+  lede: `${ideas.length} systems I'd build for the trades, free to take. Filter to your industry, steal anything on the board — or hand me one and I'll have it booking revenue while your competitors are still "circling back."`,
+  noCta: true,
+  body: `<section><div class="wrap">
+<div class="chips" id="tradeChips"><span class="lab">Industry</span><button class="chip on" data-f="all">All trades</button>${trades.map(t => `<button class="chip" data-f="${t.slug}">${esc(t.name)}</button>`).join('')}</div>
+<div class="chips" id="typeChips"><span class="lab">Type</span><button class="chip on" data-f="all">Everything</button>${IDEA_TYPES.map(t => `<button class="chip" data-f="${t.key}">${esc(t.label)}</button>`).join('')}</div>
+<p class="idea-count" aria-live="polite"><b id="ideaN">${ideas.length}</b> IDEAS ON THE BOARD</p>
+<div class="ideas" id="ideaGrid">${ideas.map(i => `<div class="idea" data-trades="${i.trades.join(' ')}" data-type="${i.type}"><span class="tp">${esc((IDEA_TYPES.find(t => t.key === i.type) || { label: i.type }).label)}</span><h3>${esc(i.title)}</h3><p>${esc(i.desc)}</p><span class="for">FOR: ${esc(ideaFor(i.trades))}</span></div>`).join('')}</div>
+</div></section>` + contactBand(`See one your shop needs? Tell me which — flat quote, fast ship.`) + `
+<script>(()=>{
+let trade='all',type='all';
+const cards=[...document.querySelectorAll('.idea')],n=document.getElementById('ideaN');
+const apply=()=>{let c=0;cards.forEach(k=>{const ts=k.dataset.trades.split(' ');const okT=trade==='all'||ts.includes('all')||ts.includes(trade);const okY=type==='all'||k.dataset.type===type;k.classList.toggle('hide',!(okT&&okY));if(okT&&okY)c++;});n.textContent=c;};
+const wire=(id,set)=>{const box=document.getElementById(id);box.addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;box.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');set(b.dataset.f);apply();});};
+wire('tradeChips',v=>trade=v);wire('typeChips',v=>type=v);
+})();</script>`,
+});
+
+/* ---------- legal pages (templates — not legal advice; have counsel review) ---------- */
+const LEGAL_DATE = 'July 30, 2026';
+const legalPages = [
+  { slug: 'terms', name: 'Terms of Use', blurb: 'The rules for using this website' },
+  { slug: 'privacy', name: 'Privacy Policy', blurb: 'What this site collects (very little) and how it’s handled' },
+  { slug: 'do-not-sell', name: 'Do Not Sell or Share My Personal Information', blurb: 'Your opt-out rights — and why there’s nothing to opt out of' },
+  { slug: 'accessibility', name: 'Accessibility', blurb: 'The standard this site is built to and how to report barriers' },
+  { slug: 'disclaimer', name: 'Disclaimer', blurb: 'What the numbers and examples on this site do and don’t promise' },
+];
+const lp = (t) => `<p class="body-copy">${t}</p>`;
+const lsec = (h, ...ps) => `<section><div class="wrap"><h2>${h}</h2>${ps.join('')}</div></section>`;
+const legalCrumb = (name, slug) => [{ name: 'Home', url: '/' }, { name: 'Legal', url: '/legal/' }, { name, url: `/legal/${slug}/` }];
+
+page({
+  path: '/legal/', title: `Legal | ${BRAND}`,
+  desc: `The policies that govern derikbannister.com: terms of use, privacy policy, data opt-out rights, accessibility statement, and disclaimer.`,
+  crumbs: [{ name: 'Home', url: '/' }, { name: 'Legal', url: '/legal/' }],
+  h1: `The fine print, <span class="chrome">in plain English.</span>`,
+  lede: `Straight policies for a straight operation. Each one is short, readable, and current as of ${LEGAL_DATE}.`,
+  body: `<section><div class="wrap"><div class="grid">${legalPages.map(l => `<a href="/legal/${l.slug}/"><b>${esc(l.name)}</b>${esc(l.blurb)}</a>`).join('')}</div></div></section>`,
+  noCta: true,
+});
+
+page({
+  path: '/legal/terms/', title: `Terms of Use | ${BRAND}`,
+  desc: `Terms of use for derikbannister.com — permitted use, intellectual property, disclaimers, limitation of liability, and Oregon governing law.`,
+  crumbs: legalCrumb('Terms of Use', 'terms'),
+  h1: `Terms of <span class="chrome">use.</span>`,
+  lede: `Effective ${LEGAL_DATE}. By using derikbannister.com (the &ldquo;Site&rdquo;), you agree to these terms. If you don't agree, don't use the Site.`,
+  noCta: true,
+  body:
+    lsec(`Who I am`, lp(`The Site is operated by ${BRAND}, an individual doing business from Oregon, USA (&ldquo;I,&rdquo; &ldquo;me,&rdquo; &ldquo;my&rdquo;). Contact: <b>${EMAIL}</b> or <b>${PHONE}</b>.`)) +
+    lsec(`What the Site is`, lp(`The Site is an informational showcase of services and past work. Nothing on it is an offer that binds me until we both sign a written agreement or I confirm a scope and price in writing.`), lp(`If you engage me for services, that engagement is governed by its own written agreement or quoted scope. If those terms conflict with these, the engagement terms win for that work. These Terms govern the Site itself.`)) +
+    lsec(`Intellectual property`, lp(`The Site's design, text, code, and branding are mine. You may browse, link to, and share the Site; you may not copy, scrape at scale, republish, or use its content to build a competing offering without written permission. Search engines and AI assistants may index the Site as described in robots.txt and llms.txt.`), lp(`Client sites shown in the &ldquo;Builds&rdquo; section belong to their respective owners and appear as portfolio references. All third-party names and trademarks belong to their owners; no affiliation or endorsement is implied.`)) +
+    lsec(`Acceptable use`, lp(`Don't use the Site to break the law, probe or disrupt its hosting, misrepresent your identity to me, or harvest information about others. I may restrict access to anyone abusing the Site.`)) +
+    lsec(`No professional advice`, lp(`Content on the Site is general information about marketing, software, and business systems. It is not legal, financial, tax, or other professional advice, and it isn't advice tailored to your situation until you hire me and we scope it.`)) +
+    lsec(`No guaranteed results`, lp(`Examples, portfolio pieces, interface mock-ups, and figures on the Site are illustrative. Marketing and software outcomes depend on your market, budget, competition, and execution. I don't guarantee rankings, lead volume, or revenue — anyone who does is lying to you. See the <a href="/legal/disclaimer/"><b>Disclaimer</b></a>.`)) +
+    lsec(`The Site is provided &ldquo;as is&rdquo;`, lp(`To the fullest extent permitted by law, the Site is provided without warranties of any kind, express or implied — including merchantability, fitness for a particular purpose, and non-infringement. I don't promise the Site will be uninterrupted, error-free, or secure.`)) +
+    lsec(`Limitation of liability`, lp(`To the fullest extent permitted by law, I am not liable for indirect, incidental, special, consequential, or punitive damages arising from your use of the Site. My total liability for any claim relating to the Site is capped at $100. Some jurisdictions don't allow certain limits, so parts of this may not apply to you.`)) +
+    lsec(`Indemnification`, lp(`You agree to defend and hold me harmless from claims arising out of your misuse of the Site or violation of these Terms.`)) +
+    lsec(`Third-party links`, lp(`The Site links to sites I don't control (including portfolio sites). I'm not responsible for their content or practices.`)) +
+    lsec(`Governing law`, lp(`These Terms are governed by the laws of the State of Oregon, USA, without regard to conflict-of-law rules. Disputes belong exclusively in the state or federal courts serving Lane County, Oregon, and you consent to that venue.`)) +
+    lsec(`Changes & housekeeping`, lp(`I may update these Terms by posting a revised version with a new effective date — continued use means acceptance. If any part is held unenforceable, the rest stands. These Terms plus the <a href="/legal/privacy/"><b>Privacy Policy</b></a> are the whole agreement about Site use.`), lp(`Questions: <b>${EMAIL}</b>.`)),
+});
+
+page({
+  path: '/legal/privacy/', title: `Privacy Policy | ${BRAND}`,
+  desc: `Privacy policy for derikbannister.com: no accounts, no ad trackers, no analytics cookies. What little is collected, how it's used, and your rights.`,
+  crumbs: legalCrumb('Privacy Policy', 'privacy'),
+  h1: `Privacy <span class="chrome">policy.</span>`,
+  lede: `Effective ${LEGAL_DATE}. Short version: this is a static website. No accounts, no forms, no ad trackers, no analytics cookies — and I don't sell personal information. Ever.`,
+  noCta: true,
+  body:
+    lsec(`Who is responsible`, lp(`${BRAND}, Oregon, USA. Contact: <b>${EMAIL}</b> or <b>${PHONE}</b>. This policy covers derikbannister.com only — portfolio sites linked from here have their own policies.`)) +
+    lsec(`What this Site collects`, `<ul class="feat"><li><b>What you send me.</b> If you email, call, or text, I receive what you choose to share — your address or number and the content of the message. That's the only personal information I actively collect.</li><li><b>Hosting logs.</b> The Site is served by GitHub Pages. GitHub may log visitor IP addresses for security and abuse prevention under its own privacy policy.</li><li><b>Fonts.</b> Typefaces load from Google Fonts. When they load, your browser discloses your IP address to Google under Google's privacy policy.</li><li><b>One local flag.</b> The Site stores a single value ("db-booted") in your browser's sessionStorage so the intro animation plays once per visit. It never leaves your device and is deleted when you close the tab. No tracking cookies are set by this Site.</li></ul>`) +
+    lsec(`How your information is used`, lp(`To respond to you, scope and deliver services you ask about, keep normal business records, and meet legal obligations. That's it. No ad targeting, no lookalike audiences, no data brokers.`)) +
+    lsec(`Calls & texts`, lp(`If you text or call, replies come from me and only about what you raised. Message and data rates may apply through your carrier. Reply STOP to end texts at any time.`)) +
+    lsec(`Sharing`, lp(`I do not sell personal information and do not share it for cross-context behavioral advertising. Information passes only through the service providers needed to run things: GitHub (hosting), Google (fonts), and email/phone carriers — each under their own terms. I may disclose information if the law genuinely requires it.`)) +
+    lsec(`Retention`, lp(`Correspondence is kept as long as it's useful for the business relationship or required for legal and accounting purposes, then deleted.`)) +
+    lsec(`Your rights`, lp(`Depending on where you live — including under the Oregon Consumer Privacy Act, the California Consumer Privacy Act as amended, and similar laws — you may have rights to access, correct, delete, or receive a copy of your personal information, and to opt out of sales or targeted advertising (nothing to opt out of here, but the right is yours). Email <b>${EMAIL}</b> with the subject &ldquo;Privacy request&rdquo; and I'll respond within 45 days. I'll never treat you worse for exercising your rights. California residents: see <a href="/legal/do-not-sell/"><b>Do Not Sell or Share My Personal Information</b></a>.`)) +
+    lsec(`Global Privacy Control`, lp(`The Site sets no trackers, so a GPC signal has nothing to switch off — you're already at the setting GPC asks for.`)) +
+    lsec(`Children`, lp(`The Site is a business site not directed to children under 13, and I don't knowingly collect their information. If you believe a child sent me personal information, email me and I'll delete it.`)) +
+    lsec(`Security & where data lives`, lp(`Correspondence lives in standard commercial email and phone services with reasonable safeguards. Processing happens in the United States. No transmission or storage method is 100% secure.`)) +
+    lsec(`Changes`, lp(`Updates get posted here with a new effective date. Material changes will be obvious. Questions: <b>${EMAIL}</b>.`)),
+});
+
+page({
+  path: '/legal/do-not-sell/', title: `Do Not Sell or Share My Personal Information | ${BRAND}`,
+  desc: `derikbannister.com does not sell personal information or share it for cross-context behavioral advertising. How to submit a privacy opt-out request anyway.`,
+  crumbs: legalCrumb('Do Not Sell or Share', 'do-not-sell'),
+  h1: `Do not sell or share <span class="chrome">my personal information.</span>`,
+  lede: `Effective ${LEGAL_DATE}. The short answer: I don't sell your data, I don't share it for behavioral advertising, and I never have. This page exists so that promise is on the record — and so you can hold me to it.`,
+  noCta: true,
+  body:
+    lsec(`The commitment`, lp(`As the terms are defined in the California Consumer Privacy Act (as amended by the CPRA) and similar state laws: this Site has not sold personal information and has not shared it for cross-context behavioral advertising in the preceding 12 months, and does not do so today. There are no third-party advertising trackers, pixels, or analytics cookies on this Site at all.`)) +
+    lsec(`Global Privacy Control`, lp(`Browsers sending a Global Privacy Control signal are already fully honored — with no tracking and no data sales, the Site is permanently in the state GPC requests.`)) +
+    lsec(`Submitting a request anyway`, lp(`If you'd still like a formal response — or want to exercise access, deletion, or correction rights — email <b>${EMAIL}</b> with the subject &ldquo;Privacy request.&rdquo; Include what right you're exercising and the email address or phone number you've used to contact me, so I can find any correspondence. I'll verify the request against that correspondence and respond within 45 days.`), lp(`You may use an authorized agent; I'll ask for proof you authorized them. You will never receive worse service or pricing for exercising a privacy right.`)) +
+    lsec(`Everything else`, lp(`The full picture of what this Site collects (very little) is in the <a href="/legal/privacy/"><b>Privacy Policy</b></a>.`)),
+});
+
+page({
+  path: '/legal/accessibility/', title: `Accessibility | ${BRAND}`,
+  desc: `Accessibility statement for derikbannister.com: WCAG 2.1 AA target, reduced-motion support, semantic markup, and how to report a barrier.`,
+  crumbs: legalCrumb('Accessibility', 'accessibility'),
+  h1: `Built for <span class="chrome">everyone.</span>`,
+  lede: `Updated ${LEGAL_DATE}. I want every visitor to be able to read, navigate, and contact me here — and when something falls short, I want to hear about it and fix it fast.`,
+  noCta: true,
+  body:
+    lsec(`The standard`, lp(`This Site targets Web Content Accessibility Guidelines (WCAG) 2.1 Level AA. It's a hand-built static site, which means accessibility issues are mine to fix directly — no platform or plugin in the way.`)) +
+    lsec(`What's implemented`, `<ul class="feat"><li>Semantic HTML with a logical heading structure and one H1 per page</li><li>Reduced-motion support: every animation and scroll effect is disabled when your system sets &ldquo;prefers reduced motion&rdquo;</li><li>High-contrast monochrome palette designed to hold up for low-vision readers</li><li>Text alternatives on meaningful images; decorative graphics hidden from screen readers</li><li>Keyboard-navigable links and controls; no keyboard traps; no time-limited content</li><li>Responsive layout that supports zoom to 200% and small screens without horizontal scrolling</li><li>Descriptive link text and ARIA labels on navigation landmarks</li></ul>`) +
+    lsec(`Known limitations`, lp(`The homepage leans on motion design; if an effect bothers you, enabling your operating system's reduced-motion setting turns all of it off. Portfolio sites linked from here are separate properties and may not meet the same standard.`)) +
+    lsec(`Found a barrier?`, lp(`Tell me and I'll fix it: <b>${EMAIL}</b> or call/text <b>${PHONE}</b>. Include the page and what went wrong. I aim to respond within two business days.`)),
+});
+
+page({
+  path: '/legal/disclaimer/', title: `Disclaimer | ${BRAND}`,
+  desc: `Disclaimer for derikbannister.com: illustrative figures, portfolio references, no earnings guarantees, and no professional advice.`,
+  crumbs: legalCrumb('Disclaimer', 'disclaimer'),
+  h1: `What this site <span class="chrome">does and doesn't promise.</span>`,
+  lede: `Effective ${LEGAL_DATE}. I'd rather under-promise here and over-deliver in the work. So let's be precise about what the words and numbers on this Site mean.`,
+  noCta: true,
+  body:
+    lsec(`Illustrative figures`, lp(`Interface mock-ups, sample metrics, and growth figures shown on this Site (for example, the animated dashboard graphics on the homepage) are illustrations of the kind of systems I build — not measurements from a specific client engagement unless expressly labeled as such.`)) +
+    lsec(`No earnings or results guarantee`, lp(`Marketing, SEO, advertising, and software outcomes depend on your market, competition, budget, follow-through, and factors nobody controls (including search engines changing the rules). Nothing on this Site guarantees rankings, lead volume, revenue, or any specific result. Past work shown is not a promise of future performance.`)) +
+    lsec(`Portfolio references`, lp(`Sites in the &ldquo;Builds&rdquo; section are real projects shown as examples of work. They belong to their owners, and their presence doesn't imply those businesses endorse anything on this Site.`)) +
+    lsec(`Not professional advice`, lp(`Content here is general business information — not legal, financial, tax, or investment advice. Decisions you make from reading this Site are your own; for advice on your specific situation, hire the appropriate professional (for services I offer, that can be me — scoped and in writing).`)) +
+    lsec(`Third parties`, lp(`All third-party trademarks, product names, and logos belong to their owners. Links to external sites don't mean I control or vouch for them.`)) +
+    lsec(`Questions`, lp(`If any of this is unclear, ask before you rely on it: <b>${EMAIL}</b>.`)),
 });
 
 /* ---------- 404 ---------- */

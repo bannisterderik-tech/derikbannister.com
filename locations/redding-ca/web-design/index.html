@@ -65,12 +65,32 @@ footer{border-top:1px solid var(--hair);padding:40px 0;background:var(--ink2);ma
 .fcols a{display:block;color:var(--muted);font-size:.82rem;padding:3px 0}
 .fcols a:hover{color:var(--silver-hi)}
 .legal{margin-top:30px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+/* ideas board */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.chips .lab{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;color:var(--faint);text-transform:uppercase;width:100%;margin-bottom:2px}
+.chip{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--hair);background:transparent;padding:.55em 1em;cursor:pointer;transition:border-color .25s,color .25s,background .25s}
+.chip:hover{border-color:var(--silver);color:var(--silver-hi)}
+.chip.on{background:var(--silver-hi);color:var(--ink);border-color:var(--silver-hi)}
+.idea-count{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;color:var(--faint);text-transform:uppercase;margin:18px 0 22px}
+.idea-count b{color:var(--silver-hi);font-weight:500}
+.ideas{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair)}
+@media(max-width:1000px){.ideas{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.ideas{grid-template-columns:1fr}}
+.idea{background:var(--ink);padding:26px 24px;display:grid;gap:10px;align-content:start;transition:background .3s;position:relative;overflow:hidden}
+.idea::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background:linear-gradient(90deg,var(--silver-lo),var(--silver-hi));transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.idea:hover{background:var(--surface)}
+.idea:hover::after{transform:scaleX(1)}
+.idea .tp{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;color:var(--silver);text-transform:uppercase}
+.idea h3{font-size:1.02rem;text-transform:uppercase;letter-spacing:.01em}
+.idea p{color:var(--muted);font-size:.88rem}
+.idea .for{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;color:var(--faint);text-transform:uppercase;margin-top:4px}
+.idea.hide{display:none}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://derikbannister.com/"},{"@type":"ListItem","position":2,"name":"Locations","item":"https://derikbannister.com/locations/"},{"@type":"ListItem","position":3,"name":"Redding, CA","item":"https://derikbannister.com/locations/redding-ca/"},{"@type":"ListItem","position":4,"name":"Websites","item":"https://derikbannister.com/locations/redding-ca/web-design/"}]}</script>
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"Service","name":"Website Design & Development in Redding, CA","description":"fast, search-first websites built to convert calls and quote requests — owned by you, on your domain","provider":{"@id":"https://derikbannister.com/#business"},"areaServed":{"@type":"City","name":"Redding","containedInPlace":{"@type":"State","name":"California"}},"url":"https://derikbannister.com/locations/redding-ca/web-design/"},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do you work with businesses in Redding, CA?","acceptedAnswer":{"@type":"Answer","text":"Yes — Redding and the surrounding far northern California (Anderson, Shasta Lake, Palo Cedro and beyond) are core service areas. Everything is delivered remotely with the same speed and accountability, and I'm reachable by phone or text at 530-736-7085."}},{"@type":"Question","name":"Why work with you instead of an agency?","acceptedAnswer":{"@type":"Answer","text":"Because the person you call is the person who does the work. The core systems run in my own Oregon business first, and the work is digital — results show up on your phone, not in a conference room."}},{"@type":"Question","name":"Do I own what you build?","acceptedAnswer":{"@type":"Answer","text":"Completely. Your domain, your site, your data, your customer list. If we part ways, everything stays with you — that's a rule, not a favor."}},{"@type":"Question","name":"What does the process look like?","acceptedAnswer":{"@type":"Answer","text":"A short strategy call, a flat quote, then work in the open — you see progress weekly, in plain English, and nothing ships without your sign-off."}},{"@type":"Question","name":"What's the cost of Websites in Redding?","acceptedAnswer":{"@type":"Answer","text":"Flat, quoted-up-front pricing scoped to your goals — no percent-of-revenue, no lock-in contracts. Email bannisterderik@gmail.com for a free strategy brief with a straight number."}}]}]</script>
 </head>
 <body>
-<header class="top"><div class="wrap"><a class="logo" href="/">DB<span style="color:var(--silver-lo)">—</span></a><nav><a href="/services/">Services</a><a href="/trades/">Industries</a><a href="/locations/">Locations</a><a href="/products/">Products</a><a href="/#contact">Contact</a></nav></div></header>
+<header class="top"><div class="wrap"><a class="logo" href="/">DB<span style="color:var(--silver-lo)">—</span></a><nav><a href="/services/">Services</a><a href="/trades/">Industries</a><a href="/locations/">Locations</a><a href="/ideas/">Ideas</a><a href="/products/">Products</a><a href="/#contact">Contact</a></nav></div></header>
 <div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/locations/">Locations</a> / <a href="/locations/redding-ca/">Redding, CA</a> / Websites</nav></div>
 <main>
 <div class="hero"><div class="wrap"><h1>Websites in <span class="chrome">Redding, CA.</span></h1><p class="lede">Fast, search-first websites built to convert calls and quote requests — owned by you, on your domain — for service businesses in Redding, Anderson, Shasta Lake, and across Shasta County.</p>
@@ -84,7 +104,8 @@ footer{border-top:1px solid var(--hair);padding:40px 0;background:var(--ink2);ma
 <div><h3>Services</h3><a href="/services/web-design/">Websites</a><a href="/services/custom-software/">Custom Software</a><a href="/services/seo/">SEO</a><a href="/services/google-ads/">Google Ads / LSA</a><a href="/services/ai-receptionist/">AI Receptionist</a><a href="/services/crm/">CRM &amp; Automation</a><a href="/services/email-sms-marketing/">Email &amp; SMS</a><a href="/services/reputation-management/">Reputation</a><a href="/services/">All services →</a></div>
 <div><h3>Industries</h3><a href="/trades/roofing/">Roofing</a><a href="/trades/plumbing/">Plumbing</a><a href="/trades/hvac/">HVAC</a><a href="/trades/electrical/">Electrical</a><a href="/trades/solar/">Solar</a><a href="/trades/concrete/">Concrete</a><a href="/trades/landscaping/">Landscaping</a><a href="/trades/pest-control/">Pest Control</a><a href="/trades/">All industries →</a></div>
 <div><h3>Locations</h3><a href="/locations/portland-or/">Portland, OR</a><a href="/locations/salem-or/">Salem, OR</a><a href="/locations/eugene-or/">Eugene, OR</a><a href="/locations/springfield-or/">Springfield, OR</a><a href="/locations/gresham-or/">Gresham, OR</a><a href="/locations/hillsboro-or/">Hillsboro, OR</a><a href="/locations/beaverton-or/">Beaverton, OR</a><a href="/locations/bend-or/">Bend, OR</a><a href="/locations/">All locations →</a></div>
-<div><h3>Company</h3><a href="/">Home</a><a href="/about/">About</a><a href="/#builds">Builds</a><a href="/products/">SEO Products</a><a href="mailto:bannisterderik@gmail.com">Email</a><a href="tel:+15307367085">Call/Text 530-736-7085</a></div>
+<div><h3>Company</h3><a href="/">Home</a><a href="/about/">About</a><a href="/#builds">Builds</a><a href="/ideas/">Ideas Board</a><a href="/products/">SEO Products</a><a href="mailto:bannisterderik@gmail.com">Email</a><a href="tel:+15307367085">Call/Text 530-736-7085</a></div>
+<div><h3>Legal</h3><a href="/legal/terms/">Terms of Use</a><a href="/legal/privacy/">Privacy Policy</a><a href="/legal/do-not-sell/">Do Not Sell or Share My Personal Information</a><a href="/legal/accessibility/">Accessibility</a><a href="/legal/disclaimer/">Disclaimer</a></div>
 </div><div class="legal"><span class="mono">© 2026 Derik Bannister</span><span class="mono">DB<b>—</b> BUILD. OPERATE. OWN.</span></div></div></footer>
 </body>
 </html>
