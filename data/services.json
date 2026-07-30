@@ -1,0 +1,182 @@
+[
+ {
+  "slug": "web-design",
+  "name": "Website Design & Development",
+  "short": "Websites",
+  "core": true,
+  "desc": "fast, search-first websites built to convert calls and quote requests \u2014 owned by you, on your domain",
+  "features": [
+   "Custom design on your brand, no templates",
+   "Core Web Vitals-fast static builds",
+   "Service and city pages engineered to rank",
+   "Call tracking and form analytics wired in",
+   "You own the domain, code, and content \u2014 forever"
+  ],
+  "metaShort": "Fast, search-first websites that convert calls"
+ },
+ {
+  "slug": "custom-software",
+  "name": "Custom Software Development",
+  "short": "Custom Software",
+  "core": true,
+  "desc": "purpose-built software for how your operation actually runs \u2014 quote calculators, customer portals, crew tools, integrations",
+  "features": [
+   "Instant-quote and estimate calculators",
+   "Customer portals and job-status pages",
+   "Crew checklists and field tools",
+   "Integrations between the tools you already use",
+   "Built lean, shipped fast, priced flat"
+  ],
+  "metaShort": "Purpose-built software for how your operation runs"
+ },
+ {
+  "slug": "seo",
+  "name": "SEO & Local Search",
+  "short": "SEO",
+  "core": true,
+  "desc": "ranking in the map pack and organic results where your customers actually search",
+  "features": [
+   "Local keyword and competitor mapping",
+   "Google Business Profile optimization",
+   "Citations and NAP consistency",
+   "Content engineered for local intent",
+   "Monthly reporting tied to calls, not vanity metrics"
+  ],
+  "metaShort": "Map-pack and organic rankings where customers search"
+ },
+ {
+  "slug": "google-ads",
+  "name": "Google Ads & LSA Management",
+  "short": "Google Ads / LSA",
+  "core": true,
+  "desc": "Local Services Ads and PPC run to a cost-per-booked-job number",
+  "features": [
+   "Local Services Ads setup and dispute management",
+   "Search campaigns built on buyer-intent keywords",
+   "Negative-keyword discipline that stops waste",
+   "Call + form conversion tracking",
+   "Weekly numbers you can read in 60 seconds"
+  ],
+  "metaShort": "LSA + PPC run to cost-per-booked-job"
+ },
+ {
+  "slug": "ai-receptionist",
+  "name": "AI Receptionist & Call Answering",
+  "short": "AI Receptionist",
+  "core": true,
+  "desc": "every call answered 24/7 \u2014 nights, weekends, storm season \u2014 and booked onto your calendar",
+  "features": [
+   "Natural-voice AI trained on your services and pricing",
+   "Books jobs straight onto your calendar",
+   "Emergency routing to on-call staff",
+   "Every call transcribed and logged to your CRM",
+   "Answers in seconds \u2014 at 2am, on a holiday weekend"
+  ],
+  "metaShort": "Every call answered 24/7 and booked"
+ },
+ {
+  "slug": "crm",
+  "name": "CRM & Pipeline Automation",
+  "short": "CRM & Automation",
+  "core": true,
+  "desc": "every lead, quote, and job in one pipeline with follow-up that never forgets",
+  "features": [
+   "One pipeline from first call to paid invoice",
+   "Automatic estimate follow-up sequences",
+   "Review requests fired after every job",
+   "Job-source tracking: know your cost per job",
+   "Team visibility without spreadsheet chaos"
+  ],
+  "metaShort": "One pipeline, follow-up that never forgets"
+ },
+ {
+  "slug": "email-sms-marketing",
+  "name": "Email & SMS Marketing",
+  "short": "Email & SMS",
+  "core": true,
+  "desc": "estimates followed up automatically and past customers reactivated every season",
+  "features": [
+   "Estimate follow-up that closes stragglers",
+   "Seasonal reactivation campaigns",
+   "Maintenance and service reminders",
+   "Compliant list building and management",
+   "Revenue attribution on every send"
+  ],
+  "metaShort": "Estimates chased, past customers reactivated"
+ },
+ {
+  "slug": "reputation-management",
+  "name": "Reputation & Review Management",
+  "short": "Reputation",
+  "core": true,
+  "desc": "review requests after every job, responses handled, your rating defended",
+  "features": [
+   "Automated review requests by text and email",
+   "Smart routing: promoters to Google, issues to you",
+   "Response drafting in your voice",
+   "Review widgets for your site",
+   "Monitoring across Google, Yelp, and Facebook"
+  ],
+  "metaShort": "Reviews requested, answered, defended"
+ },
+ {
+  "slug": "content-marketing",
+  "name": "Content & Blogging",
+  "short": "Content",
+  "core": false,
+  "desc": "local, service-specific content that compounds into rankings",
+  "features": [
+   "Keyword-mapped editorial calendars",
+   "Service-area content that ranks",
+   "Written for homeowners, not algorithms",
+   "Internal linking that lifts money pages",
+   "Published and indexed, not parked in drafts"
+  ],
+  "metaShort": "Local content that compounds into rankings"
+ },
+ {
+  "slug": "link-building",
+  "name": "Link Building & Digital PR",
+  "short": "Link Building",
+  "core": false,
+  "desc": "authority links from real sites that move rankings",
+  "features": [
+   "Manual outreach to real publications",
+   "Guest posts on relevant industry sites",
+   "Niche edits into aged content",
+   "Local sponsorship and association links",
+   "White-hat only \u2014 nothing that risks the domain"
+  ],
+  "metaShort": "White-hat authority links that move rankings"
+ },
+ {
+  "slug": "press-releases",
+  "name": "Press Release Writing & Distribution",
+  "short": "Press Releases",
+  "core": false,
+  "desc": "newsworthy announcements written and syndicated to hundreds of outlets",
+  "features": [
+   "Professionally written releases",
+   "Distribution through established newswire networks",
+   "Local media targeting",
+   "Brand-search dominance for your company name",
+   "Links and citations that support SEO"
+  ],
+  "metaShort": "Announcements written and distributed properly"
+ },
+ {
+  "slug": "branding",
+  "name": "Brand & Identity",
+  "short": "Branding",
+  "core": false,
+  "desc": "an identity sharp enough to be remembered \u2014 logo, trucks, uniforms, everything",
+  "features": [
+   "Logo and full identity systems",
+   "Truck wraps and yard signs",
+   "Brand voice and messaging",
+   "Design systems your whole team can use",
+   "Built to look bigger than the franchises"
+  ],
+  "metaShort": "An identity you can spot from two lanes over"
+ }
+]

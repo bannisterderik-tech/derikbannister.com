@@ -1,0 +1,677 @@
+[
+ {
+  "slug": "portland-or",
+  "city": "Portland",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Multnomah County",
+  "region": "Portland metro",
+  "nearby": [
+   "Beaverton",
+   "Gresham",
+   "Lake Oswego",
+   "Tigard",
+   "Milwaukie"
+  ]
+ },
+ {
+  "slug": "salem-or",
+  "city": "Salem",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Marion County",
+  "region": "Willamette Valley",
+  "nearby": [
+   "Keizer",
+   "Woodburn",
+   "Silverton",
+   "Dallas",
+   "Monmouth"
+  ]
+ },
+ {
+  "slug": "eugene-or",
+  "city": "Eugene",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Lane County",
+  "region": "southern Willamette Valley",
+  "nearby": [
+   "Springfield",
+   "Junction City",
+   "Veneta",
+   "Cottage Grove",
+   "Creswell"
+  ]
+ },
+ {
+  "slug": "springfield-or",
+  "city": "Springfield",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Lane County",
+  "region": "southern Willamette Valley",
+  "nearby": [
+   "Eugene",
+   "Pleasant Hill",
+   "Creswell",
+   "Cottage Grove",
+   "Marcola"
+  ]
+ },
+ {
+  "slug": "gresham-or",
+  "city": "Gresham",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Multnomah County",
+  "region": "east Portland metro",
+  "nearby": [
+   "Troutdale",
+   "Fairview",
+   "Wood Village",
+   "Damascus",
+   "Portland"
+  ]
+ },
+ {
+  "slug": "hillsboro-or",
+  "city": "Hillsboro",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Washington County",
+  "region": "west Portland metro",
+  "nearby": [
+   "Beaverton",
+   "Forest Grove",
+   "Cornelius",
+   "Aloha",
+   "North Plains"
+  ]
+ },
+ {
+  "slug": "beaverton-or",
+  "city": "Beaverton",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Washington County",
+  "region": "west Portland metro",
+  "nearby": [
+   "Hillsboro",
+   "Tigard",
+   "Aloha",
+   "Portland",
+   "Cedar Hills"
+  ]
+ },
+ {
+  "slug": "bend-or",
+  "city": "Bend",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Deschutes County",
+  "region": "Central Oregon",
+  "nearby": [
+   "Redmond",
+   "Sisters",
+   "La Pine",
+   "Tumalo",
+   "Prineville"
+  ]
+ },
+ {
+  "slug": "medford-or",
+  "city": "Medford",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Jackson County",
+  "region": "Rogue Valley",
+  "nearby": [
+   "Ashland",
+   "Central Point",
+   "Jacksonville",
+   "Phoenix",
+   "White City"
+  ]
+ },
+ {
+  "slug": "corvallis-or",
+  "city": "Corvallis",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Benton County",
+  "region": "mid-Willamette Valley",
+  "nearby": [
+   "Philomath",
+   "Albany",
+   "Adair Village",
+   "Monroe",
+   "Lebanon"
+  ]
+ },
+ {
+  "slug": "albany-or",
+  "city": "Albany",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Linn County",
+  "region": "mid-Willamette Valley",
+  "nearby": [
+   "Corvallis",
+   "Lebanon",
+   "Millersburg",
+   "Tangent",
+   "Jefferson"
+  ]
+ },
+ {
+  "slug": "tigard-or",
+  "city": "Tigard",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Washington County",
+  "region": "southwest Portland metro",
+  "nearby": [
+   "Beaverton",
+   "Tualatin",
+   "Lake Oswego",
+   "King City",
+   "Sherwood"
+  ]
+ },
+ {
+  "slug": "lake-oswego-or",
+  "city": "Lake Oswego",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Clackamas County",
+  "region": "south Portland metro",
+  "nearby": [
+   "West Linn",
+   "Tigard",
+   "Milwaukie",
+   "Tualatin",
+   "Portland"
+  ]
+ },
+ {
+  "slug": "keizer-or",
+  "city": "Keizer",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Marion County",
+  "region": "Willamette Valley",
+  "nearby": [
+   "Salem",
+   "Brooks",
+   "Woodburn",
+   "Gervais",
+   "St. Paul"
+  ]
+ },
+ {
+  "slug": "grants-pass-or",
+  "city": "Grants Pass",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Josephine County",
+  "region": "Rogue Valley",
+  "nearby": [
+   "Rogue River",
+   "Merlin",
+   "Cave Junction",
+   "Gold Hill",
+   "Medford"
+  ]
+ },
+ {
+  "slug": "oregon-city-or",
+  "city": "Oregon City",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Clackamas County",
+  "region": "south Portland metro",
+  "nearby": [
+   "West Linn",
+   "Gladstone",
+   "Canby",
+   "Milwaukie",
+   "Beavercreek"
+  ]
+ },
+ {
+  "slug": "mcminnville-or",
+  "city": "McMinnville",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Yamhill County",
+  "region": "Yamhill Valley wine country",
+  "nearby": [
+   "Newberg",
+   "Carlton",
+   "Lafayette",
+   "Amity",
+   "Dayton"
+  ]
+ },
+ {
+  "slug": "redmond-or",
+  "city": "Redmond",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Deschutes County",
+  "region": "Central Oregon",
+  "nearby": [
+   "Bend",
+   "Terrebonne",
+   "Prineville",
+   "Sisters",
+   "Madras"
+  ]
+ },
+ {
+  "slug": "tualatin-or",
+  "city": "Tualatin",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Washington County",
+  "region": "southwest Portland metro",
+  "nearby": [
+   "Tigard",
+   "Sherwood",
+   "Wilsonville",
+   "Lake Oswego",
+   "Durham"
+  ]
+ },
+ {
+  "slug": "west-linn-or",
+  "city": "West Linn",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Clackamas County",
+  "region": "south Portland metro",
+  "nearby": [
+   "Oregon City",
+   "Lake Oswego",
+   "Tualatin",
+   "Gladstone",
+   "Wilsonville"
+  ]
+ },
+ {
+  "slug": "woodburn-or",
+  "city": "Woodburn",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Marion County",
+  "region": "north Willamette Valley",
+  "nearby": [
+   "Salem",
+   "Keizer",
+   "Silverton",
+   "Canby",
+   "Gervais"
+  ]
+ },
+ {
+  "slug": "newberg-or",
+  "city": "Newberg",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Yamhill County",
+  "region": "Chehalem Valley",
+  "nearby": [
+   "McMinnville",
+   "Sherwood",
+   "Dundee",
+   "Wilsonville",
+   "Carlton"
+  ]
+ },
+ {
+  "slug": "roseburg-or",
+  "city": "Roseburg",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Douglas County",
+  "region": "Umpqua Valley",
+  "nearby": [
+   "Sutherlin",
+   "Winston",
+   "Green",
+   "Myrtle Creek",
+   "Oakland"
+  ]
+ },
+ {
+  "slug": "klamath-falls-or",
+  "city": "Klamath Falls",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Klamath County",
+  "region": "Klamath Basin",
+  "nearby": [
+   "Altamont",
+   "Merrill",
+   "Malin",
+   "Chiloquin",
+   "Keno"
+  ]
+ },
+ {
+  "slug": "ashland-or",
+  "city": "Ashland",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Jackson County",
+  "region": "Rogue Valley",
+  "nearby": [
+   "Medford",
+   "Talent",
+   "Phoenix",
+   "Jacksonville",
+   "Central Point"
+  ]
+ },
+ {
+  "slug": "wilsonville-or",
+  "city": "Wilsonville",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Clackamas County",
+  "region": "south Portland metro",
+  "nearby": [
+   "Tualatin",
+   "Canby",
+   "Sherwood",
+   "West Linn",
+   "Aurora"
+  ]
+ },
+ {
+  "slug": "sherwood-or",
+  "city": "Sherwood",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Washington County",
+  "region": "southwest Portland metro",
+  "nearby": [
+   "Tualatin",
+   "Tigard",
+   "Newberg",
+   "Wilsonville",
+   "King City"
+  ]
+ },
+ {
+  "slug": "canby-or",
+  "city": "Canby",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Clackamas County",
+  "region": "Willamette Valley",
+  "nearby": [
+   "Oregon City",
+   "Woodburn",
+   "Wilsonville",
+   "Aurora",
+   "Molalla"
+  ]
+ },
+ {
+  "slug": "lebanon-or",
+  "city": "Lebanon",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Linn County",
+  "region": "mid-Willamette Valley",
+  "nearby": [
+   "Albany",
+   "Sweet Home",
+   "Brownsville",
+   "Sodaville",
+   "Corvallis"
+  ]
+ },
+ {
+  "slug": "astoria-or",
+  "city": "Astoria",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Clatsop County",
+  "region": "north Oregon coast",
+  "nearby": [
+   "Warrenton",
+   "Seaside",
+   "Gearhart",
+   "Hammond",
+   "Svensen"
+  ]
+ },
+ {
+  "slug": "newport-or",
+  "city": "Newport",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Lincoln County",
+  "region": "central Oregon coast",
+  "nearby": [
+   "Lincoln City",
+   "Toledo",
+   "Waldport",
+   "Depoe Bay",
+   "South Beach"
+  ]
+ },
+ {
+  "slug": "coos-bay-or",
+  "city": "Coos Bay",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Coos County",
+  "region": "south Oregon coast",
+  "nearby": [
+   "North Bend",
+   "Coquille",
+   "Charleston",
+   "Bandon",
+   "Reedsport"
+  ]
+ },
+ {
+  "slug": "the-dalles-or",
+  "city": "The Dalles",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Wasco County",
+  "region": "Columbia River Gorge",
+  "nearby": [
+   "Hood River",
+   "Dufur",
+   "Mosier",
+   "Dallesport, WA",
+   "White Salmon, WA"
+  ]
+ },
+ {
+  "slug": "hood-river-or",
+  "city": "Hood River",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Hood River County",
+  "region": "Columbia River Gorge",
+  "nearby": [
+   "The Dalles",
+   "White Salmon, WA",
+   "Cascade Locks",
+   "Odell",
+   "Parkdale"
+  ]
+ },
+ {
+  "slug": "pendleton-or",
+  "city": "Pendleton",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Umatilla County",
+  "region": "eastern Oregon",
+  "nearby": [
+   "Hermiston",
+   "Pilot Rock",
+   "Athena",
+   "Milton-Freewater",
+   "Stanfield"
+  ]
+ },
+ {
+  "slug": "hermiston-or",
+  "city": "Hermiston",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Umatilla County",
+  "region": "Columbia Basin",
+  "nearby": [
+   "Pendleton",
+   "Umatilla",
+   "Stanfield",
+   "Echo",
+   "Boardman"
+  ]
+ },
+ {
+  "slug": "la-grande-or",
+  "city": "La Grande",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Union County",
+  "region": "Grande Ronde Valley",
+  "nearby": [
+   "Island City",
+   "Cove",
+   "Union",
+   "Elgin",
+   "Baker City"
+  ]
+ },
+ {
+  "slug": "ontario-or",
+  "city": "Ontario",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Malheur County",
+  "region": "western Treasure Valley",
+  "nearby": [
+   "Fruitland, ID",
+   "Payette, ID",
+   "Nyssa",
+   "Vale",
+   "Weiser, ID"
+  ]
+ },
+ {
+  "slug": "baker-city-or",
+  "city": "Baker City",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Baker County",
+  "region": "eastern Oregon",
+  "nearby": [
+   "La Grande",
+   "Haines",
+   "Sumpter",
+   "Halfway",
+   "North Powder"
+  ]
+ },
+ {
+  "slug": "prineville-or",
+  "city": "Prineville",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Crook County",
+  "region": "Central Oregon",
+  "nearby": [
+   "Redmond",
+   "Bend",
+   "Madras",
+   "Powell Butte",
+   "Terrebonne"
+  ]
+ },
+ {
+  "slug": "boise-id",
+  "city": "Boise",
+  "state": "ID",
+  "stateName": "Idaho",
+  "county": "Ada County",
+  "region": "Treasure Valley",
+  "nearby": [
+   "Meridian",
+   "Nampa",
+   "Eagle",
+   "Garden City",
+   "Kuna"
+  ]
+ },
+ {
+  "slug": "spokane-wa",
+  "city": "Spokane",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Spokane County",
+  "region": "Inland Northwest",
+  "nearby": [
+   "Spokane Valley",
+   "Liberty Lake",
+   "Cheney",
+   "Airway Heights",
+   "Mead"
+  ]
+ },
+ {
+  "slug": "vancouver-wa",
+  "city": "Vancouver",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Clark County",
+  "region": "southwest Washington",
+  "nearby": [
+   "Camas",
+   "Battle Ground",
+   "Ridgefield",
+   "Washougal",
+   "Hazel Dell"
+  ]
+ },
+ {
+  "slug": "reno-nv",
+  "city": "Reno",
+  "state": "NV",
+  "stateName": "Nevada",
+  "county": "Washoe County",
+  "region": "Truckee Meadows",
+  "nearby": [
+   "Sparks",
+   "Sun Valley",
+   "Spanish Springs",
+   "Verdi",
+   "Carson City"
+  ]
+ },
+ {
+  "slug": "redding-ca",
+  "city": "Redding",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Shasta County",
+  "region": "far northern California",
+  "nearby": [
+   "Anderson",
+   "Shasta Lake",
+   "Palo Cedro",
+   "Cottonwood",
+   "Red Bluff"
+  ]
+ }
+]
