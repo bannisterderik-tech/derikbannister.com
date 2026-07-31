@@ -37,8 +37,8 @@ body{background:#0a0a0a;color:#ededf0;font-family:'Archivo',sans-serif;-webkit-f
 
 /* copy panel: strong local scrim so text survives bright chrome scenes.
    NOTE: never set position on .sw-copy — the engine anchors it absolutely. */
-.sw-copy{max-width:min(720px,92vw)}
-@media(min-width:861px){.sw-copy{width:min(54vw,720px)}} /* wide enough that big Syne titles never overflow the background-clip box */
+.sw-copy{max-width:min(720px,92vw)!important}
+@media(min-width:861px){.sw-copy{width:min(54vw,720px)!important}} /* !important: the engine injects its stylesheet after this one */
 .sw-copy::before{content:"";position:absolute;inset:-48px -70px;z-index:-1;
   background:radial-gradient(75% 85% at 32% 50%,rgba(10,10,10,.78),rgba(10,10,10,.4) 58%,transparent 100%);filter:blur(4px)}
 
@@ -56,11 +56,12 @@ body{background:#0a0a0a;color:#ededf0;font-family:'Archivo',sans-serif;-webkit-f
   animation:sheen 7s linear infinite;filter:drop-shadow(0 2px 16px rgba(0,0,0,.9));text-shadow:none!important}
 @keyframes sheen{to{background-position:-220% 0}}
 /* mobile type scale: the whole copy block must fit the fold */
-@media(max-width:700px){
-  .sw-copy{max-width:92vw}
-  .sw-copy::before{inset:-28px -34px}
-  .sw-copy__title{font-size:clamp(1.7rem,8vw,2.4rem)!important}
-  .sw-copy__body{font-size:.95rem!important;line-height:1.5!important}
+@media(max-width:860px){
+  /* explicit geometry: pin the copy box inside the viewport no matter what the engine computes */
+  .sw-copy{left:18px!important;right:18px!important;width:auto!important;max-width:none!important;transform:none!important}
+  .sw-copy::before{inset:-28px -24px}
+  .sw-copy__title{font-size:clamp(1.6rem,7vw,2.3rem)!important;overflow-wrap:break-word}
+  .sw-copy__body{font-size:.95rem!important;line-height:1.5!important;max-width:none}
   .sw-copy__eyebrow{font-size:.6rem!important}
   .sw-copy__num{font-size:.58rem!important}
   .sw-copy__tags li{font-size:.56rem!important;padding:.4em .75em}
@@ -90,12 +91,47 @@ body{background:#0a0a0a;color:#ededf0;font-family:'Archivo',sans-serif;-webkit-f
 .sw-btn--ghost{background:rgba(10,10,10,.55)!important;color:#ededf0!important;border:1px solid rgba(199,199,207,.55)!important;backdrop-filter:blur(6px)}
 .sw-btn--ghost:hover{border-color:#f2f2f6!important;color:#fff!important}
 
-/* topbar + nav: mono, legible, on a real gradient */
-.sw-topbar{background:linear-gradient(180deg,rgba(10,10,10,.85),rgba(10,10,10,.35) 70%,transparent)!important;backdrop-filter:blur(10px)}
-.sw-brand{font-family:'Syne',sans-serif!important;font-weight:800!important;color:#f2f2f6!important;font-size:1rem!important;letter-spacing:.01em}
-.sw-nav a,.sw-nav button{font-family:'IBM Plex Mono',monospace!important;text-transform:uppercase!important;
-  letter-spacing:.13em!important;font-size:.63rem!important;color:#a9a9b1!important;text-shadow:0 1px 8px rgba(0,0,0,.9)}
-.sw-nav a:hover,.sw-nav button:hover{color:#ffffff!important}
+/* the engine's own topbar is replaced by a real site header */
+.sw-topbar{display:none!important}
+
+/* ---------- site header: direct access to everything, no scrolling required ---------- */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:70;display:flex;align-items:center;justify-content:space-between;
+  height:64px;padding:0 clamp(20px,5vw,72px);background:linear-gradient(180deg,rgba(10,10,10,.88),rgba(10,10,10,.55) 75%,transparent);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.hdr-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.05rem;color:#f2f2f6;text-decoration:none;letter-spacing:.01em}
+.hdr-logo span{color:#77777f}
+.hdr-nav{display:flex;align-items:center;gap:26px}
+.hdr-nav>a:not(.hdr-btn){font-family:'IBM Plex Mono',monospace;font-size:.66rem;font-weight:500;text-transform:uppercase;
+  letter-spacing:.14em;color:#c2c2ca;text-decoration:none;position:relative;text-shadow:0 1px 8px rgba(0,0,0,.9);transition:color .2s}
+.hdr-nav>a:not(.hdr-btn)::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1px;background:#f2f2f6;transition:width .25s}
+.hdr-nav>a:not(.hdr-btn):hover{color:#fff}
+.hdr-nav>a:not(.hdr-btn):hover::after{width:100%}
+.hdr-btn{display:inline-flex;align-items:center;gap:.6em;font-family:'IBM Plex Mono',monospace;font-size:.68rem;font-weight:600;
+  text-transform:uppercase;letter-spacing:.15em;color:#0a0a0a;background:linear-gradient(120deg,#d8d8de,#ffffff 50%,#b9b9c2);
+  padding:.85em 1.5em;border:1px solid #f2f2f6;border-radius:2px;text-decoration:none}
+.hdr-btn:hover{box-shadow:0 0 0 1px #f2f2f6,0 0 32px rgba(240,240,246,.22)}
+.hdr-burger{display:none;font-family:'IBM Plex Mono',monospace;font-size:.64rem;font-weight:600;letter-spacing:.18em;
+  color:#f2f2f6;background:rgba(10,10,10,.55);border:1px solid rgba(199,199,207,.5);border-radius:2px;
+  padding:.8em 1.15em;cursor:pointer;backdrop-filter:blur(6px)}
+@media(max-width:900px){
+  .hdr-nav>a:not(.hdr-btn){display:none!important}
+  .hdr-burger{display:inline-block!important}
+  .hdr-btn{font-size:.62rem;padding:.8em 1.1em}
+  .hdr-nav{gap:10px}
+}
+
+/* full-screen menu: every destination, one tap */
+.menu{position:fixed;inset:0;z-index:65;background:rgba(10,10,10,.97);backdrop-filter:blur(16px);
+  display:flex;flex-direction:column;justify-content:center;padding:90px clamp(24px,7vw,90px) 40px;
+  opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;overflow-y:auto}
+body.menu-open .menu{opacity:1;visibility:visible}
+body.menu-open{overflow:hidden}
+.menu-links{display:grid;gap:6px}
+.menu-links a{font-family:'Syne',sans-serif;font-weight:800;text-transform:uppercase;text-decoration:none;
+  font-size:clamp(1.6rem,6vw,2.6rem);line-height:1.15;letter-spacing:-.01em;color:#ededf0;transition:color .2s,padding-left .25s}
+.menu-links a:hover{color:#fff;padding-left:8px}
+.menu-links a small{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:.6rem;letter-spacing:.16em;color:#77777f;margin-left:14px;vertical-align:middle}
+.menu-contact{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.1);padding-top:26px}
 
 /* route rail labels */
 .sw-route__label{font-family:'IBM Plex Mono',monospace!important;text-transform:uppercase;letter-spacing:.14em;
@@ -142,6 +178,35 @@ body.past-world .sw-copylayer,body.past-world .sw-hint,body.past-world .sw-route
 </head>
 <body>
 <h1 class="sr">Derik Bannister — Operator &amp; Founder. Software, AI, and growth engines for real businesses.</h1>
+
+<header class="hdr">
+  <a class="hdr-logo" href="/">DB<span>—</span></a>
+  <nav class="hdr-nav" aria-label="Site">
+    <a href="/services/">Services</a>
+    <a href="/trades/">Industries</a>
+    <a href="/locations/">Locations</a>
+    <a href="/products/">Products</a>
+    <a href="/about/">About</a>
+    <a class="hdr-btn" href="mailto:bannisterderik@gmail.com">Get in touch →</a>
+  </nav>
+  <button class="hdr-burger" id="hdrBurger" aria-expanded="false">MENU</button>
+</header>
+
+<nav class="menu" id="siteMenu" aria-label="Full menu">
+  <div class="menu-links">
+    <a href="/services/">Services <small>Websites · Software · SEO · AI</small></a>
+    <a href="/trades/">Industries <small>18 trades, by name</small></a>
+    <a href="/locations/">Locations <small>Oregon + neighboring metros</small></a>
+    <a href="/products/">SEO Products <small>Links · Press · Citations</small></a>
+    <a href="/about/">About Derik <small>The operator</small></a>
+    <a href="/legal/">Legal <small>Terms · Privacy · Accessibility</small></a>
+  </div>
+  <div class="menu-contact">
+    <a class="fbtn primary" href="mailto:bannisterderik@gmail.com">Email Derik →</a>
+    <a class="fbtn ghost" href="sms:+15307367085">Call/Text 530-736-7085</a>
+  </div>
+</nav>
+
 <div id="world"></div>
 <div class="grain" aria-hidden="true"></div>
 
@@ -229,6 +294,17 @@ mountScrollWorld(document.getElementById('world'), {
     '/world/assets/conn_5.mp4'
   ]
 });
+
+/* header menu toggle */
+(() => {
+  const burger = document.getElementById('hdrBurger');
+  burger.addEventListener('click', () => {
+    const open = document.body.classList.toggle('menu-open');
+    burger.setAttribute('aria-expanded', open);
+    burger.textContent = open ? 'CLOSE' : 'MENU';
+  });
+  addEventListener('keydown', e => { if (e.key === 'Escape') { document.body.classList.remove('menu-open'); burger.setAttribute('aria-expanded', 'false'); burger.textContent = 'MENU'; } });
+})();
 
 /* fade the world's fixed overlays once the visitor reaches the footer */
 (() => {
