@@ -15,6 +15,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://derikbannister.com/#business","name":"Derik Bannister","founder":{"@type":"Person","name":"Derik Bannister"},"email":"bannisterderik@gmail.com","telephone":"+15307367085","url":"https://derikbannister.com/","address":{"@type":"PostalAddress","addressRegion":"OR","addressCountry":"US"},"areaServed":["Oregon","Boise ID","Spokane WA","Vancouver WA","Reno NV","Redding CA"]}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='42' font-family='Arial Black,sans-serif' font-size='26' font-weight='900' fill='%23e8e8ee' text-anchor='middle'%3EDB%3C/text%3E%3C/svg%3E">
+<link rel="preload" as="image" href="/world/assets/still_monogram.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -48,10 +49,21 @@ body{background:#0a0a0a;color:#ededf0;font-family:'Archivo',sans-serif;-webkit-f
 /* titles: Syne 800 uppercase + the chrome sheen — the signature move */
 .sw-copy__title{font-family:'Syne',sans-serif!important;font-weight:800!important;text-transform:uppercase;
   font-size:clamp(2.3rem,5.2vw,4.4rem)!important;line-height:1.02!important;letter-spacing:-.015em!important;
-  background:linear-gradient(105deg,#8a8a92 0%,#f6f6fa 24%,#c7c7cf 48%,#ffffff 66%,#9a9aa2 100%);
+  background:linear-gradient(105deg,#c2c2ca 0%,#ffffff 28%,#d4d4da 52%,#ffffff 74%,#c2c2ca 100%);
   background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent!important;
   animation:sheen 7s linear infinite;filter:drop-shadow(0 2px 16px rgba(0,0,0,.9));text-shadow:none!important}
 @keyframes sheen{to{background-position:-220% 0}}
+/* mobile type scale: the whole copy block must fit the fold */
+@media(max-width:700px){
+  .sw-copy{max-width:92vw}
+  .sw-copy::before{inset:-28px -34px}
+  .sw-copy__title{font-size:clamp(1.7rem,8vw,2.4rem)!important}
+  .sw-copy__body{font-size:.95rem!important;line-height:1.5!important}
+  .sw-copy__eyebrow{font-size:.6rem!important}
+  .sw-copy__num{font-size:.58rem!important}
+  .sw-copy__tags li{font-size:.56rem!important;padding:.4em .75em}
+  .sw-btn{font-size:.66rem!important;padding:.9em 1.3em!important}
+}
 
 /* body copy: bigger, brighter, bounded line length */
 .sw-copy__body{font-family:'Archivo',sans-serif!important;font-size:clamp(1.02rem,1.45vw,1.2rem)!important;
@@ -115,7 +127,7 @@ body{background:#0a0a0a;color:#ededf0;font-family:'Archivo',sans-serif;-webkit-f
     <div><h2>Services</h2><a href="/services/web-design/">Websites</a><a href="/services/custom-software/">Custom Software</a><a href="/services/seo/">SEO</a><a href="/services/google-ads/">Google Ads / LSA</a><a href="/services/ai-receptionist/">AI Receptionist</a><a href="/services/crm/">CRM &amp; Automation</a><a href="/services/">All services →</a></div>
     <div><h2>Industries</h2><a href="/trades/roofing/">Roofing</a><a href="/trades/plumbing/">Plumbing</a><a href="/trades/hvac/">HVAC</a><a href="/trades/electrical/">Electrical</a><a href="/trades/solar/">Solar</a><a href="/trades/">All industries →</a></div>
     <div><h2>Locations</h2><a href="/locations/portland-or/">Portland, OR</a><a href="/locations/salem-or/">Salem, OR</a><a href="/locations/eugene-or/">Eugene, OR</a><a href="/locations/springfield-or/">Springfield, OR</a><a href="/locations/bend-or/">Bend, OR</a><a href="/locations/">All locations →</a></div>
-    <div><h2>Company</h2><a href="/about/">About</a><a href="/products/">SEO Products</a><a href="mailto:bannisterderik@gmail.com">Email</a><a href="tel:+15307367085">Call/Text 530-736-7085</a></div>
+    <div><h2>Company</h2><a href="/about/">About</a><a href="/ideas/">Idea Board</a><a href="/products/">SEO Products</a><a href="mailto:bannisterderik@gmail.com">Email</a><a href="tel:+15307367085">Call/Text 530-736-7085</a></div>
     <div><h2>Legal</h2><a href="/legal/terms/">Terms of Use</a><a href="/legal/privacy/">Privacy Policy</a><a href="/legal/do-not-sell/">Do Not Sell or Share My Personal Information</a><a href="/legal/accessibility/">Accessibility</a><a href="/legal/disclaimer/">Disclaimer</a></div>
   </div>
   <div class="legal-row"><span>© 2026 Derik Bannister</span><span>DB— BUILD. OPERATE. OWN.</span></div>
