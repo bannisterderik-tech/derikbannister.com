@@ -37,8 +37,8 @@ body{background:#0a0a0a;color:#ededf0;font-family:'Archivo',sans-serif;-webkit-f
 
 /* copy panel: strong local scrim so text survives bright chrome scenes.
    NOTE: never set position on .sw-copy — the engine anchors it absolutely. */
-.sw-copy{max-width:min(580px,88vw)}
-@media(min-width:861px){.sw-copy{width:min(48vw,640px)}} /* wide enough that big Syne titles never overflow the background-clip box */
+.sw-copy{max-width:min(720px,92vw)}
+@media(min-width:861px){.sw-copy{width:min(54vw,720px)}} /* wide enough that big Syne titles never overflow the background-clip box */
 .sw-copy::before{content:"";position:absolute;inset:-48px -70px;z-index:-1;
   background:radial-gradient(75% 85% at 32% 50%,rgba(10,10,10,.78),rgba(10,10,10,.4) 58%,transparent 100%);filter:blur(4px)}
 
@@ -50,7 +50,7 @@ body{background:#0a0a0a;color:#ededf0;font-family:'Archivo',sans-serif;-webkit-f
 
 /* titles: Syne 800 uppercase + the chrome sheen — the signature move */
 .sw-copy__title{font-family:'Syne',sans-serif!important;font-weight:800!important;text-transform:uppercase;
-  font-size:clamp(2.3rem,5.2vw,4.4rem)!important;line-height:1.02!important;letter-spacing:-.015em!important;
+  font-size:clamp(2.2rem,4.6vw,4rem)!important;line-height:1.02!important;letter-spacing:-.015em!important;
   background:linear-gradient(105deg,#c2c2ca 0%,#ffffff 28%,#d4d4da 52%,#ffffff 74%,#c2c2ca 100%);
   background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent!important;
   animation:sheen 7s linear infinite;filter:drop-shadow(0 2px 16px rgba(0,0,0,.9));text-shadow:none!important}
@@ -106,17 +106,38 @@ body{background:#0a0a0a;color:#ededf0;font-family:'Archivo',sans-serif;-webkit-f
   font-size:.68rem!important;color:#f2f2f6!important;text-shadow:0 1px 12px rgba(0,0,0,.9);animation:hintpulse 2.2s ease-in-out infinite}
 @keyframes hintpulse{0%,100%{opacity:1}50%{opacity:.45}}
 
+/* clean handoff out of the world: fade the fixed overlays once the footer arrives */
+.sw-copylayer,.sw-hint,.sw-route{transition:opacity .45s}
+body.past-world .sw-copylayer,body.past-world .sw-hint,body.past-world .sw-route{opacity:0!important;pointer-events:none}
+
 @media(prefers-reduced-motion:reduce){
   .grain,.sw-hint,.sw-copy__title{animation:none!important}
   .sw-copy__title{background:none;color:#f2f2f6!important;-webkit-background-clip:initial}
+  .sw-copylayer,.sw-hint,.sw-route{transition:none}
 }
-/* crawlable site footer below the world */
-.site-foot{background:#101012;border-top:1px solid rgba(255,255,255,.08);padding:44px clamp(20px,5vw,72px);position:relative;z-index:5}
-.site-foot .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:26px;max-width:1280px;margin:0 auto 30px}
-.site-foot h2{font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#55555b;margin-bottom:10px;font-weight:500}
-.site-foot a{display:block;color:#8f8f97;font-size:.8rem;padding:2px 0;text-decoration:none}
-.site-foot a:hover{color:#f2f2f6}
-.site-foot .legal-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center;border-top:1px solid rgba(255,255,255,.08);padding-top:24px;max-width:1280px;margin:0 auto;font-family:'IBM Plex Mono',monospace;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:#55555b}
+/* crawlable site footer below the world — sits ABOVE the world's fixed layers */
+.site-foot{background:#0d0d0f;border-top:1px solid rgba(255,255,255,.1);padding:0 clamp(20px,5vw,72px) 40px;position:relative;z-index:30}
+.site-foot::before{content:"";position:absolute;top:-1px;left:0;height:1px;width:100%;background:linear-gradient(90deg,transparent,#c7c7cf 50%,transparent);opacity:.4}
+.foot-cta{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;max-width:1280px;margin:0 auto;padding:clamp(44px,6vw,80px) 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.foot-kicker{display:inline-flex;align-items:center;gap:.6em;font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:#77777f}
+.foot-kicker::before{content:"";width:28px;height:1px;background:#77777f}
+.foot-big{font-family:'Syne',sans-serif;font-weight:800;text-transform:uppercase;font-size:clamp(1.8rem,3.6vw,3rem);line-height:1.05;letter-spacing:-.015em;margin-top:10px;
+  background:linear-gradient(105deg,#c2c2ca,#ffffff 45%,#c2c2ca);-webkit-background-clip:text;background-clip:text;color:transparent}
+.foot-actions{display:flex;gap:14px;flex-wrap:wrap}
+.fbtn{display:inline-flex;align-items:center;gap:.6em;font-family:'IBM Plex Mono',monospace;font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.16em;
+  padding:1.05em 1.8em;border-radius:2px;text-decoration:none;transition:box-shadow .25s,border-color .25s,color .25s}
+.fbtn.primary{background:linear-gradient(120deg,#d8d8de,#ffffff 50%,#b9b9c2);color:#0a0a0a;border:1px solid #f2f2f6;position:relative;overflow:hidden}
+.fbtn.primary::before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.85) 50%,transparent 60%);transform:translateX(-130%);transition:transform .6s}
+.fbtn.primary:hover::before{transform:translateX(130%)}
+.fbtn.primary:hover{box-shadow:0 0 0 1px #f2f2f6,0 0 40px rgba(240,240,246,.2)}
+.fbtn.ghost{background:transparent;color:#ededf0;border:1px solid rgba(199,199,207,.4)}
+.fbtn.ghost:hover{border-color:#f2f2f6;color:#fff}
+.site-foot .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:30px;max-width:1280px;margin:0 auto;padding:clamp(34px,4vw,54px) 0}
+.site-foot h2{font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:#77777f;margin-bottom:12px;font-weight:500}
+.site-foot .cols a{display:block;color:#a9a9b1;font-size:.82rem;padding:3px 0;text-decoration:none;transition:color .15s,padding-left .2s}
+.site-foot .cols a:hover{color:#ffffff;padding-left:4px}
+.site-foot .legal-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center;border-top:1px solid rgba(255,255,255,.08);padding-top:26px;max-width:1280px;margin:0 auto;font-family:'IBM Plex Mono',monospace;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:#66666e}
+.site-foot .legal-row b{color:#c7c7cf;font-weight:500}
 </style>
 </head>
 <body>
@@ -125,6 +146,16 @@ body{background:#0a0a0a;color:#ededf0;font-family:'Archivo',sans-serif;-webkit-f
 <div class="grain" aria-hidden="true"></div>
 
 <footer class="site-foot">
+  <div class="foot-cta">
+    <div>
+      <span class="foot-kicker">DB— · Operator &amp; Founder · Oregon, USA</span>
+      <p class="foot-big">Ready when you are.</p>
+    </div>
+    <div class="foot-actions">
+      <a class="fbtn primary" href="mailto:bannisterderik@gmail.com">Email Derik →</a>
+      <a class="fbtn ghost" href="sms:+15307367085">Call/Text 530-736-7085</a>
+    </div>
+  </div>
   <div class="cols">
     <div><h2>Services</h2><a href="/services/web-design/">Websites</a><a href="/services/custom-software/">Custom Software</a><a href="/services/seo/">SEO</a><a href="/services/google-ads/">Google Ads / LSA</a><a href="/services/ai-receptionist/">AI Receptionist</a><a href="/services/crm/">CRM &amp; Automation</a><a href="/services/">All services →</a></div>
     <div><h2>Industries</h2><a href="/trades/roofing/">Roofing</a><a href="/trades/plumbing/">Plumbing</a><a href="/trades/hvac/">HVAC</a><a href="/trades/electrical/">Electrical</a><a href="/trades/solar/">Solar</a><a href="/trades/">All industries →</a></div>
@@ -132,7 +163,7 @@ body{background:#0a0a0a;color:#ededf0;font-family:'Archivo',sans-serif;-webkit-f
     <div><h2>Company</h2><a href="/about/">About</a><a href="/ideas/">Idea Board</a><a href="/products/">SEO Products</a><a href="mailto:bannisterderik@gmail.com">Email</a><a href="tel:+15307367085">Call/Text 530-736-7085</a></div>
     <div><h2>Legal</h2><a href="/legal/terms/">Terms of Use</a><a href="/legal/privacy/">Privacy Policy</a><a href="/legal/do-not-sell/">Do Not Sell or Share My Personal Information</a><a href="/legal/accessibility/">Accessibility</a><a href="/legal/disclaimer/">Disclaimer</a></div>
   </div>
-  <div class="legal-row"><span>© 2026 Derik Bannister</span><span>DB— BUILD. OPERATE. OWN.</span></div>
+  <div class="legal-row"><span>© 2026 Derik Bannister</span><span><b>DB—</b> BUILD. OPERATE. OWN.</span></div>
 </footer>
 
 <script src="/world/scrub-engine.js"></script>
@@ -198,6 +229,18 @@ mountScrollWorld(document.getElementById('world'), {
     '/world/assets/conn_5.mp4'
   ]
 });
+
+/* fade the world's fixed overlays once the visitor reaches the footer */
+(() => {
+  const world = document.getElementById('world');
+  let ticking = false;
+  const check = () => {
+    document.body.classList.toggle('past-world', world.getBoundingClientRect().bottom <= innerHeight * 0.55);
+    ticking = false;
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(check); } }, { passive: true });
+  check();
+})();
 </script>
 </body>
 </html>
