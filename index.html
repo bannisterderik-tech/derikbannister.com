@@ -26,6 +26,76 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#0a0a0a;color:#ededf0;font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- brand polish over the engine (unlayered = wins over @layer sw) ---------- */
+/* film grain — the old site's signature texture */
+.grain{position:fixed;inset:-100px;pointer-events:none;z-index:40;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grain 8s steps(10) infinite}
+@keyframes grain{0%,100%{transform:translate(0,0)}10%{transform:translate(-30px,20px)}30%{transform:translate(30px,-40px)}50%{transform:translate(-40px,-20px)}70%{transform:translate(20px,40px)}90%{transform:translate(-20px,10px)}}
+
+/* copy panel: strong local scrim so text survives bright chrome scenes */
+.sw-copy{max-width:min(580px,88vw);position:relative}
+.sw-copy::before{content:"";position:absolute;inset:-48px -70px;z-index:-1;
+  background:radial-gradient(75% 85% at 32% 50%,rgba(10,10,10,.78),rgba(10,10,10,.4) 58%,transparent 100%);filter:blur(4px)}
+
+/* mono telemetry counter + eyebrow with the line prefix */
+.sw-copy__num{font-family:'IBM Plex Mono',monospace!important;font-size:.66rem!important;letter-spacing:.2em;color:#77777f!important}
+.sw-copy__eyebrow{display:inline-flex!important;align-items:center;gap:.6em;font-family:'IBM Plex Mono',monospace!important;
+  font-size:.7rem!important;letter-spacing:.18em!important;text-transform:uppercase;color:#c7c7cf!important;font-weight:500}
+.sw-copy__eyebrow::before{content:"";width:28px;height:1px;background:#c7c7cf;flex:none}
+
+/* titles: Syne 800 uppercase + the chrome sheen — the signature move */
+.sw-copy__title{font-family:'Syne',sans-serif!important;font-weight:800!important;text-transform:uppercase;
+  font-size:clamp(2.3rem,5.2vw,4.4rem)!important;line-height:1.02!important;letter-spacing:-.015em!important;
+  background:linear-gradient(105deg,#8a8a92 0%,#f6f6fa 24%,#c7c7cf 48%,#ffffff 66%,#9a9aa2 100%);
+  background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent!important;
+  animation:sheen 7s linear infinite;filter:drop-shadow(0 2px 16px rgba(0,0,0,.9));text-shadow:none!important}
+@keyframes sheen{to{background-position:-220% 0}}
+
+/* body copy: bigger, brighter, bounded line length */
+.sw-copy__body{font-family:'Archivo',sans-serif!important;font-size:clamp(1.02rem,1.45vw,1.2rem)!important;
+  line-height:1.62!important;color:#f2f2f4!important;font-weight:500;max-width:46ch;
+  text-shadow:0 1px 14px rgba(0,0,0,.95),0 0 2px rgba(0,0,0,.9)}
+.sw-copy__body b{color:#fff}
+
+/* proof chips */
+.sw-copy__tags{list-style:none;display:flex;gap:8px;flex-wrap:wrap}
+.sw-copy__tags li{font-family:'IBM Plex Mono',monospace!important;text-transform:uppercase;letter-spacing:.14em;
+  font-size:.62rem!important;padding:.5em .95em;background:rgba(10,10,10,.6)!important;
+  border:1px solid rgba(199,199,207,.45)!important;color:#e8e8ee!important;border-radius:2px!important;backdrop-filter:blur(6px)}
+
+/* CTAs: the old chrome buttons, sweep and all */
+.sw-btn{font-family:'IBM Plex Mono',monospace!important;text-transform:uppercase;letter-spacing:.16em;
+  font-size:.72rem!important;font-weight:600!important;border-radius:2px!important;padding:1.05em 1.8em!important;text-decoration:none}
+.sw-btn--primary{background:linear-gradient(120deg,#d8d8de,#ffffff 50%,#b9b9c2)!important;color:#0a0a0a!important;
+  border:1px solid #f2f2f6!important;position:relative;overflow:hidden}
+.sw-btn--primary::before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.85) 50%,transparent 60%);transform:translateX(-130%);transition:transform .6s}
+.sw-btn--primary:hover::before{transform:translateX(130%)}
+.sw-btn--primary:hover{box-shadow:0 0 0 1px #f2f2f6,0 0 40px rgba(240,240,246,.25)}
+.sw-btn--ghost{background:rgba(10,10,10,.55)!important;color:#ededf0!important;border:1px solid rgba(199,199,207,.55)!important;backdrop-filter:blur(6px)}
+.sw-btn--ghost:hover{border-color:#f2f2f6!important;color:#fff!important}
+
+/* topbar + nav: mono, legible, on a real gradient */
+.sw-topbar{background:linear-gradient(180deg,rgba(10,10,10,.85),rgba(10,10,10,.35) 70%,transparent)!important;backdrop-filter:blur(10px)}
+.sw-brand{font-family:'Syne',sans-serif!important;font-weight:800!important;color:#f2f2f6!important;font-size:1rem!important;letter-spacing:.01em}
+.sw-nav a,.sw-nav button{font-family:'IBM Plex Mono',monospace!important;text-transform:uppercase!important;
+  letter-spacing:.13em!important;font-size:.63rem!important;color:#a9a9b1!important;text-shadow:0 1px 8px rgba(0,0,0,.9)}
+.sw-nav a:hover,.sw-nav button:hover{color:#ffffff!important}
+
+/* route rail labels */
+.sw-route__label{font-family:'IBM Plex Mono',monospace!important;text-transform:uppercase;letter-spacing:.14em;
+  font-size:.6rem!important;color:#e8e8ee!important;text-shadow:0 1px 8px rgba(0,0,0,.9)}
+
+/* scroll hint: unmissable */
+.sw-hint{font-family:'IBM Plex Mono',monospace!important;text-transform:uppercase;letter-spacing:.24em;
+  font-size:.68rem!important;color:#f2f2f6!important;text-shadow:0 1px 12px rgba(0,0,0,.9);animation:hintpulse 2.2s ease-in-out infinite}
+@keyframes hintpulse{0%,100%{opacity:1}50%{opacity:.45}}
+
+@media(prefers-reduced-motion:reduce){
+  .grain,.sw-hint,.sw-copy__title{animation:none!important}
+  .sw-copy__title{background:none;color:#f2f2f6!important;-webkit-background-clip:initial}
+}
 /* crawlable site footer below the world */
 .site-foot{background:#101012;border-top:1px solid rgba(255,255,255,.08);padding:44px clamp(20px,5vw,72px);position:relative;z-index:5}
 .site-foot .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:26px;max-width:1280px;margin:0 auto 30px}
@@ -38,6 +108,7 @@ body{background:#0a0a0a;color:#ededf0;font-family:'Archivo',sans-serif;-webkit-f
 <body>
 <h1 class="sr">Derik Bannister — Operator &amp; Founder. Software, AI, and growth engines for real businesses.</h1>
 <div id="world"></div>
+<div class="grain" aria-hidden="true"></div>
 
 <footer class="site-foot">
   <div class="cols">
@@ -54,52 +125,53 @@ body{background:#0a0a0a;color:#ededf0;font-family:'Archivo',sans-serif;-webkit-f
 <script>
 mountScrollWorld(document.getElementById('world'), {
   brand: { name: 'DB—', href: '/' },
-  diveScroll: 1.35, connScroll: 0.95,
-  hint: 'scroll to fly in',
+  diveScroll: 1.45, connScroll: 1.05,
+  crossfade: 0.18,
+  hint: 'Scroll to fly through',
   nav: true,
   atmosphere: true,
   sections: [
-    { id:'monogram', label:'The Monogram',
+    { id:'monogram', label:'Start',
       still:'/world/assets/still_monogram.jpg', clip:'/world/assets/dive_monogram.mp4',
-      accent:'#c7c7cf', scroll:1.6, linger:0.45,
+      accent:'#c7c7cf', scroll:1.7, linger:0.45,
       eyebrow:'Derik Bannister — Operator & Founder',
       title:'Own your market.',
-      body:'Software, AI, and growth engines for real businesses — built by an operator, not an agency.',
+      body:'I build the software, AI, and marketing machines that run real service businesses. Scroll — the camera flies you through everything I do.',
       tags:['Build','Operate','Own'] },
-    { id:'trades', label:'The Trades District',
+    { id:'trades', label:'The Trades',
       still:'/world/assets/still_trades.jpg', clip:'/world/assets/dive_trades.mp4',
-      accent:'#c7c7cf',
-      eyebrow:'Eighteen industries',
+      accent:'#c7c7cf', linger:0.35,
+      eyebrow:'Who it’s for — 18 trades',
       title:'Built for the trades.',
-      body:'Roofing, HVAC, plumbing, electrical — each trade gets its own playbook, not a recycled template.',
-      tags:['Roofing','HVAC','Plumbing'] },
-    { id:'systems', label:'The Systems Room',
+      body:'Roofing, HVAC, plumbing, electrical and fourteen more — websites, marketing, and systems shaped to how each trade actually wins work.',
+      tags:['Roofing','HVAC','Plumbing','+15 more'] },
+    { id:'systems', label:'CRM & Systems',
       still:'/world/assets/still_systems.jpg', clip:'/world/assets/dive_systems.mp4',
-      accent:'#c7c7cf',
-      eyebrow:'CRM & automation',
+      accent:'#c7c7cf', linger:0.35,
+      eyebrow:'What I build — CRM & automation',
       title:'Systems that book revenue.',
-      body:'Lead capture to close — pipelines, routing, and follow-up that never forgets a customer.',
+      body:'A pipeline for every lead, automatic follow-up, and routing that gets the right call to the right person — first click to closed job.',
       tags:['CRM','Dialer','Follow-up'] },
-    { id:'ai', label:'The AI Floor',
+    { id:'ai', label:'AI Phones',
       still:'/world/assets/still_ai.jpg', clip:'/world/assets/dive_ai.mp4',
-      accent:'#c7c7cf',
-      eyebrow:'AI & agentic systems',
+      accent:'#c7c7cf', linger:0.35,
+      eyebrow:'What I build — AI receptionists',
       title:'The phone answers itself.',
-      body:'Voice receptionists and AI agents that pick up at 2am, book the job, and work the follow-up.',
+      body:'AI receptionists that pick up at 2am, book the job, and chase the follow-up — a missed call never becomes a missed customer.',
       tags:['24/7','Voice AI','Agents'] },
-    { id:'growth', label:'The Growth Engine',
+    { id:'growth', label:'SEO Engine',
       still:'/world/assets/still_growth.jpg', clip:'/world/assets/dive_growth.mp4',
-      accent:'#c7c7cf',
-      eyebrow:'SEO & growth',
+      accent:'#c7c7cf', linger:0.35,
+      eyebrow:'What I build — search & ads',
       title:'Everywhere they search.',
-      body:'Hundreds of pages of search real estate, built from data and maintained by machines.',
-      tags:['452 pages','SEO','Ads'] },
-    { id:'contact', label:"The Operator's Desk",
+      body:'Hundreds of pages of search real estate for your services in your cities — built from data, maintained by machines.',
+      tags:['452 pages','SEO','Google Ads'] },
+    { id:'contact', label:'Contact',
       still:'/world/assets/still_contact.jpg', clip:'/world/assets/dive_contact.mp4',
-      accent:'#f2f2f6', scroll:1.8, linger:0.5,
-      eyebrow:"Let's talk",
+      accent:'#f2f2f6', scroll:1.9, linger:0.5,
+      eyebrow:'Next step — talk to Derik',
       title:"Let's build something real.",
-      body:'Email or text — you get the operator, not a sales sequence.',
+      body:'Email or text and you get me — the operator — not a sales sequence. Tell me your trade and your market; I’ll tell you what I’d build.',
       tags:[],
       cta:{ primary:{ label:'Email Derik →', href:'mailto:bannisterderik@gmail.com' },
             secondary:{ label:'Call/Text 530-736-7085', href:'sms:+15307367085' } } }
