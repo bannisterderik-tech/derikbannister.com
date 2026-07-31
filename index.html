@@ -35,8 +35,10 @@ body{background:#0a0a0a;color:#ededf0;font-family:'Archivo',sans-serif;-webkit-f
   animation:grain 8s steps(10) infinite}
 @keyframes grain{0%,100%{transform:translate(0,0)}10%{transform:translate(-30px,20px)}30%{transform:translate(30px,-40px)}50%{transform:translate(-40px,-20px)}70%{transform:translate(20px,40px)}90%{transform:translate(-20px,10px)}}
 
-/* copy panel: strong local scrim so text survives bright chrome scenes */
-.sw-copy{max-width:min(580px,88vw);position:relative}
+/* copy panel: strong local scrim so text survives bright chrome scenes.
+   NOTE: never set position on .sw-copy — the engine anchors it absolutely. */
+.sw-copy{max-width:min(580px,88vw)}
+@media(min-width:861px){.sw-copy{width:min(48vw,640px)}} /* wide enough that big Syne titles never overflow the background-clip box */
 .sw-copy::before{content:"";position:absolute;inset:-48px -70px;z-index:-1;
   background:radial-gradient(75% 85% at 32% 50%,rgba(10,10,10,.78),rgba(10,10,10,.4) 58%,transparent 100%);filter:blur(4px)}
 
