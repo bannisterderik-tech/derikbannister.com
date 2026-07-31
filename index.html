@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>DERIK BANNISTER — Operator & Founder</title>
-<meta name="description" content="Derik Bannister — operator and founder. I build operating systems for real businesses: software, AI, and growth engines across real estate and the trades.">
+<meta name="description" content="Derik Bannister — operator and founder. I build operating systems for real businesses: software, AI, and growth engines across real estate and the trades. Scroll through the world.">
 <meta property="og:title" content="DERIK BANNISTER — Operator & Founder">
-<meta property="og:description" content="I build operating systems for real businesses — software, AI, and growth engines that book real revenue.">
+<meta property="og:description" content="I build operating systems for real businesses — software, AI, and growth engines that book real revenue. Scroll through the world.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://derikbannister.com/">
 <meta name="theme-color" content="#0a0a0a">
@@ -17,1023 +17,101 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='42' font-family='Arial Black,sans-serif' font-size='26' font-weight='900' fill='%23e8e8ee' text-anchor='middle'%3EDB%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* ============================================================
-   DERIK BANNISTER — MONOCHROME CHROME
-   Black. White. Silver. No color, no mercy.
-   ============================================================ */
-:root{
-  --ink:#0a0a0a; --ink2:#101012; --surface:#141416;
-  --paper:#f4f4f6; --paper2:#ececef;
-  --silver:#c7c7cf; --silver-hi:#f2f2f6; --silver-lo:#77777f;
-  --text:#ededf0; --muted:#8f8f97; --faint:#55555b;
-  --hair:rgba(255,255,255,.08); --hair2:rgba(255,255,255,.16);
-  --hair-ink:rgba(10,10,10,.10); --hair-ink2:rgba(10,10,10,.2);
-  --disp:'Syne',sans-serif; --body:'Archivo',sans-serif; --mono:'IBM Plex Mono',monospace;
-  --gutter:clamp(20px,5vw,72px);
+:root, #world, .sw-root{
+  --sw-bg:#0a0a0a; --sw-ink:#ededf0; --sw-ink-soft:#8f8f97; --sw-accent:#c7c7cf;
+  --sw-font-display:'Syne',sans-serif; --sw-font-body:'Archivo',sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:78px}
-body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body.booting{overflow:hidden}
-::selection{background:var(--silver-hi);color:var(--ink)}
-a{color:inherit;text-decoration:none}
-img,svg,canvas{max-width:100%;display:block}
-@media(hover:hover) and (pointer:fine){ body.cursor-on, body.cursor-on a, body.cursor-on button, body.cursor-on input, body.cursor-on textarea, body.cursor-on label{cursor:none} }
-
-/* chrome text — the signature move */
-.chrome{
-  background:linear-gradient(105deg,#5c5c64 0%,#e9e9f0 22%,#8a8a92 45%,#ffffff 62%,#6a6a72 85%,#c7c7cf 100%);
-  background-size:220% 100%;
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-  animation:sheen 7s linear infinite;
-}
-@keyframes sheen{to{background-position:-220% 0}}
-
-/* film grain */
-.grain{position:fixed;inset:-100px;pointer-events:none;z-index:97;opacity:.055;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
-  animation:grain 8s steps(10) infinite}
-@keyframes grain{0%,100%{transform:translate(0,0)}10%{transform:translate(-30px,20px)}30%{transform:translate(30px,-40px)}50%{transform:translate(-40px,-20px)}70%{transform:translate(20px,40px)}90%{transform:translate(-20px,10px)}}
-
-.progress{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--silver-lo),var(--silver-hi));z-index:99}
-
-/* cursor — silver ring + dot */
-.cur,.cur2{position:fixed;top:0;left:0;pointer-events:none;z-index:100;will-change:transform;display:none}
-body.cursor-on .cur,body.cursor-on .cur2{display:block}
-.cur{width:6px;height:6px;background:var(--silver-hi);border-radius:50%;margin:-3px 0 0 -3px;mix-blend-mode:difference}
-.cur2{width:36px;height:36px;margin:-18px 0 0 -18px;border:1px solid var(--silver);border-radius:50%;transition:width .25s,height .25s,margin .25s,border-color .25s;mix-blend-mode:difference}
-.cur2.hot{width:64px;height:64px;margin:-32px 0 0 -32px;border-color:var(--silver-hi)}
-
-/* boot: monogram + line */
-.boot{position:fixed;inset:0;background:var(--ink);z-index:98;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;transition:opacity .6s,visibility .6s}
-.boot.done{opacity:0;visibility:hidden}
-.boot .mgram{font-family:var(--disp);font-weight:800;font-size:clamp(3rem,10vw,6rem);letter-spacing:-.02em}
-.boot .line{width:min(320px,60vw);height:1px;background:var(--hair2);position:relative;overflow:hidden}
-.boot .line i{position:absolute;inset:0;width:0;background:linear-gradient(90deg,var(--silver-lo),var(--silver-hi))}
-.boot .tag{font-family:var(--mono);font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--faint)}
-
-/* primitives */
-.wrap{max-width:1280px;margin:0 auto;padding:0 var(--gutter);position:relative;z-index:1}
-.mono{font-family:var(--mono);text-transform:uppercase;letter-spacing:.14em;font-size:.7rem;color:var(--muted)}
-.mono b{color:var(--silver-hi);font-weight:500}
-.eyebrow{display:inline-flex;align-items:center;gap:.6em}
-.eyebrow::before{content:"";width:28px;height:1px;background:var(--silver)}
-h1,h2,h3{font-family:var(--disp);line-height:1.02;font-weight:800;letter-spacing:-.015em}
-.section{padding:clamp(76px,10vw,150px) 0;border-top:1px solid var(--hair);position:relative}
-.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:clamp(36px,5vw,70px);flex-wrap:wrap}
-.sec-head h2{font-size:clamp(1.8rem,4.6vw,3.6rem);text-transform:uppercase}
-.sec-num{font-family:var(--mono);color:var(--faint);font-size:.75rem;letter-spacing:.14em;white-space:nowrap}
-.rv{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
-.rv.on{opacity:1;transform:none}
-
-/* topbar */
-.topbar{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,10,10,.72);backdrop-filter:blur(14px);border-bottom:1px solid var(--hair);transition:transform .4s}
-.topbar.hide{transform:translateY(-100%)}
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-family:var(--disp);font-weight:800;font-size:1rem;letter-spacing:.01em}
-.nav{display:flex;gap:30px;align-items:center}
-.nav a{font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);transition:color .25s;position:relative}
-.nav a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:1px;background:var(--silver-hi);transition:width .3s}
-.nav a:not(.btn):hover{color:var(--silver-hi)}
-.nav a:not(.btn):hover::after{width:100%}
-@media(max-width:760px){.nav a:not(.btn){display:none}}
-.btn{display:inline-flex;align-items:center;gap:.7em;font-family:var(--mono);font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.16em;color:var(--ink)!important;background:linear-gradient(120deg,#d8d8de,#ffffff 50%,#b9b9c2);padding:.95em 1.7em;border:1px solid var(--silver-hi);border-radius:2px;cursor:pointer;transition:box-shadow .25s,filter .25s;position:relative;overflow:hidden;will-change:transform}
-.btn::before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.8) 50%,transparent 60%);transform:translateX(-130%);transition:transform .6s}
-.btn:hover::before{transform:translateX(130%)}
-.btn:hover{box-shadow:0 0 0 1px var(--silver-hi),0 0 40px rgba(240,240,246,.18)}
-.btn.ghost{background:transparent;color:var(--text)!important;border-color:var(--hair2)}
-.btn.ghost:hover{border-color:var(--silver-hi);color:var(--silver-hi)!important;box-shadow:none}
-.btn .arr{transition:transform .25s}
-.btn:hover .arr{transform:translateX(4px)}
-
-/* hero */
-.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-top:110px;position:relative;overflow:hidden}
-#fx{position:absolute;inset:0;z-index:0;opacity:.85;width:100%;height:100%}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.3),transparent 30%,transparent 55%,var(--ink) 96%);z-index:0;pointer-events:none}
-.hero .wrap{z-index:2}
-.hero .kicker{margin-bottom:30px}
-.hero h1{font-size:clamp(2.2rem,7.2vw,6.6rem);text-transform:uppercase}
-.hero h1 .line{display:block}
-.hero .sub{max-width:56ch;color:var(--muted);font-size:clamp(1rem,1.5vw,1.2rem);margin:34px 0 42px}
-.hero .sub b{color:var(--text);font-weight:600}
-.hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
-.hero-tel{position:absolute;right:var(--gutter);bottom:92px;text-align:right;display:grid;gap:6px;z-index:2}
-@media(max-width:900px){.hero-tel{display:none}}
-.hero-scroll{position:absolute;left:var(--gutter);bottom:92px;z-index:2;display:flex;align-items:center;gap:10px}
-.hero-scroll .stem{width:1px;height:44px;background:var(--hair2);position:relative;overflow:hidden}
-.hero-scroll .stem::after{content:"";position:absolute;left:0;top:-40%;width:100%;height:40%;background:var(--silver-hi);animation:drip 1.8s ease-in-out infinite}
-@keyframes drip{to{top:110%}}
-@media(max-width:900px){.hero-scroll{display:none}}
-
-/* ticker */
-.ticker{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);background:var(--ink2);overflow:hidden;position:relative;z-index:2}
-.ticker .row{display:flex;align-items:center;height:44px;white-space:nowrap;overflow:hidden}
-.ticker .cell{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);padding:0 26px;border-right:1px solid var(--hair);display:flex;align-items:center;gap:.8em;height:100%}
-.ticker .cell b{color:var(--silver-hi);font-weight:500}
-.ticker .dot{width:6px;height:6px;border-radius:50%;background:var(--silver-hi);animation:blink 1.6s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.15}}
-
-/* marquee */
-.mq{border-bottom:1px solid var(--hair);overflow:hidden;padding:20px 0;background:var(--ink2)}
-.mq-track{display:flex;width:max-content;animation:mq 34s linear infinite}
-.mq:hover .mq-track{animation-play-state:paused}
-.mq-track span{font-family:var(--disp);font-weight:700;font-size:1rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);padding:0 30px;white-space:nowrap;transition:color .3s}
-.mq-track span:hover{color:var(--silver-hi)}
-.mq-track span::after{content:"—";color:var(--silver-lo);margin-left:60px;opacity:.8}
-@keyframes mq{to{transform:translateX(-50%)}}
-
-/* ventures */
-.vent{display:grid;gap:1px;background:var(--hair)}
-.vcard{background:var(--ink);padding:clamp(30px,5vw,56px) 0;transition:background .35s}
-.vcard:hover{background:var(--ink2)}
-.vcard .grid{display:grid;grid-template-columns:120px 1.1fr 1.6fr auto;gap:clamp(16px,3vw,48px);align-items:baseline;padding:0 var(--gutter);max-width:1280px;margin:0 auto}
-@media(max-width:900px){.vcard .grid{grid-template-columns:1fr;gap:10px}}
-.vcard .num{font-family:var(--mono);font-size:.75rem;color:var(--faint);letter-spacing:.14em}
-.vcard h3{font-size:clamp(1.5rem,3.4vw,2.6rem);text-transform:uppercase;transition:letter-spacing .35s}
-.vcard:hover h3{letter-spacing:.02em}
-.vcard .role{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--silver);display:block;margin-top:8px}
-.vcard p{color:var(--muted);font-size:.95rem;max-width:52ch}
-.vcard .go{font-family:var(--mono);font-size:.8rem;color:var(--faint);transition:color .3s,transform .3s;white-space:nowrap}
-.vcard:hover .go{color:var(--silver-hi);transform:translateX(6px)}
-.vcard .tag{display:inline-block;font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;border:1px solid var(--hair2);padding:.35em .8em;color:var(--muted);margin-left:12px;vertical-align:middle}
-
-
-
-/* stat grid */
-.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair)}
-@media(max-width:1000px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){.stat-grid{grid-template-columns:1fr}}
-.stat{background:var(--ink);padding:34px 30px;display:grid;gap:12px;align-content:start;transition:background .3s}
-.stat:hover{background:var(--ink2)}
-.stat b{font-family:var(--disp);font-weight:800;font-size:clamp(2.6rem,5vw,4rem);line-height:1}
-.stat p{color:var(--muted);font-size:.92rem;max-width:32ch}
-.stat .src{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;color:var(--faint)}
-
-/* sectors index */
-.sec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}
-.sec-grid a{border:1px solid var(--hair);padding:14px 16px;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);transition:border-color .25s,color .25s}
-.sec-grid a:hover{border-color:var(--silver);color:var(--silver-hi)}
-.loc-band{margin-top:34px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.loc-band a{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--hair2);padding-bottom:2px}
-.loc-band a:hover{color:var(--silver-hi);border-color:var(--silver-hi)}
-/* footer directory */
-.fdir{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:24px;margin-bottom:30px}
-.fdir h4{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:10px;font-weight:500}
-.fdir a{display:block;color:var(--muted);font-size:.8rem;padding:2px 0}
-.fdir a:hover{color:var(--silver-hi)}
-
-/* recent builds */
-.bld-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair)}
-@media(max-width:1000px){.bld-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){.bld-grid{grid-template-columns:1fr}}
-.bld{background:var(--ink);padding:36px 30px;display:grid;gap:12px;align-content:start;transition:background .3s;position:relative;overflow:hidden}
-.bld::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background:linear-gradient(90deg,var(--silver-lo),var(--silver-hi));transform:scaleX(0);transform-origin:left;transition:transform .4s}
-.bld:hover{background:var(--ink2)}
-.bld:hover::after{transform:scaleX(1)}
-.bld .idx{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;color:var(--faint)}
-.bld h3{font-size:1.15rem;text-transform:uppercase}
-.bld p{color:var(--muted);font-size:.9rem}
-.bld .dom{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;color:var(--silver);margin-top:8px}
-.bld.more{border:0;background:transparent;outline:1px dashed var(--hair2);outline-offset:-1px}
-.bld.more h3,.bld.more .dom{color:var(--faint)}
-
-/* white room — capabilities */
-.room{background:var(--paper);color:var(--ink);border-top:1px solid var(--hair-ink)}
-.room .sec-num{color:rgba(10,10,10,.4)}
-.room .sec-head h2{color:var(--ink)}
-.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair-ink)}
-@media(max-width:1000px){.cap-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){.cap-grid{grid-template-columns:1fr}}
-.cap{background:var(--paper);padding:34px 28px;transition:background .3s;position:relative;overflow:hidden}
-.cap:hover{background:var(--paper2)}
-.cap::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .4s}
-.cap:hover::after{transform:scaleX(1)}
-.cap .idx{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;color:rgba(10,10,10,.4);display:block;margin-bottom:20px}
-.cap h3{font-size:1.05rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em;margin-bottom:10px;color:var(--ink)}
-.cap p{color:rgba(10,10,10,.62);font-size:.92rem}
-
-/* kinetic band */
-.state{padding:clamp(90px,12vw,180px) 0;border-top:1px solid var(--hair);overflow:hidden;position:relative}
-.state .k{font-family:var(--disp);font-weight:800;font-size:clamp(2.6rem,9.5vw,8.5rem);text-transform:uppercase;white-space:nowrap;line-height:1.05;will-change:transform}
-.state .k.hollow{color:transparent;-webkit-text-stroke:1.5px rgba(199,199,207,.5)}
-
-/* principles */
-.rules{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,80px);align-items:start}
-@media(max-width:860px){.rules{grid-template-columns:1fr}}
-.rules .lede{font-family:var(--disp);font-weight:700;font-size:clamp(1.25rem,2.4vw,1.8rem);line-height:1.35}
-.rule{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--hair);transition:padding-left .3s}
-.rule:hover{padding-left:10px}
-.rule:first-child{padding-top:0}
-.rule .n{font-family:var(--mono);color:var(--silver);font-size:.75rem;padding-top:4px;white-space:nowrap}
-.rule h3{font-size:1rem;font-weight:700;margin-bottom:6px}
-.rule p{color:var(--muted);font-size:.92rem}
-
-/* contact */
-.contact{background:radial-gradient(60% 80% at 50% 100%,rgba(240,240,246,.06),transparent 70%),var(--ink)}
-.contact h2{font-size:clamp(2.2rem,6.5vw,5.5rem);text-transform:uppercase}
-.contact .sub{color:var(--muted);margin:24px 0 38px;max-width:50ch}
-.contact-links{display:flex;gap:16px;flex-wrap:wrap}
-.contact .mono-row{display:grid;gap:8px;margin-top:46px}
-
-footer{border-top:1px solid var(--hair);padding:34px 0;background:var(--ink2)}
-footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
-footer .mono{font-size:.64rem}
-
-/* ---------- motion layer v2 ---------- */
-/* masked word reveals */
-.wsplit .w{display:inline-block;overflow:hidden;vertical-align:top;padding:.08em .02em .16em 0;margin:-.08em -.02em -.16em 0}
-.wsplit .w>*{display:inline-block;transform:translateY(115%);transition:transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--wd,0)*70ms)}
-.wsplit.on .w>*{transform:none}
-
-/* section hairline draws itself in */
-.section::before{content:"";position:absolute;top:-1px;left:0;height:1px;width:100%;background:linear-gradient(90deg,var(--silver-lo),var(--silver-hi));opacity:.35;transform:scaleX(0);transform-origin:left;transition:transform 1.3s cubic-bezier(.2,.7,.2,1)}
-.section.insec::before{transform:scaleX(1)}
-.room::before{background:var(--ink);opacity:.14}
-
-/* ghost section numerals */
-.gnum{position:absolute;right:var(--gutter);top:clamp(20px,4vw,54px);font-family:var(--disp);font-weight:800;font-size:clamp(6rem,15vw,12rem);line-height:1;color:transparent;-webkit-text-stroke:1px rgba(199,199,207,.10);pointer-events:none;user-select:none;z-index:0;will-change:transform}
-.room .gnum{-webkit-text-stroke-color:rgba(10,10,10,.07)}
-
-/* section rail */
-.rail{position:fixed;right:22px;top:50%;transform:translateY(-50%);z-index:60;display:grid;gap:16px;mix-blend-mode:difference}
-.rail a{display:flex;align-items:center;gap:10px;justify-content:flex-end;font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);transition:color .3s}
-.rail a .lbl{opacity:0;transform:translateX(6px);transition:opacity .3s,transform .3s}
-.rail a:hover .lbl,.rail a.act .lbl{opacity:1;transform:none}
-.rail a .tick{width:16px;height:1px;background:var(--faint);transition:width .3s,background .3s}
-.rail a:hover{color:var(--silver)}
-.rail a.act{color:var(--silver-hi)}
-.rail a.act .tick{width:32px;background:var(--silver-hi)}
-@media(max-width:1100px){.rail{display:none}}
-
-/* scrollspy in topbar */
-.nav a:not(.btn).act{color:var(--silver-hi)}
-.nav a:not(.btn).act::after{width:100%}
-
-/* card glare + tilt (fine pointers only) */
-@media(hover:hover) and (pointer:fine){
-  .bld::before{content:"";position:absolute;inset:0;background:radial-gradient(240px circle at var(--gx,50%) var(--gy,50%),rgba(242,242,246,.09),transparent 65%);opacity:var(--go,0);transition:opacity .4s;pointer-events:none}
-  .cap::before{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--gx,50%) var(--gy,50%),rgba(10,10,10,.05),transparent 65%);opacity:var(--go,0);transition:opacity .4s;pointer-events:none}
-  .bld.rv.on,.cap.rv.on{transform:perspective(800px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:background .3s}
-}
-
-.hero .wrap,.state .k{will-change:transform}
-
-/* horizontal builds gallery */
-#builds{padding:0}
-.hstage{position:sticky;top:0;height:100svh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
-.hs-track{display:flex;gap:2px;padding:0 var(--gutter);width:max-content;will-change:transform}
-.bldc{flex:0 0 min(clamp(300px,34vw,460px),74vh);padding:0 0 26px}
-.bldc .shot{aspect-ratio:16/10;overflow:hidden;margin:0;background:var(--ink2);border-bottom:1px solid var(--hair)}
-.bldc .shot img{width:100%;height:100%;object-fit:cover;object-position:top;filter:grayscale(1) contrast(1.06) brightness(.9);transform:scale(1.01);transition:filter .5s,transform .6s cubic-bezier(.2,.7,.2,1)}
-.bldc:hover .shot img{filter:none;transform:scale(1.045)}
-.bldc .meta{padding:22px 24px 0;display:grid;gap:10px}
-.bldc.more{display:flex;align-items:center}
-.bldc.more .meta{padding:24px}
-.hs-ui{display:flex;align-items:center;gap:18px;padding:clamp(22px,3.5vh,44px) var(--gutter) 0}
-.hs-ui .mono{font-size:.62rem;color:var(--faint)}
-.hs-bar{flex:1;height:1px;background:var(--hair2);position:relative}
-.hs-bar i{position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,var(--silver-lo),var(--silver-hi))}
-/* capability UI vignettes — ink on paper */
-.viz{position:relative;height:150px;background:#fff;border:1px solid var(--hair-ink);margin-bottom:22px;overflow:hidden;font-family:var(--mono);text-transform:uppercase}
-.viz .t7{position:absolute;top:9px;left:11px;font-size:7px;letter-spacing:.2em;color:rgba(10,10,10,.4);z-index:2}
-/* CRM pipeline */
-.viz-crm .cols{display:flex;gap:8px;height:100%;padding:28px 10px 10px}
-.viz-crm .col{flex:1;border:1px dashed rgba(10,10,10,.18);padding:17px 6px 6px;position:relative}
-.viz-crm .col i{position:absolute;top:5px;left:6px;font-style:normal;font-size:6.5px;letter-spacing:.16em;color:rgba(10,10,10,.45)}
-.viz-crm .col b{display:block;height:11px;background:rgba(10,10,10,.06);border:1px solid rgba(10,10,10,.14);margin-bottom:5px}
-.viz-crm .lead{position:absolute;height:11px;width:24%;background:var(--ink);top:46px;left:6%;animation:crmlead 7s cubic-bezier(.7,0,.2,1) infinite}
-@keyframes crmlead{0%,16%{left:6%;top:46px}30%,58%{left:38%;top:63px}72%,100%{left:70%;top:46px}}
-/* AI chat + voice */
-.viz-ai{padding:30px 12px 10px}
-.viz-ai .bub{max-width:62%;border:1px solid rgba(10,10,10,.2);padding:7px 9px;display:grid;gap:4px}
-.viz-ai .bub span{display:block;height:4px;background:rgba(10,10,10,.18);width:110px;max-width:100%}
-.viz-ai .bub span:last-child{width:66px}
-.viz-ai .dots{display:inline-flex;gap:4px;margin:8px 0 0 3px;height:10px;align-items:center}
-.viz-ai .dots i{width:4px;height:4px;border-radius:50%;background:rgba(10,10,10,.5);animation:aidot 1.2s infinite}
-.viz-ai .dots i:nth-child(2){animation-delay:.2s}
-.viz-ai .dots i:nth-child(3){animation-delay:.4s}
-@keyframes aidot{0%,100%{opacity:.15}50%{opacity:1}}
-.viz-ai .out{margin-left:auto;margin-top:8px;background:var(--ink);border-color:var(--ink);display:flex;align-items:flex-end;gap:3px;height:36px;padding:7px 11px;max-width:56%}
-.viz-ai .out i{width:3px;height:100%;background:#fff;transform-origin:bottom;animation:wave 1s ease-in-out infinite alternate}
-.viz-ai .out i:nth-child(odd){transform:scaleY(.35)}
-.viz-ai .out i:nth-child(3n){animation-delay:.15s}
-.viz-ai .out i:nth-child(4n){animation-delay:.3s}
-.viz-ai .out i:nth-child(5n){animation-delay:.45s}
-@keyframes wave{from{transform:scaleY(.25)}to{transform:scaleY(1)}}
-/* growth chart */
-.viz-gro svg{position:absolute;left:10px;right:10px;bottom:10px;top:30px;width:calc(100% - 20px);height:calc(100% - 40px)}
-.viz-gro .l{stroke:var(--ink);stroke-width:1.5;stroke-dasharray:330;stroke-dashoffset:330}
-.cap.on .viz-gro .l{animation:chartdraw 2.2s cubic-bezier(.6,0,.2,1) .4s forwards}
-@keyframes chartdraw{to{stroke-dashoffset:0}}
-.viz-gro .a{opacity:0;transition:opacity 1s 1.8s}
-.cap.on .viz-gro .a{opacity:1}
-.viz-gro .kpi{position:absolute;right:11px;top:8px;text-align:right;z-index:2}
-.viz-gro .kpi b{display:block;font-size:14px;letter-spacing:.04em;color:var(--ink);font-weight:600}
-.viz-gro .kpi i{font-style:normal;font-size:6.5px;letter-spacing:.18em;color:rgba(10,10,10,.45)}
-/* dialer */
-.viz-tel{padding:29px 12px 10px;display:grid;gap:6px;align-content:start}
-.viz-tel .ln{display:flex;align-items:center;gap:8px;border:1px solid rgba(10,10,10,.14);padding:8px 9px;font-size:7.5px;letter-spacing:.16em;color:rgba(10,10,10,.6)}
-.viz-tel .ln s{text-decoration:none;width:6px;height:6px;border-radius:50%;border:1px solid var(--ink);flex:none}
-.viz-tel .ln em{font-style:normal;margin-left:auto;color:rgba(10,10,10,.4)}
-.viz-tel .l1 s{animation:inkblink 2.2s infinite}
-.viz-tel .l2{border-color:var(--ink)}
-.viz-tel .l2 s{background:var(--ink);animation:inkblink 1.4s infinite}
-.viz-tel .l2 em{color:var(--ink)}
-@keyframes inkblink{0%,100%{opacity:1}50%{opacity:.25}}
-.viz-tel .talk{height:2px;background:rgba(10,10,10,.12);position:relative;margin-top:3px}
-.viz-tel .talk i{position:absolute;top:0;bottom:0;left:0;width:0;background:var(--ink);animation:fillbar 8s linear infinite}
-@keyframes fillbar{to{width:100%}}
-/* app window */
-.viz-app .bar,.viz-web .bar{height:17px;border-bottom:1px solid rgba(10,10,10,.15);display:flex;align-items:center;gap:4px;padding:0 9px}
-.viz-app .bar i,.viz-web .bar i{width:5px;height:5px;border-radius:50%;border:1px solid rgba(10,10,10,.4)}
-.viz-app .body{display:flex;height:calc(100% - 17px)}
-.viz-app .side{width:36px;border-right:1px solid rgba(10,10,10,.15);padding:9px 7px;display:grid;gap:7px;align-content:start}
-.viz-app .side b{height:5px;background:rgba(10,10,10,.14)}
-.viz-app .side b:first-child{background:var(--ink)}
-.viz-app .main{flex:1;padding:11px;display:grid;gap:9px;align-content:start}
-.viz-app .main b{height:13px;border:1px solid rgba(10,10,10,.15);background:rgba(10,10,10,.04);opacity:0;transform:translateX(14px);transition:opacity .5s,transform .5s}
-.cap.on .viz-app .main b{opacity:1;transform:none}
-.cap.on .viz-app .main b:nth-child(2){transition-delay:.15s}
-.cap.on .viz-app .main b:nth-child(3){transition-delay:.3s}
-.viz-app .pg{height:3px;background:rgba(10,10,10,.12);position:relative;margin-top:7px;display:block}
-.viz-app .pg i{position:absolute;top:0;bottom:0;left:0;width:0;background:var(--ink);animation:fillbar 5s ease-in-out infinite}
-/* site assembly */
-.viz-web .bar .url{margin-left:8px;font-size:6.5px;letter-spacing:.18em;color:rgba(10,10,10,.45)}
-.viz-web .pgc{padding:11px;display:grid;gap:7px;height:calc(100% - 17px);align-content:start}
-.viz-web .pgc>*{opacity:0;transform:translateY(8px);transition:opacity .6s,transform .6s}
-.cap.on .viz-web .pgc>*{opacity:1;transform:none}
-.cap.on .viz-web .pgc>*:nth-child(2){transition-delay:.2s}
-.cap.on .viz-web .pgc>*:nth-child(3){transition-delay:.4s}
-.viz-web .h{height:10px;background:rgba(10,10,10,.1)}
-.viz-web .hero{height:46px;background:var(--ink);position:relative;overflow:hidden}
-.viz-web .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.35) 50%,transparent 60%);transform:translateX(-120%);animation:herosheen 3.6s infinite}
-@keyframes herosheen{0%,40%{transform:translateX(-120%)}75%,100%{transform:translateX(120%)}}
-.viz-web .two{display:flex;gap:7px}
-.viz-web .two b{flex:1;height:24px;border:1px solid rgba(10,10,10,.15);background:rgba(10,10,10,.04)}
-
-/* flat fallback: native swipe strip */
-.hgal.flat .hstage{position:static;height:auto;padding:clamp(76px,10vw,120px) 0;overflow:visible}
-.hgal.flat .hs-track{width:auto;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.hgal.flat .hs-track::-webkit-scrollbar{display:none}
-.hgal.flat .bldc{scroll-snap-align:start;flex-basis:clamp(280px,78vw,440px)}
-
-@media (prefers-reduced-motion:reduce){
-  .rv{transition:none;opacity:1;transform:none}
-  .mq-track,.grain,.chrome,.ticker .dot,.hero-scroll .stem::after,.boot .line i{animation:none!important}
-  .chrome{color:var(--silver-hi);background:none;-webkit-background-clip:initial}
-  html{scroll-behavior:auto}
-  .section::before{transition:none;transform:scaleX(1)}
-  .wsplit .w>*{transition:none;transform:none}
-  .bld.rv.on,.cap.rv.on{transform:none}
-  .bldc .shot img{filter:grayscale(1);transition:none;transform:none}
-  .viz *,.viz .hero::after{animation:none!important;transition:none!important}
-  .viz-app .main b,.viz-web .pgc>*{opacity:1;transform:none}
-  .viz-gro .l{stroke-dashoffset:0}
-  .viz-gro .a{opacity:1}
-}
+body{background:#0a0a0a;color:#ededf0;font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* crawlable site footer below the world */
+.site-foot{background:#101012;border-top:1px solid rgba(255,255,255,.08);padding:44px clamp(20px,5vw,72px);position:relative;z-index:5}
+.site-foot .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:26px;max-width:1280px;margin:0 auto 30px}
+.site-foot h2{font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#55555b;margin-bottom:10px;font-weight:500}
+.site-foot a{display:block;color:#8f8f97;font-size:.8rem;padding:2px 0;text-decoration:none}
+.site-foot a:hover{color:#f2f2f6}
+.site-foot .legal-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center;border-top:1px solid rgba(255,255,255,.08);padding-top:24px;max-width:1280px;margin:0 auto;font-family:'IBM Plex Mono',monospace;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:#55555b}
 </style>
 </head>
-<body class="booting">
+<body>
+<h1 class="sr">Derik Bannister — Operator &amp; Founder. Software, AI, and growth engines for real businesses.</h1>
+<div id="world"></div>
 
-<div class="progress" aria-hidden="true"></div>
-<div class="grain" aria-hidden="true"></div>
-<div class="cur" aria-hidden="true"></div>
-<div class="cur2" aria-hidden="true"></div>
-
-<div class="boot" id="boot" aria-hidden="true">
-  <div class="mgram chrome">DB</div>
-  <div class="line"><i id="bootBar"></i></div>
-  <div class="tag">DERIK&nbsp;BANNISTER</div>
-</div>
-
-<header class="topbar" id="topbar">
-  <div class="wrap">
-    <a class="logo" href="#top" aria-label="Derik Bannister home">DB<span style="color:var(--silver-lo)">—</span></a>
-    <nav class="nav" aria-label="Primary">
-      <a href="#builds">Builds</a>
-      <a href="#sectors">Industries</a>
-      <a href="#capabilities">Capabilities</a>
-      <a href="/ideas/">Ideas</a>
-      <a class="btn mag" href="#contact">Get in touch <span class="arr">→</span></a>
-    </nav>
+<footer class="site-foot">
+  <div class="cols">
+    <div><h2>Services</h2><a href="/services/web-design/">Websites</a><a href="/services/custom-software/">Custom Software</a><a href="/services/seo/">SEO</a><a href="/services/google-ads/">Google Ads / LSA</a><a href="/services/ai-receptionist/">AI Receptionist</a><a href="/services/crm/">CRM &amp; Automation</a><a href="/services/">All services →</a></div>
+    <div><h2>Industries</h2><a href="/trades/roofing/">Roofing</a><a href="/trades/plumbing/">Plumbing</a><a href="/trades/hvac/">HVAC</a><a href="/trades/electrical/">Electrical</a><a href="/trades/solar/">Solar</a><a href="/trades/">All industries →</a></div>
+    <div><h2>Locations</h2><a href="/locations/portland-or/">Portland, OR</a><a href="/locations/salem-or/">Salem, OR</a><a href="/locations/eugene-or/">Eugene, OR</a><a href="/locations/springfield-or/">Springfield, OR</a><a href="/locations/bend-or/">Bend, OR</a><a href="/locations/">All locations →</a></div>
+    <div><h2>Company</h2><a href="/about/">About</a><a href="/products/">SEO Products</a><a href="mailto:bannisterderik@gmail.com">Email</a><a href="tel:+15307367085">Call/Text 530-736-7085</a></div>
+    <div><h2>Legal</h2><a href="/legal/terms/">Terms of Use</a><a href="/legal/privacy/">Privacy Policy</a><a href="/legal/do-not-sell/">Do Not Sell or Share My Personal Information</a><a href="/legal/accessibility/">Accessibility</a><a href="/legal/disclaimer/">Disclaimer</a></div>
   </div>
-</header>
-
-<nav class="rail" aria-label="Section index">
-  <a href="#builds"><span class="lbl">Builds</span><span class="tick"></span></a>
-  <a href="#math"><span class="lbl">The Math</span><span class="tick"></span></a>
-  <a href="#sectors"><span class="lbl">Industries</span><span class="tick"></span></a>
-  <a href="#capabilities"><span class="lbl">Capabilities</span><span class="tick"></span></a>
-  <a href="#principles"><span class="lbl">Principles</span><span class="tick"></span></a>
-  <a href="#contact"><span class="lbl">Contact</span><span class="tick"></span></a>
-</nav>
-
-<!-- ================= HERO ================= -->
-<main id="top">
-<section class="hero">
-  <canvas id="fx" aria-hidden="true"></canvas>
-  <div class="wrap">
-    <p class="mono eyebrow kicker rv">Derik Bannister&nbsp;&nbsp;<b>Operator &amp; Founder — Oregon, USA</b></p>
-    <h1>
-      <span class="line rv" style="--d:.05s"><span data-scramble>Own your</span></span>
-      <span class="line chrome rv" style="--d:.15s"><span data-scramble>market.</span></span>
-    </h1>
-    <p class="sub rv" style="--d:.25s">
-      I build <b>operating systems for real businesses</b> — software, AI, and growth
-      engines for real estate, roofing, plumbing, HVAC, electrical &mdash; <b>eighteen
-      industries, each with its own playbook</b>. Not decks. Not demos.
-      <b>Systems that book revenue.</b>
-    </p>
-    <div class="hero-ctas rv" style="--d:.35s">
-      <a class="btn mag" href="#builds">See the builds <span class="arr">→</span></a>
-      <a class="btn ghost mag" href="#contact">Get in touch</a>
-    </div>
-  </div>
-  <div class="hero-scroll" aria-hidden="true"><span class="mono">SCROLL</span><span class="stem"></span></div>
-  <div class="hero-tel" aria-hidden="true">
-    <span class="mono">STATUS: <b>BUILDING</b></span>
-    <span class="mono">BUILDS: <b>04 SHIPPED</b></span>
-    <span class="mono">LOCAL: <b id="tkClock2">--:--</b> PT</span>
-  </div>
-</section>
-
-<!-- ticker -->
-<div class="ticker" aria-hidden="true">
-  <div class="row">
-    <span class="cell"><span class="dot"></span>STATUS <b>BUILDING</b></span>
-    <span class="cell">LOCAL <b id="tkClock">--:--:--</b> PT</span>
-    <span class="cell">BASE <b>OREGON, USA</b></span>
-    <span class="cell">FOCUS <b id="tkFocus">SOFTWARE</b></span>
-    <span class="cell">MODE <b>OPERATOR</b></span>
-  </div>
-</div>
-
-<!-- marquee -->
-<div class="mq" aria-hidden="true">
-  <div class="mq-track">
-    <span>Software</span><span>AI Systems</span><span>Real Estate</span><span>The Trades</span><span>Growth Engines</span><span>Automation</span><span>Telephony</span><span>Brand</span>
-    <span>Software</span><span>AI Systems</span><span>Real Estate</span><span>The Trades</span><span>Growth Engines</span><span>Automation</span><span>Telephony</span><span>Brand</span>
-  </div>
-</div>
-
-<!-- ================= RECENT BUILDS — horizontal gallery ================= -->
-<section class="section" id="builds">
-  <div class="hgal" id="hgal">
-    <div class="hstage">
-      <div class="wrap">
-        <div class="sec-head" style="margin-bottom:clamp(22px,3.5vh,48px)">
-          <h2 class="rv">Recent <span class="chrome" data-scramble>builds.</span></h2>
-          <span class="sec-num">[ 01 / SHIPPED ]</span>
-        </div>
-      </div>
-      <div class="hs-track" id="hsTrack">
-        <a class="bld bldc rv" style="--d:.0s" href="https://larissamayfieldre.com" target="_blank" rel="noopener">
-          <figure class="shot"><img src="/images/builds/larissa.jpg" alt="larissamayfieldre.com — Larissa Mayfield real-estate site homepage" width="860" height="537" loading="lazy"></figure>
-          <div class="meta">
-            <span class="idx">B-01</span>
-            <h3>Larissa Mayfield</h3>
-            <p>Real-estate agent site.</p>
-            <span class="dom">LARISSAMAYFIELDRE.COM ↗</span>
-          </div>
-        </a>
-        <a class="bld bldc rv" style="--d:.06s" href="https://mistletoeconstruction.com" target="_blank" rel="noopener">
-          <figure class="shot"><img src="/images/builds/mistletoe.jpg" alt="mistletoeconstruction.com — Mistletoe Construction roofing site homepage" width="860" height="537" loading="lazy"></figure>
-          <div class="meta">
-            <span class="idx">B-02</span>
-            <h3>Mistletoe Construction</h3>
-            <p>Roofing &amp; construction company site.</p>
-            <span class="dom">MISTLETOECONSTRUCTION.COM ↗</span>
-          </div>
-        </a>
-        <a class="bld bldc rv" style="--d:.12s" href="https://tossiebuyshouses.com" target="_blank" rel="noopener">
-          <figure class="shot"><img src="/images/builds/tossie.jpg" alt="tossiebuyshouses.com — Tossie Buys Houses cash home-buyer site homepage" width="860" height="537" loading="lazy"></figure>
-          <div class="meta">
-            <span class="idx">B-03</span>
-            <h3>Tossie Buys Houses</h3>
-            <p>Cash home-buyer site.</p>
-            <span class="dom">TOSSIEBUYSHOUSES.COM ↗</span>
-          </div>
-        </a>
-        <a class="bld bldc rv" style="--d:.18s" href="https://lynkspot.com" target="_blank" rel="noopener">
-          <figure class="shot"><img src="/images/builds/lynkspot.jpg" alt="lynkspot.com — Lynkspot marketing platform homepage" width="860" height="537" loading="lazy"></figure>
-          <div class="meta">
-            <span class="idx">B-04</span>
-            <h3>Lynkspot</h3>
-            <p>Marketing platform for loan officers.</p>
-            <span class="dom">LYNKSPOT.COM ↗</span>
-          </div>
-        </a>
-        <div class="bld bldc more rv" style="--d:.24s">
-          <div class="meta">
-            <span class="idx">B-05+</span>
-            <h3>More in the shop</h3>
-            <p>New builds land here as they ship.</p>
-            <span class="dom">ALWAYS BUILDING</span>
-          </div>
-        </div>
-      </div>
-      <div class="hs-ui" aria-hidden="true">
-        <span class="mono" id="hsCount">01 / 05</span>
-        <span class="hs-bar"><i id="hsFill"></i></span>
-        <span class="mono">SCROLL</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= THE MATH ================= -->
-<section class="section" id="math">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 class="rv">The <span class="chrome" data-scramble>math.</span></h2>
-      <span class="sec-num">[ 02 / WHY NOW ]</span>
-    </div>
-    <p class="body rv" style="color:var(--muted);max-width:62ch;margin:-30px 0 40px">Roofing, HVAC, plumbing, electrical — the trades leak more revenue to missed calls and slow follow-up than to any competitor. Processes, automations, and agentic AI plug the leak. The numbers aren't subtle:</p>
-    <div class="stat-grid">
-      <div class="stat rv" style="--d:.0s"><b class="chrome"><i data-count="62">0</i>%</b><p>of calls to home-service businesses go unanswered</p><span class="src">SERVICETITAN · 50K+ CONTRACTOR LINES</span></div>
-      <div class="stat rv" style="--d:.06s"><b class="chrome"><i data-count="86">0</i>%</b><p>of callers who hit voicemail hang up without leaving a message</p><span class="src">INDUSTRY CALL STUDIES</span></div>
-      <div class="stat rv" style="--d:.12s"><b class="chrome"><i data-count="78">0</i>%</b><p>of customers hire the business that responds first</p><span class="src">LEAD CONNECT</span></div>
-      <div class="stat rv" style="--d:.18s"><b class="chrome"><i data-count="7">0</i>×</b><p>more likely to win the lead when you answer inside the hour</p><span class="src">HARVARD BUSINESS REVIEW · 2.2M LEADS</span></div>
-      <div class="stat rv" style="--d:.24s"><b class="chrome"><i data-count="25">0</i>%</b><p>of residential contractors meaningfully use AI today — that gap is your head start</p><span class="src">2026 CONTRACTOR SURVEY · 1,000+ FIRMS</span></div>
-      <div class="stat rv" style="--d:.30s"><b class="chrome"><i data-count="73">0</i>%</b><p>of contractors already using AI say it gives them a competitive edge</p><span class="src">2026 CONTRACTOR SURVEY · 1,000+ FIRMS</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SECTORS ================= -->
-<section class="section" id="sectors">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 class="rv">Eighteen industries. <span class="chrome" data-scramble>By name.</span></h2>
-      <span class="sec-num">[ 03 / SECTORS ]</span>
-    </div>
-    <p class="body rv" style="color:var(--muted);max-width:60ch;margin:-30px 0 30px">No generic &ldquo;home services&rdquo; hand-waving. Every industry gets its own systems, its own page, its own plan &mdash; across all of Oregon and the neighboring metros I serve.</p>
-    <div class="sec-grid rv"><a href="/trades/roofing/">Roofing</a><a href="/trades/plumbing/">Plumbing</a><a href="/trades/hvac/">HVAC</a><a href="/trades/electrical/">Electrical</a><a href="/trades/solar/">Solar</a><a href="/trades/concrete/">Concrete</a><a href="/trades/landscaping/">Landscaping</a><a href="/trades/pest-control/">Pest Control</a><a href="/trades/garage-doors/">Garage Doors</a><a href="/trades/painting/">Painting</a><a href="/trades/remodeling/">Remodeling</a><a href="/trades/fencing/">Fencing</a><a href="/trades/excavation/">Excavation</a><a href="/trades/tree-service/">Tree Service</a><a href="/trades/flooring/">Flooring</a><a href="/trades/gutters/">Gutters</a><a href="/trades/construction/">Construction</a><a href="/trades/real-estate/">Real Estate</a></div>
-    <div class="loc-band rv" style="--d:.1s">
-      <span class="mono">TERRITORY:</span><a href="/locations/portland-or/">Portland, OR</a><a href="/locations/salem-or/">Salem, OR</a><a href="/locations/eugene-or/">Eugene, OR</a><a href="/locations/springfield-or/">Springfield, OR</a><a href="/locations/gresham-or/">Gresham, OR</a><a href="/locations/hillsboro-or/">Hillsboro, OR</a><a href="/locations/beaverton-or/">Beaverton, OR</a><a href="/locations/bend-or/">Bend, OR</a><a href="/locations/boise-id/">Boise, ID</a><a href="/locations/spokane-wa/">Spokane, WA</a><a href="/locations/vancouver-wa/">Vancouver, WA</a><a href="/locations/reno-nv/">Reno, NV</a><a href="/locations/redding-ca/">Redding, CA</a><a href="/locations/">ALL LOCATIONS →</a><a href="/products/">SEO PRODUCTS →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CAPABILITIES (white room) ================= -->
-<section class="section room" id="capabilities">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 class="rv">What I build.</h2>
-      <span class="sec-num">[ 04 / CAPABILITIES ]</span>
-    </div>
-    <div class="cap-grid">
-      <div class="cap rv" style="--d:.0s">
-        <span class="idx">C-01</span>
-        <div class="viz viz-crm" aria-hidden="true">
-          <span class="t7">PIPELINE</span>
-          <div class="cols">
-            <div class="col"><i>NEW</i><b></b><b></b><b></b></div>
-            <div class="col"><i>QUALIFIED</i><b></b><b></b></div>
-            <div class="col"><i>WON</i><b></b></div>
-          </div>
-          <span class="lead"></span>
-        </div>
-        <h3>Platforms &amp; CRM</h3>
-        <p>Full operating systems — lead capture to close, pipelines, routing, multi-tenant white-label.</p>
-      </div>
-      <div class="cap rv" style="--d:.06s">
-        <span class="idx">C-02</span>
-        <div class="viz viz-ai" aria-hidden="true">
-          <span class="t7">AI RECEPTIONIST</span>
-          <div class="bub"><span></span><span></span></div>
-          <div class="dots"><i></i><i></i><i></i></div>
-          <div class="bub out"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-        </div>
-        <h3>AI systems</h3>
-        <p>Voice receptionists, SDR agents that work the follow-up, and assistants grounded in the business's own data.</p>
-      </div>
-      <div class="cap rv" style="--d:.12s">
-        <span class="idx">C-03</span>
-        <div class="viz viz-gro" aria-hidden="true">
-          <span class="t7">BOOKED REVENUE</span>
-          <div class="kpi"><b>+312%</b><i>QTR / QTR</i></div>
-          <svg viewBox="0 0 200 70" preserveAspectRatio="none">
-            <line x1="0" y1="18" x2="200" y2="18" stroke="rgba(10,10,10,.07)"/>
-            <line x1="0" y1="36" x2="200" y2="36" stroke="rgba(10,10,10,.07)"/>
-            <line x1="0" y1="54" x2="200" y2="54" stroke="rgba(10,10,10,.07)"/>
-            <path class="a" d="M0 62 L30 55 L60 58 L95 40 L130 44 L165 22 L200 12 L200 70 L0 70 Z" fill="rgba(10,10,10,.05)" stroke="none"/>
-            <path class="l" d="M0 62 L30 55 L60 58 L95 40 L130 44 L165 22 L200 12" fill="none"/>
-          </svg>
-        </div>
-        <h3>Growth engines</h3>
-        <p>SEO, paid ads, email and SMS — run to booked-revenue numbers, not vanity dashboards.</p>
-      </div>
-      <div class="cap rv" style="--d:.18s">
-        <span class="idx">C-04</span>
-        <div class="viz viz-tel" aria-hidden="true">
-          <span class="t7">DIALER</span>
-          <div class="ln l1"><s></s>LINE 01<em>DIALING</em></div>
-          <div class="ln l2"><s></s>LINE 02<em>CONNECTED 00:47</em></div>
-          <div class="ln l3"><s></s>LINE 03<em>QUEUED</em></div>
-          <div class="talk"><i></i></div>
-        </div>
-        <h3>Telephony</h3>
-        <p>Multi-line dialers, call routing, compliance — the phone treated as the core system it actually is.</p>
-      </div>
-      <div class="cap rv" style="--d:.24s">
-        <span class="idx">C-05</span>
-        <div class="viz viz-app" aria-hidden="true">
-          <div class="bar"><i></i><i></i><i></i></div>
-          <div class="body">
-            <div class="side"><b></b><b></b><b></b><b></b></div>
-            <div class="main"><b></b><b></b><b></b><span class="pg"><i></i></span></div>
-          </div>
-        </div>
-        <h3>Custom apps</h3>
-        <p>Purpose-built software for how an operation actually runs — calculators, portals, internal tools.</p>
-      </div>
-      <div class="cap rv" style="--d:.3s">
-        <span class="idx">C-06</span>
-        <div class="viz viz-web" aria-hidden="true">
-          <div class="bar"><i></i><i></i><i></i><span class="url">YOURCOMPANY.COM</span></div>
-          <div class="pgc">
-            <b class="h"></b>
-            <b class="hero"></b>
-            <div class="two"><b></b><b></b></div>
-          </div>
-        </div>
-        <h3>Brand &amp; web</h3>
-        <p>Sites built to rank and convert, with a brand you can spot from a truck two lanes over.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= KINETIC ================= -->
-<section class="state" aria-hidden="true">
-  <div class="k hollow" data-kinetic="-1">BUILD&nbsp;&nbsp;OPERATE&nbsp;&nbsp;OWN&nbsp;&nbsp;BUILD&nbsp;&nbsp;OPERATE&nbsp;&nbsp;OWN</div>
-  <div class="k chrome" data-kinetic="1">SHIP REAL THINGS.&nbsp;&nbsp;SHIP REAL THINGS.&nbsp;&nbsp;SHIP REAL THINGS.</div>
-</section>
-
-<!-- ================= PRINCIPLES ================= -->
-<section class="section" id="principles">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 class="rv">How I <span class="chrome" data-scramble>operate.</span></h2>
-      <span class="sec-num">[ 05 / PRINCIPLES ]</span>
-    </div>
-    <div class="rules">
-      <p class="lede rv">Operator first, vendor never. <span class="chrome">The core stack runs in my own business before it runs in yours.</span></p>
-      <div>
-        <div class="rule rv" style="--d:.0s">
-          <span class="n">P-01</span>
-          <div><h3>Dogfood everything</h3><p>My own companies run on my own systems before a single customer does. Live deals, real phones, real money.</p></div>
-        </div>
-        <div class="rule rv" style="--d:.08s">
-          <span class="n">P-02</span>
-          <div><h3>Judged on revenue</h3><p>Impressions don't pay invoices. A system either books revenue or it gets rebuilt.</p></div>
-        </div>
-        <div class="rule rv" style="--d:.16s">
-          <span class="n">P-03</span>
-          <div><h3>Own the stack</h3><p>Own the domain, the data, the pipeline, the customer list. Renting your business from platforms is how you lose it.</p></div>
-        </div>
-        <div class="rule rv" style="--d:.24s">
-          <span class="n">P-04</span>
-          <div><h3>Speed is a feature</h3><p>Ship in days, learn in public, fix fast. Momentum compounds harder than perfection.</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section class="section contact" id="contact">
-  <div class="wrap">
-    <p class="mono eyebrow rv" style="margin-bottom:24px">[ 06 / CONTACT ]</p>
-    <h2 class="rv">Let's build <span class="chrome" data-scramble>something real.</span></h2>
-    <p class="sub rv" style="--d:.1s">Partnerships, projects, or a straight question — I read everything and answer fast.</p>
-    <div class="contact-links rv" style="--d:.2s">
-      <a class="btn mag" href="mailto:bannisterderik@gmail.com">Email me <span class="arr">→</span></a>
-      <a class="btn ghost mag" href="sms:+15307367085">Text me</a>
-    </div>
-    <div class="mono-row rv" style="--d:.3s">
-      <span class="mono">EMAIL: <b>bannisterderik@gmail.com</b></span>
-      <span class="mono">CALL/TEXT: <b>530-736-7085</b></span>
-      <span class="mono">BASE: <b>OREGON, USA</b></span>
-    </div>
-  </div>
-</section>
-</main>
-
-<footer>
-  <div class="wrap">
-    <div class="fdir">
-      <div><h4>Services</h4><a href="/services/web-design/">Websites</a><a href="/services/custom-software/">Custom Software</a><a href="/services/seo/">SEO</a><a href="/services/google-ads/">Google Ads / LSA</a><a href="/services/ai-receptionist/">AI Receptionist</a><a href="/services/crm/">CRM & Automation</a><a href="/services/">All services →</a></div>
-      <div><h4>Industries</h4><a href="/trades/roofing/">Roofing</a><a href="/trades/plumbing/">Plumbing</a><a href="/trades/hvac/">HVAC</a><a href="/trades/electrical/">Electrical</a><a href="/trades/solar/">Solar</a><a href="/trades/concrete/">Concrete</a><a href="/trades/">All industries →</a></div>
-      <div><h4>Locations</h4><a href="/locations/portland-or/">Portland, OR</a><a href="/locations/salem-or/">Salem, OR</a><a href="/locations/eugene-or/">Eugene, OR</a><a href="/locations/springfield-or/">Springfield, OR</a><a href="/locations/gresham-or/">Gresham, OR</a><a href="/locations/hillsboro-or/">Hillsboro, OR</a><a href="/locations/">All locations →</a></div>
-      <div><h4>Company</h4><a href="#builds">Builds</a><a href="/ideas/">Ideas Board</a><a href="/products/">SEO Products</a><a href="mailto:bannisterderik@gmail.com">Email</a><a href="tel:+15307367085">Call/Text 530-736-7085</a></div>
-      <div><h4>Legal</h4><a href="/legal/terms/">Terms of Use</a><a href="/legal/privacy/">Privacy Policy</a><a href="/legal/do-not-sell/">Do Not Sell or Share My Personal Information</a><a href="/legal/accessibility/">Accessibility</a><a href="/legal/disclaimer/">Disclaimer</a></div>
-    </div>
-    <div style="display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center;border-top:1px solid var(--hair);padding-top:26px">
-      <span class="mono">© 2026 Derik Bannister</span>
-      <span class="mono">DB<b>—</b>&nbsp;&nbsp;BUILD. OPERATE. OWN.</span>
-    </div>
-  </div>
+  <div class="legal-row"><span>© 2026 Derik Bannister</span><span>DB— BUILD. OPERATE. OWN.</span></div>
 </footer>
 
+<script src="/world/scrub-engine.js"></script>
 <script>
-(() => {
-const reduced = matchMedia(`(prefers-reduced-motion: reduce)`).matches;
-const finePointer = matchMedia(`(hover: hover) and (pointer: fine)`).matches;
-
-/* boot */
-const boot = document.getElementById(`boot`);
-const bootDone = () => { boot.classList.add(`done`); document.body.classList.remove(`booting`); };
-if (reduced || location.search.includes(`noboot`) || sessionStorage.getItem(`db-booted`)) {
-  bootDone();
-} else {
-  sessionStorage.setItem(`db-booted`, `1`);
-  const bar = document.getElementById(`bootBar`);
-  let p = 0;
-  const tick = setInterval(() => {
-    p = Math.min(100, p + 4 + Math.random() * 9);
-    bar.style.width = p + `%`;
-    if (p >= 100) { clearInterval(tick); setTimeout(bootDone, 380); }
-  }, 55);
-  setTimeout(bootDone, 3200); // failsafe
-}
-
-/* cursor */
-if (finePointer && !reduced) {
-  document.body.classList.add(`cursor-on`);
-  const dot = document.querySelector(`.cur`), ring = document.querySelector(`.cur2`);
-  let mx = innerWidth / 2, my = innerHeight / 2, rx = mx, ry = my;
-  addEventListener(`mousemove`, e => { mx = e.clientX; my = e.clientY; }, { passive: true });
-  const loop = () => {
-    rx += (mx - rx) * .16; ry += (my - ry) * .16;
-    dot.style.transform = `translate(${mx}px,${my}px)`;
-    ring.style.transform = `translate(${rx}px,${ry}px)`;
-    requestAnimationFrame(loop);
-  };
-  loop();
-  document.querySelectorAll(`a,button,input,textarea,label`).forEach(el => {
-    el.addEventListener(`mouseenter`, () => ring.classList.add(`hot`));
-    el.addEventListener(`mouseleave`, () => ring.classList.remove(`hot`));
-  });
-}
-
-/* hero canvas: silver starfield / drifting particles + faint horizon rings */
-const cv = document.getElementById(`fx`);
-if (cv && !reduced) {
-  const ctx = cv.getContext(`2d`);
-  const dpr = Math.min(devicePixelRatio || 1, 2);
-  let W, H, t = 0, run = true;
-  const fit = () => { const r = cv.getBoundingClientRect(); W = cv.width = r.width * dpr; H = cv.height = r.height * dpr; };
-  fit(); addEventListener(`resize`, fit, { passive: true });
-  const dots = Array.from({ length: 90 }, (_, k) => ({
-    x: (k * 733 % 1000) / 1000, y: (k * 397 % 1000) / 1000,
-    z: .25 + (k * 211 % 100) / 120, o: .12 + (k * 137 % 100) / 400,
-  }));
-  let mxr = .5, smx = .5;
-  addEventListener(`pointermove`, e => { mxr = e.clientX / innerWidth; }, { passive: true });
-  const draw = () => {
-    requestAnimationFrame(draw);
-    if (!run || !W) return;
-    t += .0016;
-    smx += (mxr - smx) * .04;
-    ctx.clearRect(0, 0, W, H);
-    // concentric horizon arcs, engraved-silver feel
-    const cx = W / 2 + (smx - .5) * W * .07, cy = H * 1.25;
-    for (let r = 1; r <= 9; r++) {
-      const rad = r * H * .16 + (t * 40 * dpr) % (H * .16);
-      ctx.strokeStyle = `rgba(199,199,207,${.05 - r * .004})`;
-      ctx.lineWidth = 1;
-      ctx.beginPath(); ctx.arc(cx, cy, rad, Math.PI, 2 * Math.PI); ctx.stroke();
-    }
-    // drifting silver dust
-    dots.forEach(d => {
-      const yy = ((d.y - t * d.z) % 1 + 1) % 1;
-      const xx = (d.x + Math.sin((t * 3 + d.y * 9)) * .004) % 1;
-      ctx.globalAlpha = Math.max(0, d.o * (1 - Math.abs(yy - .45) * 1.6));
-      ctx.fillStyle = `#e8e8ee`;
-      ctx.fillRect(xx * W, yy * H, 1.6 * dpr * d.z, 1.6 * dpr * d.z);
-    });
-    ctx.globalAlpha = 1;
-  };
-  draw();
-  new IntersectionObserver(es => { run = es[0].isIntersecting; }).observe(cv);
-}
-
-/* scramble */
-const GLYPHS = `#/\\<>[]{}=+*%$@!01`;
-const scramble = el => {
-  if (reduced || el.dataset.did) return;
-  el.dataset.did = `1`;
-  const orig = el.textContent;
-  let frame = 0;
-  const total = Math.max(14, orig.length * 2);
-  const step = () => {
-    frame++;
-    const reveal = Math.floor((frame / total) * orig.length);
-    el.textContent = orig.split(``).map((ch, idx) => {
-      if (ch === ` ` || idx < reveal) return ch;
-      return GLYPHS[(Math.random() * GLYPHS.length) | 0];
-    }).join(``);
-    if (reveal < orig.length) requestAnimationFrame(step);
-    else el.textContent = orig;
-  };
-  step();
-};
-
-/* stat count-up */
-const countUp = el => {
-  const target = +el.dataset.count;
-  if (reduced) { el.textContent = target; return; }
-  const t0 = performance.now(), dur = 1400;
-  const step = now => {
-    const p = Math.min(1, (now - t0) / dur);
-    el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
-    if (p < 1) requestAnimationFrame(step);
-  };
-  requestAnimationFrame(step);
-};
-
-/* reveals */
-const io = new IntersectionObserver(es => {
-  es.forEach(e => {
-    if (!e.isIntersecting) return;
-    e.target.classList.add(`on`);
-    e.target.querySelectorAll(`[data-scramble]`).forEach(scramble);
-    if (e.target.matches(`[data-scramble]`)) scramble(e.target);
-    e.target.querySelectorAll(`[data-count]`).forEach(countUp);
-    io.unobserve(e.target);
-  });
-}, { threshold: .15, rootMargin: `0px 0px -40px 0px` });
-document.querySelectorAll(`.rv`).forEach(el => io.observe(el));
-
-/* magnetic buttons */
-if (finePointer && !reduced) {
-  document.querySelectorAll(`.mag`).forEach(btn => {
-    btn.addEventListener(`mousemove`, e => {
-      const r = btn.getBoundingClientRect();
-      btn.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .18}px,${(e.clientY - r.top - r.height / 2) * .3}px)`;
-    });
-    btn.addEventListener(`mouseleave`, () => { btn.style.transform = ``; });
-  });
-}
-
-/* scroll: progress, topbar, kinetic */
-const progress = document.querySelector(`.progress`);
-const topbar = document.getElementById(`topbar`);
-const kinetics = document.querySelectorAll(`[data-kinetic]`);
-let lastY = 0, ticking = false;
-const onScroll = () => {
-  const y = scrollY, max = document.documentElement.scrollHeight - innerHeight;
-  progress.style.width = (max > 0 ? (y / max) * 100 : 0) + `%`;
-  topbar.classList.toggle(`hide`, y > 600 && y > lastY);
-  lastY = y;
-  ticking = false;
-};
-addEventListener(`scroll`, () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
-onScroll();
-
-/* word-mask reveals for section headings */
-if (!reduced) {
-  document.querySelectorAll(`.sec-head h2, .contact h2`).forEach(h => {
-    let wi = 0;
-    [...h.childNodes].forEach(n => {
-      if (n.nodeType === 3) {
-        const frag = document.createDocumentFragment();
-        n.textContent.split(/(\s+)/).forEach(part => {
-          if (!part) return;
-          if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
-          const w = document.createElement(`span`); w.className = `w`;
-          const i = document.createElement(`span`); i.style.setProperty(`--wd`, wi++);
-          i.textContent = part; w.appendChild(i); frag.appendChild(w);
-        });
-        h.replaceChild(frag, n);
-      } else if (n.nodeType === 1) {
-        const w = document.createElement(`span`); w.className = `w`;
-        const i = document.createElement(`span`); i.style.setProperty(`--wd`, wi++);
-        h.insertBefore(w, n); w.appendChild(i); i.appendChild(n);
-      }
-    });
-    h.classList.add(`wsplit`);
-  });
-}
-
-/* ghost section numerals */
-document.querySelectorAll(`main section[id]`).forEach((s, i) => {
-  const g = document.createElement(`span`);
-  g.className = `gnum`; g.setAttribute(`aria-hidden`, `true`);
-  g.textContent = `0` + (i + 1);
-  s.prepend(g);
+mountScrollWorld(document.getElementById('world'), {
+  brand: { name: 'DB—', href: '/' },
+  diveScroll: 1.35, connScroll: 0.95,
+  hint: 'scroll to fly in',
+  nav: true,
+  atmosphere: true,
+  sections: [
+    { id:'monogram', label:'The Monogram',
+      still:'/world/assets/still_monogram.jpg', clip:'/world/assets/dive_monogram.mp4',
+      accent:'#c7c7cf', scroll:1.6, linger:0.45,
+      eyebrow:'Derik Bannister — Operator & Founder',
+      title:'Own your market.',
+      body:'Software, AI, and growth engines for real businesses — built by an operator, not an agency.',
+      tags:['Build','Operate','Own'] },
+    { id:'trades', label:'The Trades District',
+      still:'/world/assets/still_trades.jpg', clip:'/world/assets/dive_trades.mp4',
+      accent:'#c7c7cf',
+      eyebrow:'Eighteen industries',
+      title:'Built for the trades.',
+      body:'Roofing, HVAC, plumbing, electrical — each trade gets its own playbook, not a recycled template.',
+      tags:['Roofing','HVAC','Plumbing'] },
+    { id:'systems', label:'The Systems Room',
+      still:'/world/assets/still_systems.jpg', clip:'/world/assets/dive_systems.mp4',
+      accent:'#c7c7cf',
+      eyebrow:'CRM & automation',
+      title:'Systems that book revenue.',
+      body:'Lead capture to close — pipelines, routing, and follow-up that never forgets a customer.',
+      tags:['CRM','Dialer','Follow-up'] },
+    { id:'ai', label:'The AI Floor',
+      still:'/world/assets/still_ai.jpg', clip:'/world/assets/dive_ai.mp4',
+      accent:'#c7c7cf',
+      eyebrow:'AI & agentic systems',
+      title:'The phone answers itself.',
+      body:'Voice receptionists and AI agents that pick up at 2am, book the job, and work the follow-up.',
+      tags:['24/7','Voice AI','Agents'] },
+    { id:'growth', label:'The Growth Engine',
+      still:'/world/assets/still_growth.jpg', clip:'/world/assets/dive_growth.mp4',
+      accent:'#c7c7cf',
+      eyebrow:'SEO & growth',
+      title:'Everywhere they search.',
+      body:'Hundreds of pages of search real estate, built from data and maintained by machines.',
+      tags:['452 pages','SEO','Ads'] },
+    { id:'contact', label:"The Operator's Desk",
+      still:'/world/assets/still_contact.jpg', clip:'/world/assets/dive_contact.mp4',
+      accent:'#f2f2f6', scroll:1.8, linger:0.5,
+      eyebrow:"Let's talk",
+      title:"Let's build something real.",
+      body:'Email or text — you get the operator, not a sales sequence.',
+      tags:[],
+      cta:{ primary:{ label:'Email Derik →', href:'mailto:bannisterderik@gmail.com' },
+            secondary:{ label:'Call/Text 530-736-7085', href:'sms:+15307367085' } } }
+  ],
+  connectors: [
+    '/world/assets/conn_1.mp4',
+    '/world/assets/conn_2.mp4',
+    '/world/assets/conn_3.mp4',
+    '/world/assets/conn_4.mp4',
+    '/world/assets/conn_5.mp4'
+  ]
 });
-
-/* section hairline draw */
-const secIO = new IntersectionObserver(es => es.forEach(e => {
-  if (e.isIntersecting) { e.target.classList.add(`insec`); secIO.unobserve(e.target); }
-}), { threshold: .12 });
-document.querySelectorAll(`.section`).forEach(s => secIO.observe(s));
-
-/* scrollspy: rail + topbar */
-const spyLinks = [...document.querySelectorAll(`.rail a, .nav a[href^="#"]`)];
-const spyIO = new IntersectionObserver(es => es.forEach(e => {
-  if (e.isIntersecting) spyLinks.forEach(a => a.classList.toggle(`act`, a.getAttribute(`href`) === `#` + e.target.id));
-}), { rootMargin: `-45% 0px -50% 0px` });
-document.querySelectorAll(`main section[id]`).forEach(s => spyIO.observe(s));
-
-/* card glare + tilt */
-if (finePointer && !reduced) {
-  document.querySelectorAll(`.bld,.cap`).forEach(card => {
-    card.addEventListener(`pointermove`, e => {
-      const r = card.getBoundingClientRect();
-      const px = (e.clientX - r.left) / r.width, py2 = (e.clientY - r.top) / r.height;
-      card.style.setProperty(`--gx`, px * 100 + `%`);
-      card.style.setProperty(`--gy`, py2 * 100 + `%`);
-      card.style.setProperty(`--go`, 1);
-      card.style.setProperty(`--rx`, (py2 - .5) * -3.5 + `deg`);
-      card.style.setProperty(`--ry`, (px - .5) * 4.5 + `deg`);
-    }, { passive: true });
-    card.addEventListener(`pointerleave`, () => {
-      card.style.setProperty(`--go`, 0);
-      card.style.setProperty(`--rx`, `0deg`);
-      card.style.setProperty(`--ry`, `0deg`);
-    });
-  });
-}
-
-/* horizontal builds gallery */
-const hgal = document.getElementById(`hgal`);
-const hsTrack = document.getElementById(`hsTrack`);
-const hsFill = document.getElementById(`hsFill`);
-const hsCount = document.getElementById(`hsCount`);
-const hsCards = hsTrack ? hsTrack.children.length : 0;
-const hsFlat = reduced || !finePointer || innerWidth < 900;
-if (hgal && hsFlat) {
-  hgal.classList.add(`flat`);
-  hsTrack.addEventListener(`scroll`, () => {
-    const m = hsTrack.scrollWidth - hsTrack.clientWidth;
-    const p = m > 0 ? hsTrack.scrollLeft / m : 0;
-    hsFill.style.width = p * 100 + `%`;
-    hsCount.textContent = `0` + (1 + Math.round(p * (hsCards - 1))) + ` / 0` + hsCards;
-  }, { passive: true });
-}
-if (hgal && !hsFlat) {
-  const size = () => { hgal.style.height = innerHeight + Math.max(0, hsTrack.scrollWidth - innerWidth) + `px`; };
-  size(); addEventListener(`resize`, size, { passive: true });
-}
-
-/* continuous fx loop: kinetic skew by scroll velocity, hero parallax, ghost numerals */
-if (!reduced) {
-  const heroWrap = document.querySelector(`.hero .wrap`);
-  const heroSide = document.querySelectorAll(`.hero-tel,.hero-scroll`);
-  const gnums = [...document.querySelectorAll(`.gnum`)];
-  let vel = 0, sk = 0, py = scrollY;
-  const fx = () => {
-    const y = scrollY;
-    vel = y - py; py = y;
-    sk += (Math.max(-12, Math.min(12, vel * .4)) - sk) * .1;
-    kinetics.forEach(k => {
-      const dir = +k.dataset.kinetic;
-      k.style.transform = `translateX(${(((y * .2) % 800) - 400) * dir}px) skewX(${(sk * dir * .6).toFixed(2)}deg)`;
-    });
-    if (y < innerHeight) {
-      heroWrap.style.transform = `translateY(${(y * .22).toFixed(1)}px)`;
-      heroWrap.style.opacity = Math.max(0, 1 - y / (innerHeight * .8)).toFixed(3);
-      heroSide.forEach(el => el.style.opacity = Math.max(0, 1 - y / (innerHeight * .45)).toFixed(3));
-    }
-    gnums.forEach(g => {
-      const r = g.parentElement.getBoundingClientRect();
-      if (r.top < innerHeight && r.bottom > 0) g.style.transform = `translateY(${((innerHeight - r.top) * -.08).toFixed(1)}px)`;
-    });
-    if (hgal && !hsFlat) {
-      const r = hgal.getBoundingClientRect();
-      if (r.top < innerHeight && r.bottom > 0) {
-        const extra = hsTrack.scrollWidth - innerWidth;
-        const span = r.height - innerHeight;
-        const p = span > 0 ? Math.min(1, Math.max(0, -r.top / span)) : 0;
-        hsTrack.style.transform = `translateX(${(-p * Math.max(0, extra)).toFixed(1)}px)`;
-        hsFill.style.width = p * 100 + `%`;
-        hsCount.textContent = `0` + (1 + Math.round(p * (hsCards - 1))) + ` / 0` + hsCards;
-      }
-    }
-    requestAnimationFrame(fx);
-  };
-  fx();
-}
-
-/* ticker clock + rotating focus */
-const clockEl = document.getElementById(`tkClock`);
-const clock2 = document.getElementById(`tkClock2`);
-const focusEl = document.getElementById(`tkFocus`);
-const FOCI = [`SOFTWARE`, `AI SYSTEMS`, `REAL ESTATE`, `THE TRADES`, `GROWTH`, `AUTOMATION`];
-let fi = 0;
-setInterval(() => {
-  const s = new Date().toLocaleTimeString(`en-US`, { hour12: false, timeZone: `America/Los_Angeles` });
-  clockEl.textContent = s;
-  if (clock2) clock2.textContent = s.slice(0, 5);
-}, 1000);
-setInterval(() => { fi++; focusEl.textContent = FOCI[fi % FOCI.length]; }, 3200);
-})();
 </script>
 </body>
 </html>
