@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The World — a Scrollable Tour | Derik Bannister</title>
+<meta name="description" content="Derik Bannister — operator and founder. I build operating systems for real businesses: software, AI, and growth engines across real estate and the trades. Scroll through the world.">
+<meta property="og:title" content="The World — a Scrollable Tour | Derik Bannister">
+<meta property="og:description" content="I build operating systems for real businesses — software, AI, and growth engines that book real revenue. Scroll through the world.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://derikbannister.com/world/">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="canonical" href="https://derikbannister.com/world/">
+<meta property="og:image" content="https://derikbannister.com/og/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://derikbannister.com/#business","name":"Derik Bannister","founder":{"@type":"Person","name":"Derik Bannister"},"email":"bannisterderik@gmail.com","telephone":"+15307367085","url":"https://derikbannister.com/","address":{"@type":"PostalAddress","addressRegion":"OR","addressCountry":"US"},"areaServed":["Oregon","Boise ID","Spokane WA","Vancouver WA","Reno NV","Redding CA"]}</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='42' font-family='Arial Black,sans-serif' font-size='26' font-weight='900' fill='%23e8e8ee' text-anchor='middle'%3EDB%3C/text%3E%3C/svg%3E">
+<link rel="preload" as="image" href="/world/assets/still_monogram.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root, #world, .sw-root{
+  --sw-bg:#0a0a0a; --sw-ink:#ededf0; --sw-ink-soft:#8f8f97; --sw-accent:#c7c7cf;
+  --sw-font-display:'Syne',sans-serif; --sw-font-body:'Archivo',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0a;color:#ededf0;font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- brand polish over the engine (unlayered = wins over @layer sw) ---------- */
+/* film grain — the old site's signature texture */
+.grain{position:fixed;inset:-100px;pointer-events:none;z-index:40;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grain 8s steps(10) infinite}
+@keyframes grain{0%,100%{transform:translate(0,0)}10%{transform:translate(-30px,20px)}30%{transform:translate(30px,-40px)}50%{transform:translate(-40px,-20px)}70%{transform:translate(20px,40px)}90%{transform:translate(-20px,10px)}}
+
+/* copy panel: strong local scrim so text survives bright chrome scenes.
+   NOTE: never set position on .sw-copy — the engine anchors it absolutely. */
+.sw-copy{max-width:min(720px,92vw)!important}
+@media(min-width:861px){.sw-copy{width:min(54vw,720px)!important}} /* !important: the engine injects its stylesheet after this one */
+.sw-copy::before{content:"";position:absolute;inset:-48px -70px;z-index:-1;
+  background:radial-gradient(75% 85% at 32% 50%,rgba(10,10,10,.78),rgba(10,10,10,.4) 58%,transparent 100%);filter:blur(4px)}
+
+/* mono telemetry counter + eyebrow with the line prefix */
+.sw-copy__num{font-family:'IBM Plex Mono',monospace!important;font-size:.66rem!important;letter-spacing:.2em;color:#77777f!important}
+.sw-copy__eyebrow{display:inline-flex!important;align-items:center;gap:.6em;font-family:'IBM Plex Mono',monospace!important;
+  font-size:.7rem!important;letter-spacing:.18em!important;text-transform:uppercase;color:#c7c7cf!important;font-weight:500}
+.sw-copy__eyebrow::before{content:"";width:28px;height:1px;background:#c7c7cf;flex:none}
+
+/* titles: Syne 800 uppercase + the chrome sheen — the signature move */
+.sw-copy__title{font-family:'Syne',sans-serif!important;font-weight:800!important;text-transform:uppercase;
+  font-size:clamp(2.2rem,4.6vw,4rem)!important;line-height:1.02!important;letter-spacing:-.015em!important;
+  background:linear-gradient(105deg,#c2c2ca 0%,#ffffff 28%,#d4d4da 52%,#ffffff 74%,#c2c2ca 100%);
+  background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent!important;
+  animation:sheen 7s linear infinite;filter:drop-shadow(0 2px 16px rgba(0,0,0,.9));text-shadow:none!important}
+@keyframes sheen{to{background-position:-220% 0}}
+/* mobile type scale: the whole copy block must fit the fold */
+@media(max-width:860px){
+  /* explicit geometry: pin the copy box inside the viewport no matter what the engine computes */
+  .sw-copy{left:18px!important;right:18px!important;width:auto!important;max-width:none!important;transform:none!important}
+  .sw-copy::before{inset:-28px -24px}
+  .sw-copy__title{font-size:clamp(1.6rem,7vw,2.3rem)!important;overflow-wrap:break-word}
+  .sw-copy__body{font-size:.95rem!important;line-height:1.5!important;max-width:none}
+  .sw-copy__eyebrow{font-size:.6rem!important}
+  .sw-copy__num{font-size:.58rem!important}
+  .sw-copy__tags li{font-size:.56rem!important;padding:.4em .75em}
+  .sw-btn{font-size:.66rem!important;padding:.9em 1.3em!important}
+}
+
+/* body copy: bigger, brighter, bounded line length */
+.sw-copy__body{font-family:'Archivo',sans-serif!important;font-size:clamp(1.02rem,1.45vw,1.2rem)!important;
+  line-height:1.62!important;color:#f2f2f4!important;font-weight:500;max-width:46ch;
+  text-shadow:0 1px 14px rgba(0,0,0,.95),0 0 2px rgba(0,0,0,.9)}
+.sw-copy__body b{color:#fff}
+
+/* proof chips */
+.sw-copy__tags{list-style:none;display:flex;gap:8px;flex-wrap:wrap}
+.sw-copy__tags li{font-family:'IBM Plex Mono',monospace!important;text-transform:uppercase;letter-spacing:.14em;
+  font-size:.62rem!important;padding:.5em .95em;background:rgba(10,10,10,.6)!important;
+  border:1px solid rgba(199,199,207,.45)!important;color:#e8e8ee!important;border-radius:2px!important;backdrop-filter:blur(6px)}
+
+/* CTAs: the old chrome buttons, sweep and all */
+.sw-btn{font-family:'IBM Plex Mono',monospace!important;text-transform:uppercase;letter-spacing:.16em;
+  font-size:.72rem!important;font-weight:600!important;border-radius:2px!important;padding:1.05em 1.8em!important;text-decoration:none}
+.sw-btn--primary{background:linear-gradient(120deg,#d8d8de,#ffffff 50%,#b9b9c2)!important;color:#0a0a0a!important;
+  border:1px solid #f2f2f6!important;position:relative;overflow:hidden}
+.sw-btn--primary::before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.85) 50%,transparent 60%);transform:translateX(-130%);transition:transform .6s}
+.sw-btn--primary:hover::before{transform:translateX(130%)}
+.sw-btn--primary:hover{box-shadow:0 0 0 1px #f2f2f6,0 0 40px rgba(240,240,246,.25)}
+.sw-btn--ghost{background:rgba(10,10,10,.55)!important;color:#ededf0!important;border:1px solid rgba(199,199,207,.55)!important;backdrop-filter:blur(6px)}
+.sw-btn--ghost:hover{border-color:#f2f2f6!important;color:#fff!important}
+
+/* the engine's own topbar is replaced by a real site header */
+.sw-topbar{display:none!important}
+
+/* ---------- site header: direct access to everything, no scrolling required ---------- */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:70;display:flex;align-items:center;justify-content:space-between;
+  height:64px;padding:0 clamp(20px,5vw,72px);background:linear-gradient(180deg,rgba(10,10,10,.88),rgba(10,10,10,.55) 75%,transparent);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.hdr-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.05rem;color:#f2f2f6;text-decoration:none;letter-spacing:.01em}
+.hdr-logo span{color:#77777f}
+.hdr-nav{display:flex;align-items:center;gap:26px}
+.hdr-nav>a:not(.hdr-btn){font-family:'IBM Plex Mono',monospace;font-size:.66rem;font-weight:500;text-transform:uppercase;
+  letter-spacing:.14em;color:#c2c2ca;text-decoration:none;position:relative;text-shadow:0 1px 8px rgba(0,0,0,.9);transition:color .2s}
+.hdr-nav>a:not(.hdr-btn)::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1px;background:#f2f2f6;transition:width .25s}
+.hdr-nav>a:not(.hdr-btn):hover{color:#fff}
+.hdr-nav>a:not(.hdr-btn):hover::after{width:100%}
+.hdr-btn{display:inline-flex;align-items:center;gap:.6em;font-family:'IBM Plex Mono',monospace;font-size:.68rem;font-weight:600;
+  text-transform:uppercase;letter-spacing:.15em;color:#0a0a0a;background:linear-gradient(120deg,#d8d8de,#ffffff 50%,#b9b9c2);
+  padding:.85em 1.5em;border:1px solid #f2f2f6;border-radius:2px;text-decoration:none}
+.hdr-btn:hover{box-shadow:0 0 0 1px #f2f2f6,0 0 32px rgba(240,240,246,.22)}
+.hdr-burger{display:none;font-family:'IBM Plex Mono',monospace;font-size:.64rem;font-weight:600;letter-spacing:.18em;
+  color:#f2f2f6;background:rgba(10,10,10,.55);border:1px solid rgba(199,199,207,.5);border-radius:2px;
+  padding:.8em 1.15em;cursor:pointer;backdrop-filter:blur(6px)}
+@media(max-width:900px){
+  .hdr-nav>a:not(.hdr-btn){display:none!important}
+  .hdr-burger{display:inline-block!important}
+  .hdr-btn{font-size:.62rem;padding:.8em 1.1em}
+  .hdr-nav{gap:10px}
+}
+
+/* full-screen menu: every destination, one tap */
+.menu{position:fixed;inset:0;z-index:65;background:rgba(10,10,10,.97);backdrop-filter:blur(16px);
+  display:flex;flex-direction:column;justify-content:center;padding:90px clamp(24px,7vw,90px) 40px;
+  opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;overflow-y:auto}
+body.menu-open .menu{opacity:1;visibility:visible}
+body.menu-open{overflow:hidden}
+.menu-links{display:grid;gap:6px}
+.menu-links a{font-family:'Syne',sans-serif;font-weight:800;text-transform:uppercase;text-decoration:none;
+  font-size:clamp(1.6rem,6vw,2.6rem);line-height:1.15;letter-spacing:-.01em;color:#ededf0;transition:color .2s,padding-left .25s}
+.menu-links a:hover{color:#fff;padding-left:8px}
+.menu-links a small{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:.6rem;letter-spacing:.16em;color:#77777f;margin-left:14px;vertical-align:middle}
+.menu-contact{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.1);padding-top:26px}
+
+/* route rail labels */
+.sw-route__label{font-family:'IBM Plex Mono',monospace!important;text-transform:uppercase;letter-spacing:.14em;
+  font-size:.6rem!important;color:#e8e8ee!important;text-shadow:0 1px 8px rgba(0,0,0,.9)}
+
+/* transit captions: wayfinding text during the connector flights */
+.transit{position:fixed;left:50%;bottom:clamp(76px,12vh,120px);transform:translateX(-50%) translateY(12px);z-index:22;
+  text-align:center;opacity:0;pointer-events:none;max-width:88vw;transition:none;will-change:opacity,transform}
+.transit .t-kick{display:block;font-family:'IBM Plex Mono',monospace;font-size:.62rem;font-weight:500;
+  letter-spacing:.24em;text-transform:uppercase;color:#c7c7cf;margin-bottom:10px;text-shadow:0 1px 10px rgba(0,0,0,.9)}
+.transit .t-title{display:block;font-family:'Syne',sans-serif;font-weight:800;text-transform:uppercase;
+  font-size:clamp(1.5rem,3.4vw,2.5rem);line-height:1.05;letter-spacing:-.01em;
+  background:linear-gradient(105deg,#c2c2ca,#ffffff 50%,#c2c2ca);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 2px 14px rgba(0,0,0,.9))}
+.transit .t-line{display:block;font-family:'Archivo',sans-serif;font-size:clamp(.92rem,1.2vw,1.05rem);font-weight:500;
+  color:#e8e8ec;margin-top:8px;text-shadow:0 1px 12px rgba(0,0,0,.95)}
+.transit .t-arrow{display:block;margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:.8rem;color:#77777f;animation:hintpulse 2s ease-in-out infinite}
+body.past-world .transit{opacity:0!important}
+
+/* scroll hint: unmissable */
+.sw-hint{font-family:'IBM Plex Mono',monospace!important;text-transform:uppercase;letter-spacing:.24em;
+  font-size:.68rem!important;color:#f2f2f6!important;text-shadow:0 1px 12px rgba(0,0,0,.9);animation:hintpulse 2.2s ease-in-out infinite}
+@keyframes hintpulse{0%,100%{opacity:1}50%{opacity:.45}}
+
+/* clean handoff out of the world: fade the fixed overlays once the footer arrives */
+.sw-copylayer,.sw-hint,.sw-route{transition:opacity .45s}
+body.past-world .sw-copylayer,body.past-world .sw-hint,body.past-world .sw-route{opacity:0!important;pointer-events:none}
+
+@media(prefers-reduced-motion:reduce){
+  .grain,.sw-hint,.sw-copy__title{animation:none!important}
+  .sw-copy__title{background:none;color:#f2f2f6!important;-webkit-background-clip:initial}
+  .sw-copylayer,.sw-hint,.sw-route{transition:none}
+}
+/* crawlable site footer below the world — sits ABOVE the world's fixed layers */
+.site-foot{background:#0d0d0f;border-top:1px solid rgba(255,255,255,.1);padding:0 clamp(20px,5vw,72px) 40px;position:relative;z-index:30}
+.site-foot::before{content:"";position:absolute;top:-1px;left:0;height:1px;width:100%;background:linear-gradient(90deg,transparent,#c7c7cf 50%,transparent);opacity:.4}
+.foot-cta{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;max-width:1280px;margin:0 auto;padding:clamp(44px,6vw,80px) 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.foot-kicker{display:inline-flex;align-items:center;gap:.6em;font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:#77777f}
+.foot-kicker::before{content:"";width:28px;height:1px;background:#77777f}
+.foot-big{font-family:'Syne',sans-serif;font-weight:800;text-transform:uppercase;font-size:clamp(1.8rem,3.6vw,3rem);line-height:1.05;letter-spacing:-.015em;margin-top:10px;
+  background:linear-gradient(105deg,#c2c2ca,#ffffff 45%,#c2c2ca);-webkit-background-clip:text;background-clip:text;color:transparent}
+.foot-actions{display:flex;gap:14px;flex-wrap:wrap}
+.fbtn{display:inline-flex;align-items:center;gap:.6em;font-family:'IBM Plex Mono',monospace;font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.16em;
+  padding:1.05em 1.8em;border-radius:2px;text-decoration:none;transition:box-shadow .25s,border-color .25s,color .25s}
+.fbtn.primary{background:linear-gradient(120deg,#d8d8de,#ffffff 50%,#b9b9c2);color:#0a0a0a;border:1px solid #f2f2f6;position:relative;overflow:hidden}
+.fbtn.primary::before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.85) 50%,transparent 60%);transform:translateX(-130%);transition:transform .6s}
+.fbtn.primary:hover::before{transform:translateX(130%)}
+.fbtn.primary:hover{box-shadow:0 0 0 1px #f2f2f6,0 0 40px rgba(240,240,246,.2)}
+.fbtn.ghost{background:transparent;color:#ededf0;border:1px solid rgba(199,199,207,.4)}
+.fbtn.ghost:hover{border-color:#f2f2f6;color:#fff}
+.site-foot .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:30px;max-width:1280px;margin:0 auto;padding:clamp(34px,4vw,54px) 0}
+.site-foot h2{font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:#77777f;margin-bottom:12px;font-weight:500}
+.site-foot .cols a{display:block;color:#a9a9b1;font-size:.82rem;padding:3px 0;text-decoration:none;transition:color .15s,padding-left .2s}
+.site-foot .cols a:hover{color:#ffffff;padding-left:4px}
+.site-foot .legal-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center;border-top:1px solid rgba(255,255,255,.08);padding-top:26px;max-width:1280px;margin:0 auto;font-family:'IBM Plex Mono',monospace;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:#66666e}
+.site-foot .legal-row b{color:#c7c7cf;font-weight:500}
+</style>
+</head>
+<body>
+<h1 class="sr">Derik Bannister — Operator &amp; Founder. Software, AI, and growth engines for real businesses.</h1>
+
+<header class="hdr">
+  <a class="hdr-logo" href="/">DB<span>—</span></a>
+  <nav class="hdr-nav" aria-label="Site">
+    <a href="/services/">Services</a>
+    <a href="/trades/">Industries</a>
+    <a href="/locations/">Locations</a>
+    <a href="/products/">Products</a>
+    <a href="/about/">About</a>
+    <a class="hdr-btn" href="mailto:bannisterderik@gmail.com">Get in touch →</a>
+  </nav>
+  <button class="hdr-burger" id="hdrBurger" aria-expanded="false">MENU</button>
+</header>
+
+<nav class="menu" id="siteMenu" aria-label="Full menu">
+  <div class="menu-links">
+    <a href="/services/">Services <small>Websites · Software · SEO · AI</small></a>
+    <a href="/trades/">Industries <small>18 trades, by name</small></a>
+    <a href="/locations/">Locations <small>Oregon + neighboring metros</small></a>
+    <a href="/products/">SEO Products <small>Links · Press · Citations</small></a>
+    <a href="/about/">About Derik <small>The operator</small></a>
+    <a href="/legal/">Legal <small>Terms · Privacy · Accessibility</small></a>
+  </div>
+  <div class="menu-contact">
+    <a class="fbtn primary" href="mailto:bannisterderik@gmail.com">Email Derik →</a>
+    <a class="fbtn ghost" href="sms:+15307367085">Call/Text 530-736-7085</a>
+  </div>
+</nav>
+
+<div id="world"></div>
+<div class="transit" id="transit" aria-hidden="true">
+  <span class="t-kick" id="tKick"></span>
+  <span class="t-title" id="tTitle"></span>
+  <span class="t-line" id="tLine"></span>
+  <span class="t-arrow">▼</span>
+</div>
+<div class="grain" aria-hidden="true"></div>
+
+<footer class="site-foot">
+  <div class="foot-cta">
+    <div>
+      <span class="foot-kicker">DB— · Operator &amp; Founder · Oregon, USA</span>
+      <p class="foot-big">Ready when you are.</p>
+    </div>
+    <div class="foot-actions">
+      <a class="fbtn primary" href="mailto:bannisterderik@gmail.com">Email Derik →</a>
+      <a class="fbtn ghost" href="sms:+15307367085">Call/Text 530-736-7085</a>
+    </div>
+  </div>
+  <div class="cols">
+    <div><h2>Services</h2><a href="/services/web-design/">Websites</a><a href="/services/custom-software/">Custom Software</a><a href="/services/seo/">SEO</a><a href="/services/google-ads/">Google Ads / LSA</a><a href="/services/ai-receptionist/">AI Receptionist</a><a href="/services/crm/">CRM &amp; Automation</a><a href="/services/">All services →</a></div>
+    <div><h2>Industries</h2><a href="/trades/roofing/">Roofing</a><a href="/trades/plumbing/">Plumbing</a><a href="/trades/hvac/">HVAC</a><a href="/trades/electrical/">Electrical</a><a href="/trades/solar/">Solar</a><a href="/trades/">All industries →</a></div>
+    <div><h2>Locations</h2><a href="/locations/portland-or/">Portland, OR</a><a href="/locations/salem-or/">Salem, OR</a><a href="/locations/eugene-or/">Eugene, OR</a><a href="/locations/springfield-or/">Springfield, OR</a><a href="/locations/bend-or/">Bend, OR</a><a href="/locations/">All locations →</a></div>
+    <div><h2>Company</h2><a href="/about/">About</a><a href="/ideas/">Idea Board</a><a href="/products/">SEO Products</a><a href="mailto:bannisterderik@gmail.com">Email</a><a href="tel:+15307367085">Call/Text 530-736-7085</a></div>
+    <div><h2>Legal</h2><a href="/legal/terms/">Terms of Use</a><a href="/legal/privacy/">Privacy Policy</a><a href="/legal/do-not-sell/">Do Not Sell or Share My Personal Information</a><a href="/legal/accessibility/">Accessibility</a><a href="/legal/disclaimer/">Disclaimer</a></div>
+  </div>
+  <div class="legal-row"><span>© 2026 Derik Bannister</span><span><b>DB—</b> BUILD. OPERATE. OWN.</span></div>
+</footer>
+
+<script src="/world/scrub-engine.js"></script>
+<script>
+const __swConfig = {
+  brand: { name: 'DB—', href: '/' },
+  diveScroll: 1.3, connScroll: 0.9,
+  crossfade: 0.32,
+  hint: 'Scroll to fly through',
+  nav: true,
+  atmosphere: true,
+  sections: [
+    { id:'monogram', label:'Start',
+      still:'/world/assets/still_monogram.jpg', clip:'/world/assets/dive_monogram.mp4',
+      accent:'#c7c7cf', scroll:1.7, linger:0.45,
+      eyebrow:'Derik Bannister — Operator & Founder',
+      title:'Own your market.',
+      body:'I build the software, AI, and marketing machines that run real service businesses. Scroll — the camera flies you through everything I do.',
+      tags:['Build','Operate','Own'] },
+    { id:'trades', label:'The Trades',
+      still:'/world/assets/still_trades.jpg', clip:'/world/assets/dive_trades.mp4',
+      accent:'#c7c7cf', linger:0.35,
+      eyebrow:'Who it’s for — 18 trades',
+      title:'Built for the trades.',
+      body:'Roofing, HVAC, plumbing, electrical and fourteen more — websites, marketing, and systems shaped to how each trade actually wins work.',
+      tags:['Roofing','HVAC','Plumbing','+15 more'] },
+    { id:'systems', label:'CRM & Systems',
+      still:'/world/assets/still_systems.jpg', clip:'/world/assets/dive_systems.mp4',
+      accent:'#c7c7cf', linger:0.35,
+      eyebrow:'What I build — CRM & automation',
+      title:'Systems that book revenue.',
+      body:'A pipeline for every lead, automatic follow-up, and routing that gets the right call to the right person — first click to closed job.',
+      tags:['CRM','Dialer','Follow-up'] },
+    { id:'ai', label:'AI Phones',
+      still:'/world/assets/still_ai.jpg', clip:'/world/assets/dive_ai.mp4',
+      accent:'#c7c7cf', linger:0.35,
+      eyebrow:'What I build — AI receptionists',
+      title:'The phone answers itself.',
+      body:'AI receptionists that pick up at 2am, book the job, and chase the follow-up — a missed call never becomes a missed customer.',
+      tags:['24/7','Voice AI','Agents'] },
+    { id:'growth', label:'SEO Engine',
+      still:'/world/assets/still_growth.jpg', clip:'/world/assets/dive_growth.mp4',
+      accent:'#c7c7cf', linger:0.35,
+      eyebrow:'What I build — search & ads',
+      title:'Everywhere they search.',
+      body:'Hundreds of pages of search real estate for your services in your cities — built from data, maintained by machines.',
+      tags:['452 pages','SEO','Google Ads'] },
+    { id:'contact', label:'Contact',
+      still:'/world/assets/still_contact.jpg', clip:'/world/assets/dive_contact.mp4',
+      accent:'#f2f2f6', scroll:1.9, linger:0.5,
+      eyebrow:'Next step — talk to Derik',
+      title:"Let's build something real.",
+      body:'Email or text and you get me — the operator — not a sales sequence. Tell me your trade and your market; I’ll tell you what I’d build.',
+      tags:[],
+      cta:{ primary:{ label:'Email Derik →', href:'mailto:bannisterderik@gmail.com' },
+            secondary:{ label:'Call/Text 530-736-7085', href:'sms:+15307367085' } } }
+  ],
+  connectors: [
+    '/world/assets/conn_1.mp4',
+    '/world/assets/conn_2.mp4',
+    '/world/assets/conn_3.mp4',
+    '/world/assets/conn_4.mp4',
+    '/world/assets/conn_5.mp4'
+  ]
+};
+window.__swSections = __swConfig.sections;
+mountScrollWorld(document.getElementById('world'), __swConfig);
+
+/* transit captions — text during the connector flights so no stretch of scroll is silent */
+(() => {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const CAPS = [
+    { kick: 'Next — 02 / 06', title: 'The Trades', line: 'Who it’s for: eighteen service industries, each with its own playbook.' },
+    { kick: 'Next — 03 / 06', title: 'CRM & Systems', line: 'What runs your leads: pipeline, dialer, and follow-up that never forgets.' },
+    { kick: 'Next — 04 / 06', title: 'AI Phones', line: 'The receptionist that never sleeps — books jobs at 2am.' },
+    { kick: 'Next — 05 / 06', title: 'The SEO Engine', line: 'How customers find you first — hundreds of pages working around the clock.' },
+    { kick: 'Next — 06 / 06', title: 'Talk to Derik', line: 'One email gets the operator, not a sales sequence.' },
+  ];
+  const el = document.getElementById('transit');
+  const kickEl = document.getElementById('tKick'), titleEl = document.getElementById('tTitle'), lineEl = document.getElementById('tLine');
+  const secs = window.__swSections;
+  if (!secs) return;
+  let cur = -1, ticking = false;
+  const drive = () => {
+    ticking = false;
+    const y = scrollY;
+    let op = 0;
+    for (let i = 0; i < secs.length - 1; i++) {
+      const a = secs[i]._seg, b = secs[i + 1]._seg;
+      if (!a || !b || b.start <= a.end) continue;
+      const local = (y - a.end) / (b.start - a.end);
+      if (local > 0.04 && local < 0.96) {
+        op = Math.sin(Math.PI * Math.min(1, Math.max(0, local)));
+        if (cur !== i) { cur = i; kickEl.textContent = CAPS[i].kick; titleEl.textContent = CAPS[i].title; lineEl.textContent = CAPS[i].line; }
+        break;
+      }
+    }
+    el.style.opacity = op.toFixed(3);
+    el.style.transform = `translateX(-50%) translateY(${((1 - op) * 12).toFixed(1)}px)`;
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(drive); } }, { passive: true });
+})();
+
+/* header menu toggle */
+(() => {
+  const burger = document.getElementById('hdrBurger');
+  burger.addEventListener('click', () => {
+    const open = document.body.classList.toggle('menu-open');
+    burger.setAttribute('aria-expanded', open);
+    burger.textContent = open ? 'CLOSE' : 'MENU';
+  });
+  addEventListener('keydown', e => { if (e.key === 'Escape') { document.body.classList.remove('menu-open'); burger.setAttribute('aria-expanded', 'false'); burger.textContent = 'MENU'; } });
+})();
+
+/* fade the world's fixed overlays once the visitor reaches the footer */
+(() => {
+  const world = document.getElementById('world');
+  let ticking = false;
+  const check = () => {
+    document.body.classList.toggle('past-world', world.getBoundingClientRect().bottom <= innerHeight * 0.55);
+    ticking = false;
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(check); } }, { passive: true });
+  check();
+})();
+</script>
+</body>
+</html>
