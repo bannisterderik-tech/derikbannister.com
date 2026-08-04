@@ -560,6 +560,62 @@ page({
     lsec(`Questions before you buy`, lp(`Ask. Email <b>${EMAIL}</b> or call/text <b>${PHONE}</b> and you'll get me, not a sales team.`)),
 });
 
+/* ---------- /thanks/ — Stripe success URL. Standalone: noindex, not in sitemap,
+   not in the footer nav. Its only job is turning a payment into a started job. ---------- */
+mkdirSync(join(ROOT, 'thanks'), { recursive: true });
+writeFileSync(join(ROOT, 'thanks/index.html'), `<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>You're in — here's what happens next | ${BRAND}</title>
+<meta name="robots" content="noindex,nofollow">
+${FAVICON}${FONTS}<style>${CSS}
+.tk{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:90px 0 60px}
+.tk h1{font-size:clamp(2rem,5.6vw,3.8rem);text-transform:uppercase;line-height:1.03;margin:16px 0 22px}
+.steps{display:grid;gap:1px;background:var(--hair);margin:38px 0;max-width:760px}
+.step{background:var(--ink);padding:24px 26px;display:grid;grid-template-columns:44px 1fr;gap:18px;align-items:start}
+.step .n{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;color:var(--silver);padding-top:3px}
+.step h3{font-size:1.05rem;text-transform:uppercase;margin-bottom:7px}
+.step p{color:var(--muted);font-size:.93rem;max-width:56ch}
+.step b{color:var(--text)}
+.send{border:1px solid var(--hair2);padding:26px 28px;max-width:760px;margin-top:8px}
+.send h2{font-size:1.1rem;text-transform:uppercase;margin-bottom:14px}
+.send ul{list-style:none;display:grid;gap:9px}
+.send li{color:var(--muted);font-size:.93rem;padding-left:20px;position:relative}
+.send li::before{content:"→";position:absolute;left:0;color:var(--silver)}
+</style></head>
+<body>
+<header class="top"><div class="wrap"><a class="logo" href="/">DB<span style="color:var(--silver-lo)">—</span></a><nav><a href="/services/">Services</a><a href="/trades/">Industries</a><a href="/locations/">Locations</a></nav></div></header>
+<main><div class="wrap tk">
+  <p class="mono" style="color:var(--silver)">Payment received</p>
+  <h1>You're in. <span class="chrome">Now I build.</span></h1>
+  <p class="lede" style="max-width:60ch">You'll get a receipt from Stripe in a minute. Here's exactly what happens from here — no mystery, no waiting to hear from a project manager. You deal with me.</p>
+
+  <div class="steps">
+    <div class="step"><span class="n">01</span><div><h3>Today</h3><p>I email you from <b>${EMAIL}</b> to confirm I've got it, and to ask anything I still need. If you don't see it, check spam and add me to your contacts.</p></div></div>
+    <div class="step"><span class="n">02</span><div><h3>Within 7 business days</h3><p>Your site is built and I send you the link. If a demo was already built for you, it's usually the <b>same or next business day</b>.</p></div></div>
+    <div class="step"><span class="n">03</span><div><h3>You review it</h3><p>Wrong phone number, a service you don't offer, a town you don't serve, wording you'd say differently — send it all back in one list. <b>One round of revisions</b> is included, within 14 days.</p></div></div>
+    <div class="step"><span class="n">04</span><div><h3>It goes live</h3><p>I point your domain at it, set up HTTPS, submit it to Google Search Console, and hand you the source code. <b>You own all of it</b> — code, content, domain. Nothing to keep paying me for.</p></div></div>
+  </div>
+
+  <div class="send">
+    <h2>Send me these now and it ships faster</h2>
+    <ul>
+      <li>Your <b>logo</b> — any format, even the original file from whoever made it</li>
+      <li><b>20 photos off your phone</b> of finished jobs. Real photos beat anything else on the page, and crooked ones are fine.</li>
+      <li>The <b>services you actually offer</b> — and any you don't want listed</li>
+      <li>The <b>towns you actually serve</b> (and how far you'll really drive)</li>
+      <li>Your <b>license number, hours,</b> and the best number for customers to call</li>
+      <li>Your <b>domain</b> — or tell me you need one and I'll tell you what to buy</li>
+    </ul>
+    <div class="cta-row" style="margin-top:24px">
+      <a class="btn" href="mailto:${EMAIL}?subject=My%20site%20build%20-%20here's%20my%20info">Email it to me →</a>
+      <a class="btn ghost" href="tel:${PHONE_TEL}">Or call/text ${PHONE}</a>
+    </div>
+  </div>
+
+  <p class="body-copy" style="margin-top:34px;max-width:62ch">Questions, second thoughts, or something you forgot to mention — just reply to the confirmation email. Terms for this build are at <a href="/legal/website-terms/" style="color:var(--silver);text-decoration:underline">the build agreement</a>.</p>
+</div></main>
+${footerHTML}</body></html>`);
+
 /* ---------- 404 ---------- */
 writeFileSync(join(ROOT, '404.html'), `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>404 — Off the map | ${BRAND}</title><meta name="robots" content="noindex">${FAVICON}${FONTS}<style>${CSS}.err{min-height:70vh;display:flex;flex-direction:column;justify-content:center}</style></head>

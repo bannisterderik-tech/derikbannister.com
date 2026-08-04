@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>You're in — here's what happens next | Derik Bannister</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='42' font-family='Arial Black,sans-serif' font-size='26' font-weight='900' fill='%23e8e8ee' text-anchor='middle'%3EDB%3C/text%3E%3C/svg%3E"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"><style>
+:root{--ink:#0a0a0a;--ink2:#101012;--paper:#f4f4f6;--silver:#c7c7cf;--silver-hi:#f2f2f6;--silver-lo:#77777f;--text:#ededf0;--muted:#8f8f97;--faint:#55555b;--hair:rgba(255,255,255,.08);--hair2:rgba(255,255,255,.16);--disp:'Syne',sans-serif;--body:'Archivo',sans-serif;--mono:'IBM Plex Mono',monospace;--gutter:clamp(20px,5vw,64px)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 var(--gutter)}
+h1,h2,h3{font-family:var(--disp);line-height:1.1;font-weight:800;letter-spacing:-.01em}
+.chrome{background:linear-gradient(105deg,#5c5c64,#e9e9f0 25%,#8a8a92 48%,#fff 65%,#c7c7cf);-webkit-background-clip:text;background-clip:text;color:transparent}
+.mono{font-family:var(--mono);text-transform:uppercase;letter-spacing:.14em;font-size:.68rem;color:var(--muted)}
+.mono b{color:var(--silver-hi);font-weight:500}
+.top{border-bottom:1px solid var(--hair);background:rgba(10,10,10,.9)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-family:var(--disp);font-weight:800;font-size:.95rem}
+.top nav{display:flex;gap:22px}
+.top nav a{font-family:var(--mono);font-size:.64rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.top nav a:hover{color:var(--silver-hi)}
+.crumbs{padding:18px 0;font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.crumbs a{color:var(--muted)}
+.crumbs a:hover{color:var(--silver-hi)}
+.hero{padding:clamp(40px,7vw,90px) 0 clamp(30px,5vw,60px)}
+.hero h1{font-size:clamp(1.9rem,5vw,3.4rem);text-transform:uppercase;max-width:22ch;text-wrap:balance}
+.hero .lede{color:var(--muted);max-width:65ch;margin-top:22px;font-size:1.05rem}
+.hero .lede b{color:var(--text)}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:.6em;font-family:var(--mono);font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--ink);background:linear-gradient(120deg,#d8d8de,#fff 50%,#b9b9c2);padding:.9em 1.6em;border-radius:2px}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--hair2)}
+.btn.ghost:hover{border-color:var(--silver-hi);color:var(--silver-hi)}
+section{padding:clamp(34px,5vw,60px) 0;border-top:1px solid var(--hair)}
+section h2{font-size:clamp(1.3rem,2.8vw,1.9rem);text-transform:uppercase;margin-bottom:22px}
+p+p{margin-top:1em}
+.body-copy{color:var(--muted);max-width:70ch}
+.body-copy b{color:var(--text)}
+ul.feat{list-style:none;display:grid;gap:12px;max-width:70ch}
+ul.feat li{padding:14px 18px;border:1px solid var(--hair);border-left:2px solid var(--silver);color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.grid a{border:1px solid var(--hair);padding:13px 16px;font-size:.86rem;color:var(--muted);transition:border-color .2s,color .2s}
+.grid a:hover{border-color:var(--silver);color:var(--silver-hi)}
+.grid a b{display:block;color:var(--text);font-weight:600;font-size:.92rem}
+.citylinks{columns:3;gap:26px;max-width:900px}
+@media(max-width:760px){.citylinks{columns:2}}
+@media(max-width:480px){.citylinks{columns:1}}
+.citylinks a{display:block;color:var(--muted);font-size:.82rem;padding:3px 0;break-inside:avoid}
+.citylinks a:hover{color:var(--silver-hi)}
+.faq details{border-bottom:1px solid var(--hair);padding:16px 0}
+.faq summary{cursor:pointer;font-weight:600;color:var(--text)}
+.faq p{color:var(--muted);margin-top:10px;max-width:70ch}
+.contact-band{background:var(--ink2);border:1px solid var(--hair);padding:clamp(26px,4vw,44px);margin-top:20px}
+.contact-band h2{margin-bottom:10px}
+.contact-band p{color:var(--muted);max-width:60ch}
+footer{border-top:1px solid var(--hair);padding:40px 0;background:var(--ink2);margin-top:60px}
+.fcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:26px}
+.fcols h3{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:12px;font-weight:500}
+.fcols a{display:block;color:var(--muted);font-size:.82rem;padding:3px 0}
+.fcols a:hover{color:var(--silver-hi)}
+.legal{margin-top:30px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+/* ideas board */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.chips .lab{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;color:var(--faint);text-transform:uppercase;width:100%;margin-bottom:2px}
+.chip{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--hair);background:transparent;padding:.55em 1em;cursor:pointer;transition:border-color .25s,color .25s,background .25s}
+.chip:hover{border-color:var(--silver);color:var(--silver-hi)}
+.chip.on{background:var(--silver-hi);color:var(--ink);border-color:var(--silver-hi)}
+.idea-count{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;color:var(--faint);text-transform:uppercase;margin:18px 0 22px}
+.idea-count b{color:var(--silver-hi);font-weight:500}
+.ideas{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair)}
+@media(max-width:1000px){.ideas{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.ideas{grid-template-columns:1fr}}
+.idea{background:var(--ink);padding:26px 24px;display:grid;gap:10px;align-content:start;transition:background .3s;position:relative;overflow:hidden}
+.idea::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background:linear-gradient(90deg,var(--silver-lo),var(--silver-hi));transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.idea:hover{background:var(--surface)}
+.idea:hover::after{transform:scaleX(1)}
+.idea .tp{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;color:var(--silver);text-transform:uppercase}
+.idea h3{font-size:1.02rem;text-transform:uppercase;letter-spacing:.01em}
+.idea p{color:var(--muted);font-size:.88rem}
+.idea .for{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;color:var(--faint);text-transform:uppercase;margin-top:4px}
+.idea.hide{display:none}
+
+.tk{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:90px 0 60px}
+.tk h1{font-size:clamp(2rem,5.6vw,3.8rem);text-transform:uppercase;line-height:1.03;margin:16px 0 22px}
+.steps{display:grid;gap:1px;background:var(--hair);margin:38px 0;max-width:760px}
+.step{background:var(--ink);padding:24px 26px;display:grid;grid-template-columns:44px 1fr;gap:18px;align-items:start}
+.step .n{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;color:var(--silver);padding-top:3px}
+.step h3{font-size:1.05rem;text-transform:uppercase;margin-bottom:7px}
+.step p{color:var(--muted);font-size:.93rem;max-width:56ch}
+.step b{color:var(--text)}
+.send{border:1px solid var(--hair2);padding:26px 28px;max-width:760px;margin-top:8px}
+.send h2{font-size:1.1rem;text-transform:uppercase;margin-bottom:14px}
+.send ul{list-style:none;display:grid;gap:9px}
+.send li{color:var(--muted);font-size:.93rem;padding-left:20px;position:relative}
+.send li::before{content:"→";position:absolute;left:0;color:var(--silver)}
+</style></head>
+<body>
+<header class="top"><div class="wrap"><a class="logo" href="/">DB<span style="color:var(--silver-lo)">—</span></a><nav><a href="/services/">Services</a><a href="/trades/">Industries</a><a href="/locations/">Locations</a></nav></div></header>
+<main><div class="wrap tk">
+  <p class="mono" style="color:var(--silver)">Payment received</p>
+  <h1>You're in. <span class="chrome">Now I build.</span></h1>
+  <p class="lede" style="max-width:60ch">You'll get a receipt from Stripe in a minute. Here's exactly what happens from here — no mystery, no waiting to hear from a project manager. You deal with me.</p>
+
+  <div class="steps">
+    <div class="step"><span class="n">01</span><div><h3>Today</h3><p>I email you from <b>bannisterderik@gmail.com</b> to confirm I've got it, and to ask anything I still need. If you don't see it, check spam and add me to your contacts.</p></div></div>
+    <div class="step"><span class="n">02</span><div><h3>Within 7 business days</h3><p>Your site is built and I send you the link. If a demo was already built for you, it's usually the <b>same or next business day</b>.</p></div></div>
+    <div class="step"><span class="n">03</span><div><h3>You review it</h3><p>Wrong phone number, a service you don't offer, a town you don't serve, wording you'd say differently — send it all back in one list. <b>One round of revisions</b> is included, within 14 days.</p></div></div>
+    <div class="step"><span class="n">04</span><div><h3>It goes live</h3><p>I point your domain at it, set up HTTPS, submit it to Google Search Console, and hand you the source code. <b>You own all of it</b> — code, content, domain. Nothing to keep paying me for.</p></div></div>
+  </div>
+
+  <div class="send">
+    <h2>Send me these now and it ships faster</h2>
+    <ul>
+      <li>Your <b>logo</b> — any format, even the original file from whoever made it</li>
+      <li><b>20 photos off your phone</b> of finished jobs. Real photos beat anything else on the page, and crooked ones are fine.</li>
+      <li>The <b>services you actually offer</b> — and any you don't want listed</li>
+      <li>The <b>towns you actually serve</b> (and how far you'll really drive)</li>
+      <li>Your <b>license number, hours,</b> and the best number for customers to call</li>
+      <li>Your <b>domain</b> — or tell me you need one and I'll tell you what to buy</li>
+    </ul>
+    <div class="cta-row" style="margin-top:24px">
+      <a class="btn" href="mailto:bannisterderik@gmail.com?subject=My%20site%20build%20-%20here's%20my%20info">Email it to me →</a>
+      <a class="btn ghost" href="tel:+15307367085">Or call/text 530-736-7085</a>
+    </div>
+  </div>
+
+  <p class="body-copy" style="margin-top:34px;max-width:62ch">Questions, second thoughts, or something you forgot to mention — just reply to the confirmation email. Terms for this build are at <a href="/legal/website-terms/" style="color:var(--silver);text-decoration:underline">the build agreement</a>.</p>
+</div></main>
+<footer><div class="wrap"><div class="fcols">
+<div><h3>Services</h3><a href="/services/web-design/">Websites</a><a href="/services/custom-software/">Custom Software</a><a href="/services/seo/">SEO</a><a href="/services/google-ads/">Google Ads / LSA</a><a href="/services/ai-receptionist/">AI Receptionist</a><a href="/services/crm/">CRM &amp; Automation</a><a href="/services/email-sms-marketing/">Email &amp; SMS</a><a href="/services/reputation-management/">Reputation</a><a href="/services/">All services →</a></div>
+<div><h3>Industries</h3><a href="/trades/roofing/">Roofing</a><a href="/trades/plumbing/">Plumbing</a><a href="/trades/hvac/">HVAC</a><a href="/trades/electrical/">Electrical</a><a href="/trades/solar/">Solar</a><a href="/trades/concrete/">Concrete</a><a href="/trades/landscaping/">Landscaping</a><a href="/trades/pest-control/">Pest Control</a><a href="/trades/">All industries →</a></div>
+<div><h3>Locations</h3><a href="/locations/portland-or/">Portland, OR</a><a href="/locations/salem-or/">Salem, OR</a><a href="/locations/eugene-or/">Eugene, OR</a><a href="/locations/springfield-or/">Springfield, OR</a><a href="/locations/gresham-or/">Gresham, OR</a><a href="/locations/hillsboro-or/">Hillsboro, OR</a><a href="/locations/beaverton-or/">Beaverton, OR</a><a href="/locations/bend-or/">Bend, OR</a><a href="/locations/">All locations →</a></div>
+<div><h3>Company</h3><a href="/">Home</a><a href="/about/">About</a><a href="/#builds">Builds</a><a href="/ideas/">Ideas Board</a><a href="/products/">SEO Products</a><a href="mailto:bannisterderik@gmail.com">Email</a><a href="tel:+15307367085">Call/Text 530-736-7085</a></div>
+<div><h3>Legal</h3><a href="/legal/terms/">Terms of Use</a><a href="/legal/website-terms/">Website Build Agreement</a><a href="/legal/privacy/">Privacy Policy</a><a href="/legal/do-not-sell/">Do Not Sell or Share My Personal Information</a><a href="/legal/accessibility/">Accessibility</a><a href="/legal/disclaimer/">Disclaimer</a></div>
+</div><div class="legal"><span class="mono">© 2026 Derik Bannister</span><span class="mono">DB<b>—</b> BUILD. OPERATE. OWN.</span></div></div></footer></body></html>
