@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Services — Websites, Software, SEO, AI &amp; CRM | Derik Bannister</title>
-<meta name="description" content="Every system Derik Bannister builds for service businesses: websites, custom software, SEO, Google Ads, AI receptionists, CRM, email/SMS, and reputation.">
+<title>Services — Websites, SEO, AEO, Ads, AI &amp; CRM | Derik Bannister</title>
+<meta name="description" content="All 23 systems Derik Bannister builds for service businesses: websites, local SEO, answer engine optimization, Google Ads, AI receptionists, CRM…">
 <link rel="canonical" href="https://derikbannister.com/services/">
-<meta property="og:title" content="Services — Websites, Software, SEO, AI &amp; CRM | Derik Bannister"><meta property="og:description" content="Every system Derik Bannister builds for service businesses: websites, custom software, SEO, Google Ads, AI receptionists, CRM, email/SMS, and reputation."><meta property="og:type" content="website"><meta property="og:url" content="https://derikbannister.com/services/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta property="og:title" content="Services — Websites, SEO, AEO, Ads, AI &amp; CRM | Derik Bannister"><meta property="og:description" content="All 23 systems Derik Bannister builds for service businesses: websites, local SEO, answer engine optimization, Google Ads, AI receptionists, CRM…"><meta property="og:type" content="website"><meta property="og:url" content="https://derikbannister.com/services/">
 <meta property="og:image" content="https://derikbannister.com/og/og-default.png"><meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0a0a0a">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='42' font-family='Arial Black,sans-serif' font-size='26' font-weight='900' fill='%23e8e8ee' text-anchor='middle'%3EDB%3C/text%3E%3C/svg%3E">
@@ -85,23 +86,185 @@ footer{border-top:1px solid var(--hair);padding:40px 0;background:var(--ink2);ma
 .idea p{color:var(--muted);font-size:.88rem}
 .idea .for{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;color:var(--faint);text-transform:uppercase;margin-top:4px}
 .idea.hide{display:none}
+/* direct-answer block — the passage answer engines lift */
+.answer{border:1px solid var(--hair2);border-left:2px solid var(--silver-hi);background:var(--ink2);padding:22px 24px;margin-top:26px;max-width:72ch}
+.answer .lab{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--silver);display:block;margin-bottom:9px}
+.answer p{color:var(--text);font-size:1rem;line-height:1.65}
+/* filter + search toolbar on hubs */
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:18px}
+.search{flex:1 1 260px;min-width:220px;position:relative}
+.search input{width:100%;background:var(--ink2);border:1px solid var(--hair2);color:var(--text);font-family:var(--body);font-size:.9rem;padding:.75em 1em .75em 2.2em;border-radius:2px;outline:none}
+.search input:focus{border-color:var(--silver)}
+.search input::placeholder{color:var(--faint)}
+.search::before{content:"⌕";position:absolute;left:.85em;top:50%;transform:translateY(-52%);color:var(--silver-lo);font-size:1.05rem}
+.hitcount{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin:0 0 20px}
+.hitcount b{color:var(--silver-hi);font-weight:500}
+.grid a.hide,.citylinks a.hide,.qcard.hide,.statecol.hide{display:none}
+/* grouped sections on hubs */
+.group{margin-bottom:34px}
+.group h3{font-family:var(--disp);font-size:1.05rem;text-transform:uppercase;letter-spacing:.02em;margin-bottom:6px}
+.group .gb{color:var(--muted);font-size:.88rem;max-width:66ch;margin-bottom:14px}
+/* state columns on the locations hub */
+.states{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
+.statecol h3{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--silver);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--hair)}
+.statecol a{display:block;color:var(--muted);font-size:.83rem;padding:3px 0}
+.statecol a:hover{color:var(--silver-hi)}
+.statecol a.anchor{color:var(--text);font-weight:600}
+.statecol .more{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--silver);padding-top:8px}
+/* answer cards */
+.qcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1px;background:var(--hair)}
+.qcard{background:var(--ink);padding:22px 22px;display:block;transition:background .25s}
+.qcard:hover{background:var(--ink2)}
+.qcard .tp{font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;color:var(--silver);text-transform:uppercase}
+.qcard h3{font-size:.98rem;text-transform:none;letter-spacing:0;margin:9px 0 8px;line-height:1.3}
+.qcard p{color:var(--muted);font-size:.85rem;line-height:1.6}
+/* key/value strip — real local facts, no filler */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:var(--hair);border:1px solid var(--hair);margin-top:8px}
+.facts div{background:var(--ink);padding:16px 18px}
+.facts dt{font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:5px}
+.facts dd{color:var(--text);font-size:.9rem}
+/* sitemap page */
+.smap{columns:4;gap:24px}
+@media(max-width:960px){.smap{columns:2}}
+@media(max-width:560px){.smap{columns:1}}
+.smap a{display:block;color:var(--muted);font-size:.8rem;padding:2px 0;break-inside:avoid}
+.smap a:hover{color:var(--silver-hi)}
+.smap h3{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--silver);margin:16px 0 8px;break-after:avoid}
+/* lead form */
+.lead{display:grid;gap:14px;margin-top:22px;max-width:640px}
+.lead-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.lead-row{grid-template-columns:1fr}}
+.lead label{display:grid;gap:6px;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.lead .opt{color:var(--faint);letter-spacing:.1em}
+.lead input,.lead textarea{background:var(--ink);border:1px solid var(--hair2);color:var(--text);font-family:var(--body);font-size:.95rem;padding:.72em .9em;border-radius:2px;outline:none;width:100%;text-transform:none;letter-spacing:0}
+.lead input:focus,.lead textarea:focus{border-color:var(--silver)}
+.lead input::placeholder,.lead textarea::placeholder{color:var(--faint)}
+.lead input:disabled,.lead textarea:disabled{opacity:.5}
+.lead textarea{resize:vertical}
+.lead-foot{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:2px}
+.lead button{border:none;cursor:pointer;font-family:var(--mono)}
+.lead button:disabled{opacity:.6;cursor:default}
+.lead-note{font-size:.8rem;color:var(--faint);max-width:34ch}
+.lead-note a{color:var(--silver);text-decoration:underline}
+.lead-status{font-size:.88rem;min-height:1.2em}
+.lead-status.ok{color:var(--silver-hi)}
+.lead-status.warn{color:#e8b4b4}
+.lead-status a{color:var(--silver-hi);text-decoration:underline}
+/* offer band — the money path on every generated page */
+.offer{border:1px solid var(--hair2);background:linear-gradient(120deg,var(--ink2),#141418);padding:clamp(26px,4vw,40px);display:grid;grid-template-columns:1fr auto;gap:34px;align-items:center;margin-top:20px}
+.offer-copy h2{font-size:clamp(1.25rem,2.5vw,1.8rem);text-transform:uppercase;margin:10px 0 14px;max-width:22ch}
+.offer-copy p{color:var(--muted);max-width:62ch;font-size:.94rem}
+.offer-copy p b{color:var(--text)}
+.offer-act{display:grid;gap:11px;justify-items:stretch;min-width:210px}
+.price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.price .was{font-family:var(--mono);font-size:1rem;color:var(--faint);text-decoration:line-through}
+.price .now{font-family:var(--disp);font-weight:800;font-size:2.4rem;color:var(--silver-hi)}
+.price .mono{width:100%}
+@media(max-width:760px){.offer{grid-template-columns:1fr;gap:22px}}
+/* /start/ — offer page */
+.tiers{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--hair);border:1px solid var(--hair);margin-top:8px}
+@media(max-width:700px){.tiers{grid-template-columns:1fr}}
+.tier{background:var(--ink);padding:26px 24px}
+.tier.hi{background:var(--ink2);border-left:2px solid var(--silver-hi)}
+.tier h3{font-size:1.05rem;text-transform:uppercase;margin-bottom:6px}
+.tier .amt{font-family:var(--disp);font-weight:800;font-size:2.6rem;color:var(--silver-hi);line-height:1;margin:12px 0 8px}
+.tier p{color:var(--muted);font-size:.9rem;max-width:44ch}
+.tier .btn{margin-top:18px}
+.steps{display:grid;gap:1px;background:var(--hair);border:1px solid var(--hair);margin-top:8px}
+.step{background:var(--ink);padding:20px 22px;display:grid;grid-template-columns:42px 1fr;gap:16px;align-items:start}
+.step .n{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;color:var(--silver);padding-top:3px}
+.step h3{font-size:1rem;text-transform:uppercase;margin-bottom:6px}
+.step p{color:var(--muted);font-size:.9rem;max-width:58ch}
+.step b{color:var(--text)}
+/* six nav items don't fit 375px — scroll the strip instead of overflowing the page */
+@media(max-width:760px){
+.top .wrap{height:auto;flex-direction:column;align-items:flex-start;gap:7px;padding-top:11px;padding-bottom:11px}
+.top nav{width:100%;overflow-x:auto;gap:16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.top nav::-webkit-scrollbar{display:none}
+.top nav a{white-space:nowrap}
+.facts{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://derikbannister.com/#business","name":"Derik Bannister","url":"https://derikbannister.com/","email":"bannisterderik@gmail.com","telephone":"+15307367085","founder":{"@type":"Person","name":"Derik Bannister"},"address":{"@type":"PostalAddress","addressRegion":"OR","addressCountry":"US"},"areaServed":[{"@type":"State","name":"Oregon"},{"@type":"State","name":"Washington"},{"@type":"State","name":"California"},{"@type":"State","name":"Idaho"},{"@type":"State","name":"Nevada"}],"knowsAbout":["Website Design & Development","Local SEO","Answer Engine Optimization","Google Ads & LSAs","AI Receptionist","CRM & Pipeline","Email & SMS Marketing","Reputation Management","Custom Software","Landing Pages & CRO","Google Local Services Ads","Google Business Profile Management","Call Tracking & Analytics","Content Marketing","Hosting, Care & Security","Workflow Automation & AI Agents","Online Booking & Scheduling","Meta Ads","Social Media Management","Photo & Video Content","Branding & Identity","Authority Link Building","Press Release Writing & Distribution"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://derikbannister.com/#website","url":"https://derikbannister.com/","name":"Derik Bannister","publisher":{"@id":"https://derikbannister.com/#business"},"inLanguage":"en-US"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://derikbannister.com/services/#page","url":"https://derikbannister.com/services/","name":"Services — Websites, SEO, AEO, Ads, AI & CRM | Derik Bannister","description":"All 23 systems Derik Bannister builds for service businesses: websites, local SEO, answer engine optimization, Google Ads, AI receptionists, CRM…","isPartOf":{"@id":"https://derikbannister.com/#website"},"about":{"@id":"https://derikbannister.com/#business"},"speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".answer"]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://derikbannister.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://derikbannister.com/services/"}]}</script>
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Services","numberOfItems":23,"itemListElement":[{"@type":"ListItem","position":1,"name":"Website Design & Development","url":"https://derikbannister.com/services/web-design/"},{"@type":"ListItem","position":2,"name":"Local SEO","url":"https://derikbannister.com/services/seo/"},{"@type":"ListItem","position":3,"name":"Answer Engine Optimization","url":"https://derikbannister.com/services/aeo/"},{"@type":"ListItem","position":4,"name":"Google Ads & LSAs","url":"https://derikbannister.com/services/google-ads/"},{"@type":"ListItem","position":5,"name":"AI Receptionist","url":"https://derikbannister.com/services/ai-receptionist/"},{"@type":"ListItem","position":6,"name":"CRM & Pipeline","url":"https://derikbannister.com/services/crm/"},{"@type":"ListItem","position":7,"name":"Email & SMS Marketing","url":"https://derikbannister.com/services/email-sms-marketing/"},{"@type":"ListItem","position":8,"name":"Reputation Management","url":"https://derikbannister.com/services/reputation-management/"},{"@type":"ListItem","position":9,"name":"Custom Software","url":"https://derikbannister.com/services/custom-software/"},{"@type":"ListItem","position":10,"name":"Landing Pages & CRO","url":"https://derikbannister.com/services/landing-pages/"},{"@type":"ListItem","position":11,"name":"Google Local Services Ads","url":"https://derikbannister.com/services/local-services-ads/"},{"@type":"ListItem","position":12,"name":"Google Business Profile Management","url":"https://derikbannister.com/services/google-business-profile/"},{"@type":"ListItem","position":13,"name":"Call Tracking & Analytics","url":"https://derikbannister.com/services/call-tracking/"},{"@type":"ListItem","position":14,"name":"Content Marketing","url":"https://derikbannister.com/services/content-marketing/"},{"@type":"ListItem","position":15,"name":"Hosting, Care & Security","url":"https://derikbannister.com/services/web-hosting-care/"},{"@type":"ListItem","position":16,"name":"Workflow Automation & AI Agents","url":"https://derikbannister.com/services/automation/"},{"@type":"ListItem","position":17,"name":"Online Booking & Scheduling","url":"https://derikbannister.com/services/booking-scheduling/"},{"@type":"ListItem","position":18,"name":"Meta Ads","url":"https://derikbannister.com/services/meta-ads/"},{"@type":"ListItem","position":19,"name":"Social Media Management","url":"https://derikbannister.com/services/social-media/"},{"@type":"ListItem","position":20,"name":"Photo & Video Content","url":"https://derikbannister.com/services/video-photo/"},{"@type":"ListItem","position":21,"name":"Branding & Identity","url":"https://derikbannister.com/services/branding/"},{"@type":"ListItem","position":22,"name":"Authority Link Building","url":"https://derikbannister.com/services/link-building/"},{"@type":"ListItem","position":23,"name":"Press Release Writing & Distribution","url":"https://derikbannister.com/services/press-releases/"}]}</script>
 </head>
 <body>
-<header class="top"><div class="wrap"><a class="logo" href="/">DB<span style="color:var(--silver-lo)">—</span></a><nav><a href="/services/">Services</a><a href="/trades/">Industries</a><a href="/locations/">Locations</a><a href="/ideas/">Ideas</a><a href="/products/">Products</a><a href="/#contact">Contact</a></nav></div></header>
+<a href="#main" style="position:absolute;left:-9999px;top:0" onfocus="this.style.left='8px';this.style.top='8px';this.style.background='#fff';this.style.color='#000';this.style.padding='8px 12px';this.style.zIndex=99" onblur="this.style.left='-9999px'">Skip to content</a>
+<header class="top"><div class="wrap"><a class="logo" href="/">DB<span style="color:var(--silver-lo)">—</span></a><nav><a href="/services/">Services</a><a href="/trades/">Industries</a><a href="/locations/">Locations</a><a href="/answers/">Answers</a><a href="/products/">Products</a><a href="/start/" style="color:var(--silver-hi)">Get a site — $500</a></nav></div></header>
 <div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / Services</nav></div>
-<main>
-<div class="hero"><div class="wrap"><h1>Systems that <span class="chrome">book revenue.</span></h1><p class="lede">The core systems — sites, SEO, CRM, AI answering — run in my own business before they run in yours. The rest ships to the same standard: if it wouldn't book revenue for me, it doesn't ship for you.</p>
-<div class="cta-row"><a class="btn" href="mailto:bannisterderik@gmail.com?subject=Project%20inquiry%20%E2%80%94%20Services%20%E2%80%94%20Websites%2C%20Software%2C%20SEO%2C%20AI%20%26%20CRM%20%7C%20Derik%20Bannister">Get a free strategy brief →</a><a class="btn ghost" href="tel:+15307367085">Call/Text 530-736-7085</a></div></div></div>
-<section><div class="wrap"><div class="grid"><a href="/services/web-design/"><b>Website Design &amp; Development</b>fast, search-first websites built to convert calls and quote requests</a><a href="/services/custom-software/"><b>Custom Software Development</b>purpose-built software for how your operation actually runs</a><a href="/services/seo/"><b>SEO &amp; Local Search</b>ranking in the map pack and organic results where your customers actually search</a><a href="/services/google-ads/"><b>Google Ads &amp; LSA Management</b>Local Services Ads and PPC run to a cost-per-booked-job number</a><a href="/services/ai-receptionist/"><b>AI Receptionist &amp; Call Answering</b>every call answered 24/7</a><a href="/services/crm/"><b>CRM &amp; Pipeline Automation</b>every lead, quote, and job in one pipeline with follow-up that never forgets</a><a href="/services/email-sms-marketing/"><b>Email &amp; SMS Marketing</b>estimates followed up automatically and past customers reactivated every season</a><a href="/services/reputation-management/"><b>Reputation &amp; Review Management</b>review requests after every job, responses handled, your rating defended</a><a href="/services/content-marketing/"><b>Content &amp; Blogging</b>local, service-specific content that compounds into rankings</a><a href="/services/link-building/"><b>Link Building &amp; Digital PR</b>authority links from real sites that move rankings</a><a href="/services/press-releases/"><b>Press Release Writing &amp; Distribution</b>newsworthy announcements written and syndicated to hundreds of outlets</a><a href="/services/branding/"><b>Brand &amp; Identity</b>an identity sharp enough to be remembered</a></div></div></section><section><div class="wrap"><div class="contact-band"><h2>Let's build something real.</h2><p>Not sure which system your business needs first? Email <b>bannisterderik@gmail.com</b> or call/text <b>530-736-7085</b> — you get a straight answer from me, not a sales sequence.</p><div class="cta-row"><a class="btn" href="mailto:bannisterderik@gmail.com">Email Derik →</a><a class="btn ghost" href="tel:+15307367085">Call/Text 530-736-7085</a></div></div></div></section>
+<main id="main">
+<div class="hero"><div class="wrap"><h1>Systems that <span class="chrome">book revenue.</span></h1><p class="lede">23 systems, grouped by the job they do. The core stack — sites, SEO, AEO, CRM, AI answering — runs in my own business before it runs in yours.</p><div class="answer"><span class="lab">Short answer</span><p>Derik Bannister builds 23 systems for service businesses across Oregon, Washington, California, Idaho, and Nevada: websites, local SEO, answer engine optimization, Google Ads and Local Services Ads, AI phone answering, CRM and follow-up automation, reputation management, and custom software. Flat pricing, and you own everything built.</p></div>
+<div class="cta-row"><a class="btn" href="mailto:bannisterderik@gmail.com?subject=Project%20inquiry%20%E2%80%94%20Services%20%E2%80%94%20Websites%2C%20SEO%2C%20AEO%2C%20Ads%2C%20AI%20%26%20CRM%20%7C%20Derik%20Bannister">Get a free strategy brief →</a><a class="btn ghost" href="tel:+15307367085">Call/Text 530-736-7085</a></div></div></div>
+<section><div class="wrap"><div class="toolbar">
+<div class="search"><input id="q" type="search" autocomplete="off" placeholder="Search services — &quot;reviews&quot;, &quot;ads&quot;, &quot;answering&quot;…" aria-label="Search services — &quot;reviews&quot;, &quot;ads&quot;, &quot;answering&quot;…"></div>
+</div>
+
+<p class="hitcount"><b id="hitN">23</b> services</p>
+<div id="filterRoot"><div class="group" data-group="get-found"><h3>Get found</h3><p class="gb">Show up first when someone in your market needs the work done — in search, in the map pack, and in AI answers.</p><div class="grid"><a href="/services/web-design/" data-k="website design &amp; development websites fast, search-first websites built to convert calls and quote requests — owned by you, on your domain"><b>Website Design &amp; Development</b>fast, search-first websites built to convert calls and quote requests</a><a href="/services/seo/" data-k="local seo seo the local search system — map pack, service pages, city pages, and the links that make them stick"><b>Local SEO</b>the local search system</a><a href="/services/aeo/" data-k="answer engine optimization aeo getting your business named and cited when people ask chatgpt, gemini, perplexity, and ai overviews who to call"><b>Answer Engine Optimization</b>getting your business named and cited when people ask ChatGPT, Gemini, Perplexity, and AI Overviews who to call</a><a href="/services/google-ads/" data-k="google ads &amp; lsas google ads search campaigns and local services ads that buy jobs, not clicks — with every dollar tracked to a booked call"><b>Google Ads &amp; LSAs</b>search campaigns and Local Services Ads that buy jobs, not clicks</a><a href="/services/local-services-ads/" data-k="google local services ads local services ads the google guaranteed badge and pay-per-lead placement above every other ad on the page"><b>Google Local Services Ads</b>the Google Guaranteed badge and pay-per-lead placement above every other ad on the page</a><a href="/services/google-business-profile/" data-k="google business profile management google profile the single highest-leverage local asset — built out, posted to, and defended against suspension"><b>Google Business Profile Management</b>the single highest-leverage local asset</a><a href="/services/content-marketing/" data-k="content marketing content articles, guides, and service explainers written to rank and to answer the questions buyers actually ask"><b>Content Marketing</b>articles, guides, and service explainers written to rank and to answer the questions buyers actually ask</a><a href="/services/meta-ads/" data-k="meta ads meta ads facebook and instagram campaigns for the offers that sell on interruption, not search"><b>Meta Ads</b>Facebook and Instagram campaigns for the offers that sell on interruption, not search</a><a href="/services/link-building/" data-k="authority link building link building manual, white-hat backlinks from real sites that move local rankings"><b>Authority Link Building</b>manual, white-hat backlinks from real sites that move local rankings</a><a href="/services/press-releases/" data-k="press release writing &amp; distribution press professionally written announcements distributed through established newswire networks"><b>Press Release Writing &amp; Distribution</b>professionally written announcements distributed through established newswire networks</a></div></div><div class="group" data-group="convert"><h3>Turn traffic into calls</h3><p class="gb">Everything between &quot;they found you&quot; and &quot;they called you&quot; — pages, proof, answering, and booking.</p><div class="grid"><a href="/services/ai-receptionist/" data-k="ai receptionist ai answering an ai that answers every call in seconds, any hour, books the job, and escalates real emergencies to you"><b>AI Receptionist</b>an AI that answers every call in seconds, any hour, books the job, and escalates real emergencies to you</a><a href="/services/reputation-management/" data-k="reputation management reviews review requests after every job, responses in your voice, and problems routed to you before they go public"><b>Reputation Management</b>review requests after every job, responses in your voice, and problems routed to you before they go public</a><a href="/services/landing-pages/" data-k="landing pages &amp; cro landing pages single-purpose pages built for one service and one city, tuned until the conversion rate moves"><b>Landing Pages &amp; CRO</b>single-purpose pages built for one service and one city, tuned until the conversion rate moves</a><a href="/services/booking-scheduling/" data-k="online booking &amp; scheduling booking let customers book a real slot on your calendar at midnight instead of leaving a voicemail"><b>Online Booking &amp; Scheduling</b>let customers book a real slot on your calendar at midnight instead of leaving a voicemail</a><a href="/services/social-media/" data-k="social media management social proof-of-work posting that makes you look like the busiest, most competent shop in town"><b>Social Media Management</b>proof-of-work posting that makes you look like the busiest, most competent shop in town</a><a href="/services/video-photo/" data-k="photo &amp; video content photo &amp; video real footage of your crew and your finished work — the single most persuasive asset a service business owns"><b>Photo &amp; Video Content</b>real footage of your crew and your finished work</a><a href="/services/branding/" data-k="branding &amp; identity branding a mark, a palette, and a voice that make a two-truck operation look like the standard in your market"><b>Branding &amp; Identity</b>a mark, a palette, and a voice that make a two-truck operation look like the standard in your market</a></div></div><div class="group" data-group="follow-up"><h3>Follow up automatically</h3><p class="gb">The money left on the table: estimates nobody chased and customers nobody called back.</p><div class="grid"><a href="/services/crm/" data-k="crm &amp; pipeline crm a pipeline that chases every estimate, logs every call, and never lets a quote die in silence"><b>CRM &amp; Pipeline</b>a pipeline that chases every estimate, logs every call, and never lets a quote die in silence</a><a href="/services/email-sms-marketing/" data-k="email &amp; sms marketing email &amp; sms seasonal campaigns, estimate follow-ups, and reactivation that turn your existing list into booked work"><b>Email &amp; SMS Marketing</b>seasonal campaigns, estimate follow-ups, and reactivation that turn your existing list into booked work</a></div></div><div class="group" data-group="run-the-business"><h3>Run the business</h3><p class="gb">The software layer underneath it all — tools, tracking, hosting, and automation you own.</p><div class="grid"><a href="/services/custom-software/" data-k="custom software software internal tools built around how your operation actually runs — quoting, scheduling, dispatch, and reporting"><b>Custom Software</b>internal tools built around how your operation actually runs</a><a href="/services/call-tracking/" data-k="call tracking &amp; analytics call tracking numbers on every channel so you know which marketing actually produced the call — and which is burning money"><b>Call Tracking &amp; Analytics</b>numbers on every channel so you know which marketing actually produced the call</a><a href="/services/web-hosting-care/" data-k="hosting, care &amp; security site care static hosting, uptime monitoring, backups, and the small changes you need without waiting on a queue"><b>Hosting, Care &amp; Security</b>static hosting, uptime monitoring, backups, and the small changes you need without waiting on a queue</a><a href="/services/automation/" data-k="workflow automation &amp; ai agents automation the repetitive parts of your operation handled by software — intake, dispatch notes, invoicing nudges, reporting"><b>Workflow Automation &amp; AI Agents</b>the repetitive parts of your operation handled by software</a></div></div></div></div></section><section class="faq"><div class="wrap"><h2>Questions, answered straight</h2><details><summary>Which system should a service business build first?</summary><p>Almost always the website and the phone. A site that ranks and something that answers every call are what make every other system worth paying for — ads, SEO, and follow-up all leak through an unanswered phone.</p></details><details><summary>Can I buy one service instead of a package?</summary><p>Yes. Everything here is quoted individually and flat. There's no bundle you have to buy to get one piece of it.</p></details><details><summary>What does AEO mean and do I need it?</summary><p>Answer engine optimization — getting your business named when someone asks ChatGPT, Gemini, or Google's AI who to call. If your buyers are homeowners, a growing share of them now ask an assistant first, so yes.</p></details></div></section><section><div class="wrap"><div class="contact-band"><h2>Let's build something real.</h2><p>Not sure which system your business needs first? Email <b>bannisterderik@gmail.com</b> or call/text <b>530-736-7085</b> — you get a straight answer from me, not a sales sequence.</p><div class="cta-row"><a class="btn" href="mailto:bannisterderik@gmail.com">Email Derik →</a><a class="btn ghost" href="tel:+15307367085">Call/Text 530-736-7085</a></div></div></div></section><script>(()=>{
+const root=document.getElementById('filterRoot');if(!root)return;
+const items=[...root.querySelectorAll('[data-k]')],n=document.getElementById('hitN'),q=document.getElementById('q');
+let f='all';
+const apply=()=>{const term=(q&&q.value||'').trim().toLowerCase();let c=0;
+items.forEach(i=>{const okF=f==='all'||(i.dataset.f||'').split(' ').includes(f);const okQ=!term||i.dataset.k.includes(term);const show=okF&&okQ;i.classList.toggle('hide',!show);if(show)c++;});
+if(n)n.textContent=c;
+root.querySelectorAll('[data-group]').forEach(g=>{g.classList.toggle('hide',!g.querySelector('[data-k]:not(.hide)'))});};
+const chips=document.getElementById('chipRow');
+if(chips)chips.addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;chips.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');f=b.dataset.f;apply();});
+if(q)q.addEventListener('input',apply);
+})();</script><section id="contact"><div class="wrap"><div class="contact-band"><h2>Tell me what you need.</h2><p>Name and a phone number is enough. You get me — not a form that disappears into an agency inbox.</p><form class="lead" id="leadForm" novalidate>
+<input type="hidden" name="source_path" value="/services/"><input type="hidden" name="source_type" value="services"><input type="hidden" name="source_city" value=""><input type="hidden" name="source_state" value=""><input type="hidden" name="source_service" value=""><input type="hidden" name="source_trade" value="">
+<div class="lead-row"><label>Your name<input name="name" required autocomplete="name" placeholder="First and last"></label>
+<label>Phone<input name="phone" type="tel" required autocomplete="tel" placeholder="Best number to reach you"></label></div>
+<div class="lead-row"><label>Business<input name="business" autocomplete="organization" placeholder="Company name"></label>
+<label>Email <span class="opt">optional</span><input name="email" type="email" autocomplete="email" placeholder="you@company.com"></label></div>
+<label>What do you need? <span class="opt">optional</span><textarea name="message" rows="3" placeholder="A site, more calls, the phone answered — whatever it is, plain English is fine."></textarea></label>
+<div class="lead-foot"><button class="btn" type="submit">Send it →</button>
+<span class="lead-note">Goes straight to me. No sequence, no sales team. Or call/text <a href="tel:+15307367085">530-736-7085</a>.</span></div>
+<p class="lead-status" id="leadStatus" role="status" aria-live="polite"></p>
+</form>
+<script>(()=>{
+const f=document.getElementById('leadForm');if(!f)return;
+const s=document.getElementById('leadStatus');
+const EP="",KEY="",MAIL="bannisterderik@gmail.com";
+f.addEventListener('submit',async e=>{
+ e.preventDefault();
+ const d=Object.fromEntries(new FormData(f).entries());
+ if(!d.name||!d.phone){s.textContent='Name and phone, then it sends.';s.className='lead-status warn';return}
+ d.page_title=document.title;d.referrer=document.referrer||'';
+ const btn=f.querySelector('button');btn.disabled=true;btn.textContent='Sending…';
+ if(!EP){ /* no endpoint configured yet — hand off to email rather than lose the lead */
+  const body=Object.entries(d).filter(([,v])=>v).map(([k,v])=>k+': '+v).join('\n');
+  location.href='mailto:'+MAIL+'?subject='+encodeURIComponent('Website lead — '+d.name)+'&body='+encodeURIComponent(body);
+  s.textContent='Opening your email so this reaches me — hit send.';s.className='lead-status ok';
+  btn.disabled=false;btn.textContent='Send it →';return}
+ try{
+  if(KEY)d.access_key=KEY;
+  d.subject='Website lead — '+d.name+(d.business?' ('+d.business+')':'');
+  const r=await fetch(EP,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(d)});
+  if(!r.ok)throw new Error(r.status);
+  f.querySelectorAll('input,textarea,button').forEach(x=>x.disabled=true);
+  s.innerHTML='Got it — I\'ll call you at <b>'+d.phone+'</b>. If it\'s urgent, call me now: <a href="tel:+15307367085">530-736-7085</a>.';
+  s.className='lead-status ok';
+ }catch(err){
+  s.innerHTML='That didn\'t go through. Call or text <a href="tel:+15307367085">530-736-7085</a> — fastest way to reach me.';
+  s.className='lead-status warn';btn.disabled=false;btn.textContent='Send it →';
+ }
+});})();</script></div></div></section><section><div class="wrap"><div class="offer">
+<div class="offer-copy"><span class="mono">The wedge<b>—</b></span><h2>A 250+ page site for your business. <span class="chrome">$500 if you check out now.</span></h2>
+<p>Every service you offer and every town you serve gets its own page — built on your logo, your colors, your license number. Schema, sitemap, and llms.txt so search engines and AI assistants both read you correctly. Delivered in 7 business days. <b>You own all of it</b>, source code included.</p></div>
+<div class="offer-act"><div class="price"><span class="was">$999</span><span class="now">$500</span><span class="mono">checkout price</span></div>
+<a class="btn" href="/start/">See what's included →</a><a class="btn ghost" href="tel:+15307367085">Call/Text 530-736-7085</a></div>
+</div></div></section>
 </main>
 <footer><div class="wrap"><div class="fcols">
-<div><h3>Services</h3><a href="/services/web-design/">Websites</a><a href="/services/custom-software/">Custom Software</a><a href="/services/seo/">SEO</a><a href="/services/google-ads/">Google Ads / LSA</a><a href="/services/ai-receptionist/">AI Receptionist</a><a href="/services/crm/">CRM &amp; Automation</a><a href="/services/email-sms-marketing/">Email &amp; SMS</a><a href="/services/reputation-management/">Reputation</a><a href="/services/">All services →</a></div>
-<div><h3>Industries</h3><a href="/trades/roofing/">Roofing</a><a href="/trades/plumbing/">Plumbing</a><a href="/trades/hvac/">HVAC</a><a href="/trades/electrical/">Electrical</a><a href="/trades/solar/">Solar</a><a href="/trades/concrete/">Concrete</a><a href="/trades/landscaping/">Landscaping</a><a href="/trades/pest-control/">Pest Control</a><a href="/trades/">All industries →</a></div>
-<div><h3>Locations</h3><a href="/locations/portland-or/">Portland, OR</a><a href="/locations/salem-or/">Salem, OR</a><a href="/locations/eugene-or/">Eugene, OR</a><a href="/locations/springfield-or/">Springfield, OR</a><a href="/locations/gresham-or/">Gresham, OR</a><a href="/locations/hillsboro-or/">Hillsboro, OR</a><a href="/locations/beaverton-or/">Beaverton, OR</a><a href="/locations/bend-or/">Bend, OR</a><a href="/locations/">All locations →</a></div>
-<div><h3>Company</h3><a href="/">Home</a><a href="/about/">About</a><a href="/#builds">Builds</a><a href="/ideas/">Ideas Board</a><a href="/products/">SEO Products</a><a href="mailto:bannisterderik@gmail.com">Email</a><a href="tel:+15307367085">Call/Text 530-736-7085</a></div>
+<div><h3>Services</h3><a href="/services/web-design/">Websites</a><a href="/services/seo/">SEO</a><a href="/services/aeo/">AEO</a><a href="/services/google-ads/">Google Ads</a><a href="/services/ai-receptionist/">AI Answering</a><a href="/services/crm/">CRM</a><a href="/services/email-sms-marketing/">Email &amp; SMS</a><a href="/services/reputation-management/">Reviews</a><a href="/services/">All 23 services →</a></div>
+<div><h3>Industries</h3><a href="/trades/roofing/">Roofing</a><a href="/trades/plumbing/">Plumbing</a><a href="/trades/hvac/">HVAC</a><a href="/trades/electrical/">Electrical</a><a href="/trades/solar/">Solar</a><a href="/trades/concrete/">Concrete</a><a href="/trades/landscaping/">Landscaping</a><a href="/trades/pest-control/">Pest Control</a><a href="/trades/">All 53 industries →</a></div>
+<div><h3>States</h3><a href="/locations/oregon/">Oregon (65)</a><a href="/locations/washington/">Washington (47)</a><a href="/locations/california/">California (88)</a><a href="/locations/idaho/">Idaho (6)</a><a href="/locations/nevada/">Nevada (6)</a><a href="/locations/">All 212 cities →</a></div>
+<div><h3>Company</h3><a href="/start/">Get a site — $500</a><a href="/">Home</a><a href="/about/">About</a><a href="/answers/">Answers</a><a href="/#builds">Builds</a><a href="/ideas/">Ideas Board</a><a href="/products/">SEO Products</a><a href="/sitemap/">Sitemap</a><a href="mailto:bannisterderik@gmail.com">Email</a><a href="tel:+15307367085">Call/Text 530-736-7085</a></div>
 <div><h3>Legal</h3><a href="/legal/terms/">Terms of Use</a><a href="/legal/website-terms/">Website Build Agreement</a><a href="/legal/privacy/">Privacy Policy</a><a href="/legal/do-not-sell/">Do Not Sell or Share My Personal Information</a><a href="/legal/accessibility/">Accessibility</a><a href="/legal/disclaimer/">Disclaimer</a></div>
 </div><div class="legal"><span class="mono">© 2026 Derik Bannister</span><span class="mono">DB<b>—</b> BUILD. OPERATE. OWN.</span></div></div></footer>
 </body>

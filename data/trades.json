@@ -1,20 +1,426 @@
 [
- {"slug":"roofing","name":"Roofing","plural":"roofing companies","pain":"storm-season call surges, insurance-job paperwork, and estimates that die without follow-up","systems":"storm-response landing pages, financing calculators, drone-photo galleries, and automated estimate follow-up"},
- {"slug":"plumbing","name":"Plumbing","plural":"plumbing companies","pain":"emergency calls at 2am, dispatch chaos, and homeowners who call the next Google result when you miss","systems":"24/7 AI call answering, emergency-service pages that rank, membership-plan billing, and dispatch-ready job intake"},
- {"slug":"hvac","name":"HVAC","plural":"HVAC contractors","pain":"brutal seasonality, maintenance-agreement churn, and price-shopping homeowners","systems":"seasonal campaign automation, maintenance-agreement portals, IAQ upsell content, and instant-quote tools"},
- {"slug":"electrical","name":"Electrical","plural":"electricians","pain":"low-margin service calls mixed with big-ticket panel and EV work that never gets marketed","systems":"EV-charger and panel-upgrade landing pages, permit-ready quote forms, and Google LSA dialed to licensed-trade requirements"},
- {"slug":"solar","name":"Solar","plural":"solar installers","pain":"long sales cycles, incentive confusion, and lead vendors reselling the same homeowner five times","systems":"savings calculators, incentive explainers kept current, financing pre-qual flows, and owned-lead funnels"},
- {"slug":"concrete","name":"Concrete","plural":"concrete contractors","pain":"bid-and-forget quoting, weather-driven scheduling, and portfolios trapped in a phone camera roll","systems":"project galleries that sell, square-footage estimate tools, and booking flows built around pour windows"},
- {"slug":"landscaping","name":"Landscaping","plural":"landscaping companies","pain":"one-off mows instead of contracts, spring rushes, and route-density economics nobody's website understands","systems":"recurring-contract funnels, neighborhood-targeted campaigns, and seasonal service reminders that fill routes"},
- {"slug":"pest-control","name":"Pest Control","plural":"pest control companies","pain":"national franchises buying every keyword and one-time jobs that should be quarterly plans","systems":"plan-first service pages, local-pest content that outranks the nationals, and subscription billing flows"},
- {"slug":"garage-doors","name":"Garage Doors","plural":"garage door companies","pain":"lead brokers dominating emergency searches and repair calls that never turn into replacement sales","systems":"same-day repair pages that rank, visual door configurators, and repair-to-replace nurture campaigns"},
- {"slug":"painting","name":"Painting","plural":"painting contractors","pain":"free-estimate tire kickers, seasonal interior/exterior swings, and referral pipelines that dry up","systems":"instant ballpark calculators, before/after galleries, and neighborhood farming campaigns"},
- {"slug":"remodeling","name":"Remodeling","plural":"remodeling contractors","pain":"long projects, high-ticket decisions made on trust, and portfolios that undersell the craft","systems":"project case-study pages, design-build process explainers, and financing-ready consultation funnels"},
- {"slug":"fencing","name":"Fencing","plural":"fence companies","pain":"drive-by quoting, material price swings, and zero repeat business without a system","systems":"instant footage-based estimates, material comparison pages, and neighbor-referral automation"},
- {"slug":"excavation","name":"Excavation","plural":"excavation contractors","pain":"feast-or-famine bid work and GCs who only call the operators they remember","systems":"capability pages that win bid lists, project galleries, and GC-relationship nurture campaigns"},
- {"slug":"tree-service","name":"Tree Service","plural":"tree service companies","pain":"storm spikes, insurance documentation, and danger-tree emergencies going to whoever answers first","systems":"storm-response pages, 24/7 AI answering, and assessment-request flows with photo upload"},
- {"slug":"flooring","name":"Flooring","plural":"flooring companies","pain":"showroom foot traffic dying while big-box stores buy the search results","systems":"product visualizers, in-home consult booking, and local SEO that beats the big boxes"},
- {"slug":"gutters","name":"Gutters","plural":"gutter companies","pain":"tiny average tickets unless installs, guards, and cleaning plans get sold as a system","systems":"seasonal cleaning-plan funnels, gutter-guard upsell pages, and route-based scheduling"},
- {"slug":"construction","name":"Construction","plural":"general contractors","pain":"referral dependence, bid-race margins, and a web presence that doesn't match the quality of the work","systems":"portfolio sites that win trust, pre-qualification intake flows, and reputation engines"},
- {"slug":"real-estate","name":"Real Estate","plural":"real-estate agents and teams","pain":"portal dependence, database neglect, and marketing that stops the day the listing closes","systems":"IDX-free agent sites that rank, listing marketing engines, and database reactivation campaigns — the stack I run in my own real-estate business"}
+ {
+  "slug": "roofing",
+  "name": "Roofing",
+  "plural": "roofing companies",
+  "category": "exterior",
+  "pain": "storm-season call surges, insurance-job paperwork, and estimates that die without follow-up",
+  "systems": "storm-response landing pages, financing calculators, drone-photo galleries, and automated estimate follow-up"
+ },
+ {
+  "slug": "plumbing",
+  "name": "Plumbing",
+  "plural": "plumbing companies",
+  "category": "mechanical",
+  "pain": "emergency calls at 2am, dispatch chaos, and price-shoppers who never call back",
+  "systems": "24/7 AI call answering, emergency-plumber landing pages, upfront-pricing tables, and membership-plan signup flows"
+ },
+ {
+  "slug": "hvac",
+  "name": "HVAC",
+  "plural": "HVAC companies",
+  "category": "mechanical",
+  "pain": "brutal seasonal swings, maintenance plans nobody renews, and tune-up leads that go cold",
+  "systems": "seasonal demand campaigns, maintenance-plan portals, financing integrations, and automated tune-up reminders"
+ },
+ {
+  "slug": "electrical",
+  "name": "Electrical",
+  "plural": "electricians",
+  "category": "mechanical",
+  "pain": "permit-heavy jobs, panel-upgrade shoppers, and quotes that sit unanswered",
+  "systems": "panel-upgrade and EV-charger landing pages, permit-tracking tools, and quote follow-up automation"
+ },
+ {
+  "slug": "solar",
+  "name": "Solar",
+  "plural": "solar installers",
+  "category": "exterior",
+  "pain": "long sales cycles, incentive confusion, and leads that stall between quote and contract",
+  "systems": "savings calculators, incentive-explainer pages, proposal portals, and long-cycle nurture sequences"
+ },
+ {
+  "slug": "concrete",
+  "name": "Concrete",
+  "plural": "concrete contractors",
+  "category": "site-work",
+  "pain": "weather-dependent scheduling, square-foot price shoppers, and bid requests with no drawings",
+  "systems": "instant square-foot estimators, project galleries by pour type, and weather-aware scheduling notices"
+ },
+ {
+  "slug": "landscaping",
+  "name": "Landscaping",
+  "plural": "landscaping companies",
+  "category": "outdoor-living",
+  "pain": "seasonal revenue cliffs, one-off customers, and maintenance contracts that churn",
+  "systems": "recurring-maintenance signup flows, seasonal service campaigns, and design-gallery lead magnets"
+ },
+ {
+  "slug": "pest-control",
+  "name": "Pest Control",
+  "plural": "pest control companies",
+  "category": "specialty",
+  "pain": "recurring-plan churn, same-day service demands, and pest-specific search traffic",
+  "systems": "pest-by-species landing pages, recurring-plan billing, same-day booking, and reactivation campaigns"
+ },
+ {
+  "slug": "garage-doors",
+  "name": "Garage Doors",
+  "plural": "garage door companies",
+  "category": "exterior",
+  "pain": "broken-spring emergencies, brand-model confusion, and same-day dispatch pressure",
+  "systems": "emergency-repair landing pages, door-style visualizers, brand/model pages, and same-day booking"
+ },
+ {
+  "slug": "painting",
+  "name": "Painting",
+  "plural": "painting contractors",
+  "category": "interior",
+  "pain": "estimate-heavy sales, color-decision delays, and seasonal exterior windows",
+  "systems": "color-visualizer galleries, per-room estimate tools, and interior/exterior seasonal campaigns"
+ },
+ {
+  "slug": "remodeling",
+  "name": "Remodeling",
+  "plural": "remodeling contractors",
+  "category": "interior",
+  "pain": "long consideration cycles, budget-mismatched leads, and portfolio-driven buying",
+  "systems": "project-cost range guides, before/after galleries, financing calculators, and long-cycle nurture"
+ },
+ {
+  "slug": "fencing",
+  "name": "Fencing",
+  "plural": "fence companies",
+  "category": "outdoor-living",
+  "pain": "linear-foot price shoppers, property-line questions, and material confusion",
+  "systems": "linear-foot estimators, material-comparison pages (cedar, vinyl, chain link, ornamental), and HOA-spec guides"
+ },
+ {
+  "slug": "excavation",
+  "name": "Excavation",
+  "plural": "excavation contractors",
+  "category": "site-work",
+  "pain": "bid-based work, equipment scheduling, and permit timelines",
+  "systems": "equipment-capability pages, site-prep project galleries, and bid-request intake forms"
+ },
+ {
+  "slug": "tree-service",
+  "name": "Tree Service",
+  "plural": "tree service companies",
+  "category": "outdoor-living",
+  "pain": "storm-emergency spikes, hazard-tree urgency, and insurance claims",
+  "systems": "storm-response pages, emergency dispatch answering, hazard-assessment intake, and ISA-credential trust blocks"
+ },
+ {
+  "slug": "flooring",
+  "name": "Flooring",
+  "plural": "flooring companies",
+  "category": "interior",
+  "pain": "material sampling, square-foot comparison, and installers vs. big-box competition",
+  "systems": "material-by-room pages, square-foot estimators, sample-request flows, and installed-price comparison"
+ },
+ {
+  "slug": "gutters",
+  "name": "Gutters",
+  "plural": "gutter companies",
+  "category": "exterior",
+  "pain": "rainy-season demand spikes, guard upsells, and low-ticket job economics",
+  "systems": "seasonal gutter-cleaning campaigns, guard-comparison pages, and route-based service scheduling"
+ },
+ {
+  "slug": "construction",
+  "name": "Construction",
+  "plural": "general contractors",
+  "category": "site-work",
+  "pain": "long bid cycles, subcontractor coordination, and referral dependence",
+  "systems": "project-portfolio pages by build type, bid-intake systems, and client-update portals"
+ },
+ {
+  "slug": "real-estate",
+  "name": "Real Estate",
+  "plural": "real estate teams",
+  "category": "specialty",
+  "pain": "lead-source fragmentation, slow speed-to-lead, and database neglect",
+  "systems": "IDX-adjacent landing pages, instant-response lead routing, and past-client reactivation campaigns"
+ },
+ {
+  "slug": "pools-spas",
+  "name": "Pools & Spas",
+  "plural": "pool builders and service companies",
+  "category": "outdoor-living",
+  "pain": "long build cycles, seasonal service demand, and weekly-route economics",
+  "systems": "build-cost range guides, design galleries, weekly-service signup flows, and off-season maintenance campaigns"
+ },
+ {
+  "slug": "decks",
+  "name": "Decks & Patios",
+  "plural": "deck builders",
+  "category": "outdoor-living",
+  "pain": "material comparison, permit questions, and spring booking crunches",
+  "systems": "composite-vs-wood comparison pages, square-foot estimators, and spring pre-booking campaigns"
+ },
+ {
+  "slug": "masonry",
+  "name": "Masonry",
+  "plural": "masonry contractors",
+  "category": "exterior",
+  "pain": "custom bids, material sourcing, and long project timelines",
+  "systems": "stonework portfolio galleries by material, custom-bid intake, and project-timeline explainers"
+ },
+ {
+  "slug": "pressure-washing",
+  "name": "Pressure Washing",
+  "plural": "pressure washing companies",
+  "category": "cleaning",
+  "pain": "low-ticket jobs, route density, and seasonal demand",
+  "systems": "surface-type service pages, bundled-package pricing, route-based booking, and annual reminder campaigns"
+ },
+ {
+  "slug": "septic",
+  "name": "Septic",
+  "plural": "septic companies",
+  "category": "site-work",
+  "pain": "emergency pumping calls, county permit rules, and inspection deadlines",
+  "systems": "emergency dispatch answering, county-permit explainer pages, and pumping-interval reminder automation"
+ },
+ {
+  "slug": "well-water",
+  "name": "Well & Water Systems",
+  "plural": "well drilling and water treatment companies",
+  "category": "site-work",
+  "pain": "rural service areas, water-quality questions, and emergency pump failures",
+  "systems": "water-test intake forms, county-by-county service pages, and emergency pump-repair dispatch"
+ },
+ {
+  "slug": "foundation-repair",
+  "name": "Foundation Repair",
+  "plural": "foundation repair contractors",
+  "category": "site-work",
+  "pain": "fear-driven buyers, engineer reports, and high-ticket approval cycles",
+  "systems": "inspection-request flows, problem-symptom pages, warranty explainers, and financing integration"
+ },
+ {
+  "slug": "insulation",
+  "name": "Insulation",
+  "plural": "insulation contractors",
+  "category": "interior",
+  "pain": "rebate paperwork, seasonal demand, and invisible-product selling",
+  "systems": "rebate-and-incentive pages, energy-savings calculators, and seasonal attic campaigns"
+ },
+ {
+  "slug": "drywall",
+  "name": "Drywall",
+  "plural": "drywall contractors",
+  "category": "interior",
+  "pain": "subcontractor-heavy work, repair-vs-replace questions, and small-job economics",
+  "systems": "repair-vs-replace guides, texture-match galleries, and minimum-job booking flows"
+ },
+ {
+  "slug": "epoxy-flooring",
+  "name": "Epoxy & Garage Floors",
+  "plural": "epoxy flooring companies",
+  "category": "interior",
+  "pain": "finish-sample decisions, cure-time scheduling, and price comparison vs. DIY",
+  "systems": "finish-visualizer galleries, square-foot pricing, and one-day-install explainer pages"
+ },
+ {
+  "slug": "windows-doors",
+  "name": "Windows & Doors",
+  "plural": "window and door companies",
+  "category": "exterior",
+  "pain": "long quote cycles, rebate programs, and energy-efficiency claims",
+  "systems": "window-style comparison pages, rebate explainers, energy-savings calculators, and in-home quote booking"
+ },
+ {
+  "slug": "siding",
+  "name": "Siding",
+  "plural": "siding contractors",
+  "category": "exterior",
+  "pain": "material comparison, financing needs, and whole-home ticket sizes",
+  "systems": "material-comparison pages (fiber cement, vinyl, LP, cedar), financing calculators, and before/after galleries"
+ },
+ {
+  "slug": "chimney",
+  "name": "Chimney & Fireplace",
+  "plural": "chimney sweeps and fireplace companies",
+  "category": "specialty",
+  "pain": "hard seasonal peak, safety-inspection selling, and code questions",
+  "systems": "fall booking campaigns, inspection-package pages, code-and-safety explainers, and annual reminder automation"
+ },
+ {
+  "slug": "locksmith",
+  "name": "Locksmith",
+  "plural": "locksmiths",
+  "category": "specialty",
+  "pain": "emergency lockouts, scam-operator competition, and 24/7 dispatch",
+  "systems": "24/7 AI answering, lockout landing pages, verified-local trust blocks, and live ETA responses"
+ },
+ {
+  "slug": "appliance-repair",
+  "name": "Appliance Repair",
+  "plural": "appliance repair companies",
+  "category": "specialty",
+  "pain": "brand-model search traffic, parts availability, and same-day expectations",
+  "systems": "brand-and-model landing pages, diagnostic-fee explainers, and same-day booking flows"
+ },
+ {
+  "slug": "restoration",
+  "name": "Water, Fire & Mold Restoration",
+  "plural": "restoration companies",
+  "category": "specialty",
+  "pain": "24/7 emergency response, insurance-adjuster coordination, and IICRC credential trust",
+  "systems": "24/7 dispatch answering, insurance-process explainers, emergency landing pages, and adjuster-ready documentation"
+ },
+ {
+  "slug": "irrigation",
+  "name": "Sprinklers & Irrigation",
+  "plural": "irrigation companies",
+  "category": "outdoor-living",
+  "pain": "spring startup crunches, winterization deadlines, and low-ticket service calls",
+  "systems": "spring startup and blowout campaigns, recurring-service plans, and zone-repair booking"
+ },
+ {
+  "slug": "hardscaping",
+  "name": "Hardscaping",
+  "plural": "hardscape contractors",
+  "category": "outdoor-living",
+  "pain": "design-driven sales, material selection, and long spring backlogs",
+  "systems": "paver and retaining-wall galleries, design-consult booking, and material-comparison guides"
+ },
+ {
+  "slug": "artificial-turf",
+  "name": "Artificial Turf",
+  "plural": "artificial turf installers",
+  "category": "outdoor-living",
+  "pain": "square-foot price comparison, pet-owner questions, and water-savings selling",
+  "systems": "turf-product comparison pages, water-savings calculators, and pet-turf explainers"
+ },
+ {
+  "slug": "junk-removal",
+  "name": "Junk Removal",
+  "plural": "junk removal companies",
+  "category": "cleaning",
+  "pain": "same-day expectations, volume-based pricing confusion, and route efficiency",
+  "systems": "instant volume-based quoting, same-day booking, and item-type service pages"
+ },
+ {
+  "slug": "moving",
+  "name": "Moving",
+  "plural": "moving companies",
+  "category": "specialty",
+  "pain": "quote shopping, date-driven urgency, and scam-mover competition",
+  "systems": "instant move estimators, date-availability booking, licensing/insurance trust blocks, and review automation"
+ },
+ {
+  "slug": "dumpster-rental",
+  "name": "Dumpster Rental",
+  "plural": "dumpster rental companies",
+  "category": "cleaning",
+  "pain": "size confusion, permit rules, and delivery scheduling",
+  "systems": "size-selector tools, permit explainers by city, and online delivery booking"
+ },
+ {
+  "slug": "ev-charging",
+  "name": "EV Charger Installation",
+  "plural": "EV charger installers",
+  "category": "mechanical",
+  "pain": "panel-capacity questions, rebate programs, and brand compatibility",
+  "systems": "panel-assessment intake, rebate-by-utility pages, charger-brand compatibility guides, and install-quote flows"
+ },
+ {
+  "slug": "generators",
+  "name": "Standby Generators",
+  "plural": "generator companies",
+  "category": "mechanical",
+  "pain": "outage-driven demand spikes, sizing questions, and long install lead times",
+  "systems": "outage-season campaigns, generator-sizing calculators, and maintenance-plan signups"
+ },
+ {
+  "slug": "security-systems",
+  "name": "Security & Low Voltage",
+  "plural": "security and low-voltage companies",
+  "category": "specialty",
+  "pain": "monitoring-contract churn, DIY competition, and commercial vs. residential split",
+  "systems": "monitoring-plan pages, camera-system builders, and commercial/residential split funnels"
+ },
+ {
+  "slug": "smart-home",
+  "name": "Smart Home & AV",
+  "plural": "smart home and AV integrators",
+  "category": "specialty",
+  "pain": "custom scoping, brand ecosystems, and referral-only growth",
+  "systems": "system-design galleries, brand-ecosystem pages, and consultation booking flows"
+ },
+ {
+  "slug": "hot-tubs",
+  "name": "Hot Tubs & Swim Spas",
+  "plural": "hot tub dealers and service companies",
+  "category": "outdoor-living",
+  "pain": "showroom-dependent selling, delivery logistics, and service-plan retention",
+  "systems": "model-comparison pages, delivery-and-siting guides, and service-plan subscriptions"
+ },
+ {
+  "slug": "snow-removal",
+  "name": "Snow & Ice Management",
+  "plural": "snow removal companies",
+  "category": "outdoor-living",
+  "pain": "storm-triggered demand, seasonal contracts, and commercial-lot competition",
+  "systems": "seasonal contract signups, storm-alert notifications, and commercial-lot bid intake"
+ },
+ {
+  "slug": "welding",
+  "name": "Welding & Fabrication",
+  "plural": "welding and fabrication shops",
+  "category": "specialty",
+  "pain": "custom-quote work, mobile vs. shop jobs, and industrial buyer cycles",
+  "systems": "custom-fab quote intake, capability-and-material pages, and mobile-service dispatch"
+ },
+ {
+  "slug": "paving",
+  "name": "Asphalt Paving & Sealcoating",
+  "plural": "paving companies",
+  "category": "site-work",
+  "pain": "weather windows, commercial bid cycles, and seasonal crews",
+  "systems": "commercial bid intake, sealcoat-season campaigns, and lot-condition assessment forms"
+ },
+ {
+  "slug": "carpet-cleaning",
+  "name": "Carpet & Upholstery Cleaning",
+  "plural": "carpet cleaning companies",
+  "category": "cleaning",
+  "pain": "coupon-driven shoppers, room-count pricing, and repeat-customer neglect",
+  "systems": "room-count instant quoting, package pricing, and automated re-clean reminders"
+ },
+ {
+  "slug": "janitorial",
+  "name": "Commercial Cleaning",
+  "plural": "janitorial and commercial cleaning companies",
+  "category": "cleaning",
+  "pain": "contract-based sales, bid walkthroughs, and staffing turnover",
+  "systems": "commercial bid-request flows, facility-type pages, and walkthrough scheduling"
+ },
+ {
+  "slug": "handyman",
+  "name": "Handyman",
+  "plural": "handyman services",
+  "category": "interior",
+  "pain": "small-job economics, scope creep, and scheduling density",
+  "systems": "minimum-booking flows, task-menu pricing pages, and route-based scheduling"
+ },
+ {
+  "slug": "cabinets",
+  "name": "Cabinets & Countertops",
+  "plural": "cabinet and countertop companies",
+  "category": "interior",
+  "pain": "showroom selling, material comparison, and long fabrication timelines",
+  "systems": "material-comparison pages (quartz, granite, butcher block), design-consult booking, and timeline explainers"
+ },
+ {
+  "slug": "window-cleaning",
+  "name": "Window Cleaning",
+  "plural": "window cleaning companies",
+  "category": "cleaning",
+  "pain": "route economics, recurring-plan churn, and commercial vs. residential split",
+  "systems": "recurring-plan signups, pane-count instant quoting, and commercial route bidding"
+ }
 ]

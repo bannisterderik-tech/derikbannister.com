@@ -1,91 +1,172 @@
 # Derik Bannister — derikbannister.com
 
-> Operator & founder in Oregon. Builds websites, custom software, SEO, Google Ads,
-> AI receptionists, CRM/automation, and reputation systems for service businesses
-> (roofing, plumbing, HVAC, electrical, and 14 more trades) across every Oregon
-> market plus Boise ID, Spokane WA, Vancouver WA, Reno NV, and Redding CA.
+> Operator and founder based in Oregon. Builds websites, local SEO, answer engine
+> optimization (AEO), Google Ads and Local Services Ads, AI phone answering, CRM and
+> follow-up automation, reputation systems, and custom software for service businesses
+> across Oregon, Washington, California, Idaho, and Nevada — 212 markets and 53 trades.
+> Flat pricing quoted up front; the client owns the domain, code, content, and data.
 > Contact: bannisterderik@gmail.com · call/text 530-736-7085.
 
-## Services
+## Services (23)
 - [Website Design & Development](https://derikbannister.com/services/web-design/): Fast, search-first websites that convert calls
-- [Custom Software Development](https://derikbannister.com/services/custom-software/): Purpose-built software for how your operation runs
-- [SEO & Local Search](https://derikbannister.com/services/seo/): Map-pack and organic rankings where customers search
-- [Google Ads & LSA Management](https://derikbannister.com/services/google-ads/): LSA + PPC run to cost-per-booked-job
-- [AI Receptionist & Call Answering](https://derikbannister.com/services/ai-receptionist/): Every call answered 24/7 and booked
-- [CRM & Pipeline Automation](https://derikbannister.com/services/crm/): One pipeline, follow-up that never forgets
-- [Email & SMS Marketing](https://derikbannister.com/services/email-sms-marketing/): Estimates chased, past customers reactivated
-- [Reputation & Review Management](https://derikbannister.com/services/reputation-management/): Reviews requested, answered, defended
-- [Content & Blogging](https://derikbannister.com/services/content-marketing/): Local content that compounds into rankings
-- [Link Building & Digital PR](https://derikbannister.com/services/link-building/): White-hat authority links that move rankings
-- [Press Release Writing & Distribution](https://derikbannister.com/services/press-releases/): Announcements written and distributed properly
-- [Brand & Identity](https://derikbannister.com/services/branding/): An identity you can spot from two lanes over
+- [Local SEO](https://derikbannister.com/services/seo/): Local SEO that puts you in the map pack
+- [Answer Engine Optimization](https://derikbannister.com/services/aeo/): Get cited when buyers ask AI who to call
+- [Google Ads & LSAs](https://derikbannister.com/services/google-ads/): Search ads and LSAs that buy booked jobs
+- [AI Receptionist](https://derikbannister.com/services/ai-receptionist/): 24/7 AI answering that books the job
+- [CRM & Pipeline](https://derikbannister.com/services/crm/): A pipeline that chases every estimate
+- [Email & SMS Marketing](https://derikbannister.com/services/email-sms-marketing/): Turn your customer list into booked work
+- [Reputation Management](https://derikbannister.com/services/reputation-management/): Review systems that build the rating
+- [Custom Software](https://derikbannister.com/services/custom-software/): Custom tools built around your operation
+- [Landing Pages & CRO](https://derikbannister.com/services/landing-pages/): Pages built to convert paid traffic
+- [Google Local Services Ads](https://derikbannister.com/services/local-services-ads/): Pay-per-lead placement above the ads
+- [Google Business Profile Management](https://derikbannister.com/services/google-business-profile/): The map-pack asset, built and defended
+- [Call Tracking & Analytics](https://derikbannister.com/services/call-tracking/): Know exactly which marketing books jobs
+- [Content Marketing](https://derikbannister.com/services/content-marketing/): Content that ranks and answers buyers
+- [Hosting, Care & Security](https://derikbannister.com/services/web-hosting-care/): Hosting and site care with no queue
+- [Workflow Automation & AI Agents](https://derikbannister.com/services/automation/): Software that runs the repetitive work
+- [Online Booking & Scheduling](https://derikbannister.com/services/booking-scheduling/): Let buyers book a slot at midnight
+- [Meta Ads](https://derikbannister.com/services/meta-ads/): Feed ads for offers that sell on sight
+- [Social Media Management](https://derikbannister.com/services/social-media/): Proof-of-work posting, done consistently
+- [Photo & Video Content](https://derikbannister.com/services/video-photo/): Real footage of real work, edited to sell
+- [Branding & Identity](https://derikbannister.com/services/branding/): Look like the standard in your market
+- [Authority Link Building](https://derikbannister.com/services/link-building/): White-hat links that move rankings
+- [Press Release Writing & Distribution](https://derikbannister.com/services/press-releases/): Newswire announcements that own your name
 
-## Industries
-- [Roofing](https://derikbannister.com/trades/roofing/)
-- [Plumbing](https://derikbannister.com/trades/plumbing/)
-- [HVAC](https://derikbannister.com/trades/hvac/)
-- [Electrical](https://derikbannister.com/trades/electrical/)
-- [Solar](https://derikbannister.com/trades/solar/)
-- [Concrete](https://derikbannister.com/trades/concrete/)
-- [Landscaping](https://derikbannister.com/trades/landscaping/)
-- [Pest Control](https://derikbannister.com/trades/pest-control/)
-- [Garage Doors](https://derikbannister.com/trades/garage-doors/)
-- [Painting](https://derikbannister.com/trades/painting/)
-- [Remodeling](https://derikbannister.com/trades/remodeling/)
-- [Fencing](https://derikbannister.com/trades/fencing/)
-- [Excavation](https://derikbannister.com/trades/excavation/)
-- [Tree Service](https://derikbannister.com/trades/tree-service/)
-- [Flooring](https://derikbannister.com/trades/flooring/)
-- [Gutters](https://derikbannister.com/trades/gutters/)
-- [Construction](https://derikbannister.com/trades/construction/)
-- [Real Estate](https://derikbannister.com/trades/real-estate/)
+## Industries (53)
+- [Roofing](https://derikbannister.com/trades/roofing/): systems for roofing companies
+- [Plumbing](https://derikbannister.com/trades/plumbing/): systems for plumbing companies
+- [HVAC](https://derikbannister.com/trades/hvac/): systems for HVAC companies
+- [Electrical](https://derikbannister.com/trades/electrical/): systems for electricians
+- [Solar](https://derikbannister.com/trades/solar/): systems for solar installers
+- [Concrete](https://derikbannister.com/trades/concrete/): systems for concrete contractors
+- [Landscaping](https://derikbannister.com/trades/landscaping/): systems for landscaping companies
+- [Pest Control](https://derikbannister.com/trades/pest-control/): systems for pest control companies
+- [Garage Doors](https://derikbannister.com/trades/garage-doors/): systems for garage door companies
+- [Painting](https://derikbannister.com/trades/painting/): systems for painting contractors
+- [Remodeling](https://derikbannister.com/trades/remodeling/): systems for remodeling contractors
+- [Fencing](https://derikbannister.com/trades/fencing/): systems for fence companies
+- [Excavation](https://derikbannister.com/trades/excavation/): systems for excavation contractors
+- [Tree Service](https://derikbannister.com/trades/tree-service/): systems for tree service companies
+- [Flooring](https://derikbannister.com/trades/flooring/): systems for flooring companies
+- [Gutters](https://derikbannister.com/trades/gutters/): systems for gutter companies
+- [Construction](https://derikbannister.com/trades/construction/): systems for general contractors
+- [Real Estate](https://derikbannister.com/trades/real-estate/): systems for real estate teams
+- [Pools & Spas](https://derikbannister.com/trades/pools-spas/): systems for pool builders and service companies
+- [Decks & Patios](https://derikbannister.com/trades/decks/): systems for deck builders
+- [Masonry](https://derikbannister.com/trades/masonry/): systems for masonry contractors
+- [Pressure Washing](https://derikbannister.com/trades/pressure-washing/): systems for pressure washing companies
+- [Septic](https://derikbannister.com/trades/septic/): systems for septic companies
+- [Well & Water Systems](https://derikbannister.com/trades/well-water/): systems for well drilling and water treatment companies
+- [Foundation Repair](https://derikbannister.com/trades/foundation-repair/): systems for foundation repair contractors
+- [Insulation](https://derikbannister.com/trades/insulation/): systems for insulation contractors
+- [Drywall](https://derikbannister.com/trades/drywall/): systems for drywall contractors
+- [Epoxy & Garage Floors](https://derikbannister.com/trades/epoxy-flooring/): systems for epoxy flooring companies
+- [Windows & Doors](https://derikbannister.com/trades/windows-doors/): systems for window and door companies
+- [Siding](https://derikbannister.com/trades/siding/): systems for siding contractors
+- [Chimney & Fireplace](https://derikbannister.com/trades/chimney/): systems for chimney sweeps and fireplace companies
+- [Locksmith](https://derikbannister.com/trades/locksmith/): systems for locksmiths
+- [Appliance Repair](https://derikbannister.com/trades/appliance-repair/): systems for appliance repair companies
+- [Water, Fire & Mold Restoration](https://derikbannister.com/trades/restoration/): systems for restoration companies
+- [Sprinklers & Irrigation](https://derikbannister.com/trades/irrigation/): systems for irrigation companies
+- [Hardscaping](https://derikbannister.com/trades/hardscaping/): systems for hardscape contractors
+- [Artificial Turf](https://derikbannister.com/trades/artificial-turf/): systems for artificial turf installers
+- [Junk Removal](https://derikbannister.com/trades/junk-removal/): systems for junk removal companies
+- [Moving](https://derikbannister.com/trades/moving/): systems for moving companies
+- [Dumpster Rental](https://derikbannister.com/trades/dumpster-rental/): systems for dumpster rental companies
+- [EV Charger Installation](https://derikbannister.com/trades/ev-charging/): systems for EV charger installers
+- [Standby Generators](https://derikbannister.com/trades/generators/): systems for generator companies
+- [Security & Low Voltage](https://derikbannister.com/trades/security-systems/): systems for security and low-voltage companies
+- [Smart Home & AV](https://derikbannister.com/trades/smart-home/): systems for smart home and AV integrators
+- [Hot Tubs & Swim Spas](https://derikbannister.com/trades/hot-tubs/): systems for hot tub dealers and service companies
+- [Snow & Ice Management](https://derikbannister.com/trades/snow-removal/): systems for snow removal companies
+- [Welding & Fabrication](https://derikbannister.com/trades/welding/): systems for welding and fabrication shops
+- [Asphalt Paving & Sealcoating](https://derikbannister.com/trades/paving/): systems for paving companies
+- [Carpet & Upholstery Cleaning](https://derikbannister.com/trades/carpet-cleaning/): systems for carpet cleaning companies
+- [Commercial Cleaning](https://derikbannister.com/trades/janitorial/): systems for janitorial and commercial cleaning companies
+- [Handyman](https://derikbannister.com/trades/handyman/): systems for handyman services
+- [Cabinets & Countertops](https://derikbannister.com/trades/cabinets/): systems for cabinet and countertop companies
+- [Window Cleaning](https://derikbannister.com/trades/window-cleaning/): systems for window cleaning companies
 
-## Markets
-- [Portland, OR](https://derikbannister.com/locations/portland-or/)
-- [Salem, OR](https://derikbannister.com/locations/salem-or/)
-- [Eugene, OR](https://derikbannister.com/locations/eugene-or/)
-- [Springfield, OR](https://derikbannister.com/locations/springfield-or/)
-- [Gresham, OR](https://derikbannister.com/locations/gresham-or/)
-- [Hillsboro, OR](https://derikbannister.com/locations/hillsboro-or/)
-- [Beaverton, OR](https://derikbannister.com/locations/beaverton-or/)
-- [Bend, OR](https://derikbannister.com/locations/bend-or/)
-- [Medford, OR](https://derikbannister.com/locations/medford-or/)
-- [Corvallis, OR](https://derikbannister.com/locations/corvallis-or/)
-- [Albany, OR](https://derikbannister.com/locations/albany-or/)
-- [Tigard, OR](https://derikbannister.com/locations/tigard-or/)
-- [Lake Oswego, OR](https://derikbannister.com/locations/lake-oswego-or/)
-- [Keizer, OR](https://derikbannister.com/locations/keizer-or/)
-- [Grants Pass, OR](https://derikbannister.com/locations/grants-pass-or/)
-- [Oregon City, OR](https://derikbannister.com/locations/oregon-city-or/)
-- [McMinnville, OR](https://derikbannister.com/locations/mcminnville-or/)
-- [Redmond, OR](https://derikbannister.com/locations/redmond-or/)
-- [Tualatin, OR](https://derikbannister.com/locations/tualatin-or/)
-- [West Linn, OR](https://derikbannister.com/locations/west-linn-or/)
-- [Woodburn, OR](https://derikbannister.com/locations/woodburn-or/)
-- [Newberg, OR](https://derikbannister.com/locations/newberg-or/)
-- [Roseburg, OR](https://derikbannister.com/locations/roseburg-or/)
-- [Klamath Falls, OR](https://derikbannister.com/locations/klamath-falls-or/)
-- [Ashland, OR](https://derikbannister.com/locations/ashland-or/)
-- [Wilsonville, OR](https://derikbannister.com/locations/wilsonville-or/)
-- [Sherwood, OR](https://derikbannister.com/locations/sherwood-or/)
-- [Canby, OR](https://derikbannister.com/locations/canby-or/)
-- [Lebanon, OR](https://derikbannister.com/locations/lebanon-or/)
-- [Astoria, OR](https://derikbannister.com/locations/astoria-or/)
-- [Newport, OR](https://derikbannister.com/locations/newport-or/)
-- [Coos Bay, OR](https://derikbannister.com/locations/coos-bay-or/)
-- [The Dalles, OR](https://derikbannister.com/locations/the-dalles-or/)
-- [Hood River, OR](https://derikbannister.com/locations/hood-river-or/)
-- [Pendleton, OR](https://derikbannister.com/locations/pendleton-or/)
-- [Hermiston, OR](https://derikbannister.com/locations/hermiston-or/)
-- [La Grande, OR](https://derikbannister.com/locations/la-grande-or/)
-- [Ontario, OR](https://derikbannister.com/locations/ontario-or/)
-- [Baker City, OR](https://derikbannister.com/locations/baker-city-or/)
-- [Prineville, OR](https://derikbannister.com/locations/prineville-or/)
-- [Boise, ID](https://derikbannister.com/locations/boise-id/)
-- [Spokane, WA](https://derikbannister.com/locations/spokane-wa/)
-- [Vancouver, WA](https://derikbannister.com/locations/vancouver-wa/)
-- [Reno, NV](https://derikbannister.com/locations/reno-nv/)
-- [Redding, CA](https://derikbannister.com/locations/redding-ca/)
+## States
+- [Oregon](https://derikbannister.com/locations/oregon/): 65 markets
+- [Washington](https://derikbannister.com/locations/washington/): 47 markets
+- [California](https://derikbannister.com/locations/california/): 88 markets
+- [Idaho](https://derikbannister.com/locations/idaho/): 6 markets
+- [Nevada](https://derikbannister.com/locations/nevada/): 6 markets
 
-## SEO Products
-- [Product index](https://derikbannister.com/products/)
+## Answers (69)
+- [What is answer engine optimization (AEO)?](https://derikbannister.com/answers/what-is-answer-engine-optimization/)
+- [How do I get my business mentioned by ChatGPT?](https://derikbannister.com/answers/how-do-i-get-my-business-mentioned-by-chatgpt/)
+- [What is the difference between AEO and SEO?](https://derikbannister.com/answers/aeo-vs-seo-what-is-the-difference/)
+- [What is llms.txt and does my website need one?](https://derikbannister.com/answers/what-is-llms-txt/)
+- [Should I block AI crawlers on my website?](https://derikbannister.com/answers/should-i-block-ai-crawlers-on-my-website/)
+- [How do AI assistants decide which contractor to recommend?](https://derikbannister.com/answers/how-do-ai-assistants-choose-which-contractor-to-recommend/)
+- [What schema markup does a service business website need?](https://derikbannister.com/answers/what-schema-markup-does-a-service-business-need/)
+- [Will AI search kill local SEO for contractors?](https://derikbannister.com/answers/will-ai-search-kill-local-seo/)
+- [How do I track traffic from ChatGPT and other AI assistants?](https://derikbannister.com/answers/how-do-i-track-traffic-from-ai-assistants/)
+- [Does my Google Business Profile affect what AI says about my business?](https://derikbannister.com/answers/does-my-google-business-profile-affect-ai-answers/)
+- [How long does local SEO take to work?](https://derikbannister.com/answers/how-long-does-local-seo-take/)
+- [How do I rank in the Google map pack?](https://derikbannister.com/answers/how-do-i-rank-in-the-google-map-pack/)
+- [Do city pages still work for SEO?](https://derikbannister.com/answers/do-city-pages-still-work-for-seo/)
+- [How many pages should a contractor website have?](https://derikbannister.com/answers/how-many-pages-should-a-contractor-website-have/)
+- [Why is my competitor outranking me when my work is better?](https://derikbannister.com/answers/why-is-my-competitor-outranking-me/)
+- [What is a service area business on Google?](https://derikbannister.com/answers/what-is-a-service-area-business/)
+- [How many Google reviews do I need to compete?](https://derikbannister.com/answers/how-many-google-reviews-do-i-need/)
+- [Do backlinks still matter for local SEO?](https://derikbannister.com/answers/do-backlinks-still-matter-for-local-seo/)
+- [What are local citations and do they still matter?](https://derikbannister.com/answers/what-are-citations-and-do-they-matter/)
+- [How do I rank in multiple cities without an office in each one?](https://derikbannister.com/answers/how-do-i-rank-in-multiple-cities/)
+- [Why did my Google rankings suddenly drop?](https://derikbannister.com/answers/why-did-my-google-rankings-drop/)
+- [Does my contractor website need a blog?](https://derikbannister.com/answers/does-my-website-need-a-blog/)
+- [How much does a contractor website cost?](https://derikbannister.com/answers/how-much-does-a-contractor-website-cost/)
+- [WordPress or a static website — which is better for a contractor?](https://derikbannister.com/answers/wordpress-vs-static-website-for-contractors/)
+- [How fast should my website load?](https://derikbannister.com/answers/how-fast-should-my-website-load/)
+- [Do I own my website if an agency builds it?](https://derikbannister.com/answers/do-i-own-my-website-if-an-agency-builds-it/)
+- [What pages does a service business website need?](https://derikbannister.com/answers/what-pages-does-a-service-business-website-need/)
+- [Should I put prices on my website?](https://derikbannister.com/answers/should-i-put-prices-on-my-website/)
+- [How do I move my website away from my current provider?](https://derikbannister.com/answers/how-do-i-move-my-website-to-a-new-company/)
+- [What are Core Web Vitals and do they matter?](https://derikbannister.com/answers/what-are-core-web-vitals/)
+- [Google Ads or Local Services Ads — which should a contractor run?](https://derikbannister.com/answers/google-ads-vs-local-services-ads/)
+- [How much should a contractor spend on Google Ads?](https://derikbannister.com/answers/how-much-should-a-contractor-spend-on-google-ads/)
+- [What is the Google Guaranteed badge and is it worth it?](https://derikbannister.com/answers/what-is-google-guaranteed/)
+- [Why are my Google Ads leads so bad?](https://derikbannister.com/answers/why-are-my-google-ads-leads-so-bad/)
+- [Do Facebook and Instagram ads work for contractors?](https://derikbannister.com/answers/do-facebook-ads-work-for-contractors/)
+- [What is a good cost per lead for home services?](https://derikbannister.com/answers/what-is-a-good-cost-per-lead-for-home-services/)
+- [Should I invest in SEO or ads first?](https://derikbannister.com/answers/should-i-do-seo-or-ads-first/)
+- [How do I stop wasting money on ads?](https://derikbannister.com/answers/how-do-i-stop-wasting-ad-spend/)
+- [What is an AI receptionist and how does it work?](https://derikbannister.com/answers/what-is-an-ai-receptionist/)
+- [Will customers hang up on an AI receptionist?](https://derikbannister.com/answers/will-customers-hang-up-on-an-ai-receptionist/)
+- [How many jobs do contractors lose to missed calls?](https://derikbannister.com/answers/how-many-jobs-do-contractors-lose-to-missed-calls/)
+- [AI receptionist or a live answering service — which is better?](https://derikbannister.com/answers/ai-receptionist-vs-answering-service/)
+- [What is missed call text back?](https://derikbannister.com/answers/what-is-missed-call-text-back/)
+- [How fast should I respond to a new lead?](https://derikbannister.com/answers/how-fast-should-i-respond-to-a-lead/)
+- [Can AI actually book jobs on my calendar?](https://derikbannister.com/answers/can-ai-book-jobs-on-my-calendar/)
+- [What CRM should a contractor use?](https://derikbannister.com/answers/what-crm-should-a-contractor-use/)
+- [How many times should I follow up on an estimate?](https://derikbannister.com/answers/how-many-times-should-i-follow-up-on-an-estimate/)
+- [How do I get more repeat customers?](https://derikbannister.com/answers/how-do-i-get-more-repeat-customers/)
+- [What is speed to lead and why does it matter?](https://derikbannister.com/answers/what-is-speed-to-lead/)
+- [How do I know which marketing is actually working?](https://derikbannister.com/answers/how-do-i-know-which-marketing-is-working/)
+- [Should I text my customers?](https://derikbannister.com/answers/should-i-text-my-customers/)
+- [How do I get more Google reviews?](https://derikbannister.com/answers/how-do-i-get-more-google-reviews/)
+- [Can I delete a bad Google review?](https://derikbannister.com/answers/can-i-delete-a-bad-google-review/)
+- [Should I respond to negative reviews?](https://derikbannister.com/answers/should-i-respond-to-negative-reviews/)
+- [Is it illegal to pay for reviews?](https://derikbannister.com/answers/is-it-illegal-to-pay-for-reviews/)
+- [Should I hire a marketing agency or do it myself?](https://derikbannister.com/answers/should-i-hire-a-marketing-agency-or-do-it-myself/)
+- [What should a contractor spend on marketing?](https://derikbannister.com/answers/what-should-a-contractor-marketing-budget-be/)
+- [What should I ask before hiring a marketing agency?](https://derikbannister.com/answers/what-questions-should-i-ask-a-marketing-agency/)
+- [Why do marketing agencies require long contracts?](https://derikbannister.com/answers/why-do-marketing-agencies-lock-you-into-contracts/)
+- [What is a fair price for monthly local SEO?](https://derikbannister.com/answers/what-is-a-fair-price-for-monthly-seo/)
+- [How does a small contractor compete with a national franchise?](https://derikbannister.com/answers/how-do-i-compete-with-a-franchise/)
+- [How do I grow from one truck to a fleet?](https://derikbannister.com/answers/how-do-i-grow-from-one-truck-to-a-fleet/)
+- [How do I fire my marketing agency without losing everything?](https://derikbannister.com/answers/how-do-i-fire-my-marketing-agency/)
+- [How do I market a contracting business in Oregon?](https://derikbannister.com/answers/how-do-i-market-a-contracting-business-in-oregon/)
+- [How do I market a contracting business in Washington?](https://derikbannister.com/answers/how-do-i-market-a-contracting-business-in-washington/)
+- [How do I market a contracting business in California?](https://derikbannister.com/answers/how-do-i-market-a-contracting-business-in-california/)
+- [Do I need a separate website for each city I serve?](https://derikbannister.com/answers/do-i-need-a-different-website-for-each-city/)
+- [How do I choose which cities to target?](https://derikbannister.com/answers/how-do-i-pick-which-cities-to-target/)
+- [Does my contractor license number need to be on my website?](https://derikbannister.com/answers/does-my-license-number-need-to-be-on-my-website/)
+
+## Optional
+- [All 212 markets](https://derikbannister.com/locations/)
+- [SEO products](https://derikbannister.com/products/)
+- [About Derik Bannister](https://derikbannister.com/about/)
+- [Full sitemap](https://derikbannister.com/sitemap/)

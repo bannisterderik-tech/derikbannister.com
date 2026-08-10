@@ -1,0 +1,99 @@
+{
+ "serviceGroups": [
+  {
+   "key": "get-found",
+   "label": "Get found",
+   "blurb": "Show up first when someone in your market needs the work done — in search, in the map pack, and in AI answers."
+  },
+  {
+   "key": "convert",
+   "label": "Turn traffic into calls",
+   "blurb": "Everything between \"they found you\" and \"they called you\" — pages, proof, answering, and booking."
+  },
+  {
+   "key": "follow-up",
+   "label": "Follow up automatically",
+   "blurb": "The money left on the table: estimates nobody chased and customers nobody called back."
+  },
+  {
+   "key": "run-the-business",
+   "label": "Run the business",
+   "blurb": "The software layer underneath it all — tools, tracking, hosting, and automation you own."
+  }
+ ],
+ "tradeCategories": [
+  {
+   "key": "exterior",
+   "label": "Exterior & Envelope"
+  },
+  {
+   "key": "mechanical",
+   "label": "Mechanical & Electrical"
+  },
+  {
+   "key": "interior",
+   "label": "Interior & Finish"
+  },
+  {
+   "key": "outdoor-living",
+   "label": "Outdoor Living & Grounds"
+  },
+  {
+   "key": "site-work",
+   "label": "Site Work & Structure"
+  },
+  {
+   "key": "cleaning",
+   "label": "Cleaning & Hauling"
+  },
+  {
+   "key": "specialty",
+   "label": "Specialty & Emergency"
+  }
+ ],
+ "answerCategories": [
+  {
+   "key": "aeo",
+   "label": "AI & Answer Engines"
+  },
+  {
+   "key": "seo",
+   "label": "Local SEO"
+  },
+  {
+   "key": "websites",
+   "label": "Websites"
+  },
+  {
+   "key": "ads",
+   "label": "Paid Ads"
+  },
+  {
+   "key": "calls",
+   "label": "Calls & Answering"
+  },
+  {
+   "key": "followup",
+   "label": "CRM & Follow-Up"
+  },
+  {
+   "key": "reviews",
+   "label": "Reviews & Reputation"
+  },
+  {
+   "key": "business",
+   "label": "Hiring & Budget"
+  },
+  {
+   "key": "markets",
+   "label": "West Coast Markets"
+  }
+ ],
+ "states": {
+  "OR": "Oregon",
+  "WA": "Washington",
+  "CA": "California",
+  "ID": "Idaho",
+  "NV": "Nevada"
+ }
+}

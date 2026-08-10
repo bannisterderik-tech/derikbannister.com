@@ -4,179 +4,390 @@
   "name": "Website Design & Development",
   "short": "Websites",
   "core": true,
-  "desc": "fast, search-first websites built to convert calls and quote requests \u2014 owned by you, on your domain",
+  "group": "get-found",
+  "rank": 0,
+  "desc": "fast, search-first websites built to convert calls and quote requests — owned by you, on your domain",
   "features": [
    "Custom design on your brand, no templates",
    "Core Web Vitals-fast static builds",
    "Service and city pages engineered to rank",
    "Call tracking and form analytics wired in",
-   "You own the domain, code, and content \u2014 forever"
+   "You own the domain, code, and content — forever"
   ],
   "metaShort": "Fast, search-first websites that convert calls"
  },
  {
-  "slug": "custom-software",
-  "name": "Custom Software Development",
-  "short": "Custom Software",
-  "core": true,
-  "desc": "purpose-built software for how your operation actually runs \u2014 quote calculators, customer portals, crew tools, integrations",
-  "features": [
-   "Instant-quote and estimate calculators",
-   "Customer portals and job-status pages",
-   "Crew checklists and field tools",
-   "Integrations between the tools you already use",
-   "Built lean, shipped fast, priced flat"
-  ],
-  "metaShort": "Purpose-built software for how your operation runs"
- },
- {
   "slug": "seo",
-  "name": "SEO & Local Search",
+  "name": "Local SEO",
   "short": "SEO",
   "core": true,
-  "desc": "ranking in the map pack and organic results where your customers actually search",
+  "group": "get-found",
+  "rank": 1,
+  "desc": "the local search system — map pack, service pages, city pages, and the links that make them stick",
   "features": [
-   "Local keyword and competitor mapping",
-   "Google Business Profile optimization",
-   "Citations and NAP consistency",
-   "Content engineered for local intent",
-   "Monthly reporting tied to calls, not vanity metrics"
+   "Google Business Profile built and tuned",
+   "City and service pages that target real searches",
+   "Citation cleanup and NAP consistency",
+   "Review velocity that moves map rankings",
+   "Reporting tied to calls, not impressions"
   ],
-  "metaShort": "Map-pack and organic rankings where customers search"
+  "metaShort": "Local SEO that puts you in the map pack"
+ },
+ {
+  "slug": "aeo",
+  "name": "Answer Engine Optimization",
+  "short": "AEO",
+  "core": true,
+  "group": "get-found",
+  "rank": 2,
+  "desc": "getting your business named and cited when people ask ChatGPT, Gemini, Perplexity, and AI Overviews who to call",
+  "features": [
+   "Content restructured into direct, liftable answers",
+   "FAQ, Service, and LocalBusiness schema on every page",
+   "llms.txt and AI-crawler access configured",
+   "Entity consistency across the sites AI models read",
+   "Monthly checks on what the assistants actually say about you"
+  ],
+  "metaShort": "Get cited when buyers ask AI who to call"
  },
  {
   "slug": "google-ads",
-  "name": "Google Ads & LSA Management",
-  "short": "Google Ads / LSA",
+  "name": "Google Ads & LSAs",
+  "short": "Google Ads",
   "core": true,
-  "desc": "Local Services Ads and PPC run to a cost-per-booked-job number",
+  "group": "get-found",
+  "rank": 3,
+  "desc": "search campaigns and Local Services Ads that buy jobs, not clicks — with every dollar tracked to a booked call",
   "features": [
-   "Local Services Ads setup and dispute management",
-   "Search campaigns built on buyer-intent keywords",
-   "Negative-keyword discipline that stops waste",
-   "Call + form conversion tracking",
-   "Weekly numbers you can read in 60 seconds"
+   "Local Services Ads setup and Google Guaranteed badge",
+   "Tightly-scoped search campaigns by service and city",
+   "Negative-keyword discipline that kills wasted spend",
+   "Call tracking on every ad dollar",
+   "Budget pacing tied to your capacity"
   ],
-  "metaShort": "LSA + PPC run to cost-per-booked-job"
+  "metaShort": "Search ads and LSAs that buy booked jobs"
  },
  {
   "slug": "ai-receptionist",
-  "name": "AI Receptionist & Call Answering",
-  "short": "AI Receptionist",
+  "name": "AI Receptionist",
+  "short": "AI Answering",
   "core": true,
-  "desc": "every call answered 24/7 \u2014 nights, weekends, storm season \u2014 and booked onto your calendar",
+  "group": "convert",
+  "rank": 4,
+  "desc": "an AI that answers every call in seconds, any hour, books the job, and escalates real emergencies to you",
   "features": [
-   "Natural-voice AI trained on your services and pricing",
-   "Books jobs straight onto your calendar",
-   "Emergency routing to on-call staff",
-   "Every call transcribed and logged to your CRM",
-   "Answers in seconds \u2014 at 2am, on a holiday weekend"
+   "Answers 24/7, including nights and weekends",
+   "Books straight onto your calendar",
+   "Missed-call text-back within seconds",
+   "Emergency calls routed to your on-call phone",
+   "Every call transcribed and logged"
   ],
-  "metaShort": "Every call answered 24/7 and booked"
+  "metaShort": "24/7 AI answering that books the job"
  },
  {
   "slug": "crm",
-  "name": "CRM & Pipeline Automation",
-  "short": "CRM & Automation",
+  "name": "CRM & Pipeline",
+  "short": "CRM",
   "core": true,
-  "desc": "every lead, quote, and job in one pipeline with follow-up that never forgets",
+  "group": "follow-up",
+  "rank": 5,
+  "desc": "a pipeline that chases every estimate, logs every call, and never lets a quote die in silence",
   "features": [
-   "One pipeline from first call to paid invoice",
-   "Automatic estimate follow-up sequences",
-   "Review requests fired after every job",
-   "Job-source tracking: know your cost per job",
-   "Team visibility without spreadsheet chaos"
+   "Every lead captured from every source",
+   "Automated estimate follow-up until they answer",
+   "Job stages you can see at a glance",
+   "Texting and calling from one inbox",
+   "Reporting on close rate by source"
   ],
-  "metaShort": "One pipeline, follow-up that never forgets"
+  "metaShort": "A pipeline that chases every estimate"
  },
  {
   "slug": "email-sms-marketing",
   "name": "Email & SMS Marketing",
   "short": "Email & SMS",
   "core": true,
-  "desc": "estimates followed up automatically and past customers reactivated every season",
+  "group": "follow-up",
+  "rank": 6,
+  "desc": "seasonal campaigns, estimate follow-ups, and reactivation that turn your existing list into booked work",
   "features": [
-   "Estimate follow-up that closes stragglers",
-   "Seasonal reactivation campaigns",
-   "Maintenance and service reminders",
-   "Compliant list building and management",
-   "Revenue attribution on every send"
+   "Reactivation campaigns to past customers",
+   "Seasonal reminders timed to local demand",
+   "Estimate follow-up sequences that run themselves",
+   "Compliant opt-in and STOP handling",
+   "Revenue attributed per campaign"
   ],
-  "metaShort": "Estimates chased, past customers reactivated"
+  "metaShort": "Turn your customer list into booked work"
  },
  {
   "slug": "reputation-management",
-  "name": "Reputation & Review Management",
-  "short": "Reputation",
+  "name": "Reputation Management",
+  "short": "Reviews",
   "core": true,
-  "desc": "review requests after every job, responses handled, your rating defended",
+  "group": "convert",
+  "rank": 7,
+  "desc": "review requests after every job, responses in your voice, and problems routed to you before they go public",
   "features": [
-   "Automated review requests by text and email",
-   "Smart routing: promoters to Google, issues to you",
-   "Response drafting in your voice",
-   "Review widgets for your site",
-   "Monitoring across Google, Yelp, and Facebook"
+   "Automatic review requests after each job",
+   "Responses drafted in your voice",
+   "Negative feedback routed to you first",
+   "Review velocity tracked against competitors",
+   "Reviews syndicated to your site with schema"
   ],
-  "metaShort": "Reviews requested, answered, defended"
+  "metaShort": "Review systems that build the rating"
+ },
+ {
+  "slug": "custom-software",
+  "name": "Custom Software",
+  "short": "Software",
+  "core": true,
+  "group": "run-the-business",
+  "rank": 8,
+  "desc": "internal tools built around how your operation actually runs — quoting, scheduling, dispatch, and reporting",
+  "features": [
+   "Built to your workflow, not a template's",
+   "Connects to the tools your crew already uses",
+   "Quoting, scheduling, and dispatch in one place",
+   "Owner dashboards with the numbers that matter",
+   "You own the code"
+  ],
+  "metaShort": "Custom tools built around your operation"
+ },
+ {
+  "slug": "landing-pages",
+  "name": "Landing Pages & CRO",
+  "short": "Landing Pages",
+  "core": true,
+  "group": "convert",
+  "rank": 9,
+  "desc": "single-purpose pages built for one service and one city, tuned until the conversion rate moves",
+  "features": [
+   "One page, one service, one offer",
+   "Above-the-fold call and quote actions",
+   "Trust blocks: license, insurance, reviews",
+   "A/B tested headlines and forms",
+   "Built to pair with paid traffic"
+  ],
+  "metaShort": "Pages built to convert paid traffic"
+ },
+ {
+  "slug": "local-services-ads",
+  "name": "Google Local Services Ads",
+  "short": "Local Services Ads",
+  "core": false,
+  "group": "get-found",
+  "rank": 10,
+  "desc": "the Google Guaranteed badge and pay-per-lead placement above every other ad on the page",
+  "features": [
+   "License and insurance verification handled",
+   "Google Guaranteed badge setup",
+   "Lead-dispute management so you don't pay for junk",
+   "Budget and service-area tuning",
+   "Lead quality reviewed weekly"
+  ],
+  "metaShort": "Pay-per-lead placement above the ads"
+ },
+ {
+  "slug": "google-business-profile",
+  "name": "Google Business Profile Management",
+  "short": "Google Profile",
+  "core": false,
+  "group": "get-found",
+  "rank": 11,
+  "desc": "the single highest-leverage local asset — built out, posted to, and defended against suspension",
+  "features": [
+   "Full profile build-out with services and areas",
+   "Weekly posts, photos, and Q&A",
+   "Category and attribute optimization",
+   "Suspension prevention and reinstatement",
+   "Insights tracked against map rankings"
+  ],
+  "metaShort": "The map-pack asset, built and defended"
+ },
+ {
+  "slug": "call-tracking",
+  "name": "Call Tracking & Analytics",
+  "short": "Call Tracking",
+  "core": false,
+  "group": "run-the-business",
+  "rank": 12,
+  "desc": "numbers on every channel so you know which marketing actually produced the call — and which is burning money",
+  "features": [
+   "Dynamic number insertion by source",
+   "Call recording and outcome tagging",
+   "Form and chat attribution",
+   "One dashboard tying spend to booked jobs",
+   "Monthly plain-English read-out"
+  ],
+  "metaShort": "Know exactly which marketing books jobs"
  },
  {
   "slug": "content-marketing",
-  "name": "Content & Blogging",
+  "name": "Content Marketing",
   "short": "Content",
   "core": false,
-  "desc": "local, service-specific content that compounds into rankings",
+  "group": "get-found",
+  "rank": 13,
+  "desc": "articles, guides, and service explainers written to rank and to answer the questions buyers actually ask",
   "features": [
-   "Keyword-mapped editorial calendars",
-   "Service-area content that ranks",
-   "Written for homeowners, not algorithms",
-   "Internal linking that lifts money pages",
-   "Published and indexed, not parked in drafts"
+   "Topics mapped to real local search demand",
+   "Written for homeowners, structured for search",
+   "Internal links that lift your money pages",
+   "Published on your site, owned by you",
+   "Refreshed as rankings shift"
   ],
-  "metaShort": "Local content that compounds into rankings"
+  "metaShort": "Content that ranks and answers buyers"
+ },
+ {
+  "slug": "web-hosting-care",
+  "name": "Hosting, Care & Security",
+  "short": "Site Care",
+  "core": false,
+  "group": "run-the-business",
+  "rank": 14,
+  "desc": "static hosting, uptime monitoring, backups, and the small changes you need without waiting on a queue",
+  "features": [
+   "Fast static hosting with HTTPS",
+   "Uptime and Core Web Vitals monitoring",
+   "Backups and rollback",
+   "Content edits handled fast",
+   "No plugins to break"
+  ],
+  "metaShort": "Hosting and site care with no queue"
+ },
+ {
+  "slug": "automation",
+  "name": "Workflow Automation & AI Agents",
+  "short": "Automation",
+  "core": false,
+  "group": "run-the-business",
+  "rank": 15,
+  "desc": "the repetitive parts of your operation handled by software — intake, dispatch notes, invoicing nudges, reporting",
+  "features": [
+   "Lead intake routed automatically",
+   "Job data flowing between your tools",
+   "AI agents for quoting and summarizing",
+   "Owner alerts on the things that matter",
+   "Built on tools you can keep"
+  ],
+  "metaShort": "Software that runs the repetitive work"
+ },
+ {
+  "slug": "booking-scheduling",
+  "name": "Online Booking & Scheduling",
+  "short": "Booking",
+  "core": false,
+  "group": "convert",
+  "rank": 16,
+  "desc": "let customers book a real slot on your calendar at midnight instead of leaving a voicemail",
+  "features": [
+   "Live availability by crew and service",
+   "Deposits and card-on-file options",
+   "Automatic confirmations and reminders",
+   "Route-aware scheduling",
+   "Syncs to the calendar you already use"
+  ],
+  "metaShort": "Let buyers book a slot at midnight"
+ },
+ {
+  "slug": "meta-ads",
+  "name": "Meta Ads",
+  "short": "Meta Ads",
+  "core": false,
+  "group": "get-found",
+  "rank": 17,
+  "desc": "Facebook and Instagram campaigns for the offers that sell on interruption, not search",
+  "features": [
+   "Offer-first creative built for the feed",
+   "Geo and homeowner targeting",
+   "Lead forms wired straight into your CRM",
+   "Retargeting site visitors who didn't call",
+   "Cost-per-booked-job reporting"
+  ],
+  "metaShort": "Feed ads for offers that sell on sight"
+ },
+ {
+  "slug": "social-media",
+  "name": "Social Media Management",
+  "short": "Social",
+  "core": false,
+  "group": "convert",
+  "rank": 18,
+  "desc": "proof-of-work posting that makes you look like the busiest, most competent shop in town",
+  "features": [
+   "Job-site photo and video posting",
+   "Consistent posting cadence",
+   "Review and testimonial reposting",
+   "Profile optimization for local search",
+   "Comment and message monitoring"
+  ],
+  "metaShort": "Proof-of-work posting, done consistently"
+ },
+ {
+  "slug": "video-photo",
+  "name": "Photo & Video Content",
+  "short": "Photo & Video",
+  "core": false,
+  "group": "convert",
+  "rank": 19,
+  "desc": "real footage of your crew and your finished work — the single most persuasive asset a service business owns",
+  "features": [
+   "Job-site photo and video capture direction",
+   "Short-form vertical edits for feeds",
+   "Before/after sequences",
+   "Owner-intro and testimonial pieces",
+   "Usable across site, ads, and social"
+  ],
+  "metaShort": "Real footage of real work, edited to sell"
+ },
+ {
+  "slug": "branding",
+  "name": "Branding & Identity",
+  "short": "Branding",
+  "core": false,
+  "group": "convert",
+  "rank": 20,
+  "desc": "a mark, a palette, and a voice that make a two-truck operation look like the standard in your market",
+  "features": [
+   "Logo and wordmark system",
+   "Color, type, and truck-wrap direction",
+   "Voice and messaging guidelines",
+   "Uniform, yard sign, and vehicle application",
+   "Full source files handed to you"
+  ],
+  "metaShort": "Look like the standard in your market"
  },
  {
   "slug": "link-building",
-  "name": "Link Building & Digital PR",
+  "name": "Authority Link Building",
   "short": "Link Building",
   "core": false,
-  "desc": "authority links from real sites that move rankings",
+  "group": "get-found",
+  "rank": 21,
+  "desc": "manual, white-hat backlinks from real sites that move local rankings",
   "features": [
    "Manual outreach to real publications",
-   "Guest posts on relevant industry sites",
-   "Niche edits into aged content",
-   "Local sponsorship and association links",
-   "White-hat only \u2014 nothing that risks the domain"
+   "DR-tiered placements to fit budget",
+   "Anchors planned against your keyword map",
+   "Every URL reported",
+   "No PBNs, no spam, nothing that risks the domain"
   ],
-  "metaShort": "White-hat authority links that move rankings"
+  "metaShort": "White-hat links that move rankings"
  },
  {
   "slug": "press-releases",
   "name": "Press Release Writing & Distribution",
-  "short": "Press Releases",
+  "short": "Press",
   "core": false,
-  "desc": "newsworthy announcements written and syndicated to hundreds of outlets",
+  "group": "get-found",
+  "rank": 22,
+  "desc": "professionally written announcements distributed through established newswire networks",
   "features": [
-   "Professionally written releases",
-   "Distribution through established newswire networks",
-   "Local media targeting",
-   "Brand-search dominance for your company name",
-   "Links and citations that support SEO"
+   "Written by a newswire pro",
+   "Distribution through established networks",
+   "Local media targeting for your market",
+   "Brand-search dominance for your name",
+   "Live syndication report"
   ],
-  "metaShort": "Announcements written and distributed properly"
- },
- {
-  "slug": "branding",
-  "name": "Brand & Identity",
-  "short": "Branding",
-  "core": false,
-  "desc": "an identity sharp enough to be remembered \u2014 logo, trucks, uniforms, everything",
-  "features": [
-   "Logo and full identity systems",
-   "Truck wraps and yard signs",
-   "Brand voice and messaging",
-   "Design systems your whole team can use",
-   "Built to look bigger than the franchises"
-  ],
-  "metaShort": "An identity you can spot from two lanes over"
+  "metaShort": "Newswire announcements that own your name"
  }
 ]

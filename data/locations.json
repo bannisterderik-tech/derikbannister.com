@@ -6,6 +6,7 @@
   "stateName": "Oregon",
   "county": "Multnomah County",
   "region": "Portland metro",
+  "tier": 1,
   "nearby": [
    "Beaverton",
    "Gresham",
@@ -20,13 +21,14 @@
   "state": "OR",
   "stateName": "Oregon",
   "county": "Marion County",
-  "region": "Willamette Valley",
+  "region": "mid-Willamette Valley",
+  "tier": 1,
   "nearby": [
    "Keizer",
    "Woodburn",
    "Silverton",
    "Dallas",
-   "Monmouth"
+   "Independence"
   ]
  },
  {
@@ -36,12 +38,13 @@
   "stateName": "Oregon",
   "county": "Lane County",
   "region": "southern Willamette Valley",
+  "tier": 1,
   "nearby": [
    "Springfield",
    "Junction City",
+   "Creswell",
    "Veneta",
-   "Cottage Grove",
-   "Creswell"
+   "Cottage Grove"
   ]
  },
  {
@@ -51,12 +54,13 @@
   "stateName": "Oregon",
   "county": "Lane County",
   "region": "southern Willamette Valley",
+  "tier": 1,
   "nearby": [
    "Eugene",
-   "Pleasant Hill",
+   "Coburg",
    "Creswell",
-   "Cottage Grove",
-   "Marcola"
+   "Junction City",
+   "Pleasant Hill"
   ]
  },
  {
@@ -66,12 +70,13 @@
   "stateName": "Oregon",
   "county": "Multnomah County",
   "region": "east Portland metro",
+  "tier": 1,
   "nearby": [
+   "Portland",
    "Troutdale",
    "Fairview",
-   "Wood Village",
-   "Damascus",
-   "Portland"
+   "Happy Valley",
+   "Sandy"
   ]
  },
  {
@@ -81,12 +86,13 @@
   "stateName": "Oregon",
   "county": "Washington County",
   "region": "west Portland metro",
+  "tier": 1,
   "nearby": [
    "Beaverton",
    "Forest Grove",
    "Cornelius",
    "Aloha",
-   "North Plains"
+   "Tigard"
   ]
  },
  {
@@ -96,12 +102,13 @@
   "stateName": "Oregon",
   "county": "Washington County",
   "region": "west Portland metro",
+  "tier": 1,
   "nearby": [
+   "Portland",
    "Hillsboro",
    "Tigard",
    "Aloha",
-   "Portland",
-   "Cedar Hills"
+   "Tualatin"
   ]
  },
  {
@@ -111,12 +118,13 @@
   "stateName": "Oregon",
   "county": "Deschutes County",
   "region": "Central Oregon",
+  "tier": 1,
   "nearby": [
    "Redmond",
    "Sisters",
-   "La Pine",
-   "Tumalo",
-   "Prineville"
+   "Sunriver",
+   "Prineville",
+   "La Pine"
   ]
  },
  {
@@ -126,12 +134,13 @@
   "stateName": "Oregon",
   "county": "Jackson County",
   "region": "Rogue Valley",
+  "tier": 1,
   "nearby": [
    "Ashland",
    "Central Point",
    "Jacksonville",
-   "Phoenix",
-   "White City"
+   "Talent",
+   "Phoenix"
   ]
  },
  {
@@ -141,12 +150,13 @@
   "stateName": "Oregon",
   "county": "Benton County",
   "region": "mid-Willamette Valley",
+  "tier": 1,
   "nearby": [
-   "Philomath",
    "Albany",
-   "Adair Village",
-   "Monroe",
-   "Lebanon"
+   "Philomath",
+   "Lebanon",
+   "Monmouth",
+   "Independence"
   ]
  },
  {
@@ -156,11 +166,12 @@
   "stateName": "Oregon",
   "county": "Linn County",
   "region": "mid-Willamette Valley",
+  "tier": 1,
   "nearby": [
    "Corvallis",
    "Lebanon",
-   "Millersburg",
    "Tangent",
+   "Millersburg",
    "Jefferson"
   ]
  },
@@ -171,12 +182,13 @@
   "stateName": "Oregon",
   "county": "Washington County",
   "region": "southwest Portland metro",
+  "tier": 1,
   "nearby": [
    "Beaverton",
    "Tualatin",
    "Lake Oswego",
-   "King City",
-   "Sherwood"
+   "Sherwood",
+   "King City"
   ]
  },
  {
@@ -186,27 +198,13 @@
   "stateName": "Oregon",
   "county": "Clackamas County",
   "region": "south Portland metro",
+  "tier": 1,
   "nearby": [
+   "Portland",
    "West Linn",
    "Tigard",
    "Milwaukie",
-   "Tualatin",
-   "Portland"
-  ]
- },
- {
-  "slug": "keizer-or",
-  "city": "Keizer",
-  "state": "OR",
-  "stateName": "Oregon",
-  "county": "Marion County",
-  "region": "Willamette Valley",
-  "nearby": [
-   "Salem",
-   "Brooks",
-   "Woodburn",
-   "Gervais",
-   "St. Paul"
+   "Tualatin"
   ]
  },
  {
@@ -216,12 +214,29 @@
   "stateName": "Oregon",
   "county": "Josephine County",
   "region": "Rogue Valley",
+  "tier": 1,
   "nearby": [
+   "Medford",
+   "Cave Junction",
    "Rogue River",
    "Merlin",
-   "Cave Junction",
-   "Gold Hill",
-   "Medford"
+   "Central Point"
+  ]
+ },
+ {
+  "slug": "keizer-or",
+  "city": "Keizer",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Marion County",
+  "region": "mid-Willamette Valley",
+  "tier": 2,
+  "nearby": [
+   "Salem",
+   "Woodburn",
+   "Silverton",
+   "Brooks",
+   "Gervais"
   ]
  },
  {
@@ -231,12 +246,13 @@
   "stateName": "Oregon",
   "county": "Clackamas County",
   "region": "south Portland metro",
+  "tier": 2,
   "nearby": [
    "West Linn",
    "Gladstone",
    "Canby",
    "Milwaukie",
-   "Beavercreek"
+   "Happy Valley"
   ]
  },
  {
@@ -246,12 +262,13 @@
   "stateName": "Oregon",
   "county": "Yamhill County",
   "region": "Yamhill Valley wine country",
+  "tier": 2,
   "nearby": [
    "Newberg",
-   "Carlton",
+   "Dayton",
    "Lafayette",
-   "Amity",
-   "Dayton"
+   "Carlton",
+   "Amity"
   ]
  },
  {
@@ -261,11 +278,12 @@
   "stateName": "Oregon",
   "county": "Deschutes County",
   "region": "Central Oregon",
+  "tier": 2,
   "nearby": [
    "Bend",
+   "Sisters",
    "Terrebonne",
    "Prineville",
-   "Sisters",
    "Madras"
   ]
  },
@@ -276,6 +294,7 @@
   "stateName": "Oregon",
   "county": "Washington County",
   "region": "southwest Portland metro",
+  "tier": 2,
   "nearby": [
    "Tigard",
    "Sherwood",
@@ -291,12 +310,13 @@
   "stateName": "Oregon",
   "county": "Clackamas County",
   "region": "south Portland metro",
+  "tier": 2,
   "nearby": [
-   "Oregon City",
    "Lake Oswego",
+   "Oregon City",
+   "Wilsonville",
    "Tualatin",
-   "Gladstone",
-   "Wilsonville"
+   "Gladstone"
   ]
  },
  {
@@ -306,12 +326,13 @@
   "stateName": "Oregon",
   "county": "Marion County",
   "region": "north Willamette Valley",
+  "tier": 2,
   "nearby": [
    "Salem",
    "Keizer",
-   "Silverton",
-   "Canby",
-   "Gervais"
+   "Hubbard",
+   "Gervais",
+   "Canby"
   ]
  },
  {
@@ -321,12 +342,13 @@
   "stateName": "Oregon",
   "county": "Yamhill County",
   "region": "Chehalem Valley",
+  "tier": 2,
   "nearby": [
+   "Dundee",
    "McMinnville",
    "Sherwood",
-   "Dundee",
    "Wilsonville",
-   "Carlton"
+   "Yamhill"
   ]
  },
  {
@@ -336,11 +358,12 @@
   "stateName": "Oregon",
   "county": "Douglas County",
   "region": "Umpqua Valley",
+  "tier": 2,
   "nearby": [
    "Sutherlin",
    "Winston",
-   "Green",
    "Myrtle Creek",
+   "Green",
    "Oakland"
   ]
  },
@@ -351,12 +374,13 @@
   "stateName": "Oregon",
   "county": "Klamath County",
   "region": "Klamath Basin",
+  "tier": 2,
   "nearby": [
    "Altamont",
-   "Merrill",
-   "Malin",
    "Chiloquin",
-   "Keno"
+   "Merrill",
+   "Bonanza",
+   "Malin"
   ]
  },
  {
@@ -366,6 +390,7 @@
   "stateName": "Oregon",
   "county": "Jackson County",
   "region": "Rogue Valley",
+  "tier": 2,
   "nearby": [
    "Medford",
    "Talent",
@@ -381,12 +406,13 @@
   "stateName": "Oregon",
   "county": "Clackamas County",
   "region": "south Portland metro",
+  "tier": 2,
   "nearby": [
    "Tualatin",
-   "Canby",
    "Sherwood",
+   "Canby",
    "West Linn",
-   "Aurora"
+   "Newberg"
   ]
  },
  {
@@ -396,6 +422,7 @@
   "stateName": "Oregon",
   "county": "Washington County",
   "region": "southwest Portland metro",
+  "tier": 2,
   "nearby": [
    "Tualatin",
    "Tigard",
@@ -410,13 +437,14 @@
   "state": "OR",
   "stateName": "Oregon",
   "county": "Clackamas County",
-  "region": "Willamette Valley",
+  "region": "north Willamette Valley",
+  "tier": 2,
   "nearby": [
    "Oregon City",
-   "Woodburn",
    "Wilsonville",
+   "Molalla",
    "Aurora",
-   "Molalla"
+   "Hubbard"
   ]
  },
  {
@@ -426,12 +454,13 @@
   "stateName": "Oregon",
   "county": "Linn County",
   "region": "mid-Willamette Valley",
+  "tier": 2,
   "nearby": [
    "Albany",
    "Sweet Home",
+   "Corvallis",
    "Brownsville",
-   "Sodaville",
-   "Corvallis"
+   "Scio"
   ]
  },
  {
@@ -441,12 +470,13 @@
   "stateName": "Oregon",
   "county": "Clatsop County",
   "region": "north Oregon coast",
+  "tier": 2,
   "nearby": [
    "Warrenton",
    "Seaside",
    "Gearhart",
-   "Hammond",
-   "Svensen"
+   "Knappa",
+   "Cannon Beach"
   ]
  },
  {
@@ -456,12 +486,13 @@
   "stateName": "Oregon",
   "county": "Lincoln County",
   "region": "central Oregon coast",
+  "tier": 2,
   "nearby": [
-   "Lincoln City",
    "Toledo",
    "Waldport",
    "Depoe Bay",
-   "South Beach"
+   "Lincoln City",
+   "Siletz"
   ]
  },
  {
@@ -471,11 +502,12 @@
   "stateName": "Oregon",
   "county": "Coos County",
   "region": "south Oregon coast",
+  "tier": 2,
   "nearby": [
    "North Bend",
-   "Coquille",
-   "Charleston",
    "Bandon",
+   "Charleston",
+   "Coquille",
    "Reedsport"
   ]
  },
@@ -486,12 +518,13 @@
   "stateName": "Oregon",
   "county": "Wasco County",
   "region": "Columbia River Gorge",
+  "tier": 2,
   "nearby": [
    "Hood River",
    "Dufur",
    "Mosier",
-   "Dallesport, WA",
-   "White Salmon, WA"
+   "Maupin",
+   "Goldendale"
   ]
  },
  {
@@ -501,12 +534,13 @@
   "stateName": "Oregon",
   "county": "Hood River County",
   "region": "Columbia River Gorge",
+  "tier": 2,
   "nearby": [
    "The Dalles",
-   "White Salmon, WA",
-   "Cascade Locks",
    "Odell",
-   "Parkdale"
+   "Parkdale",
+   "Cascade Locks",
+   "White Salmon"
   ]
  },
  {
@@ -516,12 +550,13 @@
   "stateName": "Oregon",
   "county": "Umatilla County",
   "region": "eastern Oregon",
+  "tier": 2,
   "nearby": [
    "Hermiston",
-   "Pilot Rock",
    "Athena",
    "Milton-Freewater",
-   "Stanfield"
+   "Echo",
+   "Adams"
   ]
  },
  {
@@ -531,12 +566,13 @@
   "stateName": "Oregon",
   "county": "Umatilla County",
   "region": "Columbia Basin",
+  "tier": 2,
   "nearby": [
    "Pendleton",
    "Umatilla",
+   "Boardman",
    "Stanfield",
-   "Echo",
-   "Boardman"
+   "Echo"
   ]
  },
  {
@@ -546,11 +582,12 @@
   "stateName": "Oregon",
   "county": "Union County",
   "region": "Grande Ronde Valley",
+  "tier": 2,
   "nearby": [
    "Island City",
-   "Cove",
    "Union",
    "Elgin",
+   "Cove",
    "Baker City"
   ]
  },
@@ -561,12 +598,13 @@
   "stateName": "Oregon",
   "county": "Malheur County",
   "region": "western Treasure Valley",
+  "tier": 2,
   "nearby": [
-   "Fruitland, ID",
-   "Payette, ID",
    "Nyssa",
    "Vale",
-   "Weiser, ID"
+   "Fruitland",
+   "Payette",
+   "Weiser"
   ]
  },
  {
@@ -576,12 +614,13 @@
   "stateName": "Oregon",
   "county": "Baker County",
   "region": "eastern Oregon",
+  "tier": 2,
   "nearby": [
-   "La Grande",
    "Haines",
-   "Sumpter",
    "Halfway",
-   "North Powder"
+   "La Grande",
+   "Sumpter",
+   "Huntington"
   ]
  },
  {
@@ -591,6 +630,7 @@
   "stateName": "Oregon",
   "county": "Crook County",
   "region": "Central Oregon",
+  "tier": 2,
   "nearby": [
    "Redmond",
    "Bend",
@@ -600,18 +640,419 @@
   ]
  },
  {
-  "slug": "boise-id",
-  "city": "Boise",
-  "state": "ID",
-  "stateName": "Idaho",
-  "county": "Ada County",
-  "region": "Treasure Valley",
+  "slug": "milwaukie-or",
+  "city": "Milwaukie",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Clackamas County",
+  "region": "south Portland metro",
+  "tier": 2,
   "nearby": [
-   "Meridian",
-   "Nampa",
-   "Eagle",
-   "Garden City",
-   "Kuna"
+   "Portland",
+   "Oak Grove",
+   "Gladstone",
+   "Happy Valley",
+   "Lake Oswego"
+  ]
+ },
+ {
+  "slug": "happy-valley-or",
+  "city": "Happy Valley",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Clackamas County",
+  "region": "east Portland metro",
+  "tier": 2,
+  "nearby": [
+   "Portland",
+   "Gresham",
+   "Damascus",
+   "Milwaukie",
+   "Clackamas"
+  ]
+ },
+ {
+  "slug": "forest-grove-or",
+  "city": "Forest Grove",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Washington County",
+  "region": "west Portland metro",
+  "tier": 2,
+  "nearby": [
+   "Cornelius",
+   "Hillsboro",
+   "Gaston",
+   "Banks",
+   "Beaverton"
+  ]
+ },
+ {
+  "slug": "troutdale-or",
+  "city": "Troutdale",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Multnomah County",
+  "region": "east Portland metro",
+  "tier": 2,
+  "nearby": [
+   "Gresham",
+   "Fairview",
+   "Wood Village",
+   "Corbett",
+   "Portland"
+  ]
+ },
+ {
+  "slug": "sandy-or",
+  "city": "Sandy",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Clackamas County",
+  "region": "east Portland metro",
+  "tier": 2,
+  "nearby": [
+   "Gresham",
+   "Estacada",
+   "Boring",
+   "Welches",
+   "Damascus"
+  ]
+ },
+ {
+  "slug": "molalla-or",
+  "city": "Molalla",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Clackamas County",
+  "region": "north Willamette Valley",
+  "tier": 2,
+  "nearby": [
+   "Canby",
+   "Oregon City",
+   "Colton",
+   "Mulino",
+   "Silverton"
+  ]
+ },
+ {
+  "slug": "silverton-or",
+  "city": "Silverton",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Marion County",
+  "region": "mid-Willamette Valley",
+  "tier": 2,
+  "nearby": [
+   "Salem",
+   "Mount Angel",
+   "Stayton",
+   "Woodburn",
+   "Scotts Mills"
+  ]
+ },
+ {
+  "slug": "stayton-or",
+  "city": "Stayton",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Marion County",
+  "region": "mid-Willamette Valley",
+  "tier": 2,
+  "nearby": [
+   "Sublimity",
+   "Salem",
+   "Aumsville",
+   "Silverton",
+   "Mill City"
+  ]
+ },
+ {
+  "slug": "dallas-or",
+  "city": "Dallas",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Polk County",
+  "region": "mid-Willamette Valley",
+  "tier": 2,
+  "nearby": [
+   "Salem",
+   "Monmouth",
+   "Independence",
+   "Rickreall",
+   "Falls City"
+  ]
+ },
+ {
+  "slug": "monmouth-or",
+  "city": "Monmouth",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Polk County",
+  "region": "mid-Willamette Valley",
+  "tier": 2,
+  "nearby": [
+   "Independence",
+   "Dallas",
+   "Salem",
+   "Rickreall",
+   "Corvallis"
+  ]
+ },
+ {
+  "slug": "independence-or",
+  "city": "Independence",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Polk County",
+  "region": "mid-Willamette Valley",
+  "tier": 2,
+  "nearby": [
+   "Monmouth",
+   "Dallas",
+   "Salem",
+   "Rickreall",
+   "Albany"
+  ]
+ },
+ {
+  "slug": "cottage-grove-or",
+  "city": "Cottage Grove",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Lane County",
+  "region": "southern Willamette Valley",
+  "tier": 2,
+  "nearby": [
+   "Creswell",
+   "Eugene",
+   "Drain",
+   "Dorena",
+   "Springfield"
+  ]
+ },
+ {
+  "slug": "creswell-or",
+  "city": "Creswell",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Lane County",
+  "region": "southern Willamette Valley",
+  "tier": 2,
+  "nearby": [
+   "Eugene",
+   "Cottage Grove",
+   "Springfield",
+   "Goshen",
+   "Pleasant Hill"
+  ]
+ },
+ {
+  "slug": "junction-city-or",
+  "city": "Junction City",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Lane County",
+  "region": "southern Willamette Valley",
+  "tier": 2,
+  "nearby": [
+   "Eugene",
+   "Harrisburg",
+   "Monroe",
+   "Halsey",
+   "Veneta"
+  ]
+ },
+ {
+  "slug": "veneta-or",
+  "city": "Veneta",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Lane County",
+  "region": "southern Willamette Valley",
+  "tier": 2,
+  "nearby": [
+   "Eugene",
+   "Elmira",
+   "Junction City",
+   "Noti",
+   "Crow"
+  ]
+ },
+ {
+  "slug": "florence-or",
+  "city": "Florence",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Lane County",
+  "region": "central Oregon coast",
+  "tier": 2,
+  "nearby": [
+   "Mapleton",
+   "Reedsport",
+   "Yachats",
+   "Dunes City",
+   "Waldport"
+  ]
+ },
+ {
+  "slug": "lincoln-city-or",
+  "city": "Lincoln City",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Lincoln County",
+  "region": "central Oregon coast",
+  "tier": 2,
+  "nearby": [
+   "Depoe Bay",
+   "Newport",
+   "Otis",
+   "Neotsu",
+   "Gleneden Beach"
+  ]
+ },
+ {
+  "slug": "seaside-or",
+  "city": "Seaside",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Clatsop County",
+  "region": "north Oregon coast",
+  "tier": 2,
+  "nearby": [
+   "Gearhart",
+   "Cannon Beach",
+   "Astoria",
+   "Warrenton",
+   "Manzanita"
+  ]
+ },
+ {
+  "slug": "tillamook-or",
+  "city": "Tillamook",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Tillamook County",
+  "region": "north Oregon coast",
+  "tier": 2,
+  "nearby": [
+   "Bay City",
+   "Garibaldi",
+   "Netarts",
+   "Rockaway Beach",
+   "Pacific City"
+  ]
+ },
+ {
+  "slug": "sisters-or",
+  "city": "Sisters",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Deschutes County",
+  "region": "Central Oregon",
+  "tier": 2,
+  "nearby": [
+   "Bend",
+   "Redmond",
+   "Camp Sherman",
+   "Terrebonne",
+   "Tumalo"
+  ]
+ },
+ {
+  "slug": "madras-or",
+  "city": "Madras",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Jefferson County",
+  "region": "Central Oregon",
+  "tier": 2,
+  "nearby": [
+   "Culver",
+   "Metolius",
+   "Redmond",
+   "Warm Springs",
+   "Prineville"
+  ]
+ },
+ {
+  "slug": "sweet-home-or",
+  "city": "Sweet Home",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Linn County",
+  "region": "mid-Willamette Valley",
+  "tier": 2,
+  "nearby": [
+   "Lebanon",
+   "Brownsville",
+   "Foster",
+   "Albany",
+   "Cascadia"
+  ]
+ },
+ {
+  "slug": "sutherlin-or",
+  "city": "Sutherlin",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Douglas County",
+  "region": "Umpqua Valley",
+  "tier": 2,
+  "nearby": [
+   "Roseburg",
+   "Oakland",
+   "Wilbur",
+   "Winchester",
+   "Elkton"
+  ]
+ },
+ {
+  "slug": "brookings-or",
+  "city": "Brookings",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Curry County",
+  "region": "south Oregon coast",
+  "tier": 2,
+  "nearby": [
+   "Harbor",
+   "Gold Beach",
+   "Smith River",
+   "Port Orford",
+   "Crescent City"
+  ]
+ },
+ {
+  "slug": "central-point-or",
+  "city": "Central Point",
+  "state": "OR",
+  "stateName": "Oregon",
+  "county": "Jackson County",
+  "region": "Rogue Valley",
+  "tier": 2,
+  "nearby": [
+   "Medford",
+   "Jacksonville",
+   "Eagle Point",
+   "Gold Hill",
+   "White City"
+  ]
+ },
+ {
+  "slug": "seattle-wa",
+  "city": "Seattle",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "King County",
+  "region": "Puget Sound",
+  "tier": 1,
+  "nearby": [
+   "Bellevue",
+   "Renton",
+   "Shoreline",
+   "Burien",
+   "Kent"
   ]
  },
  {
@@ -621,12 +1062,29 @@
   "stateName": "Washington",
   "county": "Spokane County",
   "region": "Inland Northwest",
+  "tier": 1,
   "nearby": [
    "Spokane Valley",
    "Liberty Lake",
    "Cheney",
    "Airway Heights",
-   "Mead"
+   "Deer Park"
+  ]
+ },
+ {
+  "slug": "tacoma-wa",
+  "city": "Tacoma",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Pierce County",
+  "region": "South Sound",
+  "tier": 1,
+  "nearby": [
+   "Lakewood",
+   "Puyallup",
+   "Federal Way",
+   "University Place",
+   "Gig Harbor"
   ]
  },
  {
@@ -636,6 +1094,7 @@
   "stateName": "Washington",
   "county": "Clark County",
   "region": "southwest Washington",
+  "tier": 1,
   "nearby": [
    "Camas",
    "Battle Ground",
@@ -645,18 +1104,1011 @@
   ]
  },
  {
-  "slug": "reno-nv",
-  "city": "Reno",
-  "state": "NV",
-  "stateName": "Nevada",
-  "county": "Washoe County",
-  "region": "Truckee Meadows",
+  "slug": "bellevue-wa",
+  "city": "Bellevue",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "King County",
+  "region": "Eastside",
+  "tier": 1,
   "nearby": [
-   "Sparks",
-   "Sun Valley",
-   "Spanish Springs",
-   "Verdi",
-   "Carson City"
+   "Kirkland",
+   "Redmond",
+   "Issaquah",
+   "Renton",
+   "Sammamish"
+  ]
+ },
+ {
+  "slug": "kent-wa",
+  "city": "Kent",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "King County",
+  "region": "South King County",
+  "tier": 1,
+  "nearby": [
+   "Renton",
+   "Auburn",
+   "Federal Way",
+   "Covington",
+   "Tukwila"
+  ]
+ },
+ {
+  "slug": "everett-wa",
+  "city": "Everett",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Snohomish County",
+  "region": "north Puget Sound",
+  "tier": 1,
+  "nearby": [
+   "Marysville",
+   "Lynnwood",
+   "Mukilteo",
+   "Mill Creek",
+   "Snohomish"
+  ]
+ },
+ {
+  "slug": "renton-wa",
+  "city": "Renton",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "King County",
+  "region": "South King County",
+  "tier": 1,
+  "nearby": [
+   "Kent",
+   "Bellevue",
+   "Tukwila",
+   "Newcastle",
+   "Seattle"
+  ]
+ },
+ {
+  "slug": "yakima-wa",
+  "city": "Yakima",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Yakima County",
+  "region": "Yakima Valley",
+  "tier": 1,
+  "nearby": [
+   "Union Gap",
+   "Selah",
+   "Moxee",
+   "Naches",
+   "Sunnyside"
+  ]
+ },
+ {
+  "slug": "bellingham-wa",
+  "city": "Bellingham",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Whatcom County",
+  "region": "north Puget Sound",
+  "tier": 1,
+  "nearby": [
+   "Ferndale",
+   "Lynden",
+   "Blaine",
+   "Everson",
+   "Bellingham Bay"
+  ]
+ },
+ {
+  "slug": "kennewick-wa",
+  "city": "Kennewick",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Benton County",
+  "region": "Tri-Cities",
+  "tier": 1,
+  "nearby": [
+   "Richland",
+   "Pasco",
+   "West Richland",
+   "Finley",
+   "Burbank"
+  ]
+ },
+ {
+  "slug": "olympia-wa",
+  "city": "Olympia",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Thurston County",
+  "region": "South Sound",
+  "tier": 1,
+  "nearby": [
+   "Lacey",
+   "Tumwater",
+   "Yelm",
+   "Shelton",
+   "Rochester"
+  ]
+ },
+ {
+  "slug": "federal-way-wa",
+  "city": "Federal Way",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "King County",
+  "region": "South King County",
+  "tier": 2,
+  "nearby": [
+   "Kent",
+   "Auburn",
+   "Des Moines",
+   "Tacoma",
+   "Milton"
+  ]
+ },
+ {
+  "slug": "spokane-valley-wa",
+  "city": "Spokane Valley",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Spokane County",
+  "region": "Inland Northwest",
+  "tier": 2,
+  "nearby": [
+   "Spokane",
+   "Liberty Lake",
+   "Millwood",
+   "Otis Orchards",
+   "Greenacres"
+  ]
+ },
+ {
+  "slug": "kirkland-wa",
+  "city": "Kirkland",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "King County",
+  "region": "Eastside",
+  "tier": 2,
+  "nearby": [
+   "Bellevue",
+   "Redmond",
+   "Bothell",
+   "Woodinville",
+   "Kenmore"
+  ]
+ },
+ {
+  "slug": "auburn-wa",
+  "city": "Auburn",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "King County",
+  "region": "South King County",
+  "tier": 2,
+  "nearby": [
+   "Kent",
+   "Federal Way",
+   "Sumner",
+   "Pacific",
+   "Algona"
+  ]
+ },
+ {
+  "slug": "pasco-wa",
+  "city": "Pasco",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Franklin County",
+  "region": "Tri-Cities",
+  "tier": 2,
+  "nearby": [
+   "Kennewick",
+   "Richland",
+   "Burbank",
+   "Connell",
+   "West Pasco"
+  ]
+ },
+ {
+  "slug": "richland-wa",
+  "city": "Richland",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Benton County",
+  "region": "Tri-Cities",
+  "tier": 2,
+  "nearby": [
+   "Kennewick",
+   "Pasco",
+   "West Richland",
+   "Benton City",
+   "Finley"
+  ]
+ },
+ {
+  "slug": "marysville-wa",
+  "city": "Marysville",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Snohomish County",
+  "region": "north Puget Sound",
+  "tier": 2,
+  "nearby": [
+   "Everett",
+   "Arlington",
+   "Lake Stevens",
+   "Tulalip",
+   "Smokey Point"
+  ]
+ },
+ {
+  "slug": "lakewood-wa",
+  "city": "Lakewood",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Pierce County",
+  "region": "South Sound",
+  "tier": 2,
+  "nearby": [
+   "Tacoma",
+   "University Place",
+   "Steilacoom",
+   "DuPont",
+   "Parkland"
+  ]
+ },
+ {
+  "slug": "redmond-wa",
+  "city": "Redmond",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "King County",
+  "region": "Eastside",
+  "tier": 2,
+  "nearby": [
+   "Bellevue",
+   "Kirkland",
+   "Sammamish",
+   "Woodinville",
+   "Duvall"
+  ]
+ },
+ {
+  "slug": "lacey-wa",
+  "city": "Lacey",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Thurston County",
+  "region": "South Sound",
+  "tier": 2,
+  "nearby": [
+   "Olympia",
+   "Tumwater",
+   "Yelm",
+   "DuPont",
+   "Rainier"
+  ]
+ },
+ {
+  "slug": "puyallup-wa",
+  "city": "Puyallup",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Pierce County",
+  "region": "South Sound",
+  "tier": 2,
+  "nearby": [
+   "Sumner",
+   "Tacoma",
+   "Bonney Lake",
+   "Orting",
+   "Graham"
+  ]
+ },
+ {
+  "slug": "edmonds-wa",
+  "city": "Edmonds",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Snohomish County",
+  "region": "north Puget Sound",
+  "tier": 2,
+  "nearby": [
+   "Lynnwood",
+   "Mountlake Terrace",
+   "Mukilteo",
+   "Shoreline",
+   "Brier"
+  ]
+ },
+ {
+  "slug": "bremerton-wa",
+  "city": "Bremerton",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Kitsap County",
+  "region": "Kitsap Peninsula",
+  "tier": 2,
+  "nearby": [
+   "Silverdale",
+   "Port Orchard",
+   "Poulsbo",
+   "Bainbridge Island",
+   "Gorst"
+  ]
+ },
+ {
+  "slug": "longview-wa",
+  "city": "Longview",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Cowlitz County",
+  "region": "southwest Washington",
+  "tier": 2,
+  "nearby": [
+   "Kelso",
+   "Castle Rock",
+   "Woodland",
+   "Kalama",
+   "Rainier"
+  ]
+ },
+ {
+  "slug": "wenatchee-wa",
+  "city": "Wenatchee",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Chelan County",
+  "region": "north central Washington",
+  "tier": 2,
+  "nearby": [
+   "East Wenatchee",
+   "Cashmere",
+   "Leavenworth",
+   "Chelan",
+   "Rock Island"
+  ]
+ },
+ {
+  "slug": "mount-vernon-wa",
+  "city": "Mount Vernon",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Skagit County",
+  "region": "Skagit Valley",
+  "tier": 2,
+  "nearby": [
+   "Burlington",
+   "Sedro-Woolley",
+   "Anacortes",
+   "La Conner",
+   "Stanwood"
+  ]
+ },
+ {
+  "slug": "walla-walla-wa",
+  "city": "Walla Walla",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Walla Walla County",
+  "region": "Walla Walla Valley",
+  "tier": 2,
+  "nearby": [
+   "College Place",
+   "Milton-Freewater",
+   "Waitsburg",
+   "Dayton",
+   "Touchet"
+  ]
+ },
+ {
+  "slug": "pullman-wa",
+  "city": "Pullman",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Whitman County",
+  "region": "the Palouse",
+  "tier": 2,
+  "nearby": [
+   "Colfax",
+   "Moscow",
+   "Albion",
+   "Palouse",
+   "Rosalia"
+  ]
+ },
+ {
+  "slug": "aberdeen-wa",
+  "city": "Aberdeen",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Grays Harbor County",
+  "region": "Washington coast",
+  "tier": 2,
+  "nearby": [
+   "Hoquiam",
+   "Cosmopolis",
+   "Montesano",
+   "Ocean Shores",
+   "Elma"
+  ]
+ },
+ {
+  "slug": "port-angeles-wa",
+  "city": "Port Angeles",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Clallam County",
+  "region": "Olympic Peninsula",
+  "tier": 2,
+  "nearby": [
+   "Sequim",
+   "Forks",
+   "Port Townsend",
+   "Joyce",
+   "Carlsborg"
+  ]
+ },
+ {
+  "slug": "ellensburg-wa",
+  "city": "Ellensburg",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Kittitas County",
+  "region": "Kittitas Valley",
+  "tier": 2,
+  "nearby": [
+   "Cle Elum",
+   "Kittitas",
+   "Thorp",
+   "Roslyn",
+   "Selah"
+  ]
+ },
+ {
+  "slug": "moses-lake-wa",
+  "city": "Moses Lake",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Grant County",
+  "region": "Columbia Basin",
+  "tier": 2,
+  "nearby": [
+   "Ephrata",
+   "Othello",
+   "Quincy",
+   "Warden",
+   "Soap Lake"
+  ]
+ },
+ {
+  "slug": "centralia-wa",
+  "city": "Centralia",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Lewis County",
+  "region": "southwest Washington",
+  "tier": 2,
+  "nearby": [
+   "Chehalis",
+   "Napavine",
+   "Winlock",
+   "Tenino",
+   "Rochester"
+  ]
+ },
+ {
+  "slug": "camas-wa",
+  "city": "Camas",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Clark County",
+  "region": "southwest Washington",
+  "tier": 2,
+  "nearby": [
+   "Washougal",
+   "Vancouver",
+   "Battle Ground",
+   "Ridgefield",
+   "Brush Prairie"
+  ]
+ },
+ {
+  "slug": "battle-ground-wa",
+  "city": "Battle Ground",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Clark County",
+  "region": "southwest Washington",
+  "tier": 2,
+  "nearby": [
+   "Vancouver",
+   "Ridgefield",
+   "Camas",
+   "La Center",
+   "Brush Prairie"
+  ]
+ },
+ {
+  "slug": "issaquah-wa",
+  "city": "Issaquah",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "King County",
+  "region": "Eastside",
+  "tier": 2,
+  "nearby": [
+   "Sammamish",
+   "Bellevue",
+   "Renton",
+   "Newcastle",
+   "Snoqualmie"
+  ]
+ },
+ {
+  "slug": "bothell-wa",
+  "city": "Bothell",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Snohomish County",
+  "region": "north Puget Sound",
+  "tier": 2,
+  "nearby": [
+   "Kirkland",
+   "Woodinville",
+   "Mill Creek",
+   "Kenmore",
+   "Lynnwood"
+  ]
+ },
+ {
+  "slug": "lynnwood-wa",
+  "city": "Lynnwood",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Snohomish County",
+  "region": "north Puget Sound",
+  "tier": 2,
+  "nearby": [
+   "Edmonds",
+   "Everett",
+   "Mountlake Terrace",
+   "Mill Creek",
+   "Bothell"
+  ]
+ },
+ {
+  "slug": "sammamish-wa",
+  "city": "Sammamish",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "King County",
+  "region": "Eastside",
+  "tier": 2,
+  "nearby": [
+   "Issaquah",
+   "Redmond",
+   "Bellevue",
+   "Snoqualmie",
+   "Duvall"
+  ]
+ },
+ {
+  "slug": "burien-wa",
+  "city": "Burien",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "King County",
+  "region": "South King County",
+  "tier": 2,
+  "nearby": [
+   "Tukwila",
+   "SeaTac",
+   "Des Moines",
+   "Normandy Park",
+   "White Center"
+  ]
+ },
+ {
+  "slug": "shoreline-wa",
+  "city": "Shoreline",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "King County",
+  "region": "north Seattle",
+  "tier": 2,
+  "nearby": [
+   "Seattle",
+   "Edmonds",
+   "Lake Forest Park",
+   "Mountlake Terrace",
+   "Kenmore"
+  ]
+ },
+ {
+  "slug": "gig-harbor-wa",
+  "city": "Gig Harbor",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Pierce County",
+  "region": "Kitsap Peninsula",
+  "tier": 2,
+  "nearby": [
+   "Tacoma",
+   "Port Orchard",
+   "Purdy",
+   "Fox Island",
+   "Key Center"
+  ]
+ },
+ {
+  "slug": "port-orchard-wa",
+  "city": "Port Orchard",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Kitsap County",
+  "region": "Kitsap Peninsula",
+  "tier": 2,
+  "nearby": [
+   "Bremerton",
+   "Gig Harbor",
+   "Silverdale",
+   "Belfair",
+   "Southworth"
+  ]
+ },
+ {
+  "slug": "anacortes-wa",
+  "city": "Anacortes",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Skagit County",
+  "region": "Skagit Valley",
+  "tier": 2,
+  "nearby": [
+   "Mount Vernon",
+   "Burlington",
+   "Oak Harbor",
+   "La Conner",
+   "Sedro-Woolley"
+  ]
+ },
+ {
+  "slug": "oak-harbor-wa",
+  "city": "Oak Harbor",
+  "state": "WA",
+  "stateName": "Washington",
+  "county": "Island County",
+  "region": "Whidbey Island",
+  "tier": 2,
+  "nearby": [
+   "Coupeville",
+   "Anacortes",
+   "Freeland",
+   "Clinton",
+   "Langley"
+  ]
+ },
+ {
+  "slug": "los-angeles-ca",
+  "city": "Los Angeles",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Los Angeles County",
+  "region": "Greater Los Angeles",
+  "tier": 1,
+  "nearby": [
+   "Glendale",
+   "Pasadena",
+   "Burbank",
+   "Inglewood",
+   "Santa Monica"
+  ]
+ },
+ {
+  "slug": "san-diego-ca",
+  "city": "San Diego",
+  "state": "CA",
+  "stateName": "California",
+  "county": "San Diego County",
+  "region": "San Diego County",
+  "tier": 1,
+  "nearby": [
+   "Chula Vista",
+   "El Cajon",
+   "La Mesa",
+   "Poway",
+   "Santee"
+  ]
+ },
+ {
+  "slug": "san-jose-ca",
+  "city": "San Jose",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Santa Clara County",
+  "region": "Silicon Valley",
+  "tier": 1,
+  "nearby": [
+   "Santa Clara",
+   "Sunnyvale",
+   "Milpitas",
+   "Campbell",
+   "Cupertino"
+  ]
+ },
+ {
+  "slug": "san-francisco-ca",
+  "city": "San Francisco",
+  "state": "CA",
+  "stateName": "California",
+  "county": "San Francisco County",
+  "region": "San Francisco Bay Area",
+  "tier": 1,
+  "nearby": [
+   "Daly City",
+   "South San Francisco",
+   "Oakland",
+   "Brisbane",
+   "Sausalito"
+  ]
+ },
+ {
+  "slug": "fresno-ca",
+  "city": "Fresno",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Fresno County",
+  "region": "Central Valley",
+  "tier": 1,
+  "nearby": [
+   "Clovis",
+   "Sanger",
+   "Selma",
+   "Kerman",
+   "Fowler"
+  ]
+ },
+ {
+  "slug": "sacramento-ca",
+  "city": "Sacramento",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Sacramento County",
+  "region": "Sacramento Valley",
+  "tier": 1,
+  "nearby": [
+   "Elk Grove",
+   "Citrus Heights",
+   "Rancho Cordova",
+   "Folsom",
+   "West Sacramento"
+  ]
+ },
+ {
+  "slug": "long-beach-ca",
+  "city": "Long Beach",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Los Angeles County",
+  "region": "South Bay",
+  "tier": 1,
+  "nearby": [
+   "Lakewood",
+   "Signal Hill",
+   "Carson",
+   "Seal Beach",
+   "Los Alamitos"
+  ]
+ },
+ {
+  "slug": "oakland-ca",
+  "city": "Oakland",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Alameda County",
+  "region": "East Bay",
+  "tier": 1,
+  "nearby": [
+   "Berkeley",
+   "Alameda",
+   "Emeryville",
+   "San Leandro",
+   "Piedmont"
+  ]
+ },
+ {
+  "slug": "bakersfield-ca",
+  "city": "Bakersfield",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Kern County",
+  "region": "southern Central Valley",
+  "tier": 1,
+  "nearby": [
+   "Delano",
+   "Shafter",
+   "Wasco",
+   "Taft",
+   "Arvin"
+  ]
+ },
+ {
+  "slug": "anaheim-ca",
+  "city": "Anaheim",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Orange County",
+  "region": "Orange County",
+  "tier": 1,
+  "nearby": [
+   "Fullerton",
+   "Orange",
+   "Garden Grove",
+   "Buena Park",
+   "Placentia"
+  ]
+ },
+ {
+  "slug": "santa-ana-ca",
+  "city": "Santa Ana",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Orange County",
+  "region": "Orange County",
+  "tier": 1,
+  "nearby": [
+   "Tustin",
+   "Orange",
+   "Costa Mesa",
+   "Garden Grove",
+   "Irvine"
+  ]
+ },
+ {
+  "slug": "riverside-ca",
+  "city": "Riverside",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Riverside County",
+  "region": "Inland Empire",
+  "tier": 1,
+  "nearby": [
+   "Moreno Valley",
+   "Corona",
+   "Jurupa Valley",
+   "Norco",
+   "Perris"
+  ]
+ },
+ {
+  "slug": "stockton-ca",
+  "city": "Stockton",
+  "state": "CA",
+  "stateName": "California",
+  "county": "San Joaquin County",
+  "region": "Central Valley",
+  "tier": 1,
+  "nearby": [
+   "Lodi",
+   "Manteca",
+   "Tracy",
+   "Lathrop",
+   "Ripon"
+  ]
+ },
+ {
+  "slug": "irvine-ca",
+  "city": "Irvine",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Orange County",
+  "region": "Orange County",
+  "tier": 1,
+  "nearby": [
+   "Tustin",
+   "Lake Forest",
+   "Costa Mesa",
+   "Newport Beach",
+   "Laguna Hills"
+  ]
+ },
+ {
+  "slug": "fremont-ca",
+  "city": "Fremont",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Alameda County",
+  "region": "East Bay",
+  "tier": 1,
+  "nearby": [
+   "Newark",
+   "Union City",
+   "Milpitas",
+   "Hayward",
+   "Sunol"
+  ]
+ },
+ {
+  "slug": "san-bernardino-ca",
+  "city": "San Bernardino",
+  "state": "CA",
+  "stateName": "California",
+  "county": "San Bernardino County",
+  "region": "Inland Empire",
+  "tier": 1,
+  "nearby": [
+   "Rialto",
+   "Colton",
+   "Highland",
+   "Redlands",
+   "Loma Linda"
+  ]
+ },
+ {
+  "slug": "modesto-ca",
+  "city": "Modesto",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Stanislaus County",
+  "region": "Central Valley",
+  "tier": 1,
+  "nearby": [
+   "Turlock",
+   "Ceres",
+   "Riverbank",
+   "Oakdale",
+   "Salida"
+  ]
+ },
+ {
+  "slug": "oxnard-ca",
+  "city": "Oxnard",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Ventura County",
+  "region": "Ventura County",
+  "tier": 1,
+  "nearby": [
+   "Ventura",
+   "Camarillo",
+   "Port Hueneme",
+   "Santa Paula",
+   "Thousand Oaks"
+  ]
+ },
+ {
+  "slug": "santa-rosa-ca",
+  "city": "Santa Rosa",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Sonoma County",
+  "region": "Sonoma County",
+  "tier": 1,
+  "nearby": [
+   "Rohnert Park",
+   "Windsor",
+   "Sebastopol",
+   "Petaluma",
+   "Healdsburg"
+  ]
+ },
+ {
+  "slug": "santa-barbara-ca",
+  "city": "Santa Barbara",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Santa Barbara County",
+  "region": "Santa Barbara County",
+  "tier": 1,
+  "nearby": [
+   "Goleta",
+   "Carpinteria",
+   "Montecito",
+   "Isla Vista",
+   "Summerland"
   ]
  },
  {
@@ -666,12 +2118,1277 @@
   "stateName": "California",
   "county": "Shasta County",
   "region": "far northern California",
+  "tier": 1,
   "nearby": [
    "Anderson",
    "Shasta Lake",
    "Palo Cedro",
    "Cottonwood",
    "Red Bluff"
+  ]
+ },
+ {
+  "slug": "chula-vista-ca",
+  "city": "Chula Vista",
+  "state": "CA",
+  "stateName": "California",
+  "county": "San Diego County",
+  "region": "South Bay San Diego",
+  "tier": 2,
+  "nearby": [
+   "San Diego",
+   "National City",
+   "Imperial Beach",
+   "Bonita",
+   "Otay Mesa"
+  ]
+ },
+ {
+  "slug": "fontana-ca",
+  "city": "Fontana",
+  "state": "CA",
+  "stateName": "California",
+  "county": "San Bernardino County",
+  "region": "Inland Empire",
+  "tier": 2,
+  "nearby": [
+   "Rialto",
+   "Rancho Cucamonga",
+   "Ontario",
+   "Bloomington",
+   "Colton"
+  ]
+ },
+ {
+  "slug": "moreno-valley-ca",
+  "city": "Moreno Valley",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Riverside County",
+  "region": "Inland Empire",
+  "tier": 2,
+  "nearby": [
+   "Riverside",
+   "Perris",
+   "Beaumont",
+   "March Air Reserve Base",
+   "Sunnymead"
+  ]
+ },
+ {
+  "slug": "huntington-beach-ca",
+  "city": "Huntington Beach",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Orange County",
+  "region": "Orange County",
+  "tier": 2,
+  "nearby": [
+   "Costa Mesa",
+   "Fountain Valley",
+   "Westminster",
+   "Seal Beach",
+   "Newport Beach"
+  ]
+ },
+ {
+  "slug": "glendale-ca",
+  "city": "Glendale",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Los Angeles County",
+  "region": "Greater Los Angeles",
+  "tier": 2,
+  "nearby": [
+   "Burbank",
+   "Pasadena",
+   "La Cañada Flintridge",
+   "Los Angeles",
+   "Eagle Rock"
+  ]
+ },
+ {
+  "slug": "santa-clarita-ca",
+  "city": "Santa Clarita",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Los Angeles County",
+  "region": "Santa Clarita Valley",
+  "tier": 2,
+  "nearby": [
+   "Valencia",
+   "Newhall",
+   "Castaic",
+   "Stevenson Ranch",
+   "Palmdale"
+  ]
+ },
+ {
+  "slug": "garden-grove-ca",
+  "city": "Garden Grove",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Orange County",
+  "region": "Orange County",
+  "tier": 2,
+  "nearby": [
+   "Westminster",
+   "Santa Ana",
+   "Anaheim",
+   "Stanton",
+   "Fountain Valley"
+  ]
+ },
+ {
+  "slug": "oceanside-ca",
+  "city": "Oceanside",
+  "state": "CA",
+  "stateName": "California",
+  "county": "San Diego County",
+  "region": "North County San Diego",
+  "tier": 2,
+  "nearby": [
+   "Carlsbad",
+   "Vista",
+   "San Marcos",
+   "Fallbrook",
+   "Encinitas"
+  ]
+ },
+ {
+  "slug": "rancho-cucamonga-ca",
+  "city": "Rancho Cucamonga",
+  "state": "CA",
+  "stateName": "California",
+  "county": "San Bernardino County",
+  "region": "Inland Empire",
+  "tier": 2,
+  "nearby": [
+   "Ontario",
+   "Upland",
+   "Fontana",
+   "Claremont",
+   "Alta Loma"
+  ]
+ },
+ {
+  "slug": "ontario-ca",
+  "city": "Ontario",
+  "state": "CA",
+  "stateName": "California",
+  "county": "San Bernardino County",
+  "region": "Inland Empire",
+  "tier": 2,
+  "nearby": [
+   "Rancho Cucamonga",
+   "Chino",
+   "Upland",
+   "Fontana",
+   "Pomona"
+  ]
+ },
+ {
+  "slug": "elk-grove-ca",
+  "city": "Elk Grove",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Sacramento County",
+  "region": "Sacramento Valley",
+  "tier": 2,
+  "nearby": [
+   "Sacramento",
+   "Galt",
+   "Wilton",
+   "Rancho Murieta",
+   "Laguna"
+  ]
+ },
+ {
+  "slug": "corona-ca",
+  "city": "Corona",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Riverside County",
+  "region": "Inland Empire",
+  "tier": 2,
+  "nearby": [
+   "Norco",
+   "Riverside",
+   "Eastvale",
+   "Chino Hills",
+   "Lake Elsinore"
+  ]
+ },
+ {
+  "slug": "lancaster-ca",
+  "city": "Lancaster",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Los Angeles County",
+  "region": "Antelope Valley",
+  "tier": 2,
+  "nearby": [
+   "Palmdale",
+   "Quartz Hill",
+   "Rosamond",
+   "Littlerock",
+   "Mojave"
+  ]
+ },
+ {
+  "slug": "palmdale-ca",
+  "city": "Palmdale",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Los Angeles County",
+  "region": "Antelope Valley",
+  "tier": 2,
+  "nearby": [
+   "Lancaster",
+   "Quartz Hill",
+   "Acton",
+   "Littlerock",
+   "Santa Clarita"
+  ]
+ },
+ {
+  "slug": "salinas-ca",
+  "city": "Salinas",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Monterey County",
+  "region": "Salinas Valley",
+  "tier": 2,
+  "nearby": [
+   "Monterey",
+   "Marina",
+   "Seaside",
+   "Gonzales",
+   "Castroville"
+  ]
+ },
+ {
+  "slug": "hayward-ca",
+  "city": "Hayward",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Alameda County",
+  "region": "East Bay",
+  "tier": 2,
+  "nearby": [
+   "Union City",
+   "San Leandro",
+   "Castro Valley",
+   "Fremont",
+   "San Lorenzo"
+  ]
+ },
+ {
+  "slug": "escondido-ca",
+  "city": "Escondido",
+  "state": "CA",
+  "stateName": "California",
+  "county": "San Diego County",
+  "region": "North County San Diego",
+  "tier": 2,
+  "nearby": [
+   "San Marcos",
+   "Vista",
+   "Poway",
+   "Valley Center",
+   "Rancho Bernardo"
+  ]
+ },
+ {
+  "slug": "sunnyvale-ca",
+  "city": "Sunnyvale",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Santa Clara County",
+  "region": "Silicon Valley",
+  "tier": 2,
+  "nearby": [
+   "Mountain View",
+   "Santa Clara",
+   "Cupertino",
+   "San Jose",
+   "Los Altos"
+  ]
+ },
+ {
+  "slug": "torrance-ca",
+  "city": "Torrance",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Los Angeles County",
+  "region": "South Bay",
+  "tier": 2,
+  "nearby": [
+   "Redondo Beach",
+   "Gardena",
+   "Carson",
+   "Lomita",
+   "Palos Verdes Estates"
+  ]
+ },
+ {
+  "slug": "pasadena-ca",
+  "city": "Pasadena",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Los Angeles County",
+  "region": "San Gabriel Valley",
+  "tier": 2,
+  "nearby": [
+   "Altadena",
+   "Arcadia",
+   "South Pasadena",
+   "Glendale",
+   "Sierra Madre"
+  ]
+ },
+ {
+  "slug": "fullerton-ca",
+  "city": "Fullerton",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Orange County",
+  "region": "Orange County",
+  "tier": 2,
+  "nearby": [
+   "Anaheim",
+   "Brea",
+   "Placentia",
+   "Buena Park",
+   "La Habra"
+  ]
+ },
+ {
+  "slug": "roseville-ca",
+  "city": "Roseville",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Placer County",
+  "region": "Sacramento Valley",
+  "tier": 2,
+  "nearby": [
+   "Rocklin",
+   "Citrus Heights",
+   "Granite Bay",
+   "Lincoln",
+   "Antelope"
+  ]
+ },
+ {
+  "slug": "visalia-ca",
+  "city": "Visalia",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Tulare County",
+  "region": "Central Valley",
+  "tier": 2,
+  "nearby": [
+   "Tulare",
+   "Exeter",
+   "Farmersville",
+   "Goshen",
+   "Dinuba"
+  ]
+ },
+ {
+  "slug": "concord-ca",
+  "city": "Concord",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Contra Costa County",
+  "region": "East Bay",
+  "tier": 2,
+  "nearby": [
+   "Walnut Creek",
+   "Pleasant Hill",
+   "Martinez",
+   "Clayton",
+   "Pittsburg"
+  ]
+ },
+ {
+  "slug": "thousand-oaks-ca",
+  "city": "Thousand Oaks",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Ventura County",
+  "region": "Conejo Valley",
+  "tier": 2,
+  "nearby": [
+   "Newbury Park",
+   "Westlake Village",
+   "Simi Valley",
+   "Agoura Hills",
+   "Camarillo"
+  ]
+ },
+ {
+  "slug": "simi-valley-ca",
+  "city": "Simi Valley",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Ventura County",
+  "region": "Ventura County",
+  "tier": 2,
+  "nearby": [
+   "Thousand Oaks",
+   "Moorpark",
+   "Chatsworth",
+   "Camarillo",
+   "Agoura Hills"
+  ]
+ },
+ {
+  "slug": "santa-clara-ca",
+  "city": "Santa Clara",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Santa Clara County",
+  "region": "Silicon Valley",
+  "tier": 2,
+  "nearby": [
+   "San Jose",
+   "Sunnyvale",
+   "Cupertino",
+   "Campbell",
+   "Milpitas"
+  ]
+ },
+ {
+  "slug": "victorville-ca",
+  "city": "Victorville",
+  "state": "CA",
+  "stateName": "California",
+  "county": "San Bernardino County",
+  "region": "Victor Valley",
+  "tier": 2,
+  "nearby": [
+   "Hesperia",
+   "Apple Valley",
+   "Adelanto",
+   "Barstow",
+   "Phelan"
+  ]
+ },
+ {
+  "slug": "vallejo-ca",
+  "city": "Vallejo",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Solano County",
+  "region": "North Bay",
+  "tier": 2,
+  "nearby": [
+   "Benicia",
+   "American Canyon",
+   "Fairfield",
+   "Martinez",
+   "Napa"
+  ]
+ },
+ {
+  "slug": "berkeley-ca",
+  "city": "Berkeley",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Alameda County",
+  "region": "East Bay",
+  "tier": 2,
+  "nearby": [
+   "Oakland",
+   "Albany",
+   "Emeryville",
+   "El Cerrito",
+   "Kensington"
+  ]
+ },
+ {
+  "slug": "fairfield-ca",
+  "city": "Fairfield",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Solano County",
+  "region": "North Bay",
+  "tier": 2,
+  "nearby": [
+   "Suisun City",
+   "Vacaville",
+   "Vallejo",
+   "Benicia",
+   "Cordelia"
+  ]
+ },
+ {
+  "slug": "murrieta-ca",
+  "city": "Murrieta",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Riverside County",
+  "region": "southwest Riverside County",
+  "tier": 2,
+  "nearby": [
+   "Temecula",
+   "Menifee",
+   "Wildomar",
+   "Lake Elsinore",
+   "Winchester"
+  ]
+ },
+ {
+  "slug": "temecula-ca",
+  "city": "Temecula",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Riverside County",
+  "region": "southwest Riverside County",
+  "tier": 2,
+  "nearby": [
+   "Murrieta",
+   "Menifee",
+   "Wildomar",
+   "Fallbrook",
+   "Winchester"
+  ]
+ },
+ {
+  "slug": "antioch-ca",
+  "city": "Antioch",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Contra Costa County",
+  "region": "East Bay",
+  "tier": 2,
+  "nearby": [
+   "Pittsburg",
+   "Oakley",
+   "Brentwood",
+   "Bay Point",
+   "Concord"
+  ]
+ },
+ {
+  "slug": "richmond-ca",
+  "city": "Richmond",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Contra Costa County",
+  "region": "East Bay",
+  "tier": 2,
+  "nearby": [
+   "El Cerrito",
+   "San Pablo",
+   "Pinole",
+   "Albany",
+   "Berkeley"
+  ]
+ },
+ {
+  "slug": "ventura-ca",
+  "city": "Ventura",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Ventura County",
+  "region": "Ventura County",
+  "tier": 2,
+  "nearby": [
+   "Oxnard",
+   "Ojai",
+   "Camarillo",
+   "Santa Paula",
+   "Carpinteria"
+  ]
+ },
+ {
+  "slug": "chico-ca",
+  "city": "Chico",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Butte County",
+  "region": "northern Sacramento Valley",
+  "tier": 2,
+  "nearby": [
+   "Paradise",
+   "Oroville",
+   "Durham",
+   "Magalia",
+   "Corning"
+  ]
+ },
+ {
+  "slug": "eureka-ca",
+  "city": "Eureka",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Humboldt County",
+  "region": "Humboldt County",
+  "tier": 2,
+  "nearby": [
+   "Arcata",
+   "McKinleyville",
+   "Fortuna",
+   "Ferndale",
+   "Blue Lake"
+  ]
+ },
+ {
+  "slug": "napa-ca",
+  "city": "Napa",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Napa County",
+  "region": "Napa Valley",
+  "tier": 2,
+  "nearby": [
+   "American Canyon",
+   "Yountville",
+   "St. Helena",
+   "Vallejo",
+   "Sonoma"
+  ]
+ },
+ {
+  "slug": "san-luis-obispo-ca",
+  "city": "San Luis Obispo",
+  "state": "CA",
+  "stateName": "California",
+  "county": "San Luis Obispo County",
+  "region": "Central Coast",
+  "tier": 2,
+  "nearby": [
+   "Pismo Beach",
+   "Arroyo Grande",
+   "Morro Bay",
+   "Atascadero",
+   "Los Osos"
+  ]
+ },
+ {
+  "slug": "palm-springs-ca",
+  "city": "Palm Springs",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Riverside County",
+  "region": "Coachella Valley",
+  "tier": 2,
+  "nearby": [
+   "Cathedral City",
+   "Palm Desert",
+   "Rancho Mirage",
+   "Desert Hot Springs",
+   "La Quinta"
+  ]
+ },
+ {
+  "slug": "merced-ca",
+  "city": "Merced",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Merced County",
+  "region": "Central Valley",
+  "tier": 2,
+  "nearby": [
+   "Atwater",
+   "Livingston",
+   "Los Banos",
+   "Winton",
+   "Planada"
+  ]
+ },
+ {
+  "slug": "turlock-ca",
+  "city": "Turlock",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Stanislaus County",
+  "region": "Central Valley",
+  "tier": 2,
+  "nearby": [
+   "Modesto",
+   "Ceres",
+   "Denair",
+   "Hughson",
+   "Delhi"
+  ]
+ },
+ {
+  "slug": "tracy-ca",
+  "city": "Tracy",
+  "state": "CA",
+  "stateName": "California",
+  "county": "San Joaquin County",
+  "region": "Central Valley",
+  "tier": 2,
+  "nearby": [
+   "Mountain House",
+   "Manteca",
+   "Lathrop",
+   "Livermore",
+   "Banta"
+  ]
+ },
+ {
+  "slug": "folsom-ca",
+  "city": "Folsom",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Sacramento County",
+  "region": "Sacramento Valley",
+  "tier": 2,
+  "nearby": [
+   "El Dorado Hills",
+   "Rancho Cordova",
+   "Granite Bay",
+   "Orangevale",
+   "Roseville"
+  ]
+ },
+ {
+  "slug": "redwood-city-ca",
+  "city": "Redwood City",
+  "state": "CA",
+  "stateName": "California",
+  "county": "San Mateo County",
+  "region": "the Peninsula",
+  "tier": 2,
+  "nearby": [
+   "San Carlos",
+   "Menlo Park",
+   "Atherton",
+   "Palo Alto",
+   "Belmont"
+  ]
+ },
+ {
+  "slug": "san-mateo-ca",
+  "city": "San Mateo",
+  "state": "CA",
+  "stateName": "California",
+  "county": "San Mateo County",
+  "region": "the Peninsula",
+  "tier": 2,
+  "nearby": [
+   "Burlingame",
+   "Foster City",
+   "Belmont",
+   "Hillsborough",
+   "San Carlos"
+  ]
+ },
+ {
+  "slug": "mountain-view-ca",
+  "city": "Mountain View",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Santa Clara County",
+  "region": "Silicon Valley",
+  "tier": 2,
+  "nearby": [
+   "Palo Alto",
+   "Sunnyvale",
+   "Los Altos",
+   "Santa Clara",
+   "Menlo Park"
+  ]
+ },
+ {
+  "slug": "livermore-ca",
+  "city": "Livermore",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Alameda County",
+  "region": "Tri-Valley",
+  "tier": 2,
+  "nearby": [
+   "Pleasanton",
+   "Dublin",
+   "San Ramon",
+   "Tracy",
+   "Sunol"
+  ]
+ },
+ {
+  "slug": "pleasanton-ca",
+  "city": "Pleasanton",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Alameda County",
+  "region": "Tri-Valley",
+  "tier": 2,
+  "nearby": [
+   "Dublin",
+   "Livermore",
+   "San Ramon",
+   "Danville",
+   "Sunol"
+  ]
+ },
+ {
+  "slug": "walnut-creek-ca",
+  "city": "Walnut Creek",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Contra Costa County",
+  "region": "East Bay",
+  "tier": 2,
+  "nearby": [
+   "Concord",
+   "Lafayette",
+   "Pleasant Hill",
+   "Danville",
+   "Alamo"
+  ]
+ },
+ {
+  "slug": "carlsbad-ca",
+  "city": "Carlsbad",
+  "state": "CA",
+  "stateName": "California",
+  "county": "San Diego County",
+  "region": "North County San Diego",
+  "tier": 2,
+  "nearby": [
+   "Oceanside",
+   "Vista",
+   "Encinitas",
+   "San Marcos",
+   "Del Mar"
+  ]
+ },
+ {
+  "slug": "el-cajon-ca",
+  "city": "El Cajon",
+  "state": "CA",
+  "stateName": "California",
+  "county": "San Diego County",
+  "region": "East County San Diego",
+  "tier": 2,
+  "nearby": [
+   "La Mesa",
+   "Santee",
+   "Lakeside",
+   "Spring Valley",
+   "Alpine"
+  ]
+ },
+ {
+  "slug": "clovis-ca",
+  "city": "Clovis",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Fresno County",
+  "region": "Central Valley",
+  "tier": 2,
+  "nearby": [
+   "Fresno",
+   "Sanger",
+   "Madera",
+   "Friant",
+   "Kingsburg"
+  ]
+ },
+ {
+  "slug": "santa-cruz-ca",
+  "city": "Santa Cruz",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Santa Cruz County",
+  "region": "Monterey Bay",
+  "tier": 2,
+  "nearby": [
+   "Capitola",
+   "Scotts Valley",
+   "Aptos",
+   "Watsonville",
+   "Soquel"
+  ]
+ },
+ {
+  "slug": "monterey-ca",
+  "city": "Monterey",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Monterey County",
+  "region": "Monterey Bay",
+  "tier": 2,
+  "nearby": [
+   "Seaside",
+   "Pacific Grove",
+   "Carmel-by-the-Sea",
+   "Marina",
+   "Salinas"
+  ]
+ },
+ {
+  "slug": "paso-robles-ca",
+  "city": "Paso Robles",
+  "state": "CA",
+  "stateName": "California",
+  "county": "San Luis Obispo County",
+  "region": "Central Coast",
+  "tier": 2,
+  "nearby": [
+   "Atascadero",
+   "Templeton",
+   "San Miguel",
+   "Creston",
+   "San Luis Obispo"
+  ]
+ },
+ {
+  "slug": "santa-maria-ca",
+  "city": "Santa Maria",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Santa Barbara County",
+  "region": "Central Coast",
+  "tier": 2,
+  "nearby": [
+   "Orcutt",
+   "Lompoc",
+   "Guadalupe",
+   "Nipomo",
+   "Buellton"
+  ]
+ },
+ {
+  "slug": "vacaville-ca",
+  "city": "Vacaville",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Solano County",
+  "region": "North Bay",
+  "tier": 2,
+  "nearby": [
+   "Fairfield",
+   "Dixon",
+   "Winters",
+   "Suisun City",
+   "Elmira"
+  ]
+ },
+ {
+  "slug": "petaluma-ca",
+  "city": "Petaluma",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Sonoma County",
+  "region": "Sonoma County",
+  "tier": 2,
+  "nearby": [
+   "Rohnert Park",
+   "Novato",
+   "Cotati",
+   "Penngrove",
+   "Sonoma"
+  ]
+ },
+ {
+  "slug": "san-rafael-ca",
+  "city": "San Rafael",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Marin County",
+  "region": "North Bay",
+  "tier": 2,
+  "nearby": [
+   "Novato",
+   "Larkspur",
+   "Corte Madera",
+   "San Anselmo",
+   "Mill Valley"
+  ]
+ },
+ {
+  "slug": "gilroy-ca",
+  "city": "Gilroy",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Santa Clara County",
+  "region": "south Santa Clara Valley",
+  "tier": 2,
+  "nearby": [
+   "Morgan Hill",
+   "San Martin",
+   "Hollister",
+   "Watsonville",
+   "San Jose"
+  ]
+ },
+ {
+  "slug": "lodi-ca",
+  "city": "Lodi",
+  "state": "CA",
+  "stateName": "California",
+  "county": "San Joaquin County",
+  "region": "Central Valley",
+  "tier": 2,
+  "nearby": [
+   "Stockton",
+   "Galt",
+   "Woodbridge",
+   "Acampo",
+   "Lockeford"
+  ]
+ },
+ {
+  "slug": "manteca-ca",
+  "city": "Manteca",
+  "state": "CA",
+  "stateName": "California",
+  "county": "San Joaquin County",
+  "region": "Central Valley",
+  "tier": 2,
+  "nearby": [
+   "Lathrop",
+   "Ripon",
+   "Stockton",
+   "Tracy",
+   "Escalon"
+  ]
+ },
+ {
+  "slug": "davis-ca",
+  "city": "Davis",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Yolo County",
+  "region": "Sacramento Valley",
+  "tier": 2,
+  "nearby": [
+   "Woodland",
+   "West Sacramento",
+   "Dixon",
+   "Winters",
+   "Sacramento"
+  ]
+ },
+ {
+  "slug": "hemet-ca",
+  "city": "Hemet",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Riverside County",
+  "region": "San Jacinto Valley",
+  "tier": 2,
+  "nearby": [
+   "San Jacinto",
+   "Menifee",
+   "Perris",
+   "Winchester",
+   "Idyllwild"
+  ]
+ },
+ {
+  "slug": "indio-ca",
+  "city": "Indio",
+  "state": "CA",
+  "stateName": "California",
+  "county": "Riverside County",
+  "region": "Coachella Valley",
+  "tier": 2,
+  "nearby": [
+   "La Quinta",
+   "Coachella",
+   "Palm Desert",
+   "Bermuda Dunes",
+   "Thermal"
+  ]
+ },
+ {
+  "slug": "boise-id",
+  "city": "Boise",
+  "state": "ID",
+  "stateName": "Idaho",
+  "county": "Ada County",
+  "region": "Treasure Valley",
+  "tier": 1,
+  "nearby": [
+   "Meridian",
+   "Eagle",
+   "Garden City",
+   "Kuna",
+   "Star"
+  ]
+ },
+ {
+  "slug": "meridian-id",
+  "city": "Meridian",
+  "state": "ID",
+  "stateName": "Idaho",
+  "county": "Ada County",
+  "region": "Treasure Valley",
+  "tier": 2,
+  "nearby": [
+   "Boise",
+   "Eagle",
+   "Kuna",
+   "Star",
+   "Nampa"
+  ]
+ },
+ {
+  "slug": "nampa-id",
+  "city": "Nampa",
+  "state": "ID",
+  "stateName": "Idaho",
+  "county": "Canyon County",
+  "region": "Treasure Valley",
+  "tier": 2,
+  "nearby": [
+   "Caldwell",
+   "Meridian",
+   "Kuna",
+   "Middleton",
+   "Melba"
+  ]
+ },
+ {
+  "slug": "caldwell-id",
+  "city": "Caldwell",
+  "state": "ID",
+  "stateName": "Idaho",
+  "county": "Canyon County",
+  "region": "Treasure Valley",
+  "tier": 2,
+  "nearby": [
+   "Nampa",
+   "Middleton",
+   "Parma",
+   "Notus",
+   "Wilder"
+  ]
+ },
+ {
+  "slug": "coeur-dalene-id",
+  "city": "Coeur d'Alene",
+  "state": "ID",
+  "stateName": "Idaho",
+  "county": "Kootenai County",
+  "region": "Inland Northwest",
+  "tier": 2,
+  "nearby": [
+   "Post Falls",
+   "Hayden",
+   "Rathdrum",
+   "Spokane Valley",
+   "Liberty Lake"
+  ]
+ },
+ {
+  "slug": "post-falls-id",
+  "city": "Post Falls",
+  "state": "ID",
+  "stateName": "Idaho",
+  "county": "Kootenai County",
+  "region": "Inland Northwest",
+  "tier": 2,
+  "nearby": [
+   "Coeur d'Alene",
+   "Hayden",
+   "Rathdrum",
+   "Liberty Lake",
+   "Spokane Valley"
+  ]
+ },
+ {
+  "slug": "reno-nv",
+  "city": "Reno",
+  "state": "NV",
+  "stateName": "Nevada",
+  "county": "Washoe County",
+  "region": "Truckee Meadows",
+  "tier": 1,
+  "nearby": [
+   "Sparks",
+   "Carson City",
+   "Sun Valley",
+   "Verdi",
+   "Cold Springs"
+  ]
+ },
+ {
+  "slug": "sparks-nv",
+  "city": "Sparks",
+  "state": "NV",
+  "stateName": "Nevada",
+  "county": "Washoe County",
+  "region": "Truckee Meadows",
+  "tier": 2,
+  "nearby": [
+   "Reno",
+   "Sun Valley",
+   "Spanish Springs",
+   "Fernley",
+   "Carson City"
+  ]
+ },
+ {
+  "slug": "carson-city-nv",
+  "city": "Carson City",
+  "state": "NV",
+  "stateName": "Nevada",
+  "county": "Carson City",
+  "region": "Carson Valley",
+  "tier": 2,
+  "nearby": [
+   "Minden",
+   "Gardnerville",
+   "Dayton",
+   "Reno",
+   "Genoa"
+  ]
+ },
+ {
+  "slug": "las-vegas-nv",
+  "city": "Las Vegas",
+  "state": "NV",
+  "stateName": "Nevada",
+  "county": "Clark County",
+  "region": "Las Vegas Valley",
+  "tier": 1,
+  "nearby": [
+   "Henderson",
+   "North Las Vegas",
+   "Summerlin",
+   "Paradise",
+   "Spring Valley"
+  ]
+ },
+ {
+  "slug": "henderson-nv",
+  "city": "Henderson",
+  "state": "NV",
+  "stateName": "Nevada",
+  "county": "Clark County",
+  "region": "Las Vegas Valley",
+  "tier": 2,
+  "nearby": [
+   "Las Vegas",
+   "Boulder City",
+   "Paradise",
+   "Anthem",
+   "Green Valley"
+  ]
+ },
+ {
+  "slug": "north-las-vegas-nv",
+  "city": "North Las Vegas",
+  "state": "NV",
+  "stateName": "Nevada",
+  "county": "Clark County",
+  "region": "Las Vegas Valley",
+  "tier": 2,
+  "nearby": [
+   "Las Vegas",
+   "Henderson",
+   "Summerlin",
+   "Nellis AFB",
+   "Sunrise Manor"
   ]
  }
 ]

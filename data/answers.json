@@ -1,0 +1,761 @@
+[
+ {
+  "slug": "what-is-answer-engine-optimization",
+  "cat": "aeo",
+  "svc": "aeo",
+  "q": "What is answer engine optimization (AEO)?",
+  "a": "Answer engine optimization is the work of getting your business named and cited when someone asks an AI assistant a question — ChatGPT, Gemini, Perplexity, Copilot, or Google AI Overviews. It overlaps with SEO but optimizes for being quoted in an answer rather than clicked in a list.",
+  "body": [
+   "The mechanical difference is format. A search engine ranks documents and shows ten of them. An answer engine reads documents, extracts a claim, and states it as fact — usually with two or three citations. Pages structured as long persuasive essays get skipped. Pages that state a clear fact in a clear sentence, with the entity named, get lifted.",
+   "In practice AEO is four things: content restructured so each page answers one question directly near the top; schema markup that tells the model what your business is, where it works, and what it charges for; consistent business facts across every source a model might read; and machine-readable access — a clean sitemap, an llms.txt, and no accidental blocking of AI crawlers."
+  ]
+ },
+ {
+  "slug": "how-do-i-get-my-business-mentioned-by-chatgpt",
+  "cat": "aeo",
+  "svc": "aeo",
+  "q": "How do I get my business mentioned by ChatGPT?",
+  "a": "Assistants name businesses they can verify from multiple independent sources. The reliable path is: a website that states plainly what you do and where, a complete Google Business Profile, consistent name/address/phone everywhere, real reviews, and mentions on sites the model already trusts — local directories, trade associations, news.",
+  "body": [
+   "There is no submission form and nobody can buy placement. What models rely on is corroboration: if five sources agree that a specific company does roofing in Bend, Oregon, that becomes a usable fact. If your phone number is different in three places and your service area is vague, you are not a usable fact and you get skipped in favor of a competitor who is.",
+   "The single most common blocker is a website that never states the obvious. Pages that say \"quality craftsmanship since day one\" without naming the trade, the cities, or the services give a model nothing to cite. Say the plain thing: what you do, the towns you serve, the hours you answer the phone, the license you hold."
+  ]
+ },
+ {
+  "slug": "aeo-vs-seo-what-is-the-difference",
+  "cat": "aeo",
+  "svc": "aeo",
+  "q": "What is the difference between AEO and SEO?",
+  "a": "SEO earns a ranking position so someone clicks through to your site. AEO earns a citation inside an answer someone reads without clicking anything. The underlying work overlaps heavily — same crawlability, same authority, same accurate business data — but AEO adds structure, directness, and schema aimed at extraction.",
+  "body": [
+   "They are not competing budgets. Nearly everything that makes a page rank also makes it citable, and answer engines lean on search indexes to find candidate sources in the first place. A site with no search visibility is rarely cited by an assistant, because the assistant never encountered it.",
+   "What changes is the writing. SEO tolerates a page that builds to its point; AEO rewards a page that leads with it. The practical fix is putting a direct two-sentence answer at the top of every page, then expanding underneath — which also happens to be what human readers on phones prefer."
+  ]
+ },
+ {
+  "slug": "what-is-llms-txt",
+  "cat": "aeo",
+  "svc": "aeo",
+  "q": "What is llms.txt and does my website need one?",
+  "a": "llms.txt is a plain-text file at the root of your site that summarizes what your business does and links to your most important pages, written for AI systems rather than browsers. It is a proposed convention, not a standard — cheap to add, no downside, and it costs nothing to be early.",
+  "body": [
+   "Think of it as robots.txt's cooperative cousin. Where robots.txt says what a crawler may not touch, llms.txt says here is who we are and here is the short list of pages worth reading. For a service business that means the trade, the service areas, the phone number, and links to your service and city pages.",
+   "Be honest about the status: adoption is uneven and no major assistant guarantees it reads the file. It is not a substitute for schema markup, a clean site structure, or a complete Google Business Profile — those do the heavy lifting today. Add llms.txt because it takes ten minutes, not because it is a ranking factor."
+  ]
+ },
+ {
+  "slug": "should-i-block-ai-crawlers-on-my-website",
+  "cat": "aeo",
+  "svc": "aeo",
+  "q": "Should I block AI crawlers on my website?",
+  "a": "For a local service business, no. Blocking GPTBot, ClaudeBot, PerplexityBot and the rest removes you from the answers your buyers are now asking for. Publishers with paid archives have a real argument for blocking; a roofing company trying to be recommended does not.",
+  "body": [
+   "Check what you are already doing before assuming you are open. Plenty of contractor sites block AI crawlers by accident — a security plugin, a bot-protection service, or an aggressive firewall rule that was set up years ago and never reviewed. Pull up your robots.txt and read it.",
+   "The one legitimate concern is scraping of original photography and written content. That is worth protecting selectively, not by locking the whole domain. Block the specific paths you care about, leave your service and location pages open, and keep the door open to being cited."
+  ]
+ },
+ {
+  "slug": "how-do-ai-assistants-choose-which-contractor-to-recommend",
+  "cat": "aeo",
+  "svc": "aeo",
+  "q": "How do AI assistants decide which contractor to recommend?",
+  "a": "They assemble an answer from sources they can verify: your website, your Google Business Profile, review platforms, directories, and licensing databases. Companies with consistent details across those sources, plenty of recent reviews, and pages that clearly state services and service areas get named. Vague or inconsistent businesses get skipped.",
+  "body": [
+   "None of the major assistants publish their selection logic, and anyone claiming a guaranteed method is guessing. What is observable is the pattern: recommendations skew toward businesses that are easy to confirm, and away from businesses whose basic facts conflict between sources.",
+   "That makes the work unglamorous and specific. Fix the phone number that is wrong on two directories. Add the five cities you actually serve to your site as real pages. Get the license number on the page. Keep review volume moving. None of that is a trick — it is the same groundwork that makes you findable in normal search."
+  ]
+ },
+ {
+  "slug": "what-schema-markup-does-a-service-business-need",
+  "cat": "aeo",
+  "svc": "aeo",
+  "q": "What schema markup does a service business website need?",
+  "a": "At minimum: LocalBusiness (or a more specific type like Plumber or RoofingContractor) with your name, phone, address or service area, and hours; Service markup on each service page; FAQPage on pages with real questions; and BreadcrumbList for structure. Add AggregateRating only if the reviews are genuinely yours.",
+  "body": [
+   "Schema does not make you rank. It makes you legible — it tells search and answer engines exactly what a page is about rather than leaving them to infer it from prose. For a business with dozens of service and city pages, that difference compounds.",
+   "The most common mistake is marking up things that are not true: review counts pulled from nowhere, hours that do not match the Google profile, an address for a business that has no public storefront. Structured data that conflicts with reality is worse than no structured data, because it teaches the engine to distrust the source."
+  ]
+ },
+ {
+  "slug": "will-ai-search-kill-local-seo",
+  "cat": "aeo",
+  "svc": "seo",
+  "q": "Will AI search kill local SEO for contractors?",
+  "a": "It changes the shape of it, not the substance. AI answers reduce clicks on informational searches — \"how much does a new roof cost\" — but someone who needs a roof replaced still ends up at a map pack, a phone number, and a booked appointment. Local intent still converts locally.",
+  "body": [
+   "The measurable shift is in traffic mix. Expect fewer visits to general how-to content and roughly steady demand on high-intent pages: the service page, the city page, the contact page. If your site was built to farm informational traffic, that hurts. If it was built to book jobs, it mostly does not.",
+   "The defensive move is the same either way: be the business that answer engines can verify and recommend. Being named in the answer is the new version of ranking above the fold, and the qualifying work — profile, reviews, consistent facts, clear pages — is work you were supposed to be doing anyway."
+  ]
+ },
+ {
+  "slug": "how-do-i-track-traffic-from-ai-assistants",
+  "cat": "aeo",
+  "svc": "call-tracking",
+  "q": "How do I track traffic from ChatGPT and other AI assistants?",
+  "a": "Check referral sources in your analytics for chatgpt.com, perplexity.ai, gemini.google.com, and copilot.microsoft.com. That captures visitors who clicked a citation. It will not capture the larger group who read the answer, never clicked, and called you directly — so pair it with call tracking and a \"how did you hear about us\" question.",
+  "body": [
+   "Expect the referral numbers to look small and the influence to be larger than they look. Assistants answer inline; a good citation can produce a phone call with no session attached to it at all. Judging AEO purely on referral traffic will undercount it badly.",
+   "The practical instrument is a two-part one: watch AI referrers in analytics for direction, and ask every caller how they found you. Cheap, low-tech, and it catches the invisible half."
+  ]
+ },
+ {
+  "slug": "does-my-google-business-profile-affect-ai-answers",
+  "cat": "aeo",
+  "svc": "google-business-profile",
+  "q": "Does my Google Business Profile affect what AI says about my business?",
+  "a": "Yes — heavily. The profile is one of the most structured, most trusted records about a local business anywhere online, and assistants lean on that class of source. Categories, service list, service area, hours, and reviews all feed what gets said about you.",
+  "body": [
+   "This is why an incomplete profile is expensive twice over. It costs you map-pack visibility in normal search, and it removes the cleanest machine-readable description of your business from the pool of sources an assistant draws on.",
+   "Fill it out fully and keep it current: primary category chosen precisely, every service listed, service area matching the towns you actually drive to, hours accurate including holidays, photos added regularly, and questions in the Q&A section answered by you rather than left to strangers."
+  ]
+ },
+ {
+  "slug": "how-long-does-local-seo-take",
+  "cat": "seo",
+  "svc": "seo",
+  "q": "How long does local SEO take to work?",
+  "a": "Expect early map-pack movement in one to three months, meaningful ranking change in four to six, and compounding results after that. Anything faster is usually paid ads being described as SEO. Anything slower usually means the fundamentals — profile, reviews, site structure — were never fixed.",
+  "body": [
+   "The timeline depends mostly on where you start. A business with a complete Google Business Profile, steady reviews, and a technically sound site is tuning an engine that already runs. A business with a five-page brochure site, forty reviews from 2019, and inconsistent listings is rebuilding from the block up.",
+   "Competition sets the ceiling. Ranking for a service in a town of 8,000 is a different exercise from ranking in Seattle or Sacramento, where franchise operators run real budgets. Any honest quote should name your specific market and your specific competitors, not a generic timeline."
+  ]
+ },
+ {
+  "slug": "how-do-i-rank-in-the-google-map-pack",
+  "cat": "seo",
+  "svc": "seo",
+  "q": "How do I rank in the Google map pack?",
+  "a": "Map-pack ranking is driven by relevance, distance, and prominence. Practically: a fully built Google Business Profile in the right primary category, a steady flow of recent reviews, consistent name/address/phone across the web, and a website with real service and city pages backing the profile up.",
+  "body": [
+   "Distance is the constraint most owners underestimate. Google shows results near the searcher, so a business physically located across the metro will struggle to appear for searches in a suburb no matter how good its SEO is. That is not a failure of effort — it is geometry, and it is why targeting has to be honest about where you can actually win.",
+   "Prominence is the part you control. Review velocity — reviews arriving consistently rather than in one old burst — matters more than raw count. So do citations that agree with each other, photos added regularly, and a website whose city pages give Google a reason to associate you with those towns."
+  ]
+ },
+ {
+  "slug": "do-city-pages-still-work-for-seo",
+  "cat": "seo",
+  "svc": "seo",
+  "q": "Do city pages still work for SEO?",
+  "a": "Yes, when each page is genuinely about that city — the neighborhoods and county you serve, the work you actually do there, local specifics a competitor could not copy. Pages that swap only the city name into identical text are the doorway pages Google explicitly targets, and they can drag a whole site down.",
+  "body": [
+   "The test is simple: if you deleted the city name from the page, would a reader still know which market it was about? If not, the page is a template, and it is competing against every other contractor running the same template with the same tool.",
+   "Done properly, city pages are still the backbone of multi-market local search. They give the search engine a specific document to rank for a specific town, they give a visitor from that town the proof that you work there, and they give an answer engine something concrete to cite."
+  ]
+ },
+ {
+  "slug": "how-many-pages-should-a-contractor-website-have",
+  "cat": "seo",
+  "svc": "web-design",
+  "q": "How many pages should a contractor website have?",
+  "a": "One page per service you sell, one per town you actually serve, plus hubs, an about page, contact, and an FAQ section. For most trades operating across a metro that lands between 60 and 300 pages. Page count is a byproduct of coverage, not a goal in itself.",
+  "body": [
+   "The reason is mechanical: search engines rank pages, not businesses. A single \"Services\" page listing eleven services competes for none of them well. Eleven pages, each about one service, each linked from the right city pages, competes for all eleven.",
+   "The limit is honesty. Build a page for a town you will not drive to and you have built a page that cannot convert and may not rank. Coverage should match your real service radius — and when it does, the page count takes care of itself."
+  ]
+ },
+ {
+  "slug": "why-is-my-competitor-outranking-me",
+  "cat": "seo",
+  "svc": "seo",
+  "q": "Why is my competitor outranking me when my work is better?",
+  "a": "Rankings measure signals, not craftsmanship. The usual gap is one of four things: they have more recent reviews, their Google Business Profile is more completely built out, their site has a real page for the service and city being searched, or they are simply closer to the searcher.",
+  "body": [
+   "Diagnose before you spend. Search the exact phrase you want to win, from the town you want to win it in, and look at what the top three actually have: review count and recency, category, page titles, whether a dedicated page exists for that service in that city. The gap is usually visible in ten minutes.",
+   "Occasionally the answer is that they are buying the position — Local Services Ads and search ads sit above the organic results, and to an owner scrolling their phone that looks identical to ranking. Worth confirming before you conclude your SEO is broken."
+  ]
+ },
+ {
+  "slug": "what-is-a-service-area-business",
+  "cat": "seo",
+  "svc": "google-business-profile",
+  "q": "What is a service area business on Google?",
+  "a": "A service area business serves customers at their location and has no storefront customers visit. On Google Business Profile you hide the address and list the cities or zip codes you serve. Most contractors, plumbers, electricians, and mobile trades fall into this category.",
+  "body": [
+   "Hiding the address is required, not optional, if customers do not come to you — and Google does suspend profiles that list a home address as a visitable location. If you genuinely have a shop with a counter, keep the address visible; if not, switch to service-area mode and list your towns.",
+   "The catch is that service area businesses still rank relative to their actual location. Listing forty cities does not make you appear in all forty. The list clarifies your coverage to customers and to Google; the ranking still leans on proximity, which is why website city pages carry more weight for a mobile trade."
+  ]
+ },
+ {
+  "slug": "how-many-google-reviews-do-i-need",
+  "cat": "seo",
+  "svc": "reputation-management",
+  "q": "How many Google reviews do I need to compete?",
+  "a": "Enough to be credible against the top three in your market — look them up and aim past the median. More important than total count is recency and pace: a steady trickle of new reviews signals an active business, while 200 reviews that stop three years ago signals the opposite.",
+  "body": [
+   "Ratings behave less like a score and more like a threshold. Below roughly four stars, buyers screen you out; well above it, further decimal gains matter less than volume and freshness. A 4.7 with reviews from last week generally beats a 4.9 with reviews from 2021.",
+   "The only reliable way to get there is asking every customer, every job, through a system that does it automatically instead of when someone remembers. Do not buy reviews — platforms detect purchased review patterns, and in the US the FTC has rules against fake reviews and testimonials."
+  ]
+ },
+ {
+  "slug": "do-backlinks-still-matter-for-local-seo",
+  "cat": "seo",
+  "svc": "link-building",
+  "q": "Do backlinks still matter for local SEO?",
+  "a": "Yes, but fewer and better than most agencies sell. For a local service business the links that move rankings are local and topical: the chamber of commerce, suppliers and manufacturers, trade associations, local news, sponsored teams and events, and genuinely relevant industry sites.",
+  "body": [
+   "Volume-based link packages are largely a legacy product. A hundred links from unrelated directories in unrelated countries do not help a plumbing company in Tacoma, and a portion of that inventory carries real risk to the domain.",
+   "The unglamorous local links are the ones with leverage, and most of them are free to earn. Sponsor a youth team and get listed. Join the trade association and claim the member profile. Ask the manufacturer whose product you install to add you to their dealer locator. Each one is a link a competitor cannot buy from a vendor."
+  ]
+ },
+ {
+  "slug": "what-are-citations-and-do-they-matter",
+  "cat": "seo",
+  "svc": "seo",
+  "q": "What are local citations and do they still matter?",
+  "a": "A citation is any listing of your business name, address, and phone number on another site — directories, chambers, review platforms, data aggregators. They still matter, mostly as consistency signals. What hurts is contradiction: three different phone numbers across the web makes every source less trustworthy.",
+  "body": [
+   "The value has shifted from quantity to cleanup. Building 300 new listings does little; fixing the old listing with your former address, the duplicate profile from a rebrand, and the aggregator record with a dead phone number does a lot.",
+   "Priority order is boring and effective: Google first, then Apple Maps and Bing Places, then the big aggregators, then the directories specific to your trade. Get those consistent and the long tail mostly sorts itself out."
+  ]
+ },
+ {
+  "slug": "how-do-i-rank-in-multiple-cities",
+  "cat": "seo",
+  "svc": "seo",
+  "q": "How do I rank in multiple cities without an office in each one?",
+  "a": "Through your website, not your Google profile. The profile ranks mostly by proximity to the searcher, but website pages can rank anywhere — so a real, substantive page per city, linked properly and backed by local proof, is how a single-location business competes across a metro.",
+  "body": [
+   "Do not fake locations. Renting a mailbox to create a second profile is a suspension waiting to happen, and Google does remove listings for it. If you eventually open a real staffed location, that earns a real profile.",
+   "Order of operations that works: dominate the city you are physically in first, then expand outward city by city with real pages, real photos from jobs in those towns, and reviews that mention them. Customers naming the town in a review is one of the few local signals nobody can manufacture."
+  ]
+ },
+ {
+  "slug": "why-did-my-google-rankings-drop",
+  "cat": "seo",
+  "svc": "seo",
+  "q": "Why did my Google rankings suddenly drop?",
+  "a": "The usual causes, in order: a Google algorithm update, a change someone made to your website, a Google Business Profile edit or suspension, a competitor who got aggressive, or a technical failure — expired hosting, a broken sitemap, an accidental noindex tag.",
+  "body": [
+   "Check the boring things first. Confirm the site loads, confirm robots.txt is not blocking, confirm no page-level noindex crept in during a redesign, confirm the profile is still live and not suspended. A large share of \"we got penalized\" calls turn out to be a checkbox in a plugin.",
+   "If the fundamentals are intact and the drop lines up with a known update, resist rewriting everything in a panic. Look at which page types lost visibility, compare them to what still ranks, and fix the thinnest content first. Recovery generally follows the next crawl cycle, not the next day."
+  ]
+ },
+ {
+  "slug": "does-my-website-need-a-blog",
+  "cat": "seo",
+  "svc": "content-marketing",
+  "q": "Does my contractor website need a blog?",
+  "a": "Only if you will keep it current and write about things buyers actually search. Twelve strong pages answering real questions — cost, timeline, materials, permits — beat sixty thin posts. An abandoned blog whose newest post is three years old actively signals a dormant business.",
+  "body": [
+   "The mistake is treating a blog as a publishing schedule instead of a coverage map. Nobody in your service area is searching \"5 Tips for Summer.\" They are searching what a tear-off costs, whether a permit is required, how long the job takes, and whether their insurance covers it. Answer those, once, properly.",
+   "For most service businesses, service pages and city pages deserve the effort first. Blog content is the third priority, and it earns its keep by capturing question-shaped searches and feeding internal links to the pages that actually book work."
+  ]
+ },
+ {
+  "slug": "how-much-does-a-contractor-website-cost",
+  "cat": "websites",
+  "svc": "web-design",
+  "q": "How much does a contractor website cost?",
+  "a": "DIY builders run roughly $20–50 a month. Freelancers typically charge $2,000–8,000 for a custom build. Agencies commonly quote $8,000–30,000, and many local agencies sell $300–1,500 monthly plans where you never own the site. What matters more than the number is whether the site is built to rank and whether you own it.",
+  "body": [
+   "The expensive failure mode is a beautiful five-page site with no service pages, no city pages, and no structured data. It photographs well and ranks for your business name — which you already had. Coverage and structure are what produce calls.",
+   "Ask three questions before paying anyone: do I own the domain, code, and content outright; how many pages does this include and what are they about; and what happens to the site if I stop paying. Any hesitation on the third question tells you what the arrangement really is."
+  ]
+ },
+ {
+  "slug": "wordpress-vs-static-website-for-contractors",
+  "cat": "websites",
+  "svc": "web-design",
+  "q": "WordPress or a static website — which is better for a contractor?",
+  "a": "Static wins on speed, security, and cost: no database, no plugins, nothing to hack or update, and near-instant load times. WordPress wins if you need to publish frequently yourself without help. For a service business whose pages change a few times a year, static is usually the better trade.",
+  "body": [
+   "The hidden cost of WordPress for a small operation is maintenance. Plugins update, conflict, break layouts, and open vulnerabilities. A large share of small-business site outages trace back to an unattended plugin or an expired license — and the owner finds out when calls stop.",
+   "The honest limitation of static is edits. If you want to change your own text weekly without touching code or asking anyone, take that seriously — either choose a CMS or make sure whoever builds it will turn changes around fast. Ownership matters more than the stack: whatever gets built, make sure the source code is handed to you."
+  ]
+ },
+ {
+  "slug": "how-fast-should-my-website-load",
+  "cat": "websites",
+  "svc": "web-design",
+  "q": "How fast should my website load?",
+  "a": "Aim for the main content to appear in under 2.5 seconds on a phone over cellular data — that is Google's Largest Contentful Paint threshold. Most contractor sites fail it, usually because of oversized photos, a page builder, and a stack of tracking scripts.",
+  "body": [
+   "Speed matters for two reasons that compound. It is a ranking input, and it is a conversion input — visitors abandon slow pages, and a homeowner with a leak is the least patient visitor you will ever get.",
+   "The fixes are unglamorous and effective: compress and correctly size images, cut unused scripts and chat widgets, stop loading five font weights, and serve as much as possible as static HTML. Test on a phone on cell data, not on the office wifi that makes everything look fine."
+  ]
+ },
+ {
+  "slug": "do-i-own-my-website-if-an-agency-builds-it",
+  "cat": "websites",
+  "svc": "web-design",
+  "q": "Do I own my website if an agency builds it?",
+  "a": "Only if your contract says so. Many agencies retain the domain, the code, or both — and a common local-marketing model licenses you a site that disappears when you stop paying. Get ownership of the domain, the source code, and the content in writing before work starts.",
+  "body": [
+   "The domain is the piece that hurts most to lose, because it carries your ranking history, your email, and your printed marketing. It should be registered in your name, on your account, with your credit card. An agency having admin access is fine; an agency being the registrant is not.",
+   "Two other traps: content written for you should be assigned to you, not licensed, and reviews should live on Google rather than only on an agency-controlled widget. Ask directly — \"if I leave tomorrow, what do I keep?\" — and get the answer in the contract, not the sales call."
+  ]
+ },
+ {
+  "slug": "what-pages-does-a-service-business-website-need",
+  "cat": "websites",
+  "svc": "web-design",
+  "q": "What pages does a service business website need?",
+  "a": "A homepage that states the trade and the service area, one page per service, one per city served, an about page with real credentials, a contact page with a real phone number, an FAQ, reviews, and your license and insurance details. Everything else is optional.",
+  "body": [
+   "The about page is the one most owners underrate. It is where credentials, license numbers, years in business, and a photograph of an actual person turn an anonymous vendor into a company someone will let into their house. It also feeds the trust signals search and answer engines look for.",
+   "Skip the pages that exist out of habit — a stock-photo \"Our Process\" page, a mission statement nobody reads, a gallery of images that are not your work. Replace them with the pages that answer buying questions: what it costs, how long it takes, what happens on day one."
+  ]
+ },
+ {
+  "slug": "should-i-put-prices-on-my-website",
+  "cat": "websites",
+  "svc": "web-design",
+  "q": "Should I put prices on my website?",
+  "a": "Put ranges on it, not exact quotes. \"Most gutter replacements in this area run $1,800–4,500 depending on linear footage and material\" pre-qualifies the caller, filters tire-kickers, and captures the enormous volume of searches that include the word cost.",
+  "body": [
+   "The fear is that a competitor undercuts you or a customer anchors low. In practice the bigger cost is estimate time burned on people who were never going to spend what the job takes — and the searchers who bounce because a competitor answered the money question and you did not.",
+   "Ranges also serve answer engines directly. Cost questions are among the most common things people ask an assistant, and a page with a clear, honest range and an explanation of what moves it is exactly the kind of source that gets cited."
+  ]
+ },
+ {
+  "slug": "how-do-i-move-my-website-to-a-new-company",
+  "cat": "websites",
+  "svc": "web-design",
+  "q": "How do I move my website away from my current provider?",
+  "a": "Get control of the domain registrar first, then export the site content, then rebuild or migrate before changing anything public. Keep the same URLs where possible, and put 301 redirects on any that change so the ranking history follows.",
+  "body": [
+   "The domain is the leverage point. If it sits in a provider account, request the transfer authorization code before you announce you are leaving — not after. Once the domain is in your own registrar account under your own login, the rest is logistics.",
+   "The technical risk in a move is lost URLs. Rankings attach to specific addresses, so a rebuild that quietly changes every path throws away years of accumulated equity. Map old to new, redirect every one, and check search performance weekly for the first month."
+  ]
+ },
+ {
+  "slug": "what-are-core-web-vitals",
+  "cat": "websites",
+  "svc": "web-design",
+  "q": "What are Core Web Vitals and do they matter?",
+  "a": "Three measurements Google uses to score page experience: Largest Contentful Paint (how fast the main content appears), Interaction to Next Paint (how quickly the page responds to taps), and Cumulative Layout Shift (how much the layout jumps while loading). They are a real but modest ranking factor.",
+  "body": [
+   "Treat them as a tiebreaker rather than a strategy. Passing all three will not lift a page with no relevant content above one that answers the question; failing them badly will cost you against an otherwise equal competitor — and, more directly, cost you visitors who leave.",
+   "Layout shift is the one that quietly costs the most money. A phone visitor going to tap the call button, only for an image to load and push the button under their thumb, is a lost job. Reserve space for images and ads, and the number fixes itself."
+  ]
+ },
+ {
+  "slug": "google-ads-vs-local-services-ads",
+  "cat": "ads",
+  "svc": "google-ads",
+  "q": "Google Ads or Local Services Ads — which should a contractor run?",
+  "a": "Local Services Ads first for most home-service trades: they sit above regular ads, carry the Google Guaranteed badge, and charge per lead instead of per click. Add regular search ads for services LSAs do not cover or when you need control over exactly which searches you appear for.",
+  "body": [
+   "LSAs are simpler and stricter. You verify your license and insurance, set a weekly budget and service area, and pay for leads rather than clicks. You can dispute leads that are out of area or clearly not for your service, which caps the wasted spend that makes owners hate advertising.",
+   "Regular search ads earn their place when you need precision: a specific high-margin service, a specific competitor comparison, a specific city you are trying to break into. They also cover the trades and B2B services LSAs never added."
+  ]
+ },
+ {
+  "slug": "how-much-should-a-contractor-spend-on-google-ads",
+  "cat": "ads",
+  "svc": "google-ads",
+  "q": "How much should a contractor spend on Google Ads?",
+  "a": "Work backwards from job value, not from a percentage. If your average job profits $1,200 and you close one in four leads, you can pay up to $300 a lead and break even. Set the monthly budget at the number of jobs you actually want times your target cost per job.",
+  "body": [
+   "The starting budget people ask for — \"is $1,000 a month enough?\" — is unanswerable without cost per click in your trade and market. Emergency plumbing clicks in a major metro can run many times what a landscaping click costs in a small town. Pull the numbers for your own market before committing.",
+   "The more common failure is capacity, not budget. Spending into more leads than your crew can quote produces slow callbacks, bad reviews, and wasted spend. Scale the budget to the jobs you can actually service well, then grow it as capacity grows."
+  ]
+ },
+ {
+  "slug": "what-is-google-guaranteed",
+  "cat": "ads",
+  "svc": "local-services-ads",
+  "q": "What is the Google Guaranteed badge and is it worth it?",
+  "a": "It is a green checkmark on Local Services Ads showing Google verified your license, insurance, and background check, backed by a limited Google-funded guarantee for customers who are dissatisfied. For consumer home services it is generally worth the verification effort.",
+  "body": [
+   "The badge does two jobs: it lifts click-through because it looks like an endorsement, and it clears the trust hurdle for a homeowner deciding which stranger to let inside. In a results list where every other option is unverified, that is a real edge.",
+   "The cost is paperwork and patience. Verification requires current license and insurance documentation and background checks, and it can take a couple of weeks. Keep the documents current afterward — an expired insurance certificate pulls the badge, usually at the worst time."
+  ]
+ },
+ {
+  "slug": "why-are-my-google-ads-leads-so-bad",
+  "cat": "ads",
+  "svc": "google-ads",
+  "q": "Why are my Google Ads leads so bad?",
+  "a": "Almost always targeting. Broad match keywords without a strong negative list will spend your budget on people researching DIY, students, out-of-area searchers, and competitors. Second most common: ads that point at a homepage instead of a page about the specific service searched.",
+  "body": [
+   "Open the search terms report and read the actual queries you paid for. Owners are routinely stunned — words like jobs, salary, training, free, cheap, DIY, and how to eating a meaningful share of spend. Every one of those belongs in the negative keyword list.",
+   "The second fix is landing pages. Someone searching \"emergency water heater repair\" who lands on a general homepage has to hunt for confirmation you do that, today, near them. A page about that one service in that one city, with the phone number visible without scrolling, converts several times better on the same traffic."
+  ]
+ },
+ {
+  "slug": "do-facebook-ads-work-for-contractors",
+  "cat": "ads",
+  "svc": "meta-ads",
+  "q": "Do Facebook and Instagram ads work for contractors?",
+  "a": "They work for offers people buy on sight — turf, fencing, decks, remodels, pools, roofing after a storm — and for staying visible to a market between purchase cycles. They work poorly for emergency services, where the buyer is searching, not scrolling.",
+  "body": [
+   "The distinction is intent. Search captures demand that already exists; feed ads create it. Nobody scrolling Instagram decides their water heater is leaking, but plenty of people see a finished patio and start imagining theirs.",
+   "What performs is real footage of real work — a fifteen-second walkthrough of a finished job shot on a phone beats produced advertising in this category. Pair it with retargeting of website visitors who did not call, which is usually the cheapest lead source available."
+  ]
+ },
+ {
+  "slug": "what-is-a-good-cost-per-lead-for-home-services",
+  "cat": "ads",
+  "svc": "google-ads",
+  "q": "What is a good cost per lead for home services?",
+  "a": "The only meaningful benchmark is your own economics: acceptable cost per lead equals job profit times close rate, minus your target margin. A $60 lead is expensive for a $200 service call and cheap for a $30,000 remodel.",
+  "body": [
+   "Industry-average figures circulate widely and are mostly noise — they blend trades, markets, and channels that have nothing to do with each other. Cost per lead in emergency restoration and in lawn care are not comparable numbers.",
+   "Track the metric one step further down: cost per booked job, not cost per lead. A channel producing $40 leads that close at 10% is worse than one producing $90 leads that close at 50%, and only the downstream number reveals it."
+  ]
+ },
+ {
+  "slug": "should-i-do-seo-or-ads-first",
+  "cat": "ads",
+  "svc": "google-ads",
+  "q": "Should I invest in SEO or ads first?",
+  "a": "Ads for cash flow now, SEO for cost per lead later. If you need jobs this month, ads are the only channel that delivers on that timeline. If you can fund both, run them together — ads keep the lights on while SEO compounds into the cheaper channel.",
+  "body": [
+   "The sequencing mistake is treating them as alternatives. Ads stop the day you stop paying; SEO takes months to arrive and then keeps producing. A business that only ever buys ads is renting its lead flow forever, and one that only does SEO may not survive the wait.",
+   "There is a technical dependency too. The landing pages that make ads efficient are the same service and city pages that make SEO work, so building them once serves both — and ad data tells you which keywords convert, which is the best possible input to an SEO plan."
+  ]
+ },
+ {
+  "slug": "how-do-i-stop-wasting-ad-spend",
+  "cat": "ads",
+  "svc": "call-tracking",
+  "q": "How do I stop wasting money on ads?",
+  "a": "Track calls to their source, read your search terms report weekly, build a real negative keyword list, tighten your service area radius, and turn off ads during hours nobody answers the phone unless something answers for you.",
+  "body": [
+   "Without call tracking every decision is a guess. Most home-service leads arrive as phone calls, so an ad account measuring only form fills is blind to the majority of what it produced — and owners routinely kill the campaign that was actually working.",
+   "The second leak is after the click. Paying for a call that rings out to voicemail is the most expensive thing in the account. Either staff the phone during ad hours, or put an AI receptionist behind it so the spend converts instead of evaporating."
+  ]
+ },
+ {
+  "slug": "what-is-an-ai-receptionist",
+  "cat": "calls",
+  "svc": "ai-receptionist",
+  "q": "What is an AI receptionist and how does it work?",
+  "a": "It is software that answers your phone in a natural voice, asks the questions you would ask, books the appointment on your calendar, and texts you a summary. It answers every call instantly, at any hour, and never puts anyone on hold.",
+  "body": [
+   "Setup is a script and a set of rules: which services you offer, which towns you serve, what qualifies as an emergency, when to transfer to a human, what to say about pricing. Once configured it handles overflow and after-hours calls, and can take every call if you want it to.",
+   "What it does not replace is judgment on complex jobs. The right configuration escalates: routine booking handled automatically, real emergencies forwarded to your on-call phone immediately, and anything unusual flagged for a callback with a full transcript attached."
+  ]
+ },
+ {
+  "slug": "will-customers-hang-up-on-an-ai-receptionist",
+  "cat": "calls",
+  "svc": "ai-receptionist",
+  "q": "Will customers hang up on an AI receptionist?",
+  "a": "Fewer than hang up on voicemail. Current voice systems answer in under two seconds, speak naturally, and handle interruptions — and callers overwhelmingly prefer an immediate answer to a recording. The failure mode to avoid is pretending it is human.",
+  "body": [
+   "Be straightforward in the greeting and give an out: identify the business, offer to help, and make transferring to a person easy. Callers who know what they are talking to and can escape it if they want almost never object.",
+   "The comparison that matters is not AI versus your best receptionist on a good day. It is AI versus what actually happens at 7pm on a Saturday when the truck is on a job — which today is a voicemail box, and a caller who dials the next result before you hear it."
+  ]
+ },
+ {
+  "slug": "how-many-jobs-do-contractors-lose-to-missed-calls",
+  "cat": "calls",
+  "svc": "ai-receptionist",
+  "q": "How many jobs do contractors lose to missed calls?",
+  "a": "More than most owners believe, because missed calls leave no record to review. Pull your phone records for last month, count inbound calls with no answer and no callback, and multiply by your average job value — that number is usually the cheapest revenue available.",
+  "body": [
+   "Beware of the specific percentages that circulate in marketing material; most trace back to vendor surveys with no published methodology. You do not need a benchmark, because your own phone log is a better data source than any industry average.",
+   "Two fixes cover most of it. Something answers every call — a person, an answering service, or an AI. And every unanswered call triggers an immediate text back, because a caller who gets a text within seconds frequently replies instead of dialing your competitor."
+  ]
+ },
+ {
+  "slug": "ai-receptionist-vs-answering-service",
+  "cat": "calls",
+  "svc": "ai-receptionist",
+  "q": "AI receptionist or a live answering service — which is better?",
+  "a": "A live service is better for genuinely complex, emotionally sensitive calls. AI is better on speed, cost, consistency, and volume — it answers instantly, never has hold times, handles simultaneous calls, and costs a fraction per call. Many operations run AI first with human escalation.",
+  "body": [
+   "The practical weakness of traditional answering services is that they are message takers. They cannot see your calendar, cannot quote, and cannot book — so the customer waits for a callback anyway, which is the exact delay that loses the job.",
+   "The practical weakness of AI is edge cases: heavy accents on a bad line, an upset customer, a job that needs real judgment. Configure escalation for those and the combination outperforms either alone."
+  ]
+ },
+ {
+  "slug": "what-is-missed-call-text-back",
+  "cat": "calls",
+  "svc": "ai-receptionist",
+  "q": "What is missed call text back?",
+  "a": "An automation that sends an immediate text to anyone whose call you did not answer — typically \"Sorry we missed you, this is [business], what can we help with?\" It converts dead calls into text conversations, and it is one of the cheapest fixes in a service business.",
+  "body": [
+   "It works because of timing. A caller who has just dialed you is still in the moment; sixty seconds later they are dialing someone else. A text arriving inside that window frequently restarts the conversation on a channel people answer faster than the phone.",
+   "Two rules keep it effective. Send it within seconds, not minutes — a delayed apology text is worse than none. And make sure a human or an AI actually replies to the responses, because an automated opener followed by silence is a worse impression than the missed call was."
+  ]
+ },
+ {
+  "slug": "how-fast-should-i-respond-to-a-lead",
+  "cat": "calls",
+  "svc": "crm",
+  "q": "How fast should I respond to a new lead?",
+  "a": "Minutes, not hours. Home-service buyers typically contact several companies in one sitting and hire whoever responds first with a credible answer. Being first is often worth more than being cheapest.",
+  "body": [
+   "Research on lead response consistently shows contact rates collapsing as delay grows — the difference between a five-minute reply and an hour-later reply is large, and the difference between same-day and next-day is close to fatal. The exact multiples vary by study; the direction never does.",
+   "Speed is a systems problem, not a discipline problem. Nobody running a crew can watch an inbox. Route every lead — form, call, chat, ad — into one place that pings a phone, auto-texts an acknowledgment immediately, and escalates if nobody responds inside your window."
+  ]
+ },
+ {
+  "slug": "can-ai-book-jobs-on-my-calendar",
+  "cat": "calls",
+  "svc": "booking-scheduling",
+  "q": "Can AI actually book jobs on my calendar?",
+  "a": "Yes. Voice systems can read live availability, offer real slots, respect drive-time and crew rules, book the appointment, and send confirmations to both sides. The constraint is not capability — it is having a calendar clean enough to trust.",
+  "body": [
+   "Set the rules before turning it on: which services get which appointment lengths, how much travel buffer between jobs, which crews handle what, how far ahead bookings are allowed, and which job types must be quoted by a human first.",
+   "Start narrow. Let it book the routine, well-defined work — diagnostics, estimates, maintenance visits — and escalate everything else. Once a month of bookings looks right, widen the scope."
+  ]
+ },
+ {
+  "slug": "what-crm-should-a-contractor-use",
+  "cat": "followup",
+  "svc": "crm",
+  "q": "What CRM should a contractor use?",
+  "a": "The one your crew will actually update. For most small service businesses that means a field-service platform with scheduling, quoting, and invoicing in one place rather than a sales CRM built for software companies. Fit to workflow beats feature count every time.",
+  "body": [
+   "The predictable failure is buying an enterprise-grade system, spending months configuring it, and watching the field team keep using text messages and a whiteboard. A simpler tool used consistently produces more revenue than a powerful one used by nobody.",
+   "Non-negotiables regardless of brand: every lead source lands in it automatically, follow-up sequences fire without anyone remembering, you can text from it, and you can export your customer list. That last one is your leverage — if you cannot get your data out, you do not really own it."
+  ]
+ },
+ {
+  "slug": "how-many-times-should-i-follow-up-on-an-estimate",
+  "cat": "followup",
+  "svc": "crm",
+  "q": "How many times should I follow up on an estimate?",
+  "a": "At least five to seven touches over two to three weeks, mixing text, email, and a call. Most quotes are abandoned after one or two attempts, which is exactly where the competitor who kept going picks up the job.",
+  "body": [
+   "A workable cadence: same-day thank-you with the quote attached, next-day check for questions, day four a text, day eight a call, day fourteen a value note — a photo of similar completed work — and a final \"closing this out unless I hear from you\" around day twenty-one. That last one produces more replies than any of the others.",
+   "The reason to automate it is not laziness; it is consistency. Follow-up done by memory happens when work is slow and stops when work is busy — which is precisely backwards, since the quotes you send during a busy stretch are the pipeline for the slow one."
+  ]
+ },
+ {
+  "slug": "how-do-i-get-more-repeat-customers",
+  "cat": "followup",
+  "svc": "email-sms-marketing",
+  "q": "How do I get more repeat customers?",
+  "a": "Contact the list you already have on a schedule tied to how your service actually recurs — seasonal reminders, maintenance intervals, and annual check-ins. Past customers are the cheapest jobs available and the most commonly ignored.",
+  "body": [
+   "Most service businesses have hundreds or thousands of past customers and no system for reaching them. That database is an asset with a carrying cost of nearly zero, and a single seasonal campaign to it routinely outperforms a month of ad spend.",
+   "Tie the timing to the trade: gutters before the rain, HVAC before the first freeze and the first heat wave, irrigation at startup and blowout, chimney in early fall, pressure washing in spring. Relevance is what separates a useful reminder from spam."
+  ]
+ },
+ {
+  "slug": "what-is-speed-to-lead",
+  "cat": "followup",
+  "svc": "crm",
+  "q": "What is speed to lead and why does it matter?",
+  "a": "Speed to lead is the elapsed time between someone contacting you and you contacting them back. It is among the most predictive numbers in a service business, because buyers contacting multiple companies frequently hire the first credible responder.",
+  "body": [
+   "Measure it before improving it. Time-stamp every inbound lead and every first response, then look at the median — most owners guess minutes and discover hours, especially for leads arriving after 4pm or on weekends.",
+   "Improving it is mechanical: automatic text acknowledgment within seconds, one inbox for every channel, notifications on a phone somebody carries, and an escalation rule if nobody responds inside your target window."
+  ]
+ },
+ {
+  "slug": "how-do-i-know-which-marketing-is-working",
+  "cat": "followup",
+  "svc": "call-tracking",
+  "q": "How do I know which marketing is actually working?",
+  "a": "Put a unique tracking number on each channel, tag every lead with its source, and report on cost per booked job rather than clicks or impressions. Without that, budget decisions are guesses dressed up as strategy.",
+  "body": [
+   "Attribution in home services is messy and honest reporting admits it. A customer may see a truck wrap, search your name, read a review, and call from the map pack — one job, four touches. Track sources anyway; imperfect data beats none, and the biggest winners and losers show up clearly.",
+   "Add the low-tech instrument: ask every caller how they heard about you and log the answer. It catches word of mouth, yard signs, and AI-assistant recommendations that no analytics tool will ever attribute."
+  ]
+ },
+ {
+  "slug": "should-i-text-my-customers",
+  "cat": "followup",
+  "svc": "email-sms-marketing",
+  "q": "Should I text my customers?",
+  "a": "Yes, for operational messages — appointment confirmations, arrival windows, quote follow-ups, review requests. Texts get read almost immediately. Marketing blasts are a different matter and carry real compliance requirements around consent and opt-out.",
+  "body": [
+   "Keep the two categories separate. Transactional texts about a job in progress are expected and welcome. Promotional texts require prior express consent, clear identification of the sender, and a working STOP — US rules around unsolicited messaging carry meaningful per-message penalties.",
+   "Practical hygiene: collect consent at the point of booking, use a business number rather than a personal cell, keep messages short and identify yourself, and honor opt-outs immediately and permanently."
+  ]
+ },
+ {
+  "slug": "how-do-i-get-more-google-reviews",
+  "cat": "reviews",
+  "svc": "reputation-management",
+  "q": "How do I get more Google reviews?",
+  "a": "Ask every customer, every job, immediately after the work is done, with a direct link that takes one tap. Automating the request is what turns it from something you do when you remember into a steady flow.",
+  "body": [
+   "Timing beats persuasion. The window where a satisfied customer will actually write something is short — same day, ideally within an hour of completion while the crew is still fresh in mind. A request that arrives four days later gets ignored by people who genuinely meant to help.",
+   "Remove every step you can. Send a text with a direct review link rather than instructions to search for you. Never gate the request based on predicted sentiment — review gating violates Google's policies and the reviews can be removed."
+  ]
+ },
+ {
+  "slug": "can-i-delete-a-bad-google-review",
+  "cat": "reviews",
+  "svc": "reputation-management",
+  "q": "Can I delete a bad Google review?",
+  "a": "Not directly. You can flag it for removal, and Google removes reviews that violate its policies — spam, conflicts of interest, off-topic content, hate speech, or a review of a business the person never used. A genuine negative experience will stay up.",
+  "body": [
+   "Flagging works best when you can point at a specific policy violation rather than unfairness. Reviews from competitors, from people who were never customers, or containing personal attacks are removable. \"This is not accurate\" generally is not.",
+   "The stronger play is response plus volume. A calm, specific, non-defensive reply is read by every future customer and often matters more than the review itself. And a steady flow of new reviews pushes any single bad one down and dilutes its effect on the average."
+  ]
+ },
+ {
+  "slug": "should-i-respond-to-negative-reviews",
+  "cat": "reviews",
+  "svc": "reputation-management",
+  "q": "Should I respond to negative reviews?",
+  "a": "Always, and quickly. The response is not for the reviewer — it is for the dozens of prospects reading it later. A short, factual, non-defensive reply that offers to fix the problem offline neutralizes most of the damage.",
+  "body": [
+   "A structure that works: thank them for the feedback, state the fact that needs correcting if there is one, take responsibility for what was yours, and move the conversation to a phone number. Four sentences. No arguing, no legal threats, no explaining the customer to themselves.",
+   "Never disclose private details of the job in a public reply — in some contexts that creates its own legal exposure, and it always reads badly. Also respond to positive reviews; a profile where the owner replies to everything reads as an attentive business."
+  ]
+ },
+ {
+  "slug": "is-it-illegal-to-pay-for-reviews",
+  "cat": "reviews",
+  "svc": "reputation-management",
+  "q": "Is it illegal to pay for reviews?",
+  "a": "In the United States, buying fake reviews and testimonials is prohibited by FTC rules and can carry civil penalties. It also violates the platform policies of Google, Yelp, and the rest, and detection has gotten good enough that the usual outcome is losing reviews you legitimately earned.",
+  "body": [
+   "The line is compensation for a review, not compensation for a customer. You may not pay for a review, offer an incentive conditional on a positive one, write reviews of your own business, or have employees post as customers. Fake reviews of competitors are also covered.",
+   "What is allowed: asking every customer, making it easy, and — in most jurisdictions and platform policies — offering a small thank-you that is not conditional on leaving a review or on its content. When in doubt, do not condition anything on the review."
+  ]
+ },
+ {
+  "slug": "should-i-hire-a-marketing-agency-or-do-it-myself",
+  "cat": "business",
+  "svc": "seo",
+  "q": "Should I hire a marketing agency or do it myself?",
+  "a": "Do the parts that are cheap and high-leverage yourself: the Google Business Profile, asking for reviews, taking job photos, answering the phone fast. Hire out the parts that need tooling and time — site build, technical SEO, ad management, automation.",
+  "body": [
+   "The best-run small service businesses tend to split it exactly that way. Nobody outside your company can produce your job photos, your review flow, or your response speed, and those are the highest-return activities available.",
+   "When you do hire, hire for a defined outcome with a defined deliverable, not a monthly retainer with vague scope. Ask what specifically ships each month, what you own at the end, and what happens if you leave."
+  ]
+ },
+ {
+  "slug": "what-should-a-contractor-marketing-budget-be",
+  "cat": "business",
+  "svc": "seo",
+  "q": "What should a contractor spend on marketing?",
+  "a": "Commonly cited ranges for established service businesses fall between 5% and 10% of revenue, with newer businesses or those entering a new market spending more. The useful version is bottom-up: cost per booked job times the jobs you need.",
+  "body": [
+   "Percentage rules break down at the edges. A business at capacity with a two-month backlog should be spending less and raising prices; a business with idle crews should be spending more than any percentage suggests, because idle capacity is the most expensive thing on the books.",
+   "Split the budget between channels that produce now and channels that compound. Ads and LSAs deliver this month. Website, SEO, reviews, and the customer database deliver for years. Funding only the first means the cost per lead never comes down."
+  ]
+ },
+ {
+  "slug": "what-questions-should-i-ask-a-marketing-agency",
+  "cat": "business",
+  "svc": "seo",
+  "q": "What should I ask before hiring a marketing agency?",
+  "a": "Who does the actual work; what specifically ships each month; do I own the domain, site, content, and data; what happens if I cancel; can I see results for a client in my trade and market; and what is the contract term. Hesitation on ownership is disqualifying.",
+  "body": [
+   "Two answers should end the conversation. Guaranteed rankings — nobody controls the algorithm, so a guarantee is either meaningless or fraudulent. And a site you do not own, where cancelling means losing the pages you paid for.",
+   "Ask what happens to your rankings if you cancel. A well-built site and a fixed profile keep working for a while; a rented site disappears instantly. That single answer tells you whether you are buying an asset or a subscription."
+  ]
+ },
+ {
+  "slug": "why-do-marketing-agencies-lock-you-into-contracts",
+  "cat": "business",
+  "svc": "seo",
+  "q": "Why do marketing agencies require long contracts?",
+  "a": "Partly legitimate — SEO takes months, and a month-to-month client who quits in week six was never going to see results. Partly not: long terms protect agency revenue against underperformance and make churn someone else's problem.",
+  "body": [
+   "A fair structure exists. A defined ramp-up period covering the front-loaded work, then month-to-month once the build is delivered. If a company will only sell twelve months up front with no deliverable milestones, the term is protecting them, not you.",
+   "Whatever the term, insist on ownership and portability. If you own the domain, the site, the content, and the data, a contract ending is an inconvenience. If you do not, it is a demolition."
+  ]
+ },
+ {
+  "slug": "what-is-a-fair-price-for-monthly-seo",
+  "cat": "business",
+  "svc": "seo",
+  "q": "What is a fair price for monthly local SEO?",
+  "a": "For a single-location service business, common market rates run roughly $500–2,500 a month depending on competition and scope. Below a few hundred dollars, the math only works if the work is automated or offshore. Above that range, the deliverables should be specific and substantial.",
+  "body": [
+   "Judge the quote by what ships, not the number. A month should produce identifiable work: pages published, profile updates, citation fixes, links earned, technical issues resolved. \"Ongoing optimization\" as a line item is not a deliverable.",
+   "The other half of the answer is your own economics. If a booked job is worth $8,000 in profit, $2,000 a month for two extra jobs is trivially worth it. If jobs are $400, the same spend needs a very different volume to make sense — run the arithmetic before comparing prices."
+  ]
+ },
+ {
+  "slug": "how-do-i-compete-with-a-franchise",
+  "cat": "business",
+  "svc": "seo",
+  "q": "How does a small contractor compete with a national franchise?",
+  "a": "On speed, specificity, and proof. You answer faster, you can be genuinely local on every page instead of running a corporate template, and you can show your own crew and your own finished jobs. Franchises buy the first impression; independents win the second.",
+  "body": [
+   "Do not fight them on ad spend in the broadest keywords — that is their strongest ground. Take the specific ground instead: individual towns, specific services, questions their template never answers, and the review profile of a business people in that town recognize.",
+   "The structural advantage is that a franchise page for your city was written by a marketing department that has never been there. Yours can name the county, the neighborhoods, the permit office, and the conditions that actually affect the work. That is not something a national template can copy."
+  ]
+ },
+ {
+  "slug": "how-do-i-grow-from-one-truck-to-a-fleet",
+  "cat": "business",
+  "svc": "custom-software",
+  "q": "How do I grow from one truck to a fleet?",
+  "a": "Fix lead flow and lead handling before adding trucks. A second truck without enough qualified demand halves everyone's utilization; systems that capture every call and chase every quote produce the demand that makes the second truck obvious.",
+  "body": [
+   "The predictable sequence: get consistent demand, get systems that handle it without you, then hire. Owners who reverse the last two steps end up as dispatchers who also swing a hammer, and growth stops at whatever one person can personally coordinate.",
+   "The systems that carry the weight are unglamorous: something answers every call, every lead lands in one pipeline, follow-up runs automatically, scheduling accounts for drive time, and the owner sees a weekly number for leads, close rate, and average ticket. That stack is what makes a third truck an arithmetic decision instead of a gamble."
+  ]
+ },
+ {
+  "slug": "how-do-i-fire-my-marketing-agency",
+  "cat": "business",
+  "svc": "web-design",
+  "q": "How do I fire my marketing agency without losing everything?",
+  "a": "Secure the assets before you give notice: domain registrar login, website files, Google Business Profile ownership, ad account ownership, analytics, and your customer list. Then check the notice period in the contract and give it in writing.",
+  "body": [
+   "The order matters. Announcing first and requesting access afterward is how businesses end up locked out of their own domain during a transition. Verify you are the registrant, that you have owner-level access to the Google profile and ad accounts, and that you hold an export of the site and the customer data.",
+   "Then transition rather than switch off. Keep the site live while the replacement is built, keep the ad accounts running if they are producing, and redirect any URL that changes. The goal is nobody outside the business noticing anything happened."
+  ]
+ },
+ {
+  "slug": "how-do-i-market-a-contracting-business-in-oregon",
+  "cat": "markets",
+  "svc": "seo",
+  "q": "How do I market a contracting business in Oregon?",
+  "a": "Lead with your CCB license number — Oregon buyers are trained to check it — build city pages for the towns you actually drive to rather than the whole state, and time campaigns to the wet season, which drives roofing, gutter, drainage, and moisture work.",
+  "body": [
+   "Oregon splits into distinct markets that behave differently: the Portland metro, the Willamette Valley corridor from Salem to Eugene, Central Oregon around Bend, the Rogue Valley, the coast, and the eastern side. A campaign built for Portland competition will overspend badly in Pendleton, and one built for a small market will get buried in Portland.",
+   "The Construction Contractors Board license is both a legal requirement and a marketing asset — the number belongs on the site, the profile, and the truck. Oregon also has consumer protections and disclosure requirements that buyers know about, so visible compliance reads as competence rather than fine print."
+  ]
+ },
+ {
+  "slug": "how-do-i-market-a-contracting-business-in-washington",
+  "cat": "markets",
+  "svc": "seo",
+  "q": "How do I market a contracting business in Washington?",
+  "a": "Show your L&I contractor registration and bond prominently, treat the Puget Sound corridor and Eastern Washington as separate markets with different costs and competition, and build for the rain-driven services that dominate demand west of the Cascades.",
+  "body": [
+   "Washington's contractor registration through Labor & Industries is publicly searchable, and buyers do search it. Registration number, bond, and insurance on the site removes a hurdle before the first call — and the same details feed the verification that ad platforms and answer engines rely on.",
+   "The geography is two economies. Seattle, Bellevue, Tacoma, and Everett are among the most expensive local search markets on the coast; Spokane, Yakima, the Tri-Cities, and Wenatchee cost a fraction as much per click and reward local specificity. Run them as separate plans with separate budgets."
+  ]
+ },
+ {
+  "slug": "how-do-i-market-a-contracting-business-in-california",
+  "cat": "markets",
+  "svc": "seo",
+  "q": "How do I market a contracting business in California?",
+  "a": "Display your CSLB license number — California requires it in advertising for licensed work — target sub-metro areas rather than whole regions, and build around the state's specific demand drivers: wildfire hardening, drought and water rules, Title 24 energy requirements, and seismic work.",
+  "body": [
+   "California is not one market and cannot be budgeted as one. Los Angeles, the Bay Area, San Diego, the Central Valley, and the far north differ enormously in cost per click, competition, and buyer behavior. Trying to cover \"Southern California\" in one campaign is the fastest way to spend a budget with nothing to show.",
+   "CSLB rules are strict about advertising: licensed contractors must include the license number in advertising, and there are limits on what unlicensed operators may advertise or bid. Put the number in the footer of every page and on the Google profile — it is both compliance and a trust signal in a market with a lot of unlicensed competition."
+  ]
+ },
+ {
+  "slug": "do-i-need-a-different-website-for-each-city",
+  "cat": "markets",
+  "svc": "web-design",
+  "q": "Do I need a separate website for each city I serve?",
+  "a": "No. Separate domains per city split your authority, multiply maintenance, and historically get treated as doorway sites. One strong site with a substantive page per city outperforms five thin sites, and costs less to run.",
+  "body": [
+   "The instinct comes from an outdated tactic — exact-match city domains once worked and have not for a long time. What replaced it is a single authoritative domain where every city page benefits from the authority the whole site has accumulated.",
+   "The rare exception is genuinely separate businesses: different brands, different legal entities, different phone numbers and crews. Two brands operated by one owner can justify two sites. One brand serving eight towns should never have eight sites."
+  ]
+ },
+ {
+  "slug": "how-do-i-pick-which-cities-to-target",
+  "cat": "markets",
+  "svc": "seo",
+  "q": "How do I choose which cities to target?",
+  "a": "Start with where your existing customers already are — pull addresses from the last hundred jobs and map them. Then expand outward along the roads you already drive, ranked by drive time, job value, and how contested the market is.",
+  "body": [
+   "Two filters keep the list honest. Would you actually drive there for a normal-sized job, and is there enough of that job type there to matter? A town forty minutes out where you take one call a year is not a market; it is a page nobody reads.",
+   "Order by winnability, not size. The biggest city nearby is usually the most contested and the most expensive, and often the worst first target. Building visibility in three adjacent towns you can genuinely own creates the review base and authority that make the big market attackable later."
+  ]
+ },
+ {
+  "slug": "does-my-license-number-need-to-be-on-my-website",
+  "cat": "markets",
+  "svc": "web-design",
+  "q": "Does my contractor license number need to be on my website?",
+  "a": "In several states, yes — California requires the CSLB number in advertising for licensed work, and Oregon and Washington require contractors to be registered and to identify themselves properly. Even where not strictly required, displaying it converts, because buyers check.",
+  "body": [
+   "Rules vary by state and by trade, and advertising requirements are enforced. Confirm the current requirement with your own licensing board rather than relying on a marketing article — including whether the number must appear in specific places or at a specific size.",
+   "Beyond compliance it is a conversion asset. License number, bond, and insurance shown in the footer and on the about page answer the first question a cautious homeowner has, and give search and answer engines a verifiable fact to tie to your business."
+  ]
+ }
+]
