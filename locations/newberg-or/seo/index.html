@@ -164,6 +164,7 @@ footer{border-top:1px solid var(--hair);padding:40px 0;background:var(--ink2);ma
 /* /start/ — offer page */
 .tiers{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--hair);border:1px solid var(--hair);margin-top:8px}
 @media(max-width:700px){.tiers{grid-template-columns:1fr}}
+.tiers.one{grid-template-columns:1fr;max-width:560px} /* single-tier offers shouldn't leave a dead column */
 .tier{background:var(--ink);padding:26px 24px}
 .tier.hi{background:var(--ink2);border-left:2px solid var(--silver-hi)}
 .tier h3{font-size:1.05rem;text-transform:uppercase;margin-bottom:6px}
@@ -195,7 +196,7 @@ footer{border-top:1px solid var(--hair);padding:40px 0;background:var(--ink2);ma
 </head>
 <body>
 <a href="#main" style="position:absolute;left:-9999px;top:0" onfocus="this.style.left='8px';this.style.top='8px';this.style.background='#fff';this.style.color='#000';this.style.padding='8px 12px';this.style.zIndex=99" onblur="this.style.left='-9999px'">Skip to content</a>
-<header class="top"><div class="wrap"><a class="logo" href="/">DB<span style="color:var(--silver-lo)">—</span></a><nav><a href="/services/">Services</a><a href="/trades/">Industries</a><a href="/locations/">Locations</a><a href="/answers/">Answers</a><a href="/products/">Products</a><a href="/start/" style="color:var(--silver-hi)">Get a site — $500</a></nav></div></header>
+<header class="top"><div class="wrap"><a class="logo" href="/">DB<span style="color:var(--silver-lo)">—</span></a><nav><a href="/services/">Services</a><a href="/trades/">Industries</a><a href="/locations/">Locations</a><a href="/answers/">Answers</a><a href="/claude-code/">Claude Code</a><a href="/start/" style="color:var(--silver-hi)">Get a site — $500</a></nav></div></header>
 <div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/locations/">Locations</a> / <a href="/locations/oregon/">Oregon</a> / <a href="/locations/newberg-or/">Newberg, OR</a> / SEO</nav></div>
 <main id="main">
 <div class="hero"><div class="wrap"><h1>SEO in <span class="chrome">Newberg, OR.</span></h1><p class="lede">The local search system — map pack, service pages, city pages, and the links that make them stick — for service businesses in Newberg, Dundee, McMinnville, and across Yamhill County.</p><div class="answer"><span class="lab">Short answer</span><p>Local SEO for Newberg, OR service businesses: the local search system. Serving Newberg, Dundee, McMinnville, Sherwood, and the rest of Yamhill County. Flat pricing quoted up front, and you own everything that gets built. Call or text 530-736-7085.</p></div>
@@ -253,7 +254,7 @@ f.addEventListener('submit',async e=>{
 <div><h3>Services</h3><a href="/services/web-design/">Websites</a><a href="/services/seo/">SEO</a><a href="/services/aeo/">AEO</a><a href="/services/google-ads/">Google Ads</a><a href="/services/ai-receptionist/">AI Answering</a><a href="/services/crm/">CRM</a><a href="/services/email-sms-marketing/">Email &amp; SMS</a><a href="/services/reputation-management/">Reviews</a><a href="/services/">All 23 services →</a></div>
 <div><h3>Industries</h3><a href="/trades/roofing/">Roofing</a><a href="/trades/plumbing/">Plumbing</a><a href="/trades/hvac/">HVAC</a><a href="/trades/electrical/">Electrical</a><a href="/trades/solar/">Solar</a><a href="/trades/concrete/">Concrete</a><a href="/trades/landscaping/">Landscaping</a><a href="/trades/pest-control/">Pest Control</a><a href="/trades/">All 53 industries →</a></div>
 <div><h3>States</h3><a href="/locations/oregon/">Oregon (65)</a><a href="/locations/washington/">Washington (47)</a><a href="/locations/california/">California (88)</a><a href="/locations/idaho/">Idaho (6)</a><a href="/locations/nevada/">Nevada (6)</a><a href="/locations/">All 212 cities →</a></div>
-<div><h3>Company</h3><a href="/start/">Get a site — $500</a><a href="/">Home</a><a href="/about/">About</a><a href="/answers/">Answers</a><a href="/#builds">Builds</a><a href="/ideas/">Ideas Board</a><a href="/products/">SEO Products</a><a href="/sitemap/">Sitemap</a><a href="mailto:bannisterderik@gmail.com">Email</a><a href="tel:+15307367085">Call/Text 530-736-7085</a></div>
+<div><h3>Company</h3><a href="/start/">Get a site — $500</a><a href="/claude-code/">Claude Code setup — $1,500</a><a href="/">Home</a><a href="/about/">About</a><a href="/answers/">Answers</a><a href="/#builds">Builds</a><a href="/ideas/">Ideas Board</a><a href="/products/">SEO Products</a><a href="/sitemap/">Sitemap</a><a href="mailto:bannisterderik@gmail.com">Email</a><a href="tel:+15307367085">Call/Text 530-736-7085</a></div>
 <div><h3>Legal</h3><a href="/legal/terms/">Terms of Use</a><a href="/legal/website-terms/">Website Build Agreement</a><a href="/legal/privacy/">Privacy Policy</a><a href="/legal/do-not-sell/">Do Not Sell or Share My Personal Information</a><a href="/legal/accessibility/">Accessibility</a><a href="/legal/disclaimer/">Disclaimer</a></div>
 </div><div class="legal"><span class="mono">© 2026 Derik Bannister</span><span class="mono">DB<b>—</b> BUILD. OPERATE. OWN.</span></div></div></footer>
 </body>

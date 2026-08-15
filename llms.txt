@@ -7,6 +7,10 @@
 > Flat pricing quoted up front; the client owns the domain, code, content, and data.
 > Contact: bannisterderik@gmail.com · call/text 530-736-7085.
 
+## Flat-price products
+- [250+ page website build](https://derikbannister.com/start/): $999 invoiced, $500 at checkout. 7 business days. Client owns the source code.
+- [Claude Code setup](https://derikbannister.com/claude-code/): $1,500 flat. Claude Code installed, existing tools connected, business configuration written, 3–5 custom skills built, 60-minute working session. 5 business days. Client owns the configuration and skills.
+
 ## Services (23)
 - [Website Design & Development](https://derikbannister.com/services/web-design/): Fast, search-first websites that convert calls
 - [Local SEO](https://derikbannister.com/services/seo/): Local SEO that puts you in the map pack

@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Code Setup — $1,500 | Derik Bannister</title>
+<meta name="description" content="Claude Code installed, connected to your real tools, and taught your business — plus 3–5 custom skills and a working session. $1,500 flat, 5 business days.">
+<link rel="canonical" href="https://derikbannister.com/claude-code/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta property="og:title" content="Claude Code Setup — $1,500 | Derik Bannister"><meta property="og:description" content="Claude Code installed, connected to your real tools, and taught your business — plus 3–5 custom skills and a working session. $1,500 flat, 5 business days."><meta property="og:type" content="website"><meta property="og:url" content="https://derikbannister.com/claude-code/">
+<meta property="og:image" content="https://derikbannister.com/og/og-default.png"><meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='42' font-family='Arial Black,sans-serif' font-size='26' font-weight='900' fill='%23e8e8ee' text-anchor='middle'%3EDB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0a0a0a;--ink2:#101012;--paper:#f4f4f6;--silver:#c7c7cf;--silver-hi:#f2f2f6;--silver-lo:#77777f;--text:#ededf0;--muted:#8f8f97;--faint:#55555b;--hair:rgba(255,255,255,.08);--hair2:rgba(255,255,255,.16);--disp:'Syne',sans-serif;--body:'Archivo',sans-serif;--mono:'IBM Plex Mono',monospace;--gutter:clamp(20px,5vw,64px)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 var(--gutter)}
+h1,h2,h3{font-family:var(--disp);line-height:1.1;font-weight:800;letter-spacing:-.01em}
+.chrome{background:linear-gradient(105deg,#5c5c64,#e9e9f0 25%,#8a8a92 48%,#fff 65%,#c7c7cf);-webkit-background-clip:text;background-clip:text;color:transparent}
+.mono{font-family:var(--mono);text-transform:uppercase;letter-spacing:.14em;font-size:.68rem;color:var(--muted)}
+.mono b{color:var(--silver-hi);font-weight:500}
+.top{border-bottom:1px solid var(--hair);background:rgba(10,10,10,.9)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-family:var(--disp);font-weight:800;font-size:.95rem}
+.top nav{display:flex;gap:22px}
+.top nav a{font-family:var(--mono);font-size:.64rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.top nav a:hover{color:var(--silver-hi)}
+.crumbs{padding:18px 0;font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.crumbs a{color:var(--muted)}
+.crumbs a:hover{color:var(--silver-hi)}
+.hero{padding:clamp(40px,7vw,90px) 0 clamp(30px,5vw,60px)}
+.hero h1{font-size:clamp(1.9rem,5vw,3.4rem);text-transform:uppercase;max-width:22ch;text-wrap:balance}
+.hero .lede{color:var(--muted);max-width:65ch;margin-top:22px;font-size:1.05rem}
+.hero .lede b{color:var(--text)}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:.6em;font-family:var(--mono);font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--ink);background:linear-gradient(120deg,#d8d8de,#fff 50%,#b9b9c2);padding:.9em 1.6em;border-radius:2px}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--hair2)}
+.btn.ghost:hover{border-color:var(--silver-hi);color:var(--silver-hi)}
+section{padding:clamp(34px,5vw,60px) 0;border-top:1px solid var(--hair)}
+section h2{font-size:clamp(1.3rem,2.8vw,1.9rem);text-transform:uppercase;margin-bottom:22px}
+p+p{margin-top:1em}
+.body-copy{color:var(--muted);max-width:70ch}
+.body-copy b{color:var(--text)}
+ul.feat{list-style:none;display:grid;gap:12px;max-width:70ch}
+ul.feat li{padding:14px 18px;border:1px solid var(--hair);border-left:2px solid var(--silver);color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.grid a{border:1px solid var(--hair);padding:13px 16px;font-size:.86rem;color:var(--muted);transition:border-color .2s,color .2s}
+.grid a:hover{border-color:var(--silver);color:var(--silver-hi)}
+.grid a b{display:block;color:var(--text);font-weight:600;font-size:.92rem}
+.citylinks{columns:3;gap:26px;max-width:900px}
+@media(max-width:760px){.citylinks{columns:2}}
+@media(max-width:480px){.citylinks{columns:1}}
+.citylinks a{display:block;color:var(--muted);font-size:.82rem;padding:3px 0;break-inside:avoid}
+.citylinks a:hover{color:var(--silver-hi)}
+.faq details{border-bottom:1px solid var(--hair);padding:16px 0}
+.faq summary{cursor:pointer;font-weight:600;color:var(--text)}
+.faq p{color:var(--muted);margin-top:10px;max-width:70ch}
+.contact-band{background:var(--ink2);border:1px solid var(--hair);padding:clamp(26px,4vw,44px);margin-top:20px}
+.contact-band h2{margin-bottom:10px}
+.contact-band p{color:var(--muted);max-width:60ch}
+footer{border-top:1px solid var(--hair);padding:40px 0;background:var(--ink2);margin-top:60px}
+.fcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:26px}
+.fcols h3{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:12px;font-weight:500}
+.fcols a{display:block;color:var(--muted);font-size:.82rem;padding:3px 0}
+.fcols a:hover{color:var(--silver-hi)}
+.legal{margin-top:30px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+/* ideas board */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.chips .lab{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;color:var(--faint);text-transform:uppercase;width:100%;margin-bottom:2px}
+.chip{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--hair);background:transparent;padding:.55em 1em;cursor:pointer;transition:border-color .25s,color .25s,background .25s}
+.chip:hover{border-color:var(--silver);color:var(--silver-hi)}
+.chip.on{background:var(--silver-hi);color:var(--ink);border-color:var(--silver-hi)}
+.idea-count{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;color:var(--faint);text-transform:uppercase;margin:18px 0 22px}
+.idea-count b{color:var(--silver-hi);font-weight:500}
+.ideas{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair)}
+@media(max-width:1000px){.ideas{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.ideas{grid-template-columns:1fr}}
+.idea{background:var(--ink);padding:26px 24px;display:grid;gap:10px;align-content:start;transition:background .3s;position:relative;overflow:hidden}
+.idea::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background:linear-gradient(90deg,var(--silver-lo),var(--silver-hi));transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.idea:hover{background:var(--surface)}
+.idea:hover::after{transform:scaleX(1)}
+.idea .tp{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;color:var(--silver);text-transform:uppercase}
+.idea h3{font-size:1.02rem;text-transform:uppercase;letter-spacing:.01em}
+.idea p{color:var(--muted);font-size:.88rem}
+.idea .for{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;color:var(--faint);text-transform:uppercase;margin-top:4px}
+.idea.hide{display:none}
+/* direct-answer block — the passage answer engines lift */
+.answer{border:1px solid var(--hair2);border-left:2px solid var(--silver-hi);background:var(--ink2);padding:22px 24px;margin-top:26px;max-width:72ch}
+.answer .lab{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--silver);display:block;margin-bottom:9px}
+.answer p{color:var(--text);font-size:1rem;line-height:1.65}
+/* filter + search toolbar on hubs */
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:18px}
+.search{flex:1 1 260px;min-width:220px;position:relative}
+.search input{width:100%;background:var(--ink2);border:1px solid var(--hair2);color:var(--text);font-family:var(--body);font-size:.9rem;padding:.75em 1em .75em 2.2em;border-radius:2px;outline:none}
+.search input:focus{border-color:var(--silver)}
+.search input::placeholder{color:var(--faint)}
+.search::before{content:"⌕";position:absolute;left:.85em;top:50%;transform:translateY(-52%);color:var(--silver-lo);font-size:1.05rem}
+.hitcount{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin:0 0 20px}
+.hitcount b{color:var(--silver-hi);font-weight:500}
+.grid a.hide,.citylinks a.hide,.qcard.hide,.statecol.hide{display:none}
+/* grouped sections on hubs */
+.group{margin-bottom:34px}
+.group h3{font-family:var(--disp);font-size:1.05rem;text-transform:uppercase;letter-spacing:.02em;margin-bottom:6px}
+.group .gb{color:var(--muted);font-size:.88rem;max-width:66ch;margin-bottom:14px}
+/* state columns on the locations hub */
+.states{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
+.statecol h3{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--silver);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--hair)}
+.statecol a{display:block;color:var(--muted);font-size:.83rem;padding:3px 0}
+.statecol a:hover{color:var(--silver-hi)}
+.statecol a.anchor{color:var(--text);font-weight:600}
+.statecol .more{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--silver);padding-top:8px}
+/* answer cards */
+.qcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1px;background:var(--hair)}
+.qcard{background:var(--ink);padding:22px 22px;display:block;transition:background .25s}
+.qcard:hover{background:var(--ink2)}
+.qcard .tp{font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;color:var(--silver);text-transform:uppercase}
+.qcard h3{font-size:.98rem;text-transform:none;letter-spacing:0;margin:9px 0 8px;line-height:1.3}
+.qcard p{color:var(--muted);font-size:.85rem;line-height:1.6}
+/* key/value strip — real local facts, no filler */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:var(--hair);border:1px solid var(--hair);margin-top:8px}
+.facts div{background:var(--ink);padding:16px 18px}
+.facts dt{font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:5px}
+.facts dd{color:var(--text);font-size:.9rem}
+/* sitemap page */
+.smap{columns:4;gap:24px}
+@media(max-width:960px){.smap{columns:2}}
+@media(max-width:560px){.smap{columns:1}}
+.smap a{display:block;color:var(--muted);font-size:.8rem;padding:2px 0;break-inside:avoid}
+.smap a:hover{color:var(--silver-hi)}
+.smap h3{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--silver);margin:16px 0 8px;break-after:avoid}
+/* lead form */
+.lead{display:grid;gap:14px;margin-top:22px;max-width:640px}
+.lead-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.lead-row{grid-template-columns:1fr}}
+.lead label{display:grid;gap:6px;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.lead .opt{color:var(--faint);letter-spacing:.1em}
+.lead input,.lead textarea{background:var(--ink);border:1px solid var(--hair2);color:var(--text);font-family:var(--body);font-size:.95rem;padding:.72em .9em;border-radius:2px;outline:none;width:100%;text-transform:none;letter-spacing:0}
+.lead input:focus,.lead textarea:focus{border-color:var(--silver)}
+.lead input::placeholder,.lead textarea::placeholder{color:var(--faint)}
+.lead input:disabled,.lead textarea:disabled{opacity:.5}
+.lead textarea{resize:vertical}
+.lead-foot{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:2px}
+.lead button{border:none;cursor:pointer;font-family:var(--mono)}
+.lead button:disabled{opacity:.6;cursor:default}
+.lead-note{font-size:.8rem;color:var(--faint);max-width:34ch}
+.lead-note a{color:var(--silver);text-decoration:underline}
+.lead-status{font-size:.88rem;min-height:1.2em}
+.lead-status.ok{color:var(--silver-hi)}
+.lead-status.warn{color:#e8b4b4}
+.lead-status a{color:var(--silver-hi);text-decoration:underline}
+/* offer band — the money path on every generated page */
+.offer{border:1px solid var(--hair2);background:linear-gradient(120deg,var(--ink2),#141418);padding:clamp(26px,4vw,40px);display:grid;grid-template-columns:1fr auto;gap:34px;align-items:center;margin-top:20px}
+.offer-copy h2{font-size:clamp(1.25rem,2.5vw,1.8rem);text-transform:uppercase;margin:10px 0 14px;max-width:22ch}
+.offer-copy p{color:var(--muted);max-width:62ch;font-size:.94rem}
+.offer-copy p b{color:var(--text)}
+.offer-act{display:grid;gap:11px;justify-items:stretch;min-width:210px}
+.price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.price .was{font-family:var(--mono);font-size:1rem;color:var(--faint);text-decoration:line-through}
+.price .now{font-family:var(--disp);font-weight:800;font-size:2.4rem;color:var(--silver-hi)}
+.price .mono{width:100%}
+@media(max-width:760px){.offer{grid-template-columns:1fr;gap:22px}}
+/* /start/ — offer page */
+.tiers{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--hair);border:1px solid var(--hair);margin-top:8px}
+@media(max-width:700px){.tiers{grid-template-columns:1fr}}
+.tiers.one{grid-template-columns:1fr;max-width:560px} /* single-tier offers shouldn't leave a dead column */
+.tier{background:var(--ink);padding:26px 24px}
+.tier.hi{background:var(--ink2);border-left:2px solid var(--silver-hi)}
+.tier h3{font-size:1.05rem;text-transform:uppercase;margin-bottom:6px}
+.tier .amt{font-family:var(--disp);font-weight:800;font-size:2.6rem;color:var(--silver-hi);line-height:1;margin:12px 0 8px}
+.tier p{color:var(--muted);font-size:.9rem;max-width:44ch}
+.tier .btn{margin-top:18px}
+.steps{display:grid;gap:1px;background:var(--hair);border:1px solid var(--hair);margin-top:8px}
+.step{background:var(--ink);padding:20px 22px;display:grid;grid-template-columns:42px 1fr;gap:16px;align-items:start}
+.step .n{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;color:var(--silver);padding-top:3px}
+.step h3{font-size:1rem;text-transform:uppercase;margin-bottom:6px}
+.step p{color:var(--muted);font-size:.9rem;max-width:58ch}
+.step b{color:var(--text)}
+/* six nav items don't fit 375px — scroll the strip instead of overflowing the page */
+@media(max-width:760px){
+.top .wrap{height:auto;flex-direction:column;align-items:flex-start;gap:7px;padding-top:11px;padding-bottom:11px}
+.top nav{width:100%;overflow-x:auto;gap:16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.top nav::-webkit-scrollbar{display:none}
+.top nav a{white-space:nowrap}
+.facts{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://derikbannister.com/#business","name":"Derik Bannister","url":"https://derikbannister.com/","email":"bannisterderik@gmail.com","telephone":"+15307367085","founder":{"@type":"Person","name":"Derik Bannister"},"address":{"@type":"PostalAddress","addressRegion":"OR","addressCountry":"US"},"areaServed":[{"@type":"State","name":"Oregon"},{"@type":"State","name":"Washington"},{"@type":"State","name":"California"},{"@type":"State","name":"Idaho"},{"@type":"State","name":"Nevada"}],"knowsAbout":["Website Design & Development","Local SEO","Answer Engine Optimization","Google Ads & LSAs","AI Receptionist","CRM & Pipeline","Email & SMS Marketing","Reputation Management","Custom Software","Landing Pages & CRO","Google Local Services Ads","Google Business Profile Management","Call Tracking & Analytics","Content Marketing","Hosting, Care & Security","Workflow Automation & AI Agents","Online Booking & Scheduling","Meta Ads","Social Media Management","Photo & Video Content","Branding & Identity","Authority Link Building","Press Release Writing & Distribution"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://derikbannister.com/#website","url":"https://derikbannister.com/","name":"Derik Bannister","publisher":{"@id":"https://derikbannister.com/#business"},"inLanguage":"en-US"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://derikbannister.com/claude-code/#page","url":"https://derikbannister.com/claude-code/","name":"Claude Code Setup — $1,500 | Derik Bannister","description":"Claude Code installed, connected to your real tools, and taught your business — plus 3–5 custom skills and a working session. $1,500 flat, 5 business days.","isPartOf":{"@id":"https://derikbannister.com/#website"},"about":{"@id":"https://derikbannister.com/#business"},"speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".answer"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://derikbannister.com/"},{"@type":"ListItem","position":2,"name":"Claude Code Setup","item":"https://derikbannister.com/claude-code/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Claude Code Setup","brand":{"@id":"https://derikbannister.com/#business"},"description":"Claude Code installed and configured for a service business: existing tools connected, a configuration file covering the business's services, pricing and terminology, 3–5 custom skills built for repeat workflows, and a 60-minute working session. Delivered in 5 business days. Client owns the configuration and skills.","offers":[{"@type":"Offer","price":"1500","priceCurrency":"USD","name":"Claude Code setup","url":"https://derikbannister.com/claude-code/","availability":"https://schema.org/InStock","seller":{"@id":"https://derikbannister.com/#business"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Claude Code, in plain English?","acceptedAnswer":{"@type":"Answer","text":"An AI that works inside your computer instead of inside a chat window. It reads your files, runs commands, calls your other software, and does multi-step work while you do something else. The gap between that and a chatbot is the whole point — a chatbot tells you how to pull last month's unpaid invoices. This pulls them."}},{"@type":"Question","name":"What exactly do I get for $1,500?","acceptedAnswer":{"@type":"Answer","text":"Claude Code installed and configured on your machine; your real tools connected to it — the ones you name, from your CRM and email to your spreadsheets and database; a written configuration file that teaches it your business, your pricing, your terminology, and how you want things done; 3–5 custom skills built for the specific repeat jobs you do every week; and a 60-minute working session where we run them together on your real work. Flat fee, one time."}},{"@type":"Question","name":"What's a \"skill\"?","acceptedAnswer":{"@type":"Answer","text":"A repeat job, written down once so it runs the same way every time. \"Pull this week's new leads, check which ones we already talked to, and draft the follow-ups.\" \"Turn my job notes into an invoice.\" \"Read this contract and tell me what changed.\" You describe the job in your own words; I build it, test it against your real data, and hand it over so you can run it by name from then on."}},{"@type":"Question","name":"Do I need to know how to code?","acceptedAnswer":{"@type":"Answer","text":"No. You type what you want in ordinary English. The reason this costs $1,500 and not nothing is that the setup — the connectors, the configuration, the skills built around how your business actually runs — is the part that takes technical work. That part is mine. After that it's typing."}},{"@type":"Question","name":"What does it cost to run after you're done?","acceptedAnswer":{"@type":"Answer","text":"A Claude subscription or API billing, paid directly to Anthropic — that is separate from this fee and it is not something I mark up or resell. I'll tell you which plan fits your usage before you buy anything, so there is no surprise. Any third-party tool you connect keeps its own bill too."}},{"@type":"Question","name":"Will it work with the software I already use?","acceptedAnswer":{"@type":"Answer","text":"Usually. Anything with an API can be connected, and the common ones — Google Workspace, Slack, most CRMs, Supabase and Postgres, Stripe, spreadsheets — already have prebuilt connectors. Tell me your stack before you pay and I'll tell you honestly what connects cleanly, what needs a workaround, and what can't be done. I would rather lose the sale than sell you a connection that doesn't exist."}},{"@type":"Question","name":"How long does it take?","acceptedAnswer":{"@type":"Answer","text":"5 business days from the kickoff call, assuming you get me access to the tools you want connected. The kickoff is a 30-minute call to find out what you actually do all week — that conversation is what the skills get built from."}},{"@type":"Question","name":"Is my business data safe?","acceptedAnswer":{"@type":"Answer","text":"It runs on your machine, under your accounts, with credentials you control and can revoke at any time. I don't take copies of your data, and I don't keep access after handoff. You decide which tools get connected, and anything you'd rather I never touch simply doesn't get connected."}},{"@type":"Question","name":"Do I own it?","acceptedAnswer":{"@type":"Answer","text":"Yes. The configuration and every skill built for you are plain text files on your machine. Keep them, edit them, hand them to someone else. There is no license you keep paying to use your own setup, and nothing stops working if you never speak to me again."}},{"@type":"Question","name":"What if the skills aren't right?","acceptedAnswer":{"@type":"Answer","text":"One round of revisions on the skills I built, requested within 14 days. Watch them run on a real week of your work, send me one list of what's off, and I fix it."}},{"@type":"Question","name":"What's your refund policy?","acceptedAnswer":{"@type":"Answer","text":"Before the kickoff call: full refund, no questions. After delivery the fee is non-refundable, because the work is done and it's on your machine. If I fail to deliver what's described on this page, you get your money back."}}]}</script>
+</head>
+<body>
+<a href="#main" style="position:absolute;left:-9999px;top:0" onfocus="this.style.left='8px';this.style.top='8px';this.style.background='#fff';this.style.color='#000';this.style.padding='8px 12px';this.style.zIndex=99" onblur="this.style.left='-9999px'">Skip to content</a>
+<header class="top"><div class="wrap"><a class="logo" href="/">DB<span style="color:var(--silver-lo)">—</span></a><nav><a href="/services/">Services</a><a href="/trades/">Industries</a><a href="/locations/">Locations</a><a href="/answers/">Answers</a><a href="/claude-code/">Claude Code</a><a href="/start/" style="color:var(--silver-hi)">Get a site — $500</a></nav></div></header>
+<div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / Claude Code Setup</nav></div>
+<main id="main">
+<div class="hero"><div class="wrap"><h1>Claude Code, set up around <span class="chrome">how your business actually runs.</span></h1><p class="lede">Installed on your machine, wired to the tools you already pay for, taught your pricing and your terminology, and loaded with 3–5 skills built for the jobs you repeat every week. One fee, 5 days, no retainer.</p><div class="answer"><span class="lab">Short answer</span><p>Derik Bannister sets up Claude Code for service businesses for $1,500 flat. That covers installation, connecting your existing tools, a configuration file that teaches it your business, 3–5 custom skills built for your repeat workflows, and a 60-minute working session. Delivered in 5 business days. You own the configuration and the skills outright. Call or text 530-736-7085.</p></div>
+<div class="cta-row"><a class="btn" href="mailto:bannisterderik@gmail.com?subject=Project%20inquiry%20%E2%80%94%20Claude%20Code%20Setup%20%E2%80%94%20%241%2C500%20%7C%20Derik%20Bannister">Get a free strategy brief →</a><a class="btn ghost" href="tel:+15307367085">Call/Text 530-736-7085</a></div></div></div>
+<section><div class="wrap"><h2>The price</h2><div class="tiers one">
+<div class="tier hi"><h3>Claude Code setup</h3><div class="amt">$1,500</div><p>One flat fee. Setup, connectors, configuration, 3–5 custom skills, and the working session. No retainer, no percent of anything, nothing to renew.</p><a class="btn" href="mailto:bannisterderik@gmail.com?subject=Claude%20Code%20setup%20%E2%80%94%20%241%2C500">Request an invoice — $1,500 →</a></div>
+</div><p class="body-copy" style="margin-top:18px">What you pay Anthropic to run it afterward is separate and goes straight to them — I'll tell you which plan fits before you spend a dollar on it.</p></div></section>
+
+<section><div class="wrap"><h2>What you get</h2><ul class="feat">
+<li><b>Claude Code installed and configured</b> on your machine, working the first day</li>
+<li><b>Your tools connected</b> — CRM, email, calendar, spreadsheets, database, Slack, Stripe; you name them, I wire the ones that can be wired and tell you straight about the ones that can't</li>
+<li><b>A configuration file that teaches it your business</b> — your services, your pricing, your terminology, your customers, how you want things written</li>
+<li><b>3–5 custom skills</b> built for the jobs you actually repeat, tested against your real data, runnable by name</li>
+<li><b>A 60-minute working session</b> — we run them together on live work, not a demo account</li>
+<li><b>Plain-English documentation</b> of what was built and how to run it</li>
+<li><b>One round of revisions</b> on the skills, within 14 days</li>
+<li><b>All of it yours</b> — plain text files on your machine, no license, nothing to keep paying for</li>
+</ul></div></section>
+
+<section><div class="wrap"><h2>How it goes</h2><div class="steps">
+<div class="step"><span class="n">01</span><div><h3>You book it</h3><p>Payment confirms the slot. You get a receipt and an email from me the same day.</p></div></div>
+<div class="step"><span class="n">02</span><div><h3>30-minute kickoff call</h3><p>I ask what eats your week. The answers to that call are what the skills get built from — not a questionnaire, an actual conversation about your work.</p></div></div>
+<div class="step"><span class="n">03</span><div><h3>You give me access</h3><p>Only to the tools you want connected. Your accounts, your credentials, revocable by you at any time.</p></div></div>
+<div class="step"><span class="n">04</span><div><h3>I build it — 5 business days</h3><p>Install, connectors, configuration, and the skills. Tested on your real data, not sample data.</p></div></div>
+<div class="step"><span class="n">05</span><div><h3>We run it together, then it's yours</h3><p>A 60-minute session on live work, documentation in plain English, and <b>one round of revisions within 14 days</b>. After that you're running it without me.</p></div></div>
+</div></div></section>
+
+<section><div class="wrap"><h2>What it's actually for</h2><p class="body-copy">The test for a good skill is boring: something you do every week, the same way, that costs you an hour and doesn't need your judgment. A few that come up constantly in the trades:</p><div class="grid" style="margin-top:20px">
+<a href="/services/crm/"><b>Lead follow-up that doesn't stall</b>New leads pulled, cross-checked against who you've already talked to, follow-ups drafted in your voice</a>
+<a href="/services/automation/"><b>Quotes and invoices from job notes</b>Your notes in, a priced document out, matching how you actually price</a>
+<a href="/services/reputation-management/"><b>Review requests, on time</b>Job closes, the ask goes out, responses drafted for you to approve</a>
+<a href="/services/custom-software/"><b>The weekly numbers</b>Pulled from wherever they live, assembled into the report you keep meaning to build</a>
+</div><p class="body-copy" style="margin-top:18px">Bring me your list. If a job on it can't be done well, I'll tell you that on the call instead of building something that half-works.</p></div></section>
+
+<section><div class="wrap"><h2>What's not included</h2><ul class="feat">
+<li>Your Anthropic subscription or API usage — billed by them, directly to you</li>
+<li>Third-party subscriptions for the tools being connected (CRM, phone, email platforms)</li>
+<li>Additional seats or machines beyond yours — quoted separately, and cheaper than the first</li>
+<li>Ongoing skill development, monitoring, or support past the included revision round — quoted separately if you want it</li>
+<li>Custom software, integrations for tools with no API, or anything requiring a vendor to build you access</li>
+<li>Website, SEO, or ads work — that's the <a href="/start/" style="color:var(--silver);text-decoration:underline">$500 site build</a> and the <a href="/services/" style="color:var(--silver);text-decoration:underline">service pages</a></li>
+</ul><p class="body-copy" style="margin-top:16px"><b>One honest caveat:</b> this pays for itself when you have repeat work worth automating. If your week is genuinely different every time, say so on the call and I'll tell you to skip it.</p></div></section><section class="faq"><div class="wrap"><h2>Questions, answered straight</h2><details><summary>What is Claude Code, in plain English?</summary><p>An AI that works inside your computer instead of inside a chat window. It reads your files, runs commands, calls your other software, and does multi-step work while you do something else. The gap between that and a chatbot is the whole point — a chatbot tells you how to pull last month's unpaid invoices. This pulls them.</p></details><details><summary>What exactly do I get for $1,500?</summary><p>Claude Code installed and configured on your machine; your real tools connected to it — the ones you name, from your CRM and email to your spreadsheets and database; a written configuration file that teaches it your business, your pricing, your terminology, and how you want things done; 3–5 custom skills built for the specific repeat jobs you do every week; and a 60-minute working session where we run them together on your real work. Flat fee, one time.</p></details><details><summary>What's a &quot;skill&quot;?</summary><p>A repeat job, written down once so it runs the same way every time. &quot;Pull this week's new leads, check which ones we already talked to, and draft the follow-ups.&quot; &quot;Turn my job notes into an invoice.&quot; &quot;Read this contract and tell me what changed.&quot; You describe the job in your own words; I build it, test it against your real data, and hand it over so you can run it by name from then on.</p></details><details><summary>Do I need to know how to code?</summary><p>No. You type what you want in ordinary English. The reason this costs $1,500 and not nothing is that the setup — the connectors, the configuration, the skills built around how your business actually runs — is the part that takes technical work. That part is mine. After that it's typing.</p></details><details><summary>What does it cost to run after you're done?</summary><p>A Claude subscription or API billing, paid directly to Anthropic — that is separate from this fee and it is not something I mark up or resell. I'll tell you which plan fits your usage before you buy anything, so there is no surprise. Any third-party tool you connect keeps its own bill too.</p></details><details><summary>Will it work with the software I already use?</summary><p>Usually. Anything with an API can be connected, and the common ones — Google Workspace, Slack, most CRMs, Supabase and Postgres, Stripe, spreadsheets — already have prebuilt connectors. Tell me your stack before you pay and I'll tell you honestly what connects cleanly, what needs a workaround, and what can't be done. I would rather lose the sale than sell you a connection that doesn't exist.</p></details><details><summary>How long does it take?</summary><p>5 business days from the kickoff call, assuming you get me access to the tools you want connected. The kickoff is a 30-minute call to find out what you actually do all week — that conversation is what the skills get built from.</p></details><details><summary>Is my business data safe?</summary><p>It runs on your machine, under your accounts, with credentials you control and can revoke at any time. I don't take copies of your data, and I don't keep access after handoff. You decide which tools get connected, and anything you'd rather I never touch simply doesn't get connected.</p></details><details><summary>Do I own it?</summary><p>Yes. The configuration and every skill built for you are plain text files on your machine. Keep them, edit them, hand them to someone else. There is no license you keep paying to use your own setup, and nothing stops working if you never speak to me again.</p></details><details><summary>What if the skills aren't right?</summary><p>One round of revisions on the skills I built, requested within 14 days. Watch them run on a real week of your work, send me one list of what's off, and I fix it.</p></details><details><summary>What's your refund policy?</summary><p>Before the kickoff call: full refund, no questions. After delivery the fee is non-refundable, because the work is done and it's on your machine. If I fail to deliver what's described on this page, you get your money back.</p></details></div></section><section><div class="wrap"><div class="contact-band"><h2>Want to know if it fits before you pay?</h2><p>Call or text <b>530-736-7085</b> and tell me what your week looks like. I'll tell you which parts are automatable and which aren't — and if the answer is "not many," I'll say that. You get me, not a sales team.</p><div class="cta-row"><a class="btn" href="mailto:bannisterderik@gmail.com?subject=Claude%20Code%20setup%20%E2%80%94%20%241%2C500">Request an invoice — $1,500 →</a><a class="btn ghost" href="tel:+15307367085">Call/Text 530-736-7085</a><a class="btn ghost" href="mailto:bannisterderik@gmail.com">Email Derik</a></div></div></div></section><section id="contact"><div class="wrap"><div class="contact-band"><h2>Tell me what you need.</h2><p>Name and a phone number is enough. You get me — not a form that disappears into an agency inbox.</p><form class="lead" id="leadForm" novalidate>
+<input type="hidden" name="source_path" value="/claude-code/"><input type="hidden" name="source_type" value="claude-code"><input type="hidden" name="source_city" value=""><input type="hidden" name="source_state" value=""><input type="hidden" name="source_service" value=""><input type="hidden" name="source_trade" value="">
+<div class="lead-row"><label>Your name<input name="name" required autocomplete="name" placeholder="First and last"></label>
+<label>Phone<input name="phone" type="tel" required autocomplete="tel" placeholder="Best number to reach you"></label></div>
+<div class="lead-row"><label>Business<input name="business" autocomplete="organization" placeholder="Company name"></label>
+<label>Email <span class="opt">optional</span><input name="email" type="email" autocomplete="email" placeholder="you@company.com"></label></div>
+<label>What do you need? <span class="opt">optional</span><textarea name="message" rows="3" placeholder="A site, more calls, the phone answered — whatever it is, plain English is fine."></textarea></label>
+<div class="lead-foot"><button class="btn" type="submit">Send it →</button>
+<span class="lead-note">Goes straight to me. No sequence, no sales team. Or call/text <a href="tel:+15307367085">530-736-7085</a>.</span></div>
+<p class="lead-status" id="leadStatus" role="status" aria-live="polite"></p>
+</form>
+<script>(()=>{
+const f=document.getElementById('leadForm');if(!f)return;
+const s=document.getElementById('leadStatus');
+const EP="",KEY="",MAIL="bannisterderik@gmail.com";
+f.addEventListener('submit',async e=>{
+ e.preventDefault();
+ const d=Object.fromEntries(new FormData(f).entries());
+ if(!d.name||!d.phone){s.textContent='Name and phone, then it sends.';s.className='lead-status warn';return}
+ d.page_title=document.title;d.referrer=document.referrer||'';
+ const btn=f.querySelector('button');btn.disabled=true;btn.textContent='Sending…';
+ if(!EP){ /* no endpoint configured yet — hand off to email rather than lose the lead */
+  const body=Object.entries(d).filter(([,v])=>v).map(([k,v])=>k+': '+v).join('\n');
+  location.href='mailto:'+MAIL+'?subject='+encodeURIComponent('Website lead — '+d.name)+'&body='+encodeURIComponent(body);
+  s.textContent='Opening your email so this reaches me — hit send.';s.className='lead-status ok';
+  btn.disabled=false;btn.textContent='Send it →';return}
+ try{
+  if(KEY)d.access_key=KEY;
+  d.subject='Website lead — '+d.name+(d.business?' ('+d.business+')':'');
+  const r=await fetch(EP,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(d)});
+  if(!r.ok)throw new Error(r.status);
+  f.querySelectorAll('input,textarea,button').forEach(x=>x.disabled=true);
+  s.innerHTML='Got it — I\'ll call you at <b>'+d.phone+'</b>. If it\'s urgent, call me now: <a href="tel:+15307367085">530-736-7085</a>.';
+  s.className='lead-status ok';
+ }catch(err){
+  s.innerHTML='That didn\'t go through. Call or text <a href="tel:+15307367085">530-736-7085</a> — fastest way to reach me.';
+  s.className='lead-status warn';btn.disabled=false;btn.textContent='Send it →';
+ }
+});})();</script></div></div></section>
+</main>
+<footer><div class="wrap"><div class="fcols">
+<div><h3>Services</h3><a href="/services/web-design/">Websites</a><a href="/services/seo/">SEO</a><a href="/services/aeo/">AEO</a><a href="/services/google-ads/">Google Ads</a><a href="/services/ai-receptionist/">AI Answering</a><a href="/services/crm/">CRM</a><a href="/services/email-sms-marketing/">Email &amp; SMS</a><a href="/services/reputation-management/">Reviews</a><a href="/services/">All 23 services →</a></div>
+<div><h3>Industries</h3><a href="/trades/roofing/">Roofing</a><a href="/trades/plumbing/">Plumbing</a><a href="/trades/hvac/">HVAC</a><a href="/trades/electrical/">Electrical</a><a href="/trades/solar/">Solar</a><a href="/trades/concrete/">Concrete</a><a href="/trades/landscaping/">Landscaping</a><a href="/trades/pest-control/">Pest Control</a><a href="/trades/">All 53 industries →</a></div>
+<div><h3>States</h3><a href="/locations/oregon/">Oregon (65)</a><a href="/locations/washington/">Washington (47)</a><a href="/locations/california/">California (88)</a><a href="/locations/idaho/">Idaho (6)</a><a href="/locations/nevada/">Nevada (6)</a><a href="/locations/">All 212 cities →</a></div>
+<div><h3>Company</h3><a href="/start/">Get a site — $500</a><a href="/claude-code/">Claude Code setup — $1,500</a><a href="/">Home</a><a href="/about/">About</a><a href="/answers/">Answers</a><a href="/#builds">Builds</a><a href="/ideas/">Ideas Board</a><a href="/products/">SEO Products</a><a href="/sitemap/">Sitemap</a><a href="mailto:bannisterderik@gmail.com">Email</a><a href="tel:+15307367085">Call/Text 530-736-7085</a></div>
+<div><h3>Legal</h3><a href="/legal/terms/">Terms of Use</a><a href="/legal/website-terms/">Website Build Agreement</a><a href="/legal/privacy/">Privacy Policy</a><a href="/legal/do-not-sell/">Do Not Sell or Share My Personal Information</a><a href="/legal/accessibility/">Accessibility</a><a href="/legal/disclaimer/">Disclaimer</a></div>
+</div><div class="legal"><span class="mono">© 2026 Derik Bannister</span><span class="mono">DB<b>—</b> BUILD. OPERATE. OWN.</span></div></div></footer>
+</body>
+</html>

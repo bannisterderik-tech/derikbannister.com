@@ -211,6 +211,7 @@ footer{border-top:1px solid var(--hair);padding:40px 0;background:var(--ink2);ma
 /* /start/ — offer page */
 .tiers{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--hair);border:1px solid var(--hair);margin-top:8px}
 @media(max-width:700px){.tiers{grid-template-columns:1fr}}
+.tiers.one{grid-template-columns:1fr;max-width:560px} /* single-tier offers shouldn't leave a dead column */
 .tier{background:var(--ink);padding:26px 24px}
 .tier.hi{background:var(--ink2);border-left:2px solid var(--silver-hi)}
 .tier h3{font-size:1.05rem;text-transform:uppercase;margin-bottom:6px}
@@ -243,7 +244,7 @@ const footerHTML = `<footer><div class="wrap"><div class="fcols">
 <div><h3>Services</h3>${core.slice(0, 8).map(s => `<a href="/services/${s.slug}/">${esc(s.short)}</a>`).join('')}<a href="/services/">All ${services.length} services →</a></div>
 <div><h3>Industries</h3>${trades.slice(0, 8).map(t => `<a href="/trades/${t.slug}/">${esc(t.name)}</a>`).join('')}<a href="/trades/">All ${trades.length} industries →</a></div>
 <div><h3>States</h3>${STATES.map(s => `<a href="/locations/${s.slug}/">${esc(s.name)} (${s.cities.length})</a>`).join('')}<a href="/locations/">All ${locations.length} cities →</a></div>
-<div><h3>Company</h3><a href="/start/">Get a site — $500</a><a href="/">Home</a><a href="/about/">About</a><a href="/answers/">Answers</a><a href="/#builds">Builds</a><a href="/ideas/">Ideas Board</a><a href="/products/">SEO Products</a><a href="/sitemap/">Sitemap</a><a href="mailto:${EMAIL}">Email</a><a href="tel:${PHONE_TEL}">Call/Text ${PHONE}</a></div>
+<div><h3>Company</h3><a href="/start/">Get a site — $500</a><a href="/claude-code/">Claude Code setup — $1,500</a><a href="/">Home</a><a href="/about/">About</a><a href="/answers/">Answers</a><a href="/#builds">Builds</a><a href="/ideas/">Ideas Board</a><a href="/products/">SEO Products</a><a href="/sitemap/">Sitemap</a><a href="mailto:${EMAIL}">Email</a><a href="tel:${PHONE_TEL}">Call/Text ${PHONE}</a></div>
 <div><h3>Legal</h3><a href="/legal/terms/">Terms of Use</a><a href="/legal/website-terms/">Website Build Agreement</a><a href="/legal/privacy/">Privacy Policy</a><a href="/legal/do-not-sell/">Do Not Sell or Share My Personal Information</a><a href="/legal/accessibility/">Accessibility</a><a href="/legal/disclaimer/">Disclaimer</a></div>
 </div><div class="legal"><span class="mono">© 2026 ${BRAND}</span><span class="mono">DB<b>—</b> BUILD. OPERATE. OWN.</span></div></div></footer>`;
 
@@ -347,7 +348,7 @@ ${ld.map(x => `<script type="application/ld+json">${JSON.stringify(x)}</script>`
 </head>
 <body>
 <a href="#main" style="position:absolute;left:-9999px;top:0" onfocus="this.style.left='8px';this.style.top='8px';this.style.background='#fff';this.style.color='#000';this.style.padding='8px 12px';this.style.zIndex=99" onblur="this.style.left='-9999px'">Skip to content</a>
-<header class="top"><div class="wrap"><a class="logo" href="/">DB<span style="color:var(--silver-lo)">—</span></a><nav><a href="/services/">Services</a><a href="/trades/">Industries</a><a href="/locations/">Locations</a><a href="/answers/">Answers</a><a href="/products/">Products</a><a href="/start/" style="color:var(--silver-hi)">Get a site — $500</a></nav></div></header>
+<header class="top"><div class="wrap"><a class="logo" href="/">DB<span style="color:var(--silver-lo)">—</span></a><nav><a href="/services/">Services</a><a href="/trades/">Industries</a><a href="/locations/">Locations</a><a href="/answers/">Answers</a><a href="/claude-code/">Claude Code</a><a href="/start/" style="color:var(--silver-hi)">Get a site — $500</a></nav></div></header>
 <div class="wrap"><nav class="crumbs" aria-label="Breadcrumb">${crumbUI}</nav></div>
 <main id="main">
 <div class="hero"><div class="wrap"><h1>${h1}</h1><p class="lede">${lede}</p>${answerHTML}
@@ -435,6 +436,12 @@ f.addEventListener('submit',async e=>{
 const STRIPE_500 = 'https://buy.stripe.com/3cI14ofqgctp3qBcDZdjO02';
 const PRICE_FULL = '$999';
 const PRICE_NOW = '$500';
+/* Claude Code setup — the second product. STRIPE_CC stays empty until the payment
+   link exists; /claude-code/ falls back to invoice CTAs rather than ship a dead button. */
+const STRIPE_CC = '';
+const PRICE_CC = '$1,500';
+const CC_DAYS = 5; /* business days from kickoff — matches the FAQ and the Product schema */
+const CC_SKILLS = '3–5';
 const offerBand = () => `<section><div class="wrap"><div class="offer">
 <div class="offer-copy"><span class="mono">The wedge<b>—</b></span><h2>A ${PAGE_MIN}+ page site for your business. <span class="chrome">${PRICE_NOW} if you check out now.</span></h2>
 <p>Every service you offer and every town you serve gets its own page — built on your logo, your colors, your license number. Schema, sitemap, and llms.txt so search engines and AI assistants both read you correctly. Delivered in 7 business days. <b>You own all of it</b>, source code included.</p></div>
@@ -511,7 +518,7 @@ const faqPoolCitySvc = (svc, loc) => {
 };
 
 /* ---------- clean old generated dirs ---------- */
-for (const d of ['services', 'trades', 'locations', 'products', 'about', 'legal', 'ideas', 'answers', 'sitemap', 'start']) rmSync(join(ROOT, d), { recursive: true, force: true });
+for (const d of ['services', 'trades', 'locations', 'products', 'about', 'legal', 'ideas', 'answers', 'sitemap', 'start', 'claude-code']) rmSync(join(ROOT, d), { recursive: true, force: true });
 mkdirSync(join(ROOT, 'og'), { recursive: true }); /* og-default.png is generated separately — never clean this dir */
 
 /* ---------- service hubs ---------- */
@@ -879,6 +886,83 @@ page({
   }, faqLD(startFaq)],
 });
 
+/* ---------- /claude-code/ — the $1,500 setup product. Same rule as /start/:
+   every claim on this page is something that actually ships. Until STRIPE_CC is
+   set, the CTAs ask for an invoice instead of pointing at a dead checkout. ---------- */
+const ccCheckout = STRIPE_CC
+  ? `<a class="btn" href="${STRIPE_CC}">Check out — ${PRICE_CC} →</a>`
+  : `<a class="btn" href="mailto:${EMAIL}?subject=${encodeURIComponent('Claude Code setup — ' + PRICE_CC)}">Request an invoice — ${PRICE_CC} →</a>`;
+const ccFaq = [
+  { q: `What is Claude Code, in plain English?`, a: `An AI that works inside your computer instead of inside a chat window. It reads your files, runs commands, calls your other software, and does multi-step work while you do something else. The gap between that and a chatbot is the whole point — a chatbot tells you how to pull last month's unpaid invoices. This pulls them.` },
+  { q: `What exactly do I get for ${PRICE_CC}?`, a: `Claude Code installed and configured on your machine; your real tools connected to it — the ones you name, from your CRM and email to your spreadsheets and database; a written configuration file that teaches it your business, your pricing, your terminology, and how you want things done; ${CC_SKILLS} custom skills built for the specific repeat jobs you do every week; and a 60-minute working session where we run them together on your real work. Flat fee, one time.` },
+  { q: `What's a "skill"?`, a: `A repeat job, written down once so it runs the same way every time. "Pull this week's new leads, check which ones we already talked to, and draft the follow-ups." "Turn my job notes into an invoice." "Read this contract and tell me what changed." You describe the job in your own words; I build it, test it against your real data, and hand it over so you can run it by name from then on.` },
+  { q: `Do I need to know how to code?`, a: `No. You type what you want in ordinary English. The reason this costs ${PRICE_CC} and not nothing is that the setup — the connectors, the configuration, the skills built around how your business actually runs — is the part that takes technical work. That part is mine. After that it's typing.` },
+  { q: `What does it cost to run after you're done?`, a: `A Claude subscription or API billing, paid directly to Anthropic — that is separate from this fee and it is not something I mark up or resell. I'll tell you which plan fits your usage before you buy anything, so there is no surprise. Any third-party tool you connect keeps its own bill too.` },
+  { q: `Will it work with the software I already use?`, a: `Usually. Anything with an API can be connected, and the common ones — Google Workspace, Slack, most CRMs, Supabase and Postgres, Stripe, spreadsheets — already have prebuilt connectors. Tell me your stack before you pay and I'll tell you honestly what connects cleanly, what needs a workaround, and what can't be done. I would rather lose the sale than sell you a connection that doesn't exist.` },
+  { q: `How long does it take?`, a: `${CC_DAYS} business days from the kickoff call, assuming you get me access to the tools you want connected. The kickoff is a 30-minute call to find out what you actually do all week — that conversation is what the skills get built from.` },
+  { q: `Is my business data safe?`, a: `It runs on your machine, under your accounts, with credentials you control and can revoke at any time. I don't take copies of your data, and I don't keep access after handoff. You decide which tools get connected, and anything you'd rather I never touch simply doesn't get connected.` },
+  { q: `Do I own it?`, a: `Yes. The configuration and every skill built for you are plain text files on your machine. Keep them, edit them, hand them to someone else. There is no license you keep paying to use your own setup, and nothing stops working if you never speak to me again.` },
+  { q: `What if the skills aren't right?`, a: `One round of revisions on the skills I built, requested within 14 days. Watch them run on a real week of your work, send me one list of what's off, and I fix it.` },
+  { q: `What's your refund policy?`, a: `Before the kickoff call: full refund, no questions. After delivery the fee is non-refundable, because the work is done and it's on your machine. If I fail to deliver what's described on this page, you get your money back.` },
+];
+page({
+  path: '/claude-code/', title: `Claude Code Setup — ${PRICE_CC} | ${BRAND}`,
+  desc: `Claude Code installed, connected to your real tools, and taught your business — plus ${CC_SKILLS} custom skills and a working session. ${PRICE_CC} flat, ${CC_DAYS} business days.`,
+  crumbs: [{ name: 'Home', url: '/' }, { name: 'Claude Code Setup', url: '/claude-code/' }],
+  h1: `Claude Code, set up around <span class="chrome">how your business actually runs.</span>`,
+  lede: `Installed on your machine, wired to the tools you already pay for, taught your pricing and your terminology, and loaded with ${CC_SKILLS} skills built for the jobs you repeat every week. One fee, ${CC_DAYS} days, no retainer.`,
+  answer: `${BRAND} sets up Claude Code for service businesses for ${PRICE_CC} flat. That covers installation, connecting your existing tools, a configuration file that teaches it your business, ${CC_SKILLS} custom skills built for your repeat workflows, and a 60-minute working session. Delivered in ${CC_DAYS} business days. You own the configuration and the skills outright. Call or text ${PHONE}.`,
+  noOffer: true,
+  body: `<section><div class="wrap"><h2>The price</h2><div class="tiers one">
+<div class="tier hi"><h3>Claude Code setup</h3><div class="amt">${PRICE_CC}</div><p>One flat fee. Setup, connectors, configuration, ${CC_SKILLS} custom skills, and the working session. No retainer, no percent of anything, nothing to renew.</p>${ccCheckout}</div>
+</div><p class="body-copy" style="margin-top:18px">What you pay Anthropic to run it afterward is separate and goes straight to them — I'll tell you which plan fits before you spend a dollar on it.</p></div></section>
+
+<section><div class="wrap"><h2>What you get</h2><ul class="feat">
+<li><b>Claude Code installed and configured</b> on your machine, working the first day</li>
+<li><b>Your tools connected</b> — CRM, email, calendar, spreadsheets, database, Slack, Stripe; you name them, I wire the ones that can be wired and tell you straight about the ones that can't</li>
+<li><b>A configuration file that teaches it your business</b> — your services, your pricing, your terminology, your customers, how you want things written</li>
+<li><b>${CC_SKILLS} custom skills</b> built for the jobs you actually repeat, tested against your real data, runnable by name</li>
+<li><b>A 60-minute working session</b> — we run them together on live work, not a demo account</li>
+<li><b>Plain-English documentation</b> of what was built and how to run it</li>
+<li><b>One round of revisions</b> on the skills, within 14 days</li>
+<li><b>All of it yours</b> — plain text files on your machine, no license, nothing to keep paying for</li>
+</ul></div></section>
+
+<section><div class="wrap"><h2>How it goes</h2><div class="steps">
+<div class="step"><span class="n">01</span><div><h3>You book it</h3><p>Payment confirms the slot. You get a receipt and an email from me the same day.</p></div></div>
+<div class="step"><span class="n">02</span><div><h3>30-minute kickoff call</h3><p>I ask what eats your week. The answers to that call are what the skills get built from — not a questionnaire, an actual conversation about your work.</p></div></div>
+<div class="step"><span class="n">03</span><div><h3>You give me access</h3><p>Only to the tools you want connected. Your accounts, your credentials, revocable by you at any time.</p></div></div>
+<div class="step"><span class="n">04</span><div><h3>I build it — ${CC_DAYS} business days</h3><p>Install, connectors, configuration, and the skills. Tested on your real data, not sample data.</p></div></div>
+<div class="step"><span class="n">05</span><div><h3>We run it together, then it's yours</h3><p>A 60-minute session on live work, documentation in plain English, and <b>one round of revisions within 14 days</b>. After that you're running it without me.</p></div></div>
+</div></div></section>
+
+<section><div class="wrap"><h2>What it's actually for</h2><p class="body-copy">The test for a good skill is boring: something you do every week, the same way, that costs you an hour and doesn't need your judgment. A few that come up constantly in the trades:</p><div class="grid" style="margin-top:20px">
+<a href="/services/crm/"><b>Lead follow-up that doesn't stall</b>New leads pulled, cross-checked against who you've already talked to, follow-ups drafted in your voice</a>
+<a href="/services/automation/"><b>Quotes and invoices from job notes</b>Your notes in, a priced document out, matching how you actually price</a>
+<a href="/services/reputation-management/"><b>Review requests, on time</b>Job closes, the ask goes out, responses drafted for you to approve</a>
+<a href="/services/custom-software/"><b>The weekly numbers</b>Pulled from wherever they live, assembled into the report you keep meaning to build</a>
+</div><p class="body-copy" style="margin-top:18px">Bring me your list. If a job on it can't be done well, I'll tell you that on the call instead of building something that half-works.</p></div></section>
+
+<section><div class="wrap"><h2>What's not included</h2><ul class="feat">
+<li>Your Anthropic subscription or API usage — billed by them, directly to you</li>
+<li>Third-party subscriptions for the tools being connected (CRM, phone, email platforms)</li>
+<li>Additional seats or machines beyond yours — quoted separately, and cheaper than the first</li>
+<li>Ongoing skill development, monitoring, or support past the included revision round — quoted separately if you want it</li>
+<li>Custom software, integrations for tools with no API, or anything requiring a vendor to build you access</li>
+<li>Website, SEO, or ads work — that's the <a href="/start/" style="color:var(--silver);text-decoration:underline">${PRICE_NOW} site build</a> and the <a href="/services/" style="color:var(--silver);text-decoration:underline">service pages</a></li>
+</ul><p class="body-copy" style="margin-top:16px"><b>One honest caveat:</b> this pays for itself when you have repeat work worth automating. If your week is genuinely different every time, say so on the call and I'll tell you to skip it.</p></div></section>` +
+    faqHTML(ccFaq) +
+    `<section><div class="wrap"><div class="contact-band"><h2>Want to know if it fits before you pay?</h2><p>Call or text <b>${PHONE}</b> and tell me what your week looks like. I'll tell you which parts are automatable and which aren't — and if the answer is "not many," I'll say that. You get me, not a sales team.</p><div class="cta-row">${ccCheckout}<a class="btn ghost" href="tel:${PHONE_TEL}">Call/Text ${PHONE}</a><a class="btn ghost" href="mailto:${EMAIL}">Email Derik</a></div></div></div></section>`,
+  schema: [{
+    '@context': 'https://schema.org', '@type': 'Product',
+    name: 'Claude Code Setup', brand: { '@id': BUSINESS_ID },
+    description: `Claude Code installed and configured for a service business: existing tools connected, a configuration file covering the business's services, pricing and terminology, ${CC_SKILLS} custom skills built for repeat workflows, and a 60-minute working session. Delivered in ${CC_DAYS} business days. Client owns the configuration and skills.`,
+    offers: [
+      { '@type': 'Offer', price: '1500', priceCurrency: 'USD', name: 'Claude Code setup', url: `${SITE}/claude-code/`, availability: 'https://schema.org/InStock', seller: { '@id': BUSINESS_ID } },
+    ],
+  }, faqLD(ccFaq)],
+});
+
 /* ---------- HTML sitemap — the "more intuitive" backstop for humans and crawlers ---------- */
 page({
   path: '/sitemap/', title: `Sitemap — Every Page | ${BRAND}`,
@@ -892,7 +976,7 @@ page({
 <section><div class="wrap"><h2>Industries by state</h2><div class="smap">${STATES.map(st => `<h3>${esc(st.name)}</h3>${trades.map(t => `<a href="/trades/${t.slug}/${st.slug}/">${esc(t.name)} — ${esc(st.name)}</a>`).join('')}`).join('')}</div></div></section>
 <section><div class="wrap"><h2>Markets</h2><div class="smap">${STATES.map(st => `<h3>${esc(st.name)} (${st.cities.length})</h3>${st.cities.map(l => `<a href="/locations/${l.slug}/">${esc(l.city)}, ${l.state}</a>`).join('')}`).join('')}</div></div></section>
 <section><div class="wrap"><h2>Answers</h2><div class="smap">${answerCategories.map(c => { const list = answers.filter(a => a.cat === c.key); return !list.length ? '' : `<h3>${esc(c.label)}</h3>${list.map(a => `<a href="/answers/${a.slug}/">${esc(a.q)}</a>`).join('')}`; }).join('')}</div></div></section>
-<section><div class="wrap"><h2>Company</h2><div class="smap"><a href="/">Home</a><a href="/about/">About</a><a href="/products/">SEO Products</a><a href="/ideas/">Ideas Board</a><a href="/world/">The World (scroll film)</a><a href="/legal/">Legal</a><a href="/legal/terms/">Terms of Use</a><a href="/legal/privacy/">Privacy Policy</a><a href="/legal/website-terms/">Website Build Agreement</a><a href="/legal/do-not-sell/">Do Not Sell or Share</a><a href="/legal/accessibility/">Accessibility</a><a href="/legal/disclaimer/">Disclaimer</a></div></div></section>`,
+<section><div class="wrap"><h2>Company</h2><div class="smap"><a href="/">Home</a><a href="/about/">About</a><a href="/start/">Get a site — $500</a><a href="/claude-code/">Claude Code setup — $1,500</a><a href="/products/">SEO Products</a><a href="/ideas/">Ideas Board</a><a href="/world/">The World (scroll film)</a><a href="/legal/">Legal</a><a href="/legal/terms/">Terms of Use</a><a href="/legal/privacy/">Privacy Policy</a><a href="/legal/website-terms/">Website Build Agreement</a><a href="/legal/do-not-sell/">Do Not Sell or Share</a><a href="/legal/accessibility/">Accessibility</a><a href="/legal/disclaimer/">Disclaimer</a></div></div></section>`,
 });
 
 /* ---------- about (E-E-A-T anchor; facts limited to confirmed) ---------- */
@@ -1145,6 +1229,10 @@ const LLMS_HEAD = `# Derik Bannister — derikbannister.com
 > Contact: ${EMAIL} · call/text ${PHONE}.
 `;
 writeFileSync(join(ROOT, 'llms.txt'), `${LLMS_HEAD}
+## Flat-price products
+- [${PAGE_MIN}+ page website build](${SITE}/start/): ${PRICE_FULL} invoiced, ${PRICE_NOW} at checkout. 7 business days. Client owns the source code.
+- [Claude Code setup](${SITE}/claude-code/): ${PRICE_CC} flat. Claude Code installed, existing tools connected, business configuration written, ${CC_SKILLS} custom skills built, 60-minute working session. ${CC_DAYS} business days. Client owns the configuration and skills.
+
 ## Services (${services.length})
 ${services.map(s => `- [${s.name}](${SITE}/services/${s.slug}/): ${s.metaShort}`).join('\n')}
 
