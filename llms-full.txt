@@ -3,7 +3,7 @@
 > Operator and founder based in Oregon. Builds websites, local SEO, answer engine
 > optimization (AEO), Google Ads and Local Services Ads, AI phone answering, CRM and
 > follow-up automation, reputation systems, and custom software for service businesses
-> across Oregon, Washington, California, Idaho, and Nevada — 212 markets and 53 trades.
+> across Oregon, Washington, California, Idaho, and Nevada — 212 markets and 54 trades.
 > Flat pricing quoted up front; the client owns the domain, code, content, and data.
 > Contact: bannisterderik@gmail.com · call/text 530-736-7085.
 
@@ -438,7 +438,7 @@ Professionally written announcements distributed through established newswire ne
 - Live syndication report
 https://derikbannister.com/services/press-releases/
 
-## Industries (53)
+## Industries (54)
 ### Roofing
 For roofing companies. Common problems: storm-season call surges, insurance-job paperwork, and estimates that die without follow-up. Trade-specific systems: storm-response landing pages, financing calculators, drone-photo galleries, and automated estimate follow-up.
 https://derikbannister.com/trades/roofing/
@@ -510,6 +510,10 @@ https://derikbannister.com/trades/construction/
 ### Real Estate
 For real estate teams. Common problems: lead-source fragmentation, slow speed-to-lead, and database neglect. Trade-specific systems: IDX-adjacent landing pages, instant-response lead routing, and past-client reactivation campaigns.
 https://derikbannister.com/trades/real-estate/
+
+### Real Estate Wholesaling
+For real estate wholesalers. Common problems: stale seller lists, slow speed-to-lead on motivated-seller calls, and a buyer list nobody works. Trade-specific systems: motivated-seller landing pages, instant-response call and text routing, and disposition buyer-list campaigns.
+https://derikbannister.com/trades/real-estate-wholesaling/
 
 ### Pools & Spas
 For pool builders and service companies. Common problems: long build cycles, seasonal service demand, and weekly-route economics. Trade-specific systems: build-cost range guides, design galleries, weekly-service signup flows, and off-season maintenance campaigns.

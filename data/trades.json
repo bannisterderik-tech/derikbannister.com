@@ -144,6 +144,14 @@
   "systems": "IDX-adjacent landing pages, instant-response lead routing, and past-client reactivation campaigns"
  },
  {
+  "slug": "real-estate-wholesaling",
+  "name": "Real Estate Wholesaling",
+  "plural": "real estate wholesalers",
+  "category": "specialty",
+  "pain": "stale seller lists, slow speed-to-lead on motivated-seller calls, and a buyer list nobody works",
+  "systems": "motivated-seller landing pages, instant-response call and text routing, and disposition buyer-list campaigns"
+ },
+ {
   "slug": "pools-spas",
   "name": "Pools & Spas",
   "plural": "pool builders and service companies",
